@@ -803,94 +803,110 @@ rdf:li rdf:type owl:ObjectProperty ;
 ###  http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:DatatypeProperty ;
                                               rdfs:range xsd:string ;
-                                              rdfs:label "description"@en .
+                                              rdfs:label "description"@en ;
+                                              rdfs:comment "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en .
 
 
 ###  http://purl.org/dc/elements/1.1/identifier
 <http://purl.org/dc/elements/1.1/identifier> rdf:type owl:DatatypeProperty ;
                                              rdfs:range xsd:string ;
-                                             rdfs:label "identifier"@en .
+                                             rdfs:label "identifier"@en ;
+                                              rdfs:comment "An unambiguous reference to the resource within a given context."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/A00
 :A00 rdf:type owl:DatatypeProperty ;
      rdfs:domain :Transform ;
      rdfs:range xsd:float ;
-     rdfs:label "A00"@en .
+     rdfs:label "A00"@en ;
+     rdfs:comment "Property \"A00\" specifies the element (0,0) of matrix used to transform the shape."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/A01
 :A01 rdf:type owl:DatatypeProperty ;
      rdfs:domain :Transform ;
      rdfs:range xsd:float ;
-     rdfs:label "A01"@en .
+     rdfs:label "A01"@en ;
+     rdfs:comment "Property \"A01\" specifies the element (0,1) of matrix used to transform the shape."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/A02
 :A02 rdf:type owl:DatatypeProperty ;
      rdfs:domain :Transform ;
      rdfs:range xsd:float ;
-     rdfs:label "A02"@en .
+     rdfs:label "A02"@en ;
+     rdfs:comment "Property \"A02\" specifies the element (0,2) of matrix used to transform the shape."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/A10
 :A10 rdf:type owl:DatatypeProperty ;
      rdfs:domain :Transform ;
      rdfs:range xsd:float ;
-     rdfs:label "A10"@en .
+     rdfs:label "A10"@en ;
+     rdfs:comment "Property \"A10\" specifies the element (1,0) of matrix used to transform the shape."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/A11
 :A11 rdf:type owl:DatatypeProperty ;
      rdfs:domain :Transform ;
      rdfs:range xsd:float ;
-     rdfs:label "A11"@en .
+     rdfs:label "A11"@en ;
+     rdfs:comment "Property \"A11\" specifies the element (1,1) of matrix used to transform the shape."@en .
+
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/A12
 :A12 rdf:type owl:DatatypeProperty ;
      rdfs:domain :Transform ;
      rdfs:range xsd:float ;
-     rdfs:label "A12"@en .
+     rdfs:label "A12"@en ;
+     rdfs:comment "Property \"A12\" specifies the element (1,2) of matrix used to transform the shape."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/CO2Percent
 :CO2Percent rdf:type owl:DatatypeProperty ;
-            rdfs:label "CO2 percent"@en .
+            rdfs:label "CO2 percent"@en ;
+            rdfs:comment "Property \"CO2Percent\" specifies the carbon dioxide concentration around the sample."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/NDFilter
 :NDFilter rdf:type owl:DatatypeProperty ;
           rdfs:domain :Channel ;
           rdfs:range xsd:float ;
-          rdfs:label "ND Filter"@en .
+          rdfs:label "ND Filter"@en ;
+          rdfs:comment "Property \"NDFilter\" specifies the combined effect of any neutral density filters used."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/XMLAnnotationValue
 :XMLAnnotationValue rdf:type owl:DatatypeProperty ;
                     rdfs:domain :XMLAnnotation ;
-                    rdfs:range rdf:XMLLiteral .
+                    rdfs:range rdf:XMLLiteral ;
+                    rdfs:label "XML annotation value"@en ;
+                    rdfs:comment "Property \"XMLAnnotationValue\" specifies a general XML annotation."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/acquisitionDate
 :acquisitionDate rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Image ;
                  rdfs:range xsd:dateTime ;
-                 rdfs:label "acquisition date"@en .
+                 rdfs:label "acquisition date"@en ;
+                 rdfs:comment "Property \"acquisitionDate\" specifies the acquisition date of the Image."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/amplificationGain
 :amplificationGain rdf:type owl:DatatypeProperty ;
                    rdfs:domain :OpticalDetector ;
                    rdfs:range xsd:float ;
-                   rdfs:label "amplification gain"@en .
+                   rdfs:label "amplification gain"@en ;
+                   rdfs:comment "Property \"amplificationGain\" specifies the gain applied to the detector signal."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/attenuation
 :attenuation rdf:type owl:DatatypeProperty ;
              rdfs:domain :LightSourceSettings ;
              rdfs:range xsd:float ;
-             rdfs:label "attenuation"@en .
+             rdfs:label "attenuation"@en ;
+             rdfs:comment "Property \"attenuation\" specifies the attenuation of the light source."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/bigEndian
@@ -898,132 +914,153 @@ rdf:li rdf:type owl:ObjectProperty ;
            rdfs:domain :BinData ,
                        :Pixels ;
            rdfs:range xsd:boolean ;
-           rdfs:label "big endian"@en .
+           rdfs:label "big endian"@en ;
+           rdfs:comment "Property \"bigEndian\" specifies a boolean value. The value is true if the pixels data was written in BigEndian order."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/booleanAnnotationValue
 :booleanAnnotationValue rdf:type owl:DatatypeProperty ;
                         rdfs:domain :BooleanAnnotation ;
                         rdfs:range xsd:boolean ;
-                        rdfs:label "boolean annotation value"@en .
+                        rdfs:label "boolean annotation value"@en ;
+                        rdfs:comment "Property \"booleanAnnotationValue\" specifies the boolean value of the BooleanAnnotation."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/calibratedMagnification
 :calibratedMagnification rdf:type owl:DatatypeProperty ;
                          rdfs:domain :Objective ;
                          rdfs:range xsd:float ;
-                         rdfs:label "calibrated maginification"@en .
+                         rdfs:label "calibrated maginification"@en ;
+                         rdfs:comment "Property \"calibratedMagnification\" specifies the magnification of the lens as measured by a calibration process- i.e. \'59.987\' for a 60X lens."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/column
 :column rdf:type owl:DatatypeProperty ;
         rdfs:domain :Well ;
         rdfs:range xsd:nonNegativeInteger ;
-        rdfs:label "column"@en.
+        rdfs:label "column"@en ;
+        rdfs:comment "Property \"column\" specifies the column index of the well, the origin is the top left corner of the plate with the first column of cells being column zero. i.e top left is (0,0). The combination of row, column has to be unique for each well in a plate."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/columns
 :columns rdf:type owl:DatatypeProperty ;
          rdfs:domain :Plate ;
          rdfs:range xsd:positiveInteger ;
-         rdfs:label "columns"@en .
+         rdfs:label "columns"@en ;
+         rdfs:comment "Property \"columns\" specifies the number of columns in the plate."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/commentAnnotationValue
 :commentAnnotationValue rdf:type owl:DatatypeProperty ;
                         rdfs:domain :CommentAnnotation ;
                         rdfs:range xsd:string ;
-                        rdfs:label "comment annotation value"@en .
+                        rdfs:label "comment annotation value"@en ;
+                        rdfs:comment "Property \"commentAnnotationValue\" specifies a simple comment annotation."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/correctionCollar
 :correctionCollar rdf:type owl:DatatypeProperty ;
                   rdfs:domain :ObjectiveSettings ;
                   rdfs:range xsd:float ;
-                  rdfs:label "correction collar"@en .
+                  rdfs:label "correction collar"@en ;
+                  rdfs:comment "Property \"correctionCollar\" specifies normally an adjustable ring on the objective. Each has an arbitrary scale on it so the values
+is unit-less."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/data
 :data rdf:type owl:DatatypeProperty ;
       rdfs:domain :BinData ;
       rdfs:range xsd:base64Binary ;
-      rdfs:label "data"@en .
+      rdfs:label "data"@en ;
+      rdfs:comment "Property \"data\" specifies a base64 stream."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/doubleAnnotationValue
 :doubleAnnotationValue rdf:type owl:DatatypeProperty ;
                        rdfs:domain :DoubleAnnotation ;
                        rdfs:range xsd:double ;
-                       rdfs:label "double annotation value"@en .
+                       rdfs:label "double annotation value"@en ;
+                       rdfs:comment "Property \"doubleAnnotationValue\" specifies a simple numerical annotation of type xsd:double."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/endTime
 :endTime rdf:type owl:DatatypeProperty ;
          rdfs:domain :PlateAcquisition ;
          rdfs:range xsd:dateTime ;
-         rdfs:label "end time"@en .
+         rdfs:label "end time"@en ;
+         rdfs:comment "Property \"endTime\" specifies the time when the last image of this acquisition was collected."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/externalDescription
 :externalDescription rdf:type owl:DatatypeProperty ;
 					 rdfs:domain :Well ;
-                     rdfs:label "external description"@en .
+                     rdfs:label "external description"@en ;
+                     rdfs:comment "Property \"externalDescription\" specifies a description of the externally defined identifier for the object."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/externalIdentifier
 :externalIdentifier rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Plate;
                     rdfs:domain :Well;
-                    rdfs:label "external identifier"@en .
+                    rdfs:label "external identifier"@en ;
+                    rdfs:comment "Property \"externalIdentifier\" specifies a reference to an external database."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/fieldIndex
 :fieldIndex rdf:type owl:DatatypeProperty ;
             rdfs:domain :Plate ;
             rdfs:range xsd:nonNegativeInteger ;
-            rdfs:label "field index"@en .
+            rdfs:label "field index"@en ;
+            rdfs:comment "Property \"fieldIndex\" specifies the index of the WellSample to display as the default Field."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/filterWheel
 :filterWheel rdf:type owl:DatatypeProperty ;
              rdfs:domain :Filter ;
              rdfs:range xsd:string ;
-             rdfs:label "filter wheel"@en .
+             rdfs:label "filter wheel"@en ;
+             rdfs:comment "Property \"filterWheel\" specifies any arrangement of filters in a filter holder of any shape. It could, for example, be a filter slider."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/firstC
 :firstC rdf:type owl:DatatypeProperty ;
         rdfs:domain :TiffData ;
         rdfs:range xsd:nonNegativeInteger ;
-        rdfs:label "first c"@en .
+        rdfs:label "first c"@en ;
+        rdfs:comment "Property \"firstC\" specifies the C position of the image plane at the specified IFD. Indexed from 0. Default is 0 (the first C position)."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/firstT
 :firstT rdf:type owl:DatatypeProperty ;
         rdfs:domain :TiffData ;
         rdfs:range xsd:nonNegativeInteger ;
-        rdfs:label "first t"@en .
+        rdfs:label "first t"@en ;
+        rdfs:comment "Property \"firstT\" specifies the T position of the image plane at the specified IFD. Indexed from 0. Default is 0 (the first T position)."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/firstZ
 :firstZ rdf:type owl:DatatypeProperty ;
         rdfs:domain :TiffData ;
         rdfs:range xsd:nonNegativeInteger ;
-        rdfs:label "first z"@en .
+        rdfs:label "first z"@en ;
+        rdfs:comment "Property \"firstZ\" specifies the Z position of the image plane at the specified IFD. Indexed from 0. Default is 0 (the first Z position)."@en .
+
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/fluor
 :fluor rdf:type owl:DatatypeProperty ;
        rdfs:domain :Channel ;
        rdfs:range xsd:string ;
-       rdfs:label "fluor"@en .
+       rdfs:label "fluor"@en ;
+       rdfs:comment "Property \"fluor\" specifies a fluorescence image. This is the name of the fluorophore used to produce this channel."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/frequencyMultiplication
 :frequencyMultiplication rdf:type owl:DatatypeProperty ;
                          rdfs:domain :Laser ;
                          rdfs:range xsd:positiveInteger ;
-                         rdfs:label "frequency multiplication"@en .
+                         rdfs:label "frequency multiplication"@en ;
+                         rdfs:comment "Property \"frequencyMultiplication\" specifies the frequency multiplication of the laser."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/gain
@@ -1031,14 +1068,16 @@ rdf:li rdf:type owl:ObjectProperty ;
       rdfs:domain :DetectorSetting ,
                   :OpticalDetector ;
       rdfs:range xsd:float ;
-      rdfs:label "gain"@en .
+      rdfs:label "gain"@en ;
+      rdfs:comment "Property \"gain\" specifies the gain of the detector, as a float."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/hashSHA1
 :hashSHA1 rdf:type owl:DatatypeProperty ;
           rdfs:domain :Plane ;
           rdfs:range xsd:hexBinary ;
-          rdfs:label "hash SHA1"@en .
+          rdfs:label "hash SHA1"@en ;
+          rdfs:comment "Property \"hashSHA1\" specifies the SHA1 hash value."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/height
@@ -1046,108 +1085,125 @@ rdf:li rdf:type owl:ObjectProperty ;
         rdfs:domain :Mask ,
                     :Rectangle ;
         rdfs:range xsd:float ;
-        rdfs:label "height"@en .
+        rdfs:label "height"@en ;
+        rdfs:comment "Property \"height\" specifies the height of the object."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/humidity
 :humidity rdf:type owl:DatatypeProperty ;
-          rdfs:label "humidity"@en .
+          rdfs:label "humidity"@en ;
+          rdfs:comment "Property \"humidity\" specifies the humidity around the sample."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ifd
 :ifd rdf:type owl:DatatypeProperty ;
      rdfs:domain :TiffData ;
      rdfs:range xsd:nonNegativeInteger ;
-     rdfs:label "ifd"@en .
+     rdfs:label "ifd"@en ;
+     rdfs:comment "Property \"ifd\" specifies the IFD(s) for which this element is applicable. Indexed from 0. Default is 0 (the first IFD)."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/index
 :index rdf:type owl:DatatypeProperty ;
        rdfs:domain :WellSample ;
        rdfs:range xsd:nonNegativeInteger ;
-       rdfs:label "index"@en .
+       rdfs:label "index"@en ;
+       rdfs:comment "Property \"index\" specifies the order of the well samples. Each index should be unique for a given plate but they do not have to be sequential, there may be gaps if part of the dataset is missing. In the user interface the displayed value of the index will be calculated modulo the number of PlateAcquisitions for the plate."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/integration
 :integration rdf:type owl:DatatypeProperty ;
              rdfs:domain :DetectorSetting ;
              rdfs:range xsd:positiveInteger ;
-             rdfs:label "integration"@en .
+             rdfs:label "integration"@en ;
+             rdfs:comment "Property \"integration\" specifies the number of sequential frames that get averaged, to improve the signal-to-noise ratio."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/interleaved
 :interleaved rdf:type owl:DatatypeProperty ;
              rdfs:domain :Pixels ;
              rdfs:range xsd:boolean ;
-             rdfs:label "interleaved"@en .
+             rdfs:label "interleaved"@en ;
+             rdfs:comment "Property \"interleaved\" specifies how the channels are arranged within the data block: true if channels are stored RGBRGBRGB...; false if channels are stored RRR...GGG...BBB..."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/iris
 :iris rdf:type owl:DatatypeProperty ;
       rdfs:domain :Objective ;
       rdfs:range xsd:boolean ;
-      rdfs:label "iris"@en .
+      rdfs:label "iris"@en ;
+      rdfs:comment "Property \"iris\" specifies the boolean value whether or not the objective was fitted with an iris."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/key
 :key rdf:type owl:DatatypeProperty ;
      rdfs:domain :Map ;
      rdfs:range xsd:string ;
-     rdfs:label "key"@en .
+     rdfs:label "key"@en ;
+     rdfs:comment "Property \"key\" specifies the key of the map."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/length
 :length rdf:type owl:DatatypeProperty ;
         rdfs:domain :BinData ;
         rdfs:range xsd:long ;
-        rdfs:label "length"@en .
+        rdfs:label "length"@en ;
+        rdfs:comment "Property \"length\" specifies the length of the object."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/lensNA
 :lensNA rdf:type owl:DatatypeProperty ;
         rdfs:domain :Objective ;
         rdfs:range xsd:float ;
-        rdfs:label "lens NA"@en .
+        rdfs:label "lens NA"@en ;
+        rdfs:comment "Property \"lensNA\" specifies the numerical aperture of the lens expressed as a floating point (real) number. Expected range 0.02 - 1.5. "@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/locked
 :locked rdf:type owl:DatatypeProperty ;
         rdfs:domain :Shape ;
         rdfs:range xsd:boolean ;
-        rdfs:label "locked"@en .
+        rdfs:label "locked"@en ;
+        rdfs:comment "Property \"locked\" specifies the controls whether the shape is locked and read only, true is locked, false is editable."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/longAnnotationValue
 :longAnnotationValue rdf:type owl:DatatypeProperty ;
                      rdfs:domain :LongAnnotation ;
                      rdfs:range xsd:long ;
-                     rdfs:label "long annotation value"@en .
+                     rdfs:label "long annotation value"@en ;
+                     rdfs:comment "Property \"longAnnotationValue\" specifies a simple numerical annotation of type xsd:long."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/lotNumber
 :lotNumber rdf:type owl:DatatypeProperty ;
            rdfs:domain :ManufacturerSpec ;
-           rdfs:label "lot number"@en .
+           rdfs:label "lot number"@en ;
+           rdfs:comment "Property \"lotNumber\" specifies the lot number of the component."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/maximumFieldCount
 :maximumFieldCount rdf:type owl:DatatypeProperty ;
                    rdfs:domain :PlateAcquisition ;
-                   rdfs:label "maximum field count"@en .
+                   rdfs:label "maximum field count"@en ;
+                   rdfs:comment "Property \"maximumFieldCount\" specifies the maximum number of fields (well samples) in any well
+in this PlateAcquisition. This is only used to speed up user interaction by stopping the reading of every well sample."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/nameSpace
 :nameSpace rdf:type owl:DatatypeProperty ;
            rdfs:domain :StructuredAnnotation ;
            rdfs:range xsd:anyURI ;
-           rdfs:label "name space"@en .
+           rdfs:label "name space"@en ;
+           rdfs:comment "Property \"nameSpace\" specifies the namespace for annotation you define. If it is absent then we assume the annotation is to use our (OME's) default interpretation for this type."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/nominalMagnification
 :nominalMagnification rdf:type owl:DatatypeProperty ;
                       rdfs:domain :Objective ;
                       rdfs:range xsd:float ;
-                      rdfs:label "nominal maginification"@en .
+                      rdfs:label "nominal maginification"@en ;
+                      rdfs:comment "Property \"nominalMagnification\" specifies the magnification of the lens as specified by the manufacturer - i.e. '60' is a 60X lens."@en. 
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/offset
@@ -1155,164 +1211,189 @@ rdf:li rdf:type owl:ObjectProperty ;
         rdfs:domain :DetectorSetting ,
                     :OpticalDetector ;
         rdfs:range xsd:float ;
-        rdfs:label "offset"@en .
+        rdfs:label "offset"@en ;
+        rdfs:common "Property \"offset\" specifies the offset of the detector."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/planeCount
 :planeCount rdf:type owl:DatatypeProperty ;
             rdfs:domain :TiffData ;
             rdfs:range xsd:nonNegativeInteger ;
-            rdfs:label "plane count"@en .
+            rdfs:label "plane count"@en ;
+            rdfs:comment "Property \"planeCount\" specifies the number of IFDs affected. Dimension order of IFDs is given by the enclosing
+Pixels element's DimensionOrder attribute. Default is the number of IFDs in the TIFF file, unless an IFD is specified, in which case the default is 1."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/pockelCell
 :pockelCell rdf:type owl:DatatypeProperty ;
             rdfs:domain :Laser ;
             rdfs:range xsd:boolean ;
-            rdfs:label "pockel cell"@en .
+            rdfs:label "pockel cell"@en ;
+            rdfs:comment "Property \"pockelCell\" specifies the boolean value if true the laser has a PockelCell to rotate the polarization of the beam."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/pockelCellSetting
 :pockelCellSetting rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Channel ;
                    rdfs:range xsd:integer ;
-                   rdfs:label "pockel cell setting"@en .
+                   rdfs:label "pockel cell setting"@en ;
+                   rdfs:common "Property \"pockelCellSetting\" specifies the pockel cell setting for the channel. This is the amount the polarization of the beam is rotated by."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/readOutRate
 :readOutRate rdf:type owl:DatatypeProperty ;
              rdfs:domain :DetectorSetting ;
-             rdfs:label "read out rate"@en .
+             rdfs:label "read out rate"@en ;
+             rdfs:comment "Property \"readOutRate\" specifies the speed at which the detector can count pixels."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/rediusX
 :rediusX rdf:type owl:DatatypeProperty ;
          rdfs:domain :Ellipse ;
          rdfs:range xsd:float ;
-         rdfs:label "redius x"@en .
+         rdfs:label "redius x"@en ;
+         rdfs:comment "Property \"rediusX\" specifies the horizontal radius of the ellipse."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/rediusY
 :rediusY rdf:type owl:DatatypeProperty ;
          rdfs:domain :Ellipse ;
          rdfs:range xsd:float ;
-         rdfs:label "redius y"@en .
+         rdfs:label "redius y"@en ;
+         rdfs:comment "Property \"rediusY\" specifies the vertical radius of the ellipse."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/refractiveIndex
 :refractiveIndex rdf:type owl:DatatypeProperty ;
                  rdfs:domain :ObjectiveSettings ;
                  rdfs:range xsd:float ;
-                 rdfs:label "refractive index"@en .
+                 rdfs:label "refractive index"@en ;
+                 rdfs:comment "Property \"refractiveIndex\" specifies the refractive index of the immersion medium."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/row
 :row rdf:type owl:DatatypeProperty ;
      rdfs:domain :Well ;
      rdfs:range xsd:nonNegativeInteger ;
-     rdfs:label "row"@en .
+     rdfs:label "row"@en ;
+     rdfs:comment "Property \"row\" specifies  the row index of the well, the origin is the top left corner of the plate with the first row of wells being row zero. i.e top left is (0,0). The combination of Row, Column has to be unique for each well in a plate."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/rows
 :rows rdf:type owl:DatatypeProperty ;
       rdfs:domain :Plate ;
       rdfs:range xsd:positiveInteger ;
-      rdfs:label "rows"@en .
+      rdfs:label "rows"@en ;
+      rdfs:comment "Property \"rows\" specifies the number of rows in the plate."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/samplesPerPixel
 :samplesPerPixel rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Channel ;
                  rdfs:range xsd:positiveInteger ;
-                 rdfs:label "samples per pixel"@en .
+                 rdfs:label "samples per pixel"@en ;
+                 rdfs:comment "Property \"samplePerPixel\" specifies the number of samples the detector takes to form each pixel value."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/screenType
 :screenType rdf:type owl:DatatypeProperty ;
             rdfs:domain :Screen ;
-            rdfs:label "screen type"@en .
+            rdfs:label "screen type"@en ;
+            rdfs:comment "Property \"screenType\" specifies the screen type."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/serialNumber
 :serialNumber rdf:type owl:DatatypeProperty ;
               rdfs:domain :ManufacturerSpec ;
-              rdfs:label "serial number"@en .
+              rdfs:label "serial number"@en ;
+              rdfs:comment "Property \"serialNumber\" specifies the serial number of the component."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/significantBits
 :significantBits rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Pixels ;
                  rdfs:range xsd:positiveInteger ;
-                 rdfs:label "significant bits"@en .
+                 rdfs:label "significant bits"@en ;
+                 rdfs:comment "Property \"significantBits\" specifies the number of bits within the type storing each pixel that are significant, e.g. you can store 12 bit data within a 16 bit type. This does not reduce the storage requirements but can be a useful indicator when processing or viewing the image data."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/sizeC
 :sizeC rdf:type owl:DatatypeProperty ;
        rdfs:domain :Pixels ;
        rdfs:range xsd:positiveInteger ;
-       rdfs:label "size c"@en .
+       rdfs:label "size c"@en ;
+       rdfs:comment "Property \"sizeC\" specifies the dimensional size of pixel data array."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/sizeT
 :sizeT rdf:type owl:DatatypeProperty ;
        rdfs:domain :Pixels ;
        rdfs:range xsd:positiveInteger ;
-       rdfs:label "size t"@en .
+       rdfs:label "size t"@en ;
+       rdfs:comment "Property \"sizeT\" specifies the dimensional size of pixel data array."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/sizeX
 :sizeX rdf:type owl:DatatypeProperty ;
        rdfs:domain :Pixels ;
        rdfs:range xsd:positiveInteger ;
-       rdfs:label "size t"@en .
+       rdfs:label "size x"@en ;
+       rdfs:comment "Property \"sizeX\" specifies the dimensional size of pixel data array."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/sizeY
 :sizeY rdf:type owl:DatatypeProperty ;
        rdfs:domain :Pixels ;
        rdfs:range xsd:positiveInteger ;
-       rdfs:label "size y"@en .
+       rdfs:label "size y"@en ;
+       rdfs:comment "Property \"sizeY\" specifies the dimensional size of pixel data array."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/sizeZ
 :sizeZ rdf:type owl:DatatypeProperty ;
        rdfs:domain :Pixels ;
        rdfs:range xsd:positiveInteger ;
-       rdfs:label "size z"@en .
+       rdfs:label "size z"@en ;
+       rdfs:comment "Property \"sizeZ\" specifies the dimensional size of pixel data array."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/startTime
 :startTime rdf:type owl:DatatypeProperty ;
            rdfs:domain :PlateAcquisition ;
            rdfs:range xsd:dateTime ;
-           rdfs:label "start time"@en .
+           rdfs:label "start time"@en ;
+           rdfs:comment "Property \"startTime\" specifies the time when the first image of this acquisition was collected."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/status
 :status rdf:type owl:DatatypeProperty ;
         rdfs:domain :Plate ;
-        rdfs:label "status"@en .
+        rdfs:label "status"@en ;
+        rdfs:comment "Property \"status\" specifies the textual annotation of the current state of the plate with respect to the
+experiment work-flow."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/tagAnnotation
 :tagAnnotation rdf:type owl:DatatypeProperty ;
-               rdfs:domain :TagAnnotation ;
-               rdfs:range xsd:string ;
-               rdfs:label "tag annotation"@en .
+               rdfs:range :TagAnnotation ;
+               rdfs:label "tag annotation"@en ;
+               rdfs:comment "Property \"tagAnnotation\" specifies the annotation that represents as a tag."@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/termAnnotationValue
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/termAnnotation
 :termAnnotationValue rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :TermAnnotation ;
-                     rdfs:range xsd:string ;
-                     rdfs:label "tag annotation value"@en .
+                     rdfs:range :TermAnnotation ;
+                     rdfs:label "term annotation"@en ;
+               rdfs:comment "Property \"termAnnotation\" specifies the ontology term annotation."@en .
+
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/text
 :text rdf:type owl:DatatypeProperty ;
       rdfs:domain :Shape ;
       rdfs:range xsd:string ;
-      rdfs:label "text"@en .
+      rdfs:label "text"@en ;
+      rdfs:comment "Property \"text\" specifies the text."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/theC
@@ -1320,7 +1401,8 @@ rdf:li rdf:type owl:ObjectProperty ;
       rdfs:domain :Plane ,
                   :Shape ;
       rdfs:range xsd:nonNegativeInteger ;
-      rdfs:label "the c"@en .
+      rdfs:label "the c"@en ;
+      rdfs:comment "Property \"theC\" specifies the channel this plane is for. This is numbered from 0."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/theT
@@ -1328,7 +1410,8 @@ rdf:li rdf:type owl:ObjectProperty ;
       rdfs:domain :Plane ,
                   :Shape ;
       rdfs:range xsd:nonNegativeInteger ;
-      rdfs:label "the c"@en .
+      rdfs:label "the t"@en ;
+      rdfs:comment "Property \"theT\" specifies the timepoint this plane is for. This is numbered from 0."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/theZ
@@ -1336,63 +1419,64 @@ rdf:li rdf:type owl:ObjectProperty ;
       rdfs:domain :Plane ,
                   :Shape ;
       rdfs:range xsd:nonNegativeInteger ;
-      rdfs:label "the z"@en .
+      rdfs:label "the z"@en ;
+      rdfs:comment "Property \"theZ\" specifies the Z-section this plane is for. This is numbered from 0."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/timePoint
 :timePoint rdf:type owl:DatatypeProperty ;
            rdfs:domain :WellSample ;
            rdfs:range xsd:dateTime ;
-           rdfs:label "time point"@en .
+           rdfs:label "time point"@en ;
+           rdfs:comment "Property \"timePoint\" specifies the time-point at which the image started to be collected."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/timestampAnnotationValue
 :timestampAnnotationValue rdf:type owl:DatatypeProperty ;
                           rdfs:domain :TimestampAnnotation ;
                           rdfs:range xsd:dateTime ;
-                          rdfs:label "timestamp annotation value"@en .
+                          rdfs:label "timestamp annotation value"@en ;
+                          rdfs:comment "Property \"timestampAnnotationValue\" specifies the date/time annotation of type xsd:dateTime."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/transmittance
 :transmittance rdf:type owl:DatatypeProperty ;
                rdfs:domain :TransmittanceRange ;
                rdfs:range xsd:float ;
-               rdfs:label "transmittance"@en .
+               rdfs:label "transmittance"@en ;
+               rdfs:comment "Property \"transmittance\" specifies the amount of light the filter transmits at a maximum. A fraction, as a value from 0.0 to 1.0."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/tuneable
 :tuneable rdf:type owl:DatatypeProperty ;
           rdfs:domain :Laser ;
           rdfs:range xsd:boolean ;
-          rdfs:label "tuneable"@en .
+          rdfs:label "tuneable"@en ;
+          rdfs:comment "Property \"tuneable\" specifies whether or not the laser is tuneable."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/uuid
 :uuid rdf:type owl:DatatypeProperty ;
       rdfs:domain :TiffData ;
       rdfs:range xsd:anyURI ;
-      rdfs:label "uuid"@en .
+      rdfs:label "uuid"@en ;
+      rdfs:comment "Property \"uuid\" specifies the unique identifier."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/value
 :value rdf:type owl:DatatypeProperty ;
        rdfs:domain :Map ;
        rdfs:range xsd:string ;
-       rdfs:label "value"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/visible
-:visible rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Shape ;
-         rdfs:range xsd:boolean ;
-         rdfs:label "visible"@en .
+       rdfs:label "value"@en ;
+       rdfs:comment "Property \"value\" specifies the value of the map."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/wellType
 :wellType rdf:type owl:DatatypeProperty ;
           rdfs:domain :Well ;
           rdfs:range xsd:string; 
-          rdfs:label "well type"@en .
+          rdfs:label "well type"@en ;
+          rdfs:comment "Property \"wellType\" specifies the well type for the screening status."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/width
@@ -1400,7 +1484,8 @@ rdf:li rdf:type owl:ObjectProperty ;
        rdfs:domain :Mask ,
                    :Rectangle ;
        rdfs:range xsd:float ;
-       rdfs:label "width"@en .
+       rdfs:label "width"@en ;
+       rdfs:comment "Property \"width\" specifies the width of the object."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/x
@@ -1410,21 +1495,24 @@ rdf:li rdf:type owl:ObjectProperty ;
                :Point ,
                :Rectangle ;
    rdfs:range xsd:float ;
-   rdfs:label "x"@en .
+   rdfs:label "x"@en ;
+   rdfs:comment "Property \"x\" specifies the x value of the object."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/x1
 :x1 rdf:type owl:DatatypeProperty ;
     rdfs:domain :Line ;
     rdfs:range xsd:float ;
-    rdfs:label "x1"@en .
+    rdfs:label "x1"@en ;
+    rdfs:comment "Property \"x1\" specifies the x coordinate of the start of the line."@en . 
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/x2
 :x2 rdf:type owl:DatatypeProperty ;
     rdfs:domain :Line ;
     rdfs:range xsd:float ;
-    rdfs:label "x2"@en .
+    rdfs:label "x2"@en ;
+    rdfs:comment "Property \"x2\" specifies the x coordinate of the end of the line."@en . 
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/y
@@ -1434,21 +1522,24 @@ rdf:li rdf:type owl:ObjectProperty ;
                :Point ,
                :Rectangle ;
    rdfs:range xsd:float ;
-   rdfs:label "y"@en .
+   rdfs:label "y"@en ;
+   rdfs:comment "Property \"y\" specifies the y value of the object."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/y1
 :y1 rdf:type owl:DatatypeProperty ;
     rdfs:domain :Line ;
     rdfs:range xsd:float ;
-    rdfs:label "y1"@en .
+    rdfs:label "y1"@en ;
+    rdfs:comment "Property \"y1\" specifies the y coordinate of the start of the line."@en . 
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/y2
 :y2 rdf:type owl:DatatypeProperty ;
     rdfs:domain :Line ;
     rdfs:range xsd:float ;
-    rdfs:label "y2"@en .
+    rdfs:label "y2"@en ;
+    rdfs:comment "Property \"y2\" specifies the y coordinate of the end of the line."@en . 
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/z
@@ -1458,7 +1549,8 @@ rdf:li rdf:type owl:ObjectProperty ;
                :Point ,
                :Rectangle ;
    rdfs:range xsd:float ;
-   rdfs:label "z"@en .
+   rdfs:label "z"@en ;
+   rdfs:comment "Property \"z\" specifies the z value of the object."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/zoom
@@ -1466,12 +1558,14 @@ rdf:li rdf:type owl:ObjectProperty ;
       rdfs:domain :DetectorSetting ,
                   :OpticalDetector ;
       rdfs:range xsd:float ;
-      rdfs:label "zoom"@en .
+      rdfs:label "zoom"@en ;
+      rdfs:comment "Property \"zoom\" specifies the fixed Zoom for a detector."@en .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
 rdf:value rdf:type owl:DatatypeProperty ;
-          rdfs:label "value"@en .
+          rdfs:label "value"@en ;
+          rdfs:comment "Property \"value\" specifies the value of the entity."@en .
 
 
 #################################################################
@@ -3366,14 +3460,6 @@ mbmp:Uncaging rdf:type owl:NamedIndividual ,
 <http://www.openmicroscopy.org/rdf/ome_core/0.1/Marker#arrow> rdf:type owl:NamedIndividual ,
                                                                           :Marker ;
                                                                  rdfs:label "arrow"@en .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-
-:XMLAnnotationValue rdfs:label "XML Annotation Value"@en .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
