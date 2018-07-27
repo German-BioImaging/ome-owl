@@ -93,14 +93,22 @@ xsd:string rdf:type rdfs:Datatype ;
                         :ExperimenterGroup ,
                         :Image ,
                         :Project ;
-            rdfs:range :StructuredAnnotation ;
+            rdfs:range :Annotation ;
             rdfs:label "annotation"@en ;
             rdfs:comment "Property \"annotation\" specifies the annotation from which all others are ultimately derived."@en .
 
 
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/annotator
+:annotator rdf:type owl:ObjectProperty ;
+            rdfs:domain :Annotation ;
+            rdfs:range <http://xmlns.com/foaf/0.1/Person> ;
+            rdfs:label "annotator"@en ;
+            rdfs:comment "Property \"annotator\" specifies  the person who attached this annotation.  e.g. If UserA annotates something with TagB, owned by UserB, UserA is still the Annotator."@en .
+
+
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/binData
 :binData rdf:type owl:ObjectProperty ;
-         rdfs:domain :Image ;
+         rdfs:domain :Pixels ;
          rdfs:range :BinData ;
          rdfs:label "bin data"@en ;
          rdfs:common "Property \"bindata\" specifies the binary data which are base64-encoded."@en .
@@ -133,7 +141,8 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/color
 :color rdf:type owl:ObjectProperty ;
        rdfs:domain :Channel ,
-                   :Well ;
+                   :Well ,
+                   :Shape ;
        rdfs:range :Color ;
        rdfs:label "color"@en ;
        rdfs:comment "Property \"color\" speficies the color, such as the color used to reder the channel and the marker color used to highlight the well."@en .
@@ -161,6 +170,14 @@ xsd:string rdf:type rdfs:Datatype ;
                 rdfs:range :ContrastMethod ;
                 rdfs:label "contrast method"@en ;
                 rdfs:comment "Property \"contrastMethod\" specifies the technique used to achieve contrast for each channel."@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/correction
+:correction rdf:type owl:ObjectProperty ;
+                rdfs:domain :Objective ;
+                rdfs:range :Correction ;
+                rdfs:label "correction"@en ;
+                rdfs:comment "Property \"correction\" specifies the correction applied to the lens."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/cutIn
@@ -202,6 +219,7 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/deltaT
 :deltaT rdf:type owl:ObjectProperty ;
         rdfs:label "delta t"@en ;
+	rdfs:domain :Plane ;
         rdfs:comment "Property \"deltaT\" specifies time since the beginning of the experiment."@en .
 
 
@@ -439,6 +457,8 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/markerEnd
 :markerEnd rdf:type owl:ObjectProperty ;
            rdfs:domain :Shape ;
+           rdfs:domain :Line ;
+           rdfs:domain :Ployline ;
            rdfs:range :Marker ;
            rdfs:label "maker end"@en ;
            rdfs:comment "Property \"markerEnd\" specifies the end of the marker."@en .
@@ -447,6 +467,8 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/markerStart
 :markerStart rdf:type owl:ObjectProperty ;
              rdfs:domain :Shape ;
+             rdfs:domain :Line ;
+             rdfs:domain :Ployline ;
              rdfs:range :Marker ;
              rdfs:label "marker start"@en ;
              rdfs:comment "Property \"markerStart\" specifies the start of the marker."@en .
@@ -479,6 +501,14 @@ xsd:string rdf:type rdfs:Datatype ;
             rdfs:comment "Property \"microscope\" specifies the microscope."@en .
 
 
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/mimeType
+:mimeType rdf:type owl:ObjectProperty ;
+            rdfs:domain :BinaryFile ;
+            rdfs:range <http://purl.org/dc/terms/FileFormat> ;
+            rdfs:label "MIME type"@en ;
+            rdfs:comment "Property \"mimeType\" specifies the MIME type of the binary file."@en .
+
+
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/model
 :model rdf:type owl:ObjectProperty ;
        rdfs:domain :ManufacturerSpec ;
@@ -498,17 +528,20 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/physicalSizeX
 :physicalSizeX rdf:type owl:ObjectProperty ;
                rdfs:label "physical size x"@en ;
+               rdfs:domain :Pixels ;
                rdfs:comment "Property \"physicalSizeX\" specifies the physical size of a pixel on the x axis."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/physicalSizeY
 :physicalSizeY rdf:type owl:ObjectProperty ;
+               rdfs:domain :Pixels ;
                rdfs:label "physical size y"@en ;
                rdfs:comment "Property \"physicalSizeY\" specifies the physical size of a pixel on the y axis."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/physicalSizeZ
 :physicalSizeZ rdf:type owl:ObjectProperty ;
+               rdfs:domain :Pixels ;
                rdfs:label "physical size z"@en ;
                rdfs:comment "Property \"physicalSizeZ\" specifies the physical size of a pixel on the z axis."@en .
 
@@ -572,6 +605,8 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/positionX
 :positionX rdf:type owl:ObjectProperty ;
            rdfs:domain :Plane ;
+           rdfs:domain :WellSample ;
+           rdfs:domain :StageLabel ;
            rdfs:label "position x"@en ;
            rdfs:comment "Property \"positionX\" specifies the x position of the stage."@en .
 
@@ -579,6 +614,8 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/positionY
 :positionY rdf:type owl:ObjectProperty ;
            rdfs:domain :Plane ;
+           rdfs:domain :WellSample ;
+           rdfs:domain :StageLabel ;
            rdfs:label "position y"@en ;
            rdfs:comment "Property \"positionY\" specifies the y position of the stage."@en .
 
@@ -586,6 +623,7 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/positionZ
 :positionZ rdf:type owl:ObjectProperty ;
            rdfs:domain :Plane ;
+           rdfs:domain :StageLabel ;
            rdfs:label "position z"@en ;
            rdfs:comment "Property \"positionX\" specifies the z position of the stage."@en .
 
@@ -593,19 +631,29 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/power
 :power rdf:type owl:ObjectProperty ;
        rdfs:label "power"@en ;
+           rdfs:domain :LightSource ;
        rdfs:comment "Property \"power\" specifies the light-source power."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/protocol
 :protocol rdf:type owl:ObjectProperty ;
           rdfs:label "protocol"@en ;
+           rdfs:domain :Screen ;
           rdfs:comment "Property \"protocol\" specifies the protocol such as the screen protocol."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/pulse
 :pulse rdf:type owl:ObjectProperty ;
        rdfs:label "pulse"@en ;
+	           rdfs:domain :Laser ;
        rdfs:comment "Property \"pulse\" specifies the pulse mode of the laser."@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/readOutRate
+:readOutRate rdf:type owl:ObjectProperty ;
+         rdfs:domain :DetectorSettings ;
+         rdfs:label "read out rate"@en ;
+         rdfs:comment "Property \"readOutRate\" specifies the speed at which the detector can count pixels. {used:CCD,EMCCD}  This is the bytes per second that can be read from the detector (like a baud rate)."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/reagent
@@ -628,7 +676,8 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/regionOfInterest
 :regionOfInterest rdf:type owl:ObjectProperty ;
                   rdfs:domain :Folder ,
-                              :Image ;
+                              :Image ,
+                              :Laser ;
                   rdfs:range :RegionOfInterest ;
                   rdfs:label "region of interest"@en ;
                   rdfs:comment "Property \"regionOfInterest\" specifies a four dimensional region of interest (ROI)."@en .
@@ -652,6 +701,13 @@ xsd:string rdf:type rdfs:Datatype ;
 :shape rdf:type owl:ObjectProperty ;
        rdfs:label "shape"@en ;
        rdfs:comment "Property \"shape\" specifies the shape that contains a single specific ROI shape and links that to any channels, and a timepoint and a z-section."@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/size
+:size rdf:type owl:ObjectProperty ;
+       rdfs:label "size"@en ;
+       rdfs:domain :BinaryFile ;
+       rdfs:comment "Property \"shape\" specifies the size of the uncompressed file."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/stageLavel
@@ -688,12 +744,14 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/temperature
 :temperature rdf:type owl:ObjectProperty ;
              rdfs:label "temperature"@en ;
+             rdfs:domain :ImagingEnvironment ;
              rdfs:comment "Property \"temperature\" specifies the temperature."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/timeIncrement
 :timeIncrement rdf:type owl:ObjectProperty ;
                rdfs:label "time increment"@en ;
+               rdfs:domain :Pixels ;
                rdfs:comment "Property \"timeIncrement\" specifies the timeinclement that is used for time series that have a global timing specification instead of per-timepoint timing information."@en .
 
 
@@ -724,6 +782,7 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/voltage
 :voltage rdf:type owl:ObjectProperty ;
          rdfs:domain :DetectorSetting ;
+         rdfs:domain :Detector ;
          rdfs:label "voltage"@en ;
          rdfs:comment "Property \"voltage\" specifies the voltage of the detector."@en .
 
@@ -731,6 +790,7 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/waveLength
 :waveLength rdf:type owl:ObjectProperty ;
             rdfs:domain :Laser ;
+            rdfs:domain :LightSourceSettings ;
             rdfs:label "wave length"@en ;
             rdfs:comment "Property \"waveLength\" specifies the wave length of the laser."@en .
 
@@ -768,6 +828,7 @@ xsd:string rdf:type rdfs:Datatype ;
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/workingDistance
 :workingDistance rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Objective ;
                  rdfs:label "working distance"@en ;
                  rdfs:common "Property \"workingDistance\" specifies the working distance of the lens."@en .
 
@@ -865,6 +926,7 @@ rdf:li rdf:type owl:ObjectProperty ;
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/CO2Percent
 :CO2Percent rdf:type owl:DatatypeProperty ;
+            rdfs:domain :ImagingEnvironment ;
             rdfs:label "CO2 percent"@en ;
             rdfs:comment "Property \"CO2Percent\" specifies the carbon dioxide concentration around the sample."@en .
 
@@ -1045,8 +1107,6 @@ is unit-less."@en .
         rdfs:label "first z"@en ;
         rdfs:comment "Property \"firstZ\" specifies the Z position of the image plane at the specified IFD. Indexed from 0. Default is 0 (the first Z position)."@en .
 
-
-
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/fluor
 :fluor rdf:type owl:DatatypeProperty ;
        rdfs:domain :Channel ;
@@ -1091,6 +1151,7 @@ is unit-less."@en .
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/humidity
 :humidity rdf:type owl:DatatypeProperty ;
+            rdfs:domain :ImagingEnvironment ;
           rdfs:label "humidity"@en ;
           rdfs:comment "Property \"humidity\" specifies the humidity around the sample."@en .
 
@@ -1178,6 +1239,7 @@ is unit-less."@en .
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/lotNumber
 :lotNumber rdf:type owl:DatatypeProperty ;
            rdfs:domain :ManufacturerSpec ;
+           rdfs:range xsd:string ;
            rdfs:label "lot number"@en ;
            rdfs:comment "Property \"lotNumber\" specifies the lot number of the component."@en .
 
@@ -1305,6 +1367,7 @@ Pixels element's DimensionOrder attribute. Default is the number of IFDs in the 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/serialNumber
 :serialNumber rdf:type owl:DatatypeProperty ;
               rdfs:domain :ManufacturerSpec ;
+           rdfs:range xsd:string ;
               rdfs:label "serial number"@en ;
               rdfs:comment "Property \"serialNumber\" specifies the serial number of the component."@en .
 
@@ -1368,6 +1431,7 @@ Pixels element's DimensionOrder attribute. Default is the number of IFDs in the 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/status
 :status rdf:type owl:DatatypeProperty ;
         rdfs:domain :Plate ;
+           rdfs:range xsd:string ;
         rdfs:label "status"@en ;
         rdfs:comment "Property \"status\" specifies the textual annotation of the current state of the plate with respect to the
 experiment work-flow."@en .
@@ -1493,7 +1557,8 @@ experiment work-flow."@en .
    rdfs:domain :Ellipse ,
                :Mask ,
                :Point ,
-               :Rectangle ;
+               :Rectangle ,
+               :Lavel ;
    rdfs:range xsd:float ;
    rdfs:label "x"@en ;
    rdfs:comment "Property \"x\" specifies the x value of the object."@en .
@@ -1520,7 +1585,8 @@ experiment work-flow."@en .
    rdfs:domain :Ellipse ,
                :Mask ,
                :Point ,
-               :Rectangle ;
+               :Rectangle ,
+               :Lavel ;
    rdfs:range xsd:float ;
    rdfs:label "y"@en ;
    rdfs:comment "Property \"y\" specifies the y value of the object."@en .
@@ -1556,7 +1622,7 @@ experiment work-flow."@en .
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/zoom
 :zoom rdf:type owl:DatatypeProperty ;
       rdfs:domain :DetectorSetting ,
-                  :OpticalDetector ;
+                  :Detector ;
       rdfs:range xsd:float ;
       rdfs:label "zoom"@en ;
       rdfs:comment "Property \"zoom\" specifies the fixed Zoom for a detector."@en .
@@ -1572,196 +1638,146 @@ rdf:value rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/APD
-:APD rdf:type owl:Class ;
-     rdfs:subClassOf :OpticalDetector ;
-     rdfs:label "APD"@en .
-
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/AcquisitionMode
 :AcquisitionMode rdf:type owl:Class ;
-                 rdfs:label "Acquisition Mode"@en .
+                 rdfs:label "Acquisition Mode"@en ;
+                 rdfs:comment "Class \"AcquisitionMode\" is a type of microscopy performed for each channel."@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/AnalogVideo
-:AnalogVideo rdf:type owl:Class ;
-             rdfs:subClassOf :OpticalDetector ;
-             rdfs:label "Analog Video"@en .
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Annotation
+:Annotation rdf:type owl:Class ;
+                   rdfs:label "Annotation"@en ;
+                 rdfs:comment "Class \"Annotation\" is an annotation from which all others are ultimately derived."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Arc
 :Arc rdf:type owl:Class ;
-     rdfs:subClassOf :OpticalLightSource ;
-     rdfs:label "Arc"@en .
+     rdfs:subClassOf :LightSource ;
+     rdfs:label "Arc"@en ;
+                 rdfs:comment "Class \"Arc\" is various kinds of Arc lamps - Hg, Xe, HgXe."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ArcType
 :ArcType rdf:type owl:Class ;
-         rdfs:label "ArcType"@en .
+         rdfs:label "ArcType"@en ;
+                 rdfs:comment "Class \"ArcType\" is types of Arc lamp."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/BinData
 :BinData rdf:type owl:Class ;
-         rdfs:label "Binary Data"@en .
+         rdfs:label "Binary Data"@en ;
+                 rdfs:comment "Class \"ArcType\" is contents of this element are base64-encoded."@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/BinFile
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/BinaryFile
 :BinFile rdf:type owl:Class ;
-         rdfs:label "Binary File"@en .
+         rdfs:label "Binary File"@en ;
+         rdfs:comment "Class \"BinaryFile\" is binary files."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Binning
 :Binning rdf:type owl:Class ;
-         rdfs:label "Binning"@en .
+         rdfs:label "Binning"@en ;
+         rdfs:comment "Class \"Binning\" is numbers of pixels that are combined to form larger pixels. {used:CCD,EMCCD}."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/BooleanAnnotation
 :BooleanAnnotation rdf:type owl:Class ;
                    rdfs:subClassOf :StructuredAnnotation ;
-                   rdfs:label "Boolean Annotation"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/CCD
-:CCD rdf:type owl:Class ;
-     rdfs:subClassOf :OpticalDetector ;
-     rdfs:label "CCD"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/CMOS
-:CMOS rdf:type owl:Class ;
-      rdfs:subClassOf :OpticalDetector ;
-      rdfs:label "CMOS"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/CWPulse
-:CWPulse rdf:type owl:Class ;
-         rdfs:subClassOf :Pulse ;
-         rdfs:label "CW Pulse"@en .
+                   rdfs:label "Boolean Annotation"@en ;
+         rdfs:comment "Class \"BooleanAnnotation\" is simple boolean annotations of type xsd:boolean."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Channel
 :Channel rdf:type owl:Class ;
-         rdfs:label "Channel"@en .
+         rdfs:label "Channel"@en ;
+         rdfs:comment "Class \"Channel\" is channels in the Image, even for a single-plane image."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Color
 :Color rdf:type owl:Class ;
-       rdfs:label "Color"@en .
+       rdfs:label "Color"@en ;
+         rdfs:comment "Class \"Color\" is colrs. The value is an integer between -2,147,483,648 and 2,147,483,647 (inclusive). The value is a signed 32 bit encoding of RGBA so \"-1\" is #FFFFFFFF or solid white."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/CommentAnnotation
 :CommentAnnotation rdf:type owl:Class ;
                    rdfs:subClassOf :StructuredAnnotation ;
-                   rdfs:label "Comment Annotation"@en .
+                   rdfs:label "Comment Annotation"@en ;
+         rdfs:comment "Class \"CommentAnnotation\" is simple comment annotations."@en .
+
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Compression
 :Compression rdf:type owl:Class ;
-             rdfs:label "Compression"@en .
+             rdfs:label "Compression"@en ;
+         rdfs:comment "Class \"Compression\" is compression schemes used to encode the data."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ContrastMethod
 :ContrastMethod rdf:type owl:Class ;
-                rdfs:label "Contrast Method"@en .
+                rdfs:label "Contrast Method"@en ;
+         rdfs:comment "Class \"ContrastMethod\" is the techniques used to achieve contrast for each channel."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Correction
 :Correction rdf:type owl:Class ;
-            rdfs:label "Correction"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/CorrelationSpectroscopy
-:CorrelationSpectroscopy rdf:type owl:Class ;
-                         rdfs:subClassOf :OpticalDetector ;
-                         rdfs:label "Correlation Spectroscopy"@en .
+            rdfs:label "Correction"@en ;
+         rdfs:comment "Class \"Correction\" is the collections applied to the lens."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Dataset
 :Dataset rdf:type owl:Class ;
          rdfs:subClassOf owl:Thing ;
-         rdfs:label "Dataset"@en .
+         rdfs:label "Dataset"@en ;
+         rdfs:comment "Class \"Dataset\" is collections of images that are always processed together. Images can belong to more than one Dataset, and a Dataset may contain more than one Image."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Detector
 :Detector rdf:type owl:Class ;
-                 rdfs:label "Detector"@en .
+                 rdfs:label "Detector"@en ;
+         rdfs:comment "Class \"Detector\" is types of detectors used to capture the image."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorSetting
 :DetectorSetting rdf:type owl:Class ;
                  rdfs:subClassOf :Setting ;
-                 rdfs:label "Detector Setting"@en .
+                 rdfs:label "Detector Setting"@en ;
+         rdfs:comment "Class \"DetectorSetting\" is settings applied to a detector as well as a reference to the detector."@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType
+:DetectorType rdf:type owl:Class ;
+                 rdfs:label "DetectorType"@en ;
+         rdfs:comment "Class \"DetectorType\" is the types of detectors. E.g. CCD, PMT, EMCCD etc."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Dichroic
 :Dichroic rdf:type owl:Class ;
           rdfs:subClassOf :Parts ;
-          rdfs:label "Dichroic"@en .
+          rdfs:label "Dichroic"@en ;
+         rdfs:comment "Class \"Dichroic\" is dichromatic beamsplitters or dichroic mirrors used for this filter combination."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DimensionOrder
 :DimensionOrder rdf:type owl:Class ;
-                rdfs:label "DimensionOrder"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DissectionMicroscope
-:DissectionMicroscope rdf:type owl:Class ;
-                      rdfs:subClassOf :OpticalMicroscope ;
-                      rdfs:label "Dissection Microscope"@en .
+                rdfs:label "DimensionOrder"@en ;
+         rdfs:comment "Class \"DimensionOrder\" is the orders in which the individual planes of data are interleaved."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DoubleAnnotation
 :DoubleAnnotation rdf:type owl:Class ;
                   rdfs:subClassOf :StructuredAnnotation ;
-                  rdfs:label "Double Annotation"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DyeLaser
-:DyeLaser rdf:type owl:Class ;
-          rdfs:subClassOf :Laser ;
-          rdfs:label "Dye Laser"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/EBCCD
-:EBCCD rdf:type owl:Class ;
-       rdfs:subClassOf :OpticalDetector ;
-       rdfs:label "EBCCD"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/EMCCD
-:EMCCD rdf:type owl:Class ;
-       rdfs:subClassOf :OpticalDetector ;
-       rdfs:label "EMCCD"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ElectrophysiologyMicroscope
-:ElectrophysiologyMicroscope rdf:type owl:Class ;
-                             rdfs:subClassOf :OpticalMicroscope ;
-                             rdfs:label "Electrophysiology Microscope"@en .
+                  rdfs:label "Double Annotation"@en ;
+         rdfs:comment "Class \"DoubleAnnotation\" is simple numerical annotations of type xsd:double."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Ellipse
 :Ellipse rdf:type owl:Class ;
          rdfs:subClassOf :Shape ;
-         rdfs:label "Ellipse"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/EmissionFilter
-:EmissionFilter rdf:type owl:Class ;
-                rdfs:subClassOf :Filter ;
-                rdfs:label "Emission Filter"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExcimerLaser
-:ExcimerLaser rdf:type owl:Class ;
-              rdfs:subClassOf :Laser ;
-              rdfs:label "Excimer Laser"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExcitationFilter
-:ExcitationFilter rdf:type owl:Class ;
-                  rdfs:subClassOf :Filter ;
-                  rdfs:label "Excitation Filter"@en .
+         rdfs:label "Ellipse"@en ;
+         rdfs:comment "Class \"Ellipse\" is simple ellipse objects. If rotation is required apply a transformation at the Shape level."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Experiment
@@ -1775,53 +1791,45 @@ rdf:value rdf:type owl:DatatypeProperty ;
                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onClass :ExperimenterGroup
                                 ] ;
-            rdfs:label "Experiment"@en .
+            rdfs:label "Experiment"@en ;
+         rdfs:comment "Class \"Experiment\" is experiments."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType
 :ExperimentType rdf:type owl:Class ;
-                rdfs:label "Experiment Type"@en .
+                rdfs:label "Experiment Type"@en ;
+         rdfs:comment "Class \"ExperimentType\" is the types of experiments."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimenterGroup
 :ExperimenterGroup rdf:type owl:Class ;
-                   rdfs:label "Experimenter Group"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FLIP
-:FLIP rdf:type owl:Class .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FRAP
-:FRAP rdf:type owl:Class .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FTIR
-:FTIR rdf:type owl:Class ;
-      rdfs:subClassOf :OpticalDetector ;
-      rdfs:label "FTIR"@en .
+                   rdfs:label "Experimenter Group"@en ;
+         rdfs:comment "Class \"ExperimenterGroup\" is groups of experimenters. The information should ideally be specified for at least one Leader as a contact for the group. The Leaders are themselves Experimenters.the types of experiments."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Filament
 :Filament rdf:type owl:Class ;
-          rdfs:subClassOf :OpticalLightSource ;
-          rdfs:label "Filament"@en .
+          rdfs:subClassOf :LightSource ;
+          rdfs:label "Filament"@en ;
+         rdfs:comment "Class \"Filament\" is various kinds of filament bulbs such as Incadescent or Halogen."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FilamentType
 :FilamentType rdf:type owl:Class ;
-              rdfs:label "FilamentType"@en .
+              rdfs:label "FilamentType"@en ;
+         rdfs:comment "Class \"FilamentType\" is the types of filaments."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/File
-:File rdf:type owl:Class ;
-      rdfs:label "File"@en .
+#:File rdf:type owl:Class ;
+#      rdfs:label "File"@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FileAnnotation
 :FileAnnotation rdf:type owl:Class ;
                 rdfs:subClassOf :StructuredAnnotation ;
-                rdfs:label "File Annotation"@en .
+                rdfs:label "File Annotation"@en ;
+         rdfs:comment "Class \"FilamentType\" is file object annotations."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FillRule
@@ -1831,363 +1839,303 @@ rdf:value rdf:type owl:DatatypeProperty ;
                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                 owl:onClass :FillRule
                               ] ;
-          rdfs:label "Fill Rule"@en .
+          rdfs:label "Fill Rule"@en ;
+         rdfs:comment "Class \"FillRule\" is fill ruless."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Filter
 :Filter rdf:type owl:Class ;
         rdfs:subClassOf :Parts ;
-        rdfs:label "Filter"@en .
+        rdfs:label "Filter"@en ;
+         rdfs:comment "Class \"Filter\" is filters. A filter is either an excitation or emission filters. There should be one filter element specified per wavelength in the image. The channel number associated with a filter set is specified in Channel. It is based on the FilterSpec type, so has the required attributes Manufacturer, Model, and LotNumber."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterSet
 :FilterSet rdf:type owl:Class ;
            rdfs:subClassOf :Parts ;
-           rdfs:label "Filter Set"@en .
+           rdfs:label "Filter Set"@en ;
+         rdfs:comment "Class \"FilterSet\" is filter set manufacturer specifications."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType
 :FilterType rdf:type owl:Class ;
-            rdfs:label "Filter Type"@en .
+            rdfs:label "Filter Type"@en ;
+         rdfs:comment "Class \"FilterType\" is the types of filters."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Folder
 :Folder rdf:type owl:Class ;
-        rdfs:label "Folder"@en .
+        rdfs:label "Folder"@en ;
+         rdfs:comment "Class \"Folder\" is possibly heterogeneous collections of data. Folders may contain Folders so that data may be organized within a tree of Folders. Data may be in multiple Folders but a Folder may not be in more than one other Folder."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Font
 :Font rdf:type owl:Class ;
-            rdfs:label "Font"@en .
+            rdfs:label "Font"@en ;
+         rdfs:comment "Class \"Font\" is fonts used to draw the texts."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FontFamily
 :FontFamily rdf:type owl:Class ;
-            rdfs:label "Font Family"@en .
+            rdfs:label "Font Family"@en ;
+         rdfs:comment "Class \"FontFamily\" is font families used to draw the texts."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FontStyle
 :FontStyle rdf:type owl:Class ;
-           rdfs:label "Font Style"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FreeElectronLaser
-:FreeElectronLaser rdf:type owl:Class ;
-                   rdfs:subClassOf :Laser ;
-                   rdfs:label "Free Electron Laser"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/GasLaser
-:GasLaser rdf:type owl:Class ;
-          rdfs:subClassOf :Laser ;
-          rdfs:label "Gas Laser"@en .
+           rdfs:label "Font Style"@en ;
+         rdfs:comment "Class \"FontStyle\" is font styles used to draw the texts."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/GenericExcitationSource
 :GenericExcitationSource rdf:type owl:Class ;
-                         rdfs:subClassOf :OpticalLightSource ;
-                         rdfs:label "General Excitation Source"@en .
+                         rdfs:label "General Excitation Source"@en ;
+         rdfs:comment "Class \"Font\" is sources as collections of key/value pairs, stored in Maps. The other lightsource objects should always be used in preference to this if possible.."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/IlluminationType
 :IlluminationType rdf:type owl:Class ;
-                  rdfs:label "Illumination Type"@en .
+                  rdfs:label "Illumination Type"@en ;
+         rdfs:comment "Class \"Illumination\" is methods of illumination used to capture the channel."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Image
 :Image rdf:type owl:Class ;
-       rdfs:label "Image"@en .
+       rdfs:label "Image"@en ;
+         rdfs:comment "Class \"Image\" is actual images and their meta-data."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ImageFile
 :ImageFile rdf:type owl:Class ;
-           rdfs:label "Image File"@en .
+           rdfs:label "Image File"@en ;
+         rdfs:comment "Class \"ImageFile\" is actual image files."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ImagingCondition
 :ImagingCondition rdf:type owl:Class ;
-                  rdfs:label "Imaging Condition"@en .
+                  rdfs:label "Imaging Condition"@en ;
+         rdfs:comment "Class \"ImageCondition\" is image conditions introsuced in the OWL ontology."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ImagingEnvironment
 :ImagingEnvironment rdf:type owl:Class ;
-                    rdfs:label "Imaging Environment"@en .
+                    rdfs:label "Imaging Environment"@en ;
+         rdfs:comment "Class \"ImageEnvironment\" is environments that the biological samples were in
+during the experiments."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Immersion
 :Immersion rdf:type owl:Class ;
-           rdfs:subClassOf owl:Thing ;
-           rdfs:label "Immersion"@en .
+           rdfs:label "Immersion"@en ;
+         rdfs:comment "Class \"Immersion\" is immersion mediums the lens are designed for."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Instrument
 :Instrument rdf:type owl:Class ;
-            rdfs:subClassOf owl:Thing ;
-            rdfs:label "Instrument"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/IntensifiedCCD
-:IntensifiedCCD rdf:type owl:Class ;
-                rdfs:subClassOf :OpticalDetector ;
-                rdfs:label "Intensified CCD"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/InverseFRAP
-:InverseFRAP rdf:type owl:Class .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/InvertedMicroscope
-:InvertedMicroscope rdf:type owl:Class ;
-                    rdfs:subClassOf :OpticalMicroscope ;
-                    rdfs:label "Inverted Microscope"@en .
+            rdfs:label "Instrument"@en ;
+         rdfs:comment "Class \"Instrument\" is instruments used to capture the Images. It is primarily a container for manufacturer's model and catalog numbers for the Microscope, LightSource, Detector, Objective and Filters components."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Label
 :Label rdf:type owl:Class ;
        rdfs:subClassOf :Shape ;
-       rdfs:label "Label"@en .
+       rdfs:label "Label"@en ;
+         rdfs:comment "Class \"Label\" is text labels. Any transformation should be applied at the shape level."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Laser
 :Laser rdf:type owl:Class ;
-       rdfs:subClassOf :OpticalLightSource ;
-       rdfs:label "Laser"@en .
+       rdfs:subClassOf :LightSource ;
+       rdfs:label "Laser"@en ;
+         rdfs:comment "Class \"Laser\" is laser types."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/LaserMedium
 :LaserMedium rdf:type owl:Class ;
              rdfs:subClassOf :Medium ;
-             rdfs:label "Laser Medium"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/LifetimeImaging
-:LifetimeImaging rdf:type owl:Class ;
-                 rdfs:subClassOf :OpticalDetector ;
-                 rdfs:label "Lifetime Imaging"@en .
+             rdfs:label "Laser Medium"@en ;
+         rdfs:comment "Class \"LaserMedium\" is actual lasing mediums for given laser types."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/LightEmittingDiode
 :LightEmittingDiode rdf:type owl:Class ;
-                    rdfs:subClassOf :OpticalLightSource ;
                     rdfs:label "LED"@en ,
-                               "Light Emitting Diode"@en .
+                               "Light Emitting Diode"@en ;
+         rdfs:comment "Class \"LightEmittingDiode\" is various kinds of LED lamps."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/LightPath
 :LightPath rdf:type owl:Class ;
-           rdfs:label "Lignt Path"@en .
+           rdfs:label "Lignt Path"@en ;
+         rdfs:comment "Class \"LightPath\" is light paths."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/LightSource
 :LightSource rdf:type owl:Class ;
              rdfs:subClassOf :Parts ;
-             rdfs:label "Light Source"@en .
+             rdfs:label "Light Source"@en ;
+         rdfs:comment "Class \"LightSource\" is light sources for the instruments."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/LightSourceSettings
 :LightSourceSettings rdf:type owl:Class ;
-             rdfs:label "Light Source Settings"@en .
+             rdfs:label "Light Source Settings"@en ;
+         rdfs:comment "Class \"LightSourceSettings\" is settings of light sources for the instruments."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Line
 :Line rdf:type owl:Class ;
       rdfs:subClassOf :Shape ;
-      rdfs:label "Line"@en .
+      rdfs:label "Line"@en ;
+         rdfs:comment "Class \"Line\" is straight lines defined by their end points."@en .
+
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ListAnnotation
 :ListAnnotation rdf:type owl:Class ;
                 rdfs:subClassOf :StructuredAnnotation ;
-                rdfs:label "List Annotation"@en .
+                rdfs:label "List Annotation"@en ;
+         rdfs:comment "Class \"ListAnnotation\" is groups of annotation objects. It uses the sequence of annotation refs from the base Annotation to form the list."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/LongAnnotation
 :LongAnnotation rdf:type owl:Class ;
                 rdfs:subClassOf :StructuredAnnotation ;
-                rdfs:label "Long Annotation"@en .
+                rdfs:label "Long Annotation"@en ;
+         rdfs:comment "Class \"LongAnnotation\" is simple numerical annotations of type xsd:long"@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Manufacturer
 :Manufacturer rdf:type owl:Class ;
-              rdfs:label "Manufacturer"@en .
+              rdfs:label "Manufacturer"@en ;
+         rdfs:comment "Class \"Manufacturer\" is manufacturers of the components."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ManufacturerSpec
 :ManufacturerSpec rdf:type owl:Class ;
-                  rdfs:label "Manufacture Spec"@en .
+                  rdfs:label "Manufacture Spec"@en ;
+         rdfs:comment "Class \"ManufacturerSpec\" is the base from which many microscope components are extended. E.g Objective, Filter etc. Provides attributes for recording common properties of these components such as Manufacturer name, Model etc, all of which are optional."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Map
 :Map rdf:type owl:Class ;
-     rdfs:label "Map"@en .
+     rdfs:label "Map"@en ;
+         rdfs:comment "Class \"Map\" is mappings of key/value pairs."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MapAnnotation
 :MapAnnotation rdf:type owl:Class ;
                rdfs:subClassOf :StructuredAnnotation ;
-               rdfs:label "Map Annotation"@en .
+               rdfs:label "Map Annotation"@en ;
+         rdfs:comment "Class \"MapAnnotation\" is map annotations. The contents of this is a list of key/value pairs."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Marker
 :Marker rdf:type owl:Class ;
-        rdfs:label "Marker"@en .
+        rdfs:label "Marker"@en ;
+         rdfs:comment "Class \"Marker\" is shapes of marker on the ends of lines."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Mask
 :Mask rdf:type owl:Class ;
       rdfs:subClassOf :Shape ;
-      rdfs:label "Mask"@en .
+      rdfs:label "Mask"@en ;
+         rdfs:comment "Class \"Mask\" is masks. A mask ROI shape is a link to a BinData object that is a BIT mask drawn on top of the image as an ROI. It is applied at the same scale, pixel to pixel, as the Image the ROI is applied to, unless a transform is applied at the shape level.shapes of marker on the ends of lines."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Medium
 :Medium rdf:type owl:Class ;
-        rdfs:label "Medium"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MetalVaporLaser
-:MetalVaporLaser rdf:type owl:Class ;
-                 rdfs:subClassOf :Laser ;
-                 rdfs:label "Metal Vapor Laser"@en .
+        rdfs:label "Medium"@en ;
+         rdfs:comment "Class \"Medium\" is the mediums used for lenses."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration
 :MicrobeamManipuration rdf:type owl:Class ;
-                       rdfs:label "Microbeam Manipuration"@en .
+                       rdfs:label "Microbeam Manipuration"@en ;
+         rdfs:comment "Class \"MicrobeamManipuration\" is microbeam operation types and the regions of the images."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Microscope
 :Microscope rdf:type owl:Class ;
-            rdfs:label "Microscope"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ModeLockedPulse
-:ModeLockedPulse rdf:type owl:Class ;
-                 rdfs:subClassOf :Pulse ;
-                 rdfs:label "Mode Locked Pulse"@en .
+            rdfs:label "Microscope"@en ;
+         rdfs:comment "Class \"Microscope\" is microscopes' manufacturer specifications."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Model
 :Model rdf:type owl:Class ;
-       rdfs:label "Model"@en .
+       rdfs:label "Model"@en ;
+         rdfs:comment "Class \"Model\" is models of the components."@en .
 
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/NDFilter
-:NDFilter rdf:type owl:Class .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/NamingConvention
 :NamingConvention rdf:type owl:Class ;
-                  rdfs:label "Naming Convention"@en .
+                  rdfs:label "Naming Convention"@en ;
+         rdfs:comment "Class \"NamingConvention\" is predefined lists of values for the well labels."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Objective
 :Objective rdf:type owl:Class ;
            rdfs:subClassOf :Parts ;
-           rdfs:label "Objective"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ObjectiveMedium
-:ObjectiveMedium rdf:type owl:Class ;
-                 rdfs:subClassOf :Medium ;
-                 rdfs:label "Objective Medium"@en .
+           rdfs:label "Objective"@en ;
+           rdfs:comment "Class \"Objective\" is microscopes' objective lens."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ObjectiveSettings
 :ObjectiveSettings rdf:type owl:Class ;
-                   rdfs:subClassOf :Setting ;
-                   rdfs:label "Objective Settings"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetector
-:OpticalDetector rdf:type owl:Class ;
-                 rdfs:label "Optical Detactor"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType
-:OpticalDetectorType rdf:type owl:Class ;
-                     rdfs:label "Optical Detactor Type"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalLightSource
-:OpticalLightSource rdf:type owl:Class ;
-                    rdfs:label "OpticalLightSource"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalMicroscope
-:OpticalMicroscope rdf:type owl:Class ;
-                   rdfs:subClassOf :Microscope ;
-                   rdfs:label "Optical Microscope"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalTrapping
-:OpticalTrapping rdf:type owl:Class .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/PMT
-:PMT rdf:type owl:Class ;
-     rdfs:subClassOf :OpticalDetector ;
-     rdfs:label "PMT"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Parts
-:Parts rdf:type owl:Class .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Photoablation
-:Photoablation rdf:type owl:Class .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Photoactivation
-:Photoactivation rdf:type owl:Class .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Photodiode
-:Photodiode rdf:type owl:Class ;
-            rdfs:subClassOf :OpticalDetector ;
-            rdfs:label "Photodiode"@en .
+                   rdfs:label "Objective Settings"@en ;
+                   rdfs:comment "Class \"ObjectiveSettings\" is settings applied to an objective as well as a reference to the objective."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/PixelType
 :PixelType rdf:type owl:Class ;
-           rdfs:label "Pixel Type"@en .
+           rdfs:label "Pixel Type"@en ;
+           rdfs:comment "Class \"PixelType\" is numbers size/kind used to represent pixels."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Pixels
 :Pixels rdf:type owl:Class ;
-        rdfs:label "Pixels"@en .
+        rdfs:label "Pixels"@en ;
+           rdfs:comment "Class \"Pixels\" is pixels. Pixels is going to be removed in the future, but it is still required."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Plane
 :Plane rdf:type owl:Class ;
-       rdfs:label "Plane"@en .
+       rdfs:label "Plane"@en ;
+           rdfs:comment "Class \"Plane\" is microscope stages and image timing data for given channels/z-sections/timepoints."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Plate
 :Plate rdf:type owl:Class ;
-       rdfs:label "Plate"@en .
+       rdfs:label "Plate"@en ;
+       rdfs:comment "Class \"Plate\" is microtiter plates within a screen. A plate can belong to more than one screen. The Screen(s) that a plate belongs to are specified by the ScreenRef element. The Plate ID and Name attributes are required.The Wells in a plate are numbers from the top-left corner in a grid starting at zero. i.e. The top-left well of a plate is index (0,0)."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/PlateAcquisition
 :PlateAcquisition rdf:type owl:Class ;
-                  rdfs:label "Plate Acquision"@en .
+                  rdfs:label "Plate Acquision"@en ;
+           rdfs:comment "Class \"PlateAcquisition\" is single acquisition runs for plates. This object is used to record the set of images acquired in a single acquisition run. The Images for this run are linked to PlateAcquisition through WellSample."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Point
 :Point rdf:type owl:Class ;
        rdfs:subClassOf :Shape ;
-       rdfs:label "Point"@en .
+       rdfs:label "Point"@en ;
+       rdfs:comment "Class \"Point\" is points."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Polygon
 :Polygon rdf:type owl:Class ;
          rdfs:subClassOf :Shape ;
-         rdfs:label "Polygon"@en .
+         rdfs:label "Polygon"@en ;
+       rdfs:comment "Class \"Polygon\" is closed shapes formed of straight lines. Note: Polygon uses counterclockwise winding (this is the default OpenGL behavior)."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Polyline
 :Polyline rdf:type owl:Class ;
           rdfs:subClassOf :Shape ;
-          rdfs:label "Polyline"@en .
+          rdfs:label "Polyline"@en ;
+       rdfs:comment "Class \"Polyline\" is  open shapes formed of straight lines. Note: Polyline uses counterclockwise winding (this is the default OpenGL behavior)."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Project
@@ -2196,159 +2144,126 @@ rdf:value rdf:type owl:DatatypeProperty ;
                                owl:onProperty :experiment ;
                                owl:someValuesFrom :Experiment
                              ] ;
-         rdfs:label "Project"@en .
+         rdfs:label "Project"@en ;
+       rdfs:comment "Class \"Project\" is projects. Datasets can be grouped into projects using a many-to-many relationship. A Dataset may belong to one or more Projects. Projects do not directly contain images - only by virtue of containing datasets, which themselves contain images."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Protocol
 :Protocol rdf:type owl:Class ;
-          rdfs:label "Protocol"@en .
+          rdfs:label "Protocol"@en ;
+       rdfs:comment "Class \"Protocol\" is screen protocols."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Pulse
 :Pulse rdf:type owl:Class ;
-       rdfs:label "Pulse"@en .
+       rdfs:label "Pulse"@en ;
+       rdfs:comment "Class \"Pulse\" is the pulse modes of the lasers."@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/QSwitchedPulse
-:QSwitchedPulse rdf:type owl:Class ;
-                rdfs:subClassOf :Pulse ;
-                rdfs:label "QSwitched Pulse"@en .
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Pump
+:Pump rdf:type owl:Class ;
+       rdfs:label "Pump"@en ;
+       rdfs:comment "Class \"Pump\" is references to the light sources.  It is used within the Laser element to specify the light source for the laser's pump (if any)."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Reagent
 :Reagent rdf:type owl:Class ;
-         rdfs:label "Reagent"@en .
+         rdfs:label "Reagent"@en ;
+       rdfs:comment "Class \"Reagent\" is chemical or some other physical experimental parameters."@en .
+
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ReagentSet
 :ReagentSet rdf:type owl:Class ;
-            rdfs:label "Reagent Set"@en .
+            rdfs:label "Reagent Set"@en ;
+       rdfs:comment "Class \"ReagentSet\" is sets of reagents; may contain very detailed information toreproduce some of that information found in a screening database."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Rectangle
 :Rectangle rdf:type owl:Class ;
            rdfs:subClassOf :Shape ;
-           rdfs:label "Rectangle"@en .
+           rdfs:label "Rectangle"@en ;
+       rdfs:comment "Class \"Rectangle\" is simple rectangle objects. If rotation is required apply a transformation at the Shape level."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/RegionOfInterest
 :RegionOfInterest rdf:type owl:Class ;
-                  rdfs:label "Region of Interest"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/RepetitivePulse
-:RepetitivePulse rdf:type owl:Class ;
-                 rdfs:subClassOf :Pulse ;
-                 rdfs:label "Repetitive Pulse"@en .
+                  rdfs:label "Region of Interest"@en ;
+       rdfs:comment "Class \"RigionOfInterest\" is four dimensional 'Region of Interests'. If they are not used, and the Image has more than one plane, the entire set of planes is assumed to be included in the ROI. Multiple ROIs may be specified."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Screen
 :Screen rdf:type owl:Class ;
-        rdfs:label "Screen"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/SemiconductorLaser
-:SemiconductorLaser rdf:type owl:Class ;
-                    rdfs:subClassOf :Laser ;
-                    rdfs:label "Semiconductor Laser"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Setting
-:Setting rdf:type owl:Class ;
-         rdfs:label "Setting"@en .
+        rdfs:label "Screen"@en ;
+       rdfs:comment "Class \"Screen\" is groupings for Plates.."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Shape
 :Shape rdf:type owl:Class ;
-       rdfs:label "Shape"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/SinglePulse
-:SinglePulse rdf:type owl:Class ;
-             rdfs:subClassOf :Pulse ;
-             rdfs:label "Single Pulse"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/SolidStateLaser
-:SolidStateLaser rdf:type owl:Class ;
-                 rdfs:subClassOf :Laser ;
-                 rdfs:label "Solid State Laser"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Spectroscopy
-:Spectroscopy rdf:type owl:Class ;
-              rdfs:subClassOf :OpticalDetector ;
-              rdfs:label "Spectroscopy"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/StageLevel
-:StageLevel rdf:type owl:Class ;
-            rdfs:label "Stage Level"@en .
+       rdfs:label "Shape"@en ;
+       rdfs:comment "Class \"Shape\" is single specific ROI shapes and links that to any channels, and timepoints and z-sections. It alsorecords any transform applied to the ROI shape."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/StructuredAnnotation
 :StructuredAnnotation rdf:type owl:Class ;
-                      rdfs:label "Structured Annimation"@en .
+                      rdfs:label "Structured Annimation"@en ;
+                      rdfs:subclassOf :Annotation ;
+       rdfs:comment "Class \"StructuredAnnotation\" is unordered collections of annotations attached to objects in the OME data model."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/TagAnnotation
 :TagAnnotation rdf:type owl:Class ;
-               rdfs:label "Tag Annotation"@en .
+               rdfs:label "Tag Annotation"@en ;
+       rdfs:comment "Class \"TagAnnotation\" is ."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/TermAnnotation
 :TermAnnotation rdf:type owl:Class ;
-                rdfs:label "Term Annotation"@en .
+                rdfs:label "Term Annotation"@en ;
+       rdfs:comment "Class \"TermAnnotation\" is tag annotations. A tag annotation represents a tag or a tagset."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/TiffData
 :TiffData rdf:type owl:Class ;
           rdfs:subClassOf :BinData ;
-          rdfs:label "Tiff Data"@en .
+          rdfs:label "Tiff Data"@en ;
+       rdfs:comment "Class \"TiffData\" is locations of the pixel data in tiff files."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/TimestampAnnotation
 :TimestampAnnotation rdf:type owl:Class ;
-                     rdfs:label "Timestamp Annotation"@en .
+                     rdfs:label "Timestamp Annotation"@en ;
+       rdfs:comment "Class \"TimestampAnnotation\" is date/time annotations of type xsd:dateTime"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Transform
-:Transform rdf:type owl:Class ;
-           rdfs:label "Transform"@en .
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/AffineTransform
+:AffineTransform rdf:type owl:Class ;
+           rdfs:label "AffineTransform"@en ;
+       rdfs:comment "Class \"AffineTransform\" is matrixes used to transform the shapes."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/TransmittanceRange
 :TransmittanceRange rdf:type owl:Class ;
-                    rdfs:label "Transmittance Range"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Uncaging
-:Uncaging rdf:type owl:Class .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/UprightMicroscope
-:UprightMicroscope rdf:type owl:Class ;
-                   rdfs:subClassOf :OpticalMicroscope ;
-                   rdfs:label "Upright Microscope"@en .
+                    rdfs:label "Transmittance Range"@en ;
+       rdfs:comment "Class \"TransmittanceRange\" is ranges of wavelengths that are transmitted by the filters. It also records the maximum amount of light transmitted."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Well
 :Well rdf:type owl:Class ;
-      rdfs:label "Well"@en .
+      rdfs:label "Well"@en ;
+       rdfs:comment "Class \"Well\" is components of the Well/Plate/Screen constructs to describe screening applications. A Well has a number of WellSample elements that link to the Images collected in this well. The ReagentRef links any Reagents that were used in this Well. A well is part of only one Plate. The origin for the row and column identifiers is the top left corner of the plate starting at zero. i.e The top left well of a plate is index (0,0)."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/WellSample
 :WellSample rdf:type owl:Class ;
-            rdfs:label "Well Sample"@en .
+            rdfs:label "Well Sample"@en ;
+       rdfs:comment "Class \"WellSample\" is individual images that have been captured within Wells."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/XMLAnnotation
 :XMLAnnotation rdf:type owl:Class ;
-               rdfs:label "XML Annotation"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/XMLAnnotationValue
-:XMLAnnotationValue rdf:type owl:Class .
+               rdfs:label "XML Annotation"@en ;
+       rdfs:comment "Class \"XMLAnnotation\" is general xml annotations. The contents of this is not processed as OME XML but should still be well-formed XML."@en .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag
@@ -2685,13 +2600,91 @@ rdf:Seq rdf:type owl:Class ;
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Correction#superFluor
 <http://www.openmicroscopy.org/rdf/ome_core/0.1/Correction#superFluor> rdf:type owl:NamedIndividual ,
                                                                                 :Correction ;
-                                                                       rdfs:label "super fluor"@en .
+                                                                      rdfs:label "super fluor"@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/Correction#violetCorrected
 <http://www.openmicroscopy.org/rdf/ome_core/0.1/Correction#violetCorrected> rdf:type owl:NamedIndividual ,
                                                                                      :Correction ;
                                                                             rdfs:label "violet corrected"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#analogVideo
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#analogVideo> rdf:type owl:NamedIndividual,
+                                                                            :DetectorType ;
+                                                                            rdfs:label "analog video"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#APD
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#APD> rdf:type owl:NamedIndividual,
+                                                                            :DetectorType ;
+     rdfs:label "APD"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#CCD
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#CCD> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "CCD"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#CMOS
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#CMOS> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "CMOS"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#correlationSpectroscopy
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#correlationSpectroscopy> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "correlation spectroscopy"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#EBCCD
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#EBCCD> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "EBCCD"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#EMCCD
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#EMCCD> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "EMCCD"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#FTIR
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#FTIR> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "FTIR"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#lifetimeImaging
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#lifetimeImaging> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "lifetime imaging"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#intensifiedCCD
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#intensifiedCCD> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "intensified CCD"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#spectroscopy
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#spectroscopy> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "spectroscopy"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#photodiode
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#photodiode> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "photodiode"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#PMT
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/DetectorType#PMT> rdf:type owl:NamedIndividual ,
+                                                                              :DetectorType ;
+                                                                     rdfs:label "PMT"@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/DimensionOrder#xyctz
@@ -2730,14 +2723,14 @@ rdf:Seq rdf:type owl:Class ;
                                                                       rdfs:label "xyztc"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#Colocalization
-expType:Colocalization rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#colocalization
+expType:colocalization rdf:type owl:NamedIndividual ,
                                 :ExperimentType ;
                        rdfs:label "colocalization"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#Electrophysiology
-expType:Electrophysiology rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#electrophysiology
+expType:electrophysiology rdf:type owl:NamedIndividual ,
                                    :ExperimentType ;
                           rdfs:label "electrophysiology"@en .
 
@@ -2760,32 +2753,32 @@ expType:FRET rdf:type owl:NamedIndividual ,
              rdfs:label "FRET"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#FluorescenceLifetime
-expType:FluorescenceLifetime rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#fluorescenceLifetime
+expType:fluorescenceLifetime rdf:type owl:NamedIndividual ,
                                       :ExperimentType ;
                              rdfs:label "fluorescence lifetime"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#FourDPlus
-expType:FourDPlus rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#fourDPlus
+expType:fourDPlus rdf:type owl:NamedIndividual ,
                            :ExperimentType ;
                   rdfs:label "4D plus"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#Immunocytochemistry
-expType:Immunocytochemistry rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#immunocytochemistry
+expType:immunocytochemistry rdf:type owl:NamedIndividual ,
                                      :ExperimentType ;
                             rdfs:label "immunocytochemistry"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#Immunofluorescence
-expType:Immunofluorescence rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#immunofluorescence
+expType:immunofluorescence rdf:type owl:NamedIndividual ,
                                     :ExperimentType ;
                            rdfs:label "immunofluorescence"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#IonImaging
-expType:IonImaging rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#ionImaging
+expType:ionImaging rdf:type owl:NamedIndividual ,
                             :ExperimentType ;
                    rdfs:label "ion imaging"@en .
 
@@ -2796,8 +2789,20 @@ expType:PGIDocumentation rdf:type owl:NamedIndividual ,
                          rdfs:label "PGI documentation"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#Photobleaching
-expType:Photobleaching rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#photoablation
+expType:photoablation rdf:type owl:NamedIndividual ,
+                                :ExperimentType ;
+                       rdfs:label "photoablation"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#photoactivation
+expType:photoactivation rdf:type owl:NamedIndividual ,
+                                :ExperimentType ;
+                       rdfs:label "photoactivation"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#photobleaching
+expType:photobleaching rdf:type owl:NamedIndividual ,
                                 :ExperimentType ;
                        rdfs:label "photobleaching"@en .
 
@@ -2808,20 +2813,20 @@ expType:SPIM rdf:type owl:NamedIndividual ,
              rdfs:label "SPIM"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#Screen
-expType:Screen rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#screen
+expType:screen rdf:type owl:NamedIndividual ,
                         :ExperimentType ;
                rdfs:label "screen"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#SpectralImaging
-expType:SpectralImaging rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#spectralImaging
+expType:spectralImaging rdf:type owl:NamedIndividual ,
                                  :ExperimentType ;
                         rdfs:label "spectral imaging"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#TimeLapse
-expType:TimeLapse rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ExperimentType#timeLapse
+expType:timeLapse rdf:type owl:NamedIndividual ,
                            :ExperimentType ;
                   rdfs:label "time lapse"@en .
 
@@ -2853,7 +2858,7 @@ expType:TimeLapse rdf:type owl:NamedIndividual ,
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#bandPass
 <http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#bandPass> rdf:type owl:NamedIndividual ,
                                                                               :FilterType ;
-                                                                     rdfs:label "bandPass"@en .
+                                                                     rdfs:label "band pass"@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#dichroic
@@ -2865,13 +2870,13 @@ expType:TimeLapse rdf:type owl:NamedIndividual ,
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#longPass
 <http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#longPass> rdf:type owl:NamedIndividual ,
                                                                               :FilterType ;
-                                                                     rdfs:label "longPass"@en .
+                                                                     rdfs:label "long pass"@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#multiPass
 <http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#multiPass> rdf:type owl:NamedIndividual ,
                                                                                :FilterType ;
-                                                                      rdfs:label "multiPass"@en .
+                                                                      rdfs:label "multi pass"@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#neutralDensity
@@ -2883,7 +2888,7 @@ expType:TimeLapse rdf:type owl:NamedIndividual ,
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#shortPass
 <http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#shortPass> rdf:type owl:NamedIndividual ,
                                                                                :FilterType ;
-                                                                      rdfs:label "shortPass"@en .
+                                                                      rdfs:label "short pass"@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/FilterType#tuneable
@@ -3258,34 +3263,58 @@ mbmp:FRAP rdf:type owl:NamedIndividual ,
           rdfs:label "FRAP"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration#InverseFRAP
-mbmp:InverseFRAP rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration#inverseFRAP
+mbmp:inverseFRAP rdf:type owl:NamedIndividual ,
                           :MicrobeamManipuration ;
                  rdfs:label "inverse FRAP"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration#OpticalTrapping
-mbmp:OpticalTrapping rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration#opticalTrapping
+mbmp:opticalTrapping rdf:type owl:NamedIndividual ,
                               :MicrobeamManipuration ;
                      rdfs:label "optical trapping"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration#Photoablation
-mbmp:Photoablation rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration#photoablation
+mbmp:photoablation rdf:type owl:NamedIndividual ,
                             :MicrobeamManipuration ;
                    rdfs:label "photoablation"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration#Photoactivation
-mbmp:Photoactivation rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration#photoactivation
+mbmp:photoactivation rdf:type owl:NamedIndividual ,
                               :MicrobeamManipuration ;
                      rdfs:label "photoactivation"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration#Uncaging
-mbmp:Uncaging rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicrobeamManipuration#uncaging
+mbmp:uncaging rdf:type owl:NamedIndividual ,
                        :MicrobeamManipuration ;
               rdfs:label "uncaging"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicroscopeType#upright
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/MicroscopeType#upright> rdf:type owl:NamedIndividual ,
+                                                                              :MicroscopeType ;
+                                                                     rdfs:label "upright"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicroscopeType#inverted
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/MicroscopeType#inverted> rdf:type owl:NamedIndividual ,
+                                                                              :MicroscopeType ;
+                                                                     rdfs:label "inverted"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicroscopeType#dissection
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/MicroscopeType#dissection> rdf:type owl:NamedIndividual ,
+                                                                              :MicroscopeType ;
+                                                                     rdfs:label "dissection"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/MicroscopeType#electrophysiology
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/MicroscopeType#electrophysiology> rdf:type owl:NamedIndividual ,
+                                                                              :MicroscopeType ;
+                                                                     rdfs:label "electrophysiology"@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/ObjectiveMedium#air
@@ -3310,84 +3339,6 @@ mbmp:Uncaging rdf:type owl:NamedIndividual ,
 <http://www.openmicroscopy.org/rdf/ome_core/0.1/ObjectiveMedium#water> rdf:type owl:NamedIndividual ,
                                                                                 :ObjectiveMedium ;
                                                                        rdfs:label "water"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#APD
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#APD> rdf:type owl:NamedIndividual ,
-                                                                                  :OpticalDetectorType ;
-                                                                         rdfs:label "APD"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#CCD
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#CCD> rdf:type owl:NamedIndividual ,
-                                                                                  :OpticalDetectorType ;
-                                                                         rdfs:label "CCD"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#CMOS
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#CMOS> rdf:type owl:NamedIndividual ,
-                                                                                   :OpticalDetectorType ;
-                                                                          rdfs:label "CMOS"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#EBCCD
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#EBCCD> rdf:type owl:NamedIndividual ,
-                                                                                    :OpticalDetectorType ;
-                                                                           rdfs:label "EBCCD"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#EMCCD
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#EMCCD> rdf:type owl:NamedIndividual ,
-                                                                                    :OpticalDetectorType ;
-                                                                           rdfs:label "EMCCD"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#FTIR
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#FTIR> rdf:type owl:NamedIndividual ,
-                                                                                   :OpticalDetectorType ;
-                                                                          rdfs:label "FTIR"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#PMT
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#PMT> rdf:type owl:NamedIndividual ,
-                                                                                  :OpticalDetectorType ;
-                                                                         rdfs:label "PMT"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#analogVideo
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#analogVideo> rdf:type owl:NamedIndividual ,
-                                                                                          :OpticalDetectorType ;
-                                                                                 rdfs:label "analog video"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#correlationSpectroscopy
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#correlationSpectroscopy> rdf:type owl:NamedIndividual ,
-                                                                                                      :OpticalDetectorType ;
-                                                                                             rdfs:label "correlation spectroscopy"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#intensifiedCCD
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#intensifiedCCD> rdf:type owl:NamedIndividual ,
-                                                                                             :OpticalDetectorType ;
-                                                                                    rdfs:label "intensified CCD"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#lifetimeImaging
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#lifetimeImaging> rdf:type owl:NamedIndividual ,
-                                                                                              :OpticalDetectorType ;
-                                                                                     rdfs:label "lifetimeImaging"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#photodiode
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#photodiode> rdf:type owl:NamedIndividual ,
-                                                                                         :OpticalDetectorType ;
-                                                                                rdfs:label "photodiode"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#spectroscopy
-<http://www.openmicroscopy.org/rdf/ome_core/0.1/OpticalDetectorType#spectroscopy> rdf:type owl:NamedIndividual ,
-                                                                                           :OpticalDetectorType ;
-                                                                                  rdfs:label "spectroscopy"@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/ome_core/0.1/PixelType#bit
@@ -3460,6 +3411,36 @@ mbmp:Uncaging rdf:type owl:NamedIndividual ,
 <http://www.openmicroscopy.org/rdf/ome_core/0.1/Marker#arrow> rdf:type owl:NamedIndividual ,
                                                                           :Marker ;
                                                                  rdfs:label "arrow"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/PulseType#CW
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/PulseType#CW> rdf:type owl:NamedIndividual ,
+                                                                              :PulseType ;
+                                                                     rdfs:label "CW"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/PulseType#modeLocked
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/PulseType#modeLocked> rdf:type owl:NamedIndividual ,
+                                                                              :PulseType ;
+                                                                     rdfs:label "modeLocked"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/PulseType#qSwitched
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/PulseType#qSwitched> rdf:type owl:NamedIndividual ,
+                                                                              :PulseType ;
+                                                                     rdfs:label "q switched"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/PulseType#repetitive
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/PulseType#repetitive> rdf:type owl:NamedIndividual ,
+                                                                              :PulseType ;
+                                                                     rdfs:label "repetitive"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/ome_core/0.1/PulseType#single
+<http://www.openmicroscopy.org/rdf/ome_core/0.1/PulseType#single> rdf:type owl:NamedIndividual ,
+                                                                              :PulseType ;
+                                                                     rdfs:label "single"@en .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
