@@ -1,0 +1,90 @@
+@prefix :        <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix image:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/mapannotation/image/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix PATO:    <http://purl.obolibrary.org/obo/PATO_> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pixelType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
+@prefix unit:    <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/mapannotation/unit/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dimensionOrder:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix UO:      <http://purl.obolibrary.org/obo/uo#> .
+
+dimensionOrder:xyczt
+      a       :DimensionOrder .
+
+unit:um
+      a       rdfs:Class .
+
+<http://purl.obolibrary.org/obo/uo#0000300>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+_:b1  a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
+      rdf:value "100000.0"^^xsd:float ;
+      qudt:unit unit:um .
+
+image:image0
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif"@en ;
+      dcterms:identifier "Image:0" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :annotation _:b2 , _:b3 ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:0.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b1 ;
+                :physicalSizeY _:b1 ;
+                :pixcelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+<http://purl.obolibrary.org/obo/uo#0000008>
+      a       <http://purl.obolibrary.org/obo/uo#0000000> .
+
+pixelType:uint8
+      a       :PixelType .
+
+unit:nm
+      a       :Unit ;
+      rdfs:label "nano-meter"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000300> .
+
+_:b2  a       :MapAnnotation , :Annotation , :annotation ;
+      rdfs:comment "This is the description of the sample map A"@en ;
+      dcterms:identifier "Annotation:1" ;
+      :mapAnnotationValue
+              [ a       :Map ;
+                :key    "SampleKeyA" ;
+                :value  "SampleValueA"
+              ] .
+
+[]    a       :StructuredAnnotations ;
+      :annotation _:b2 , _:b3 .
+
+_:b3  a       :MapAnnotation , :Annotation , :annotation ;
+      rdfs:comment "This is the description of the sample map B"@en ;
+      dcterms:identifier "Annotation:2" ;
+      :mapAnnotationValue
+              [ a       :Map ;
+                :key    "SampleKeyB-2" ;
+                :value  "SampleValueB-2"
+              ] ;
+      :mapAnnotationValue
+              [ a       :Map ;
+                :key    "SampleKeyB-1" ;
+                :value  "SampleValueB-1"
+              ] .

@@ -1,0 +1,364 @@
+@prefix :        <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
+@prefix laserType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix detectorType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix PATO:    <http://purl.obolibrary.org/obo/PATO_> .
+@prefix screen:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/filter/screen/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix plate:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/filter/plate/> .
+@prefix instrument:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/filter/instrument/> .
+@prefix pixelType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
+@prefix arcType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/ArcType#> .
+@prefix fontFamily:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#> .
+@prefix fillRule:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#> .
+@prefix reagent:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/filter/reagent/> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix acquisitioMode:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
+@prefix UO:      <http://purl.obolibrary.org/obo/uo#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix microscopeType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#> .
+@prefix image:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/filter/image/> .
+@prefix immersion:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#> .
+@prefix binning:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Binning#> .
+@prefix fontStyle:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#> .
+@prefix laserMedium:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserMedium#> .
+@prefix unit:    <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/filter/unit/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dimensionOrder:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
+@prefix marker:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#> .
+@prefix filterType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilterType#> .
+@prefix correction:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Collection#> .
+
+immersion:air
+      a       :Immersion .
+
+_:b1  a       :ManufacturerSpec , :Dichroic ;
+      dcterms:identifier "Dichroic:1" ;
+      :model  "HFT 405/488/543/633" .
+
+correction:achromat
+      a       :Correction .
+
+_:b2  a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+      rdf:value "620.0"^^xsd:float ;
+      qudt:unit unit:nm .
+
+unit:um
+      a       :Unit ;
+      rdfs:label "micro-meter"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000299> .
+
+_:b3  a       :Filter , :ManufacturerSpec , :ExcitationFilter ;
+      dcterms:identifier "Filter:3" ;
+      :filterType filterType:bandPass ;
+      :filterWheel "Disk 7" ;
+      :lotNumber "J12" ;
+      :manufacturer _:b4 ;
+      :model  "Medium 580" ;
+      :transmittanceRange
+              [ a       :TransmittanceRange ;
+                :cutIn  _:b5 ;
+                :cutOut _:b2 ;
+                :transmittance "0.85"^^xsd:float
+              ] .
+
+_:b6  a       :Filter , :ManufacturerSpec , :ExcitationFilter ;
+      dcterms:identifier "Filter:2" ;
+      :filterType filterType:bandPass ;
+      :filterWheel "Disk 7" ;
+      :lotNumber "J34" ;
+      :manufacturer _:b4 ;
+      :model  "Medium 520" ;
+      :transmittanceRange
+              [ a       :TransmittanceRange ;
+                :cutIn  _:b7 ;
+                :cutOut _:b8 ;
+                :transmittance "0.75"^^xsd:float
+              ] .
+
+<http://purl.obolibrary.org/obo/uo#0000114>
+      a       <http://purl.obolibrary.org/obo/uo#0000000> .
+
+<http://purl.obolibrary.org/obo/uo#0000300>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+<http://purl.obolibrary.org/obo/uo#0000299>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+unit:mW
+      a       :Unit ;
+      rdfs:label "milli-watt"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000114> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000297> .
+
+<http://purl.obolibrary.org/obo/uo#0000106>
+      a       <http://purl.obolibrary.org/obo/uo#0000000> .
+
+unit:MHz
+      a       :Unit ;
+      rdfs:label "mega-heltz"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000106> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000293> .
+
+filterType:shortPass
+      a       :FilterType .
+
+filterType:multiPass
+      a       :FilterType .
+
+_:b9  a       :Filter , :ManufacturerSpec , :EmissionFilter ;
+      dcterms:identifier "Filter:6" ;
+      :filterType filterType:multiPass ;
+      :lotNumber "J12" ;
+      :manufacturer _:b4 ;
+      :model  "Medium 762" ;
+      :transmittanceRange
+              [ a       :TransmittanceRange ;
+                :cutIn  _:b5 ;
+                :cutOut _:b2 ;
+                :transmittance "0.85"^^xsd:float
+              ] .
+
+unit:nm
+      a       :Unit , rdfs:Class ;
+      rdfs:label "nano-meter"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000300> .
+
+laserMedium:Ag
+      a       :LaserMedium .
+
+_:b10
+      a       :Filter , :ManufacturerSpec , :ExcitationFilter ;
+      dcterms:identifier "Filter:1" ;
+      :filterType filterType:bandPass ;
+      :filterWheel "Disk 7" ;
+      :lotNumber "J23" ;
+      :manufacturer _:b4 ;
+      :model  "Medium 490" ;
+      :transmittanceRange
+              [ a       :TransmittanceRange ;
+                :cutIn  [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "450.0"^^xsd:float ;
+                          qudt:unit unit:nm
+                        ] ;
+                :cutOut [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "530.0"^^xsd:float ;
+                          qudt:unit unit:nm
+                        ] ;
+                :transmittance "0.8"^^xsd:float
+              ] .
+
+laserMedium:HeNe
+      a       :LaserMedium .
+
+filterType:bandPass
+      a       :FilterType .
+
+_:b11
+      a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+      rdf:value "590.0"^^xsd:float ;
+      qudt:unit unit:nm .
+
+<http://purl.obolibrary.org/obo/uo#0000008>
+      a       <http://purl.obolibrary.org/obo/uo#0000000> .
+
+_:b8  a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+      rdf:value "570.0"^^xsd:float ;
+      qudt:unit unit:nm .
+
+detectorType:other
+      a       :DetectorType .
+
+_:b7  a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+      rdf:value "500.0"^^xsd:float ;
+      qudt:unit unit:nm .
+
+_:b12
+      a       :Filter , :ManufacturerSpec , :EmissionFilter ;
+      dcterms:identifier "Filter:5" ;
+      :filterType filterType:multiPass ;
+      :lotNumber "J34" ;
+      :manufacturer _:b4 ;
+      :model  "Medium 724" ;
+      :transmittanceRange
+              [ a       :TransmittanceRange ;
+                :cutIn  _:b7 ;
+                :cutOut _:b8 ;
+                :transmittance "0.75"^^xsd:float
+              ] .
+
+image:image0
+      a       :Image ;
+      rdfs:comment "Sample Image"@en ;
+      rdfs:label "405100percentsetting"@en ;
+      dcterms:identifier "Image:0" ;
+      :acquisitionDate "2008-06-19T00:39:00" ;
+      :instrument instrument:instrument0 ;
+      :objectiveSettings
+              [ a       :ObjectiveSettings ;
+                dcterms:identifier "Objective:0:0"
+              ] ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:1" ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:2" ;
+                          :filterSet _:b13 ;
+                          :lightPath
+                                  [ a       :LightPath ;
+                                    :emissionFilter _:b9
+                                  ]
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:1" ;
+                          :lightPath
+                                  [ a       :LightPath ;
+                                    :dichroic _:b1 ;
+                                    :emissionFilter _:b12 ;
+                                    :excitationFilter _:b10 , _:b14
+                                  ]
+                        ] ;
+                :dimensionOrder dimensionOrder:xyctz ;
+                :metadataOnly "true"^^xsd:boolean ;
+                :pixelType pixelType:int16 ;
+                :sizeC  "2"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "128"^^xsd:int ;
+                :sizeY  "128"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+<http://purl.obolibrary.org/obo/uo#0000293>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+<http://purl.obolibrary.org/obo/uo#0000297>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+laserType:gas
+      a       :LaserType .
+
+_:b13
+      a       :ManufacturerSpec , :FilterSet ;
+      dcterms:identifier "FilterSet:2" ;
+      :lotNumber "K753" ;
+      :manufacturer _:b4 ;
+      :model  "Mk 3" .
+
+_:b5  a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+      rdf:value "550.0"^^xsd:float ;
+      qudt:unit unit:nm .
+
+_:b15
+      a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+      rdf:value "680.0"^^xsd:float ;
+      qudt:unit unit:nm .
+
+pixelType:int16
+      a       :PixelType .
+
+dimensionOrder:xyctz
+      a       :DimensionOrder .
+
+_:b16
+      a       :Filter , :ManufacturerSpec , :ExcitationFilter ;
+      dcterms:identifier "Filter:4" ;
+      :filterType filterType:bandPass ;
+      :filterWheel "Disk 7" ;
+      :lotNumber "J09" ;
+      :manufacturer _:b4 ;
+      :model  "Medium 630" ;
+      :transmittanceRange
+              [ a       :TransmittanceRange ;
+                :cutIn  _:b11 ;
+                :cutOut _:b15 ;
+                :transmittance "0.9"^^xsd:float
+              ] .
+
+_:b4  a       :Manufacturer ;
+      rdfs:label "Ink Inc"@en .
+
+filterType:dichroic
+      a       :FilterType .
+
+_:b14
+      a       :Filter , :ManufacturerSpec , :ExcitationFilter ;
+      dcterms:identifier "Filter:Dichroic:2" ;
+      :filterType filterType:dichroic ;
+      :lotNumber "M538" ;
+      :model  "MirrorBlock Mk II" .
+
+instrument:instrument0
+      a       :Instrument ;
+      dcterms:identifier "Instrument:0" ;
+      :manufacturerSpec _:b1 , _:b6 , _:b10 , _:b16 , _:b3 , _:b13 , _:b9 , _:b12 , _:b14 ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Detector ;
+                dcterms:identifier "Detector:0:0" ;
+                :amplificationGain "1.0"^^xsd:float ;
+                :detectorType detectorType:other ;
+                :gain   "350.0"^^xsd:float ;
+                :zoom   "1.0"^^xsd:float
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Laser ;
+                dcterms:identifier "LightSource:0:2" ;
+                :laserMedium laserMedium:Ag ;
+                :laserType laserType:gas
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Laser ;
+                dcterms:identifier "LightSource:0:1" ;
+                :laserMedium laserMedium:HeNe ;
+                :laserType laserType:gas
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Laser ;
+                dcterms:identifier "LightSource:0:0" ;
+                :laserMedium laserMedium:HeNe ;
+                :laserType laserType:gas
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :FilterSet ;
+                dcterms:identifier "FilterSet:1" ;
+                :dichroic _:b1 ;
+                :emissionFilter _:b9 , _:b12 ;
+                :excitationFilter _:b6 , _:b10 , _:b16 , _:b3 ;
+                :lotNumber "K753" ;
+                :manufacturer _:b4 ;
+                :model  "Mk 3"
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Dichroic ;
+                dcterms:identifier "Dichroic:3" ;
+                :lotNumber "M539" ;
+                :model  "MirrorBlock MK II"
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Objective ;
+                dcterms:identifier "Objective:0:0" ;
+                :correction correction:achromat ;
+                :immersion immersion:air ;
+                :lensNA "0.3"^^xsd:float ;
+                :nominalMagnification
+                        "10.0"^^xsd:float
+              ] ;
+      :manufacturerSpec
+              [ a       :Filter , :ManufacturerSpec ;
+                dcterms:identifier "Filter:7" ;
+                :filterType filterType:shortPass ;
+                :lotNumber "J09" ;
+                :manufacturer _:b4 ;
+                :model  "Medium 672" ;
+                :transmittanceRange
+                        [ a       :TransmittanceRange ;
+                          :cutIn  _:b11 ;
+                          :cutOut _:b15 ;
+                          :transmittance "0.9"^^xsd:float
+                        ]
+              ] .

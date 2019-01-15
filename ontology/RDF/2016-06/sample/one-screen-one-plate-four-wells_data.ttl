@@ -1,0 +1,485 @@
+@prefix :        <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix image:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/one-screen-one-plate-four-wells/image/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix PATO:    <http://purl.obolibrary.org/obo/PATO_> .
+@prefix screen:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/one-screen-one-plate-four-wells/screen/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix plate:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/one-screen-one-plate-four-wells/plate/> .
+@prefix pixelType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
+@prefix acquisitionMode:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
+@prefix unit:    <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/one-screen-one-plate-four-wells/unit/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dimensionOrder:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
+@prefix reagent:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/one-screen-one-plate-four-wells/reagent/> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix UO:      <http://purl.obolibrary.org/obo/uo#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+image:image8
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif-8"@en ;
+      dcterms:identifier "Image:8" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:8.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:8" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+dimensionOrder:xyczt
+      a       :DimensionOrder .
+
+image:image0
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif"@en ;
+      dcterms:identifier "Image:0" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:0.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:0" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+_:b3  a       :WellSample ;
+      dcterms:identifier "WellSample:1.1.2.2" ;
+      :image  image:image5 ;
+      :index  "7"^^xsd:int .
+
+image:image4
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif-4"@en ;
+      dcterms:identifier "Image:4" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:4.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:4" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+_:b4  a       :WellSample ;
+      dcterms:identifier "WellSample:1.1.1.1" ;
+      :image  image:image0 ;
+      :index  "1"^^xsd:int .
+
+_:b5  a       :WellSample ;
+      dcterms:identifier "WellSample:1.2.1.1" ;
+      :image  image:image2 ;
+      :index  "2"^^xsd:int .
+
+unit:um
+      a       rdfs:Class .
+
+_:b6  a       :WellSample ;
+      dcterms:identifier "WellSample:1.2.2.2" ;
+      :image  image:image10 ;
+      :index  "8"^^xsd:int .
+
+image:image7
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif-7"@en ;
+      dcterms:identifier "Image:7" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:7.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:7" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+reagent:reagent1
+      a       :Reagent ;
+      dcterms:identifier "Reagent:1" .
+
+image:image10
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif-10"@en ;
+      dcterms:identifier "Image:10" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:10.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:10" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+<http://purl.obolibrary.org/obo/uo#0000300>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+image:image3
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif-3"@en ;
+      dcterms:identifier "Image:3" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:3.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:3" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+_:b7  a       :WellSample ;
+      dcterms:identifier "WellSample:1.1.1.2" ;
+      :image  image:image1 ;
+      :index  "5"^^xsd:int .
+
+pixelType:uint8
+      a       :PixelType .
+
+_:b8  a       :WellSample ;
+      dcterms:identifier "WellSample:1.2.2.1" ;
+      :image  image:image9 ;
+      :index  "4"^^xsd:int .
+
+image:image6
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif-6"@en ;
+      dcterms:identifier "Image:6" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:6.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:6" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+<http://purl.obolibrary.org/obo/uo#0000008>
+      a       <http://purl.obolibrary.org/obo/uo#0000000> .
+
+image:image2
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif-2"@en ;
+      dcterms:identifier "Image:2" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:2.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:2" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+unit:nm
+      a       :Unit ;
+      rdfs:label "nano-meter"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000300> .
+
+plate:plate1
+      a       :Plate ;
+      rdfs:comment "Plate 1 description"@en ;
+      dcterms:identifier "Plate:1" ;
+      :plateAcquisition
+              [ a       :PlateAcquisition ;
+                dcterms:identifier "PlateAcquisition:Plate:1:ScreenAcquisition:1" ;
+                :endTime "2010-02-23T12:50:30" ;
+                :startTime "2010-02-23T12:49:30" ;
+                :wellSample _:b5 , _:b8 , _:b9 , _:b4
+              ] ;
+      :plateAcquisition
+              [ a       :PlateAcquisition ;
+                dcterms:identifier "PlateAcquisition:Plate:1:ScreenAcquisition:2" ;
+                :endTime "2010-02-23T12:51:29" ;
+                :startTime "2010-02-23T12:50:30" ;
+                :wellSample _:b10 , _:b3 , _:b7 , _:b6
+              ] ;
+      :well   [ a       :Well ;
+                dcterms:identifier "Well:1.2.2" ;
+                :column "2"^^xsd:int ;
+                :reagent reagent:reagent1 ;
+                :row    "2"^^xsd:int ;
+                :wellSample _:b8 , _:b6
+              ] ;
+      :well   [ a       :Well ;
+                dcterms:identifier "Well:1.1.2" ;
+                :column "1"^^xsd:int ;
+                :reagent reagent:reagent1 ;
+                :row    "2"^^xsd:int ;
+                :wellSample _:b3 , _:b9 ;
+                :wellSample
+                        [ a       :WellSample ;
+                          dcterms:identifier "WellSample:1.1.2.5" ;
+                          :image  image:image8 ;
+                          :index  "19"^^xsd:int
+                        ] ;
+                :wellSample
+                        [ a       :WellSample ;
+                          dcterms:identifier "WellSample:1.1.2.4" ;
+                          :image  image:image7 ;
+                          :index  "15"^^xsd:int
+                        ] ;
+                :wellSample
+                        [ a       :WellSample ;
+                          dcterms:identifier "WellSample:1.1.2.3" ;
+                          :image  image:image6 ;
+                          :index  "11"^^xsd:int
+                        ]
+              ] ;
+      :well   [ a       :Well ;
+                dcterms:identifier "Well:1.2.1" ;
+                :column "2"^^xsd:int ;
+                :reagent reagent:reagent1 ;
+                :row    "1"^^xsd:int ;
+                :wellSample _:b5 , _:b10
+              ] ;
+      :well   [ a       :Well ;
+                dcterms:identifier "Well:1.1.1" ;
+                :column "1"^^xsd:int ;
+                :reagent reagent:reagent1 ;
+                :row    "1"^^xsd:int ;
+                :wellSample _:b7 , _:b4
+              ] .
+
+image:image5
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif-5"@en ;
+      dcterms:identifier "Image:5" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:5.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:5" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+image:image9
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif-9"@en ;
+      dcterms:identifier "Image:9" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:9.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:9" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+_:b2  a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
+      rdf:value "100000.0"^^xsd:float ;
+      qudt:unit unit:um .
+
+_:b9  a       :WellSample ;
+      dcterms:identifier "WellSample:1.1.2.1" ;
+      :image  image:image4 ;
+      :index  "3"^^xsd:int .
+
+image:image1
+      a       :Image ;
+      rdfs:label "6x6x1x8-swatch.tif-1"@en ;
+      dcterms:identifier "Image:1" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:1.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:1" ;
+                          :color  _:b1
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b2 ;
+                :physicalSizeY _:b2 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+screen:screen1
+      a       :Screen ;
+      dcterms:identifier "Screen:1" ;
+      :plate  plate:plate1 ;
+      :reagentSet
+              [ a       :ReagentSet ;
+                :reagent reagent:reagent1
+              ] .
+
+_:b10
+      a       :WellSample ;
+      dcterms:identifier "WellSample:1.2.1.2" ;
+      :image  image:image3 ;
+      :index  "6"^^xsd:int .
+
+_:b1  a       :Color ;
+      rdf:value "-2147483648" .

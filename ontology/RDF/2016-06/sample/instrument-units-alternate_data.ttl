@@ -1,0 +1,467 @@
+@prefix :        <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
+@prefix laserType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix detectorType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix PATO:    <http://purl.obolibrary.org/obo/PATO_> .
+@prefix screen:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument-units-altermate/screen/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix plate:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument-units-altermate/plate/> .
+@prefix instrument:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/instrument/> .
+@prefix pixelType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
+@prefix arcType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/ArcType#> .
+@prefix acquisitionMode:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
+@prefix fontFamily:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#> .
+@prefix fillRule:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#> .
+@prefix reagent:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument-units-altermate/reagent/> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix UO:      <http://purl.obolibrary.org/obo/uo#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix SBO:     <http://purl.obolibrary.org/obo/SBO_> .
+@prefix microscopeType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#> .
+@prefix image:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/image/> .
+@prefix immersion:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#> .
+@prefix binning:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Binning#> .
+@prefix fontStyle:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#> .
+@prefix laserMedium:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserMedium#> .
+@prefix unit:    <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument-units-altermate/unit/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dimensionOrder:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
+@prefix marker:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#> .
+@prefix SIO:     <http://semanticscience.org/resource/SIO_> .
+@prefix correction:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Collection#> .
+@prefix filterType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument-units-altermate/filterType/> .
+
+dimensionOrder:xyczt
+      a       :DimensionOrder .
+
+immersion:air
+      a       :Immersion .
+
+<http://purl.obolibrary.org/obo/uo#0000296>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+microscopeType:inverted
+      a       :MicroscopeType .
+
+laserType:solidState
+      a       :LaserType .
+
+detectorType:CCD
+      a       :DetectorType .
+
+_:b1  a       :Filter , :ManufacturerSpec , :ExcitationFilter ;
+      dcterms:identifier "Filter:3" ;
+      :filterType filterType:bandPass ;
+      :manufacturer _:b2 ;
+      :model  "Delux Mk6" ;
+      :transmittanceRange
+              [ a       :TransmittanceRange ;
+                :cutIn  [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "463000.0"^^xsd:float ;
+                          qudt:unit unit:pm
+                        ] ;
+                :cutInTolerance
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "210.0"^^xsd:float ;
+                          qudt:unit <http://purl.obolibrary.org/obo/uo#0000019>
+                        ] ;
+                :cutOut [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "535000.0"^^xsd:float ;
+                          qudt:unit unit:pm
+                        ] ;
+                :cutOutTolerance
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "340.0"^^xsd:float ;
+                          qudt:unit <http://purl.obolibrary.org/obo/uo#0000019>
+                        ] ;
+                :transmittance "0.7"^^xsd:float
+              ] .
+
+unit:kV
+      a       :Unit , rdfs:Class ;
+      rdfs:label "kilo-volt"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000218> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000294> .
+
+<http://purl.obolibrary.org/obo/uo#0000287>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+_:b3  a       :Filter , :ManufacturerSpec , :EmissionFilter ;
+      dcterms:identifier "Filter:2" ;
+      :filterType filterType:bandPass ;
+      :manufacturer _:b2 ;
+      :model  "Delux Mk5" ;
+      :transmittanceRange
+              [ a       :TransmittanceRange ;
+                :cutIn  [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "562000.0"^^xsd:float ;
+                          qudt:unit unit:pm
+                        ] ;
+                :cutInTolerance
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "110.0"^^xsd:float ;
+                          qudt:unit <http://purl.obolibrary.org/obo/uo#0000019>
+                        ] ;
+                :cutOut [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "633000.0"^^xsd:float ;
+                          qudt:unit unit:pm
+                        ] ;
+                :cutOutTolerance
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "230.0"^^xsd:float ;
+                          qudt:unit <http://purl.obolibrary.org/obo/uo#0000019>
+                        ] ;
+                :transmittance "0.5"^^xsd:float
+              ] .
+
+<http://purl.obolibrary.org/obo/uo#0000295>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+_:b2  a       :Manufacturer ;
+      rdfs:label "OME Filters"@en .
+
+<http://purl.obolibrary.org/obo/uo#0000114>
+      a       <http://purl.obolibrary.org/obo/uo#0000000> , rdfs:Class .
+
+<http://purl.obolibrary.org/obo/uo#0000299>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+_:b4  a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
+      rdf:value "1.0"^^xsd:float ;
+      qudt:unit unit:cm .
+
+unit:pm
+      a       :Unit , rdfs:Class ;
+      rdfs:label "pico-meter"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000302> .
+
+<http://purl.obolibrary.org/obo/uo#0000106>
+      a       <http://purl.obolibrary.org/obo/uo#0000000> .
+
+instrument:instrument0
+      a       :Instrument ;
+      dcterms:identifier "Instrument:0" ;
+      :manufacturerSpec _:b5 , _:b6 , _:b3 , _:b7 , _:b1 ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Detector ;
+                dcterms:identifier "Detector:0" ;
+                :detectorType detectorType:CCD ;
+                :manufacturer
+                        [ a       :Manufacturer ;
+                          rdfs:label "OME Detectors"@en
+                        ] ;
+                :model  "Standard CCD Mk2" ;
+                :voltage
+                        [ a       <http://purl.obolibrary.org/obo/SBO_0000259> ;
+                          rdf:value "120.0"^^xsd:float ;
+                          qudt:unit unit:kV
+                        ]
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Microscope ;
+                :manufacturer _:b8 ;
+                :microscopeType microscopeType:inverted ;
+                :model  "Lab Mk3" ;
+                :serialNumber "L3-1234"
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Arc ;
+                dcterms:identifier "LightSource:1" ;
+                :arcType arcType:Xe ;
+                :manufacturer _:b9 ;
+                :model  "Arc60" ;
+                :power  [ a       rdf:Resource , <http://purl.obolibrary.org/obo/PATO_0001024> ;
+                          rdf:value "3.0"^^xsd:float ;
+                          qudt:unit unit:dW
+                        ] ;
+                :serialNumber "A123456"
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Laser ;
+                dcterms:identifier "LightSource:0" ;
+                :laserMedium laserMedium:Ruby ;
+                :laserType laserType:solidState ;
+                :manufacturer _:b9 ;
+                :model  "Ruby60" ;
+                :power  [ a       <http://purl.obolibrary.org/obo/PATO_0001024> ;
+                          rdf:value "0.2"^^xsd:float ;
+                          qudt:unit <http://purl.obolibrary.org/obo/uo#0000114>
+                        ] ;
+                :pump   [ a       :Pump ;
+                          dcterms:identifier "LightSource:1"
+                        ] ;
+                :repetitionRate
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0000044> ;
+                          rdf:value "1200.0"^^xsd:float ;
+                          qudt:unit unit:kHz
+                        ] ;
+                :serialNumber "A654321" ;
+                :waveLength
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "590500.0"^^xsd:float ;
+                          qudt:unit unit:pm
+                        ]
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :FilterSet ;
+                dcterms:identifier "FilterSet:0" ;
+                :dichroic _:b6 ;
+                :emissionFilter _:b7 ;
+                :excitationFilter _:b5 ;
+                :lotNumber "Lot174-A" ;
+                :manufacturer _:b2 ;
+                :model  "Standard Mk3"
+              ] ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Objective ;
+                dcterms:identifier "Objective:0" ;
+                :calibratedMagnification
+                        "60.12"^^xsd:float ;
+                :correction correction:UV ;
+                :immersion immersion:air ;
+                :lensNA "1.2"^^xsd:float ;
+                :manufacturer
+                        [ a       :Manufacturer ;
+                          rdfs:label "OME Objectives"@en
+                        ] ;
+                :model  "60xUV-Air" ;
+                :nominalMagnification
+                        "60.0"^^xsd:float ;
+                :workingDistance
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0000040> ;
+                          rdf:value "0.02"^^xsd:float ;
+                          qudt:unit unit:mm
+                        ]
+              ] .
+
+pixelType:uint8
+      a       :PixelType .
+
+_:b9  a       :Manufacturer ;
+      rdfs:label "OME Lights"@en .
+
+unit:kHz
+      a       :Unit , rdfs:Class ;
+      rdfs:label "kilo-heltz"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000106> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000294> .
+
+arcType:Xe
+      a       :ArcType .
+
+<http://purl.obolibrary.org/obo/uo#0000294>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+<http://purl.obolibrary.org/obo/uo#0000298>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+image:image0
+      a       :Image ;
+      rdfs:comment "This image is linked to the Control Set"@en ;
+      rdfs:label "6x6x1x8-swatch.tif"@en ;
+      dcterms:identifier "Image:0" ;
+      :acquisitionDate "2010-02-23T12:51:30" ;
+      :instrument instrument:instrument0 ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:0.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:0.1" ;
+                          :color  [ a       :Color ;
+                                    rdf:value "-2147483648"
+                                  ] ;
+                          :detectorSettings
+                                  [ a       :DetectorSettings ;
+                                    dcterms:identifier "Detector:0" ;
+                                    :binning binning:twoXTwo ;
+                                    :gain   "1.2"^^xsd:float ;
+                                    :offset "0.7"^^xsd:float ;
+                                    :readOutRate
+                                            [ a       <http://purl.obolibrary.org/obo/PATO_0000044> ;
+                                              rdf:value "32.0"^^xsd:float ;
+                                              qudt:unit unit:hHz
+                                            ] ;
+                                    :voltage
+                                            [ a       <http://purl.obolibrary.org/obo/SBO_0000259> ;
+                                              rdf:value "12.0"^^xsd:float ;
+                                              qudt:unit unit:daV
+                                            ]
+                                  ] ;
+                          :emissionWavelength
+                                  [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                                    rdf:value "488600.0"^^xsd:float ;
+                                    qudt:unit unit:pm
+                                  ] ;
+                          :excitationWavelength
+                                  [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                                    rdf:value "610500.0"^^xsd:float ;
+                                    qudt:unit unit:pm
+                                  ] ;
+                          :lightPath
+                                  [ a       :LightPath ;
+                                    :emissionFilter _:b3 ;
+                                    :excitationFilter _:b1
+                                  ] ;
+                          :lightSourceSettings
+                                  [ a       :LightSourceSettings ;
+                                    dcterms:identifier "LightSource:0" ;
+                                    :attenuation "0.8"^^xsd:float ;
+                                    :waveLength
+                                            [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                                              rdf:value "0.51"^^xsd:float ;
+                                              qudt:unit unit:um
+                                            ]
+                                  ] ;
+                          :pinholeSize
+                                  [ a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
+                                    rdf:value "0.0015"^^xsd:float ;
+                                    qudt:unit unit:mm
+                                  ]
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b4 ;
+                :physicalSizeY _:b4 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "1"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] .
+
+_:b7  a       :Filter , :ManufacturerSpec , :EmissionFilter ;
+      dcterms:identifier "Filter:1" ;
+      :filterType filterType:bandPass ;
+      :manufacturer _:b2 ;
+      :model  "Delux Mk4" ;
+      :transmittanceRange
+              [ a       :TransmittanceRange ;
+                :cutIn  [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "560000.0"^^xsd:float ;
+                          qudt:unit unit:pm
+                        ] ;
+                :cutInTolerance
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "250.0"^^xsd:float ;
+                          qudt:unit <http://purl.obolibrary.org/obo/uo#0000019>
+                        ] ;
+                :cutOut [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "630000.0"^^xsd:float ;
+                          qudt:unit unit:pm
+                        ] ;
+                :cutOutTolerance
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "300.0"^^xsd:float ;
+                          qudt:unit <http://purl.obolibrary.org/obo/uo#0000019>
+                        ] ;
+                :transmittance "0.8"^^xsd:float
+              ] .
+
+<http://purl.obolibrary.org/obo/uo#0000008>
+      a       <http://purl.obolibrary.org/obo/uo#0000000> .
+
+<http://purl.obolibrary.org/obo/uo#0000218>
+      a       <http://purl.obolibrary.org/obo/uo#0000000> .
+
+binning:twoXTwo
+      a       :Binning .
+
+unit:hHz
+      a       :Unit , rdfs:Class ;
+      rdfs:label "hecto-heltz"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000106> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000287> .
+
+filterType:bandPass
+      a       :FilterType .
+
+laserMedium:Ruby
+      a       :LaserMedium .
+
+unit:cm
+      a       :Unit , rdfs:Class ;
+      rdfs:label "centi-meter"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000298> .
+
+unit:daV
+      a       :Unit , rdfs:Class ;
+      rdfs:label "deca-volt"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000218> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000295> .
+
+_:b5  a       :Filter , :ManufacturerSpec , :ExcitationFilter ;
+      dcterms:identifier "Filter:0" ;
+      :filterWheel "Disc A" ;
+      :manufacturer _:b2 ;
+      :model  "Model1" ;
+      :transmittanceRange
+              [ a       :TransmittanceRange ;
+                :cutIn  [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "350000.0"^^xsd:float ;
+                          qudt:unit unit:pm
+                        ] ;
+                :cutInTolerance
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "100.0"^^xsd:float ;
+                          qudt:unit <http://purl.obolibrary.org/obo/uo#0000019>
+                        ] ;
+                :cutOut [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "450000.0"^^xsd:float ;
+                          qudt:unit unit:pm
+                        ] ;
+                :cutOutTolerance
+                        [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          rdf:value "200.0"^^xsd:float ;
+                          qudt:unit <http://purl.obolibrary.org/obo/uo#0000019>
+                        ] ;
+                :transmittance "0.3"^^xsd:float
+              ] .
+
+<http://purl.obolibrary.org/obo/uo#0000297>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+_:b6  a       :ManufacturerSpec , :Dichroic ;
+      dcterms:identifier "Dichroic:0" ;
+      :manufacturer _:b8 ;
+      :model  "Standard Mk3" .
+
+correction:UV
+      a       :Correction .
+
+_:b8  a       :Manufacturer ;
+      rdfs:label "OME Instruments"@en .
+
+unit:mm
+      a       :Unit , rdfs:Class ;
+      rdfs:label "milli-meter"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000297> .
+
+<http://purl.obolibrary.org/obo/uo#0000302>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+<http://purl.obolibrary.org/obo/uo#0000019>
+      a       rdfs:Class .
+
+unit:um
+      a       :Unit , rdfs:Class ;
+      rdfs:label "micro-meter"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000299> .
+
+unit:dW
+      a       :Unit , rdfs:Class ;
+      rdfs:label "deci-watt"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000114> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000296> .

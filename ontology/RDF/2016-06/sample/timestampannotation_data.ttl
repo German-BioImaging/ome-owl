@@ -1,0 +1,671 @@
+@prefix :        <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix PATO:    <http://purl.obolibrary.org/obo/PATO_> .
+@prefix screen:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/timestampannotation/screen/> .
+@prefix project:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/timestampannotation/project/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix plate:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/timestampannotation/plate/> .
+@prefix instrument:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/timestampannotation/instrument/> .
+@prefix pixelType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
+@prefix roi:     <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/timestampannotation/regionOfInterest/> .
+@prefix acquisitionMode:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
+@prefix fontFamily:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#> .
+@prefix fillRule:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#> .
+@prefix reagent:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/timestampannotation/reagent/> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix UO:      <http://purl.obolibrary.org/obo/uo#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix image:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/timestampannotation/image/> .
+@prefix experimenterGroup:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/timestampannotation/experimenterGroup/> .
+@prefix fontStyle:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#> .
+@prefix unit:    <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/timestampannotation/unit/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dimensionOrder:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
+@prefix marker:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#> .
+
+dimensionOrder:xyczt
+      a       :DimensionOrder .
+
+experimenterGroup:experimenterGroup0
+      a       :ExperimenterGroup ;
+      rdfs:comment "A description for my group 0. Complate with basic formatting, like new lines."@en ;
+      rdfs:label "MyGroup - Leader+Contact match"@en ;
+      dcterms:identifier "ExperimenterGroup:Group:0" ;
+      :experimenter
+              [ a       foaf:Person ;
+                dcterms:identifier "Experimenter:5"
+              ] ;
+      :leader _:b1 .
+
+roi:roi1
+      a       :RegionOfInterest ;
+      rdfs:comment "ROI 1 Upgradable description"@en ;
+      dcterms:identifier "ROI:1" ;
+      :union  [ a       rdf:Bag ;
+                rdf:li  [ a       :Point , :Shape ;
+                          dcterms:identifier "Shape:1" ;
+                          :fillColor _:b2 ;
+                          :fillRule fillRule:nonZero ;
+                          :font   [ a       :Font ;
+                                    :fontFamily fontFamily:sansSerif ;
+                                    :fontSize _:b3 ;
+                                    :fontStyle fontStyle:bold
+                                  ] ;
+                          :strokeColor _:b2 ;
+                          :strokeDashArray "1" ;
+                          :strokeWidth _:b3 ;
+                          :text   "Hello" ;
+                          :theC   "2"^^xsd:int ;
+                          :x      "1.0"^^xsd:float ;
+                          :y      "1.0"^^xsd:float
+                        ]
+              ] .
+
+instrument:instrument0
+      a       :Instrument ;
+      dcterms:identifier "Instrument:0" ;
+      :manufacturerSpec
+              [ a       :ManufacturerSpec , :Objective ;
+                dcterms:identifier "Objective:0" ;
+                :calibratedMagnification
+                        "60.12"^^xsd:float ;
+                :lotNumber "123" ;
+                :manufacturer
+                        [ a       :Manufacturer ;
+                          rdfs:label "OME Labs"@en
+                        ] ;
+                :nominalMagnification
+                        "20.0"^^xsd:float
+              ] .
+
+reagent:reagent0
+      a       :Reagent ;
+      dcterms:identifier "Reagent:0" .
+
+_:b4  a       :Annotation , :XMLAnnotation , :annotation ;
+      dcterms:identifier "Annotation:1" ;
+      :XMLAnnotationValue "<test2/>"^^rdf:XMLLiteral .
+
+roi:roi2
+      a       :RegionOfInterest ;
+      dcterms:identifier "ROI:2" ;
+      :union  [ a       rdf:Bag ;
+                rdf:li  [ a       :Shape , :Line ;
+                          dcterms:identifier "Shape:8" ;
+                          :markerEnd marker:arrow ;
+                          :strokeColor
+                                  [ a       :Color ;
+                                    rdf:value "171"
+                                  ] ;
+                          :strokeWidth "2"^^xsd:int ;
+                          :x1     "1.71"^^xsd:float ;
+                          :x2     "3.71"^^xsd:float ;
+                          :y1     "2.71"^^xsd:float ;
+                          :y2     "4.71"^^xsd:float
+                        ] ;
+                rdf:li  [ a       :Shape , :Line ;
+                          dcterms:identifier "Shape:9" ;
+                          :markerEnd marker:arrow ;
+                          :strokeColor
+                                  [ a       :Color ;
+                                    rdf:value "172"
+                                  ] ;
+                          :strokeWidth "2"^^xsd:int ;
+                          :x1     "1.72"^^xsd:float ;
+                          :x2     "3.72"^^xsd:float ;
+                          :y1     "2.72"^^xsd:float ;
+                          :y2     "4.72"^^xsd:float
+                        ] ;
+                rdf:li  [ a       :Polygon , :Shape ;
+                          dcterms:identifier "Shape:4" ;
+                          :point  [ a       :Point ;
+                                    :x      "20.0"^^xsd:float ;
+                                    :y      "20.0"^^xsd:float
+                                  ] ;
+                          :point  [ a       :Point ;
+                                    :x      "20.0"^^xsd:float ;
+                                    :y      "10.0"^^xsd:float
+                                  ] ;
+                          :point  [ a       :Point ;
+                                    :x      "1.0"^^xsd:float ;
+                                    :y      "1.0"^^xsd:float
+                                  ] ;
+                          :point  [ a       :Point ;
+                                    :x      "10.0"^^xsd:float ;
+                                    :y      "20.0"^^xsd:float
+                                  ] ;
+                          :strokeColor
+                                  [ a       :Color ;
+                                    rdf:value "15"
+                                  ] ;
+                          :strokeWidth _:b5
+                        ] ;
+                rdf:li  [ a       :Shape , :Line ;
+                          dcterms:identifier "Shape:7" ;
+                          :markerEnd marker:arrow ;
+                          :markerStart marker:arrow ;
+                          :strokeColor
+                                  [ a       :Color ;
+                                    rdf:value "17"
+                                  ] ;
+                          :strokeWidth "2"^^xsd:int ;
+                          :x1     "1.7"^^xsd:float ;
+                          :x2     "3.7"^^xsd:float ;
+                          :y1     "2.7"^^xsd:float ;
+                          :y2     "4.7"^^xsd:float
+                        ] ;
+                rdf:li  [ a       :Polyline , :Shape ;
+                          dcterms:identifier "\"Shape:6\"" ;
+                          :markerStart marker:arrow ;
+                          :point  [ a       :Point ;
+                                    :x      "20.1"^^xsd:float ;
+                                    :y      "10.1"^^xsd:float
+                                  ] ;
+                          :point  [ a       :Point ;
+                                    :x      "20.1"^^xsd:float ;
+                                    :y      "20.1"^^xsd:float
+                                  ] ;
+                          :point  [ a       :Point ;
+                                    :x      "10.1"^^xsd:float ;
+                                    :y      "20.1"^^xsd:float
+                                  ] ;
+                          :point  [ a       :Point ;
+                                    :x      "1.1"^^xsd:float ;
+                                    :y      "1.1"^^xsd:float
+                                  ] ;
+                          :strokeColor
+                                  [ a       :Color ;
+                                    rdf:value "161"
+                                  ] ;
+                          :strokeWidth _:b5
+                        ] ;
+                rdf:li  [ a       :Polyline , :Shape ;
+                          dcterms:identifier "\"Shape:5\"" ;
+                          :markerEnd marker:arrow ;
+                          :markerStart marker:arrow ;
+                          :point  [ a       :Point ;
+                                    :x      "15.0"^^xsd:float ;
+                                    :y      "25.0"^^xsd:float
+                                  ] ;
+                          :point  [ a       :Point ;
+                                    :x      "25.0"^^xsd:float ;
+                                    :y      "25.0"^^xsd:float
+                                  ] ;
+                          :point  [ a       :Point ;
+                                    :x      "25.0"^^xsd:float ;
+                                    :y      "15.0"^^xsd:float
+                                  ] ;
+                          :point  [ a       :Point ;
+                                    :x      "15.0"^^xsd:float ;
+                                    :y      "15.0"^^xsd:float
+                                  ] ;
+                          :strokeColor
+                                  [ a       :Color ;
+                                    rdf:value "16"
+                                  ] ;
+                          :strokeWidth _:b5
+                        ] ;
+                rdf:li  [ a       :Label , :Shape ;
+                          dcterms:identifier "Shape:3" ;
+                          :fillRule fillRule:evenOdd ;
+                          :font   [ a       :Font ;
+                                    :fontFamily fontFamily:serif ;
+                                    :fontStyle fontStyle:normal
+                                  ] ;
+                          :text   "Hello World Text Value! (from shape 3)" ;
+                          :x      "1.0"^^xsd:float ;
+                          :y      "1.0"^^xsd:float
+                        ] ;
+                rdf:li  [ a       :Rectangle , :Shape ;
+                          dcterms:identifier "Shape:2" ;
+                          :fillRule fillRule:evenOdd ;
+                          :height "4.0"^^xsd:float ;
+                          :text   "Hi There! (from shape 2)" ;
+                          :tramsform
+                                  [ a       :Transform , :AffineTransform ;
+                                    :a00    "10.0"^^xsd:float ;
+                                    :a01    "30.0"^^xsd:float ;
+                                    :a02    "50.0"^^xsd:float ;
+                                    :a10    "20.0"^^xsd:float ;
+                                    :a11    "40.0"^^xsd:float ;
+                                    :a12    "60.0"^^xsd:float
+                                  ] ;
+                          :width  "3.0"^^xsd:float ;
+                          :x      "1.0"^^xsd:float ;
+                          :y      "2.0"^^xsd:float
+                        ]
+              ] .
+
+acquisitionMode:laserScanningConfocalMicroscopy
+      a       :AcquisitionMode .
+
+fillRule:nonZero
+      a       :FillRule .
+
+pixelType:uint8
+      a       :PixelType .
+
+fontFamily:sansSerif
+      a       :FontFamily .
+
+acquisitionMode:multiPhotonMicroscopy
+      a       :AcquisitionMode .
+
+roi:roi0
+      a       :RegionOfInterest ;
+      dcterms:identifier "ROI:0" ;
+      :union  [ a       rdf:Bag ;
+                rdf:li  [ a       :Point , :Shape ;
+                          dcterms:identifier "Shape:0" ;
+                          :theC   "0"^^xsd:int ;
+                          :x      "1.0"^^xsd:float ;
+                          :y      "1.0"^^xsd:float
+                        ]
+              ] .
+
+_:b1  a       foaf:Person ;
+      dcterms:identifier "Experimenter:0" .
+
+_:b6  a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
+      rdf:value "100000.0"^^xsd:float ;
+      qudt:unit unit:um .
+
+_:b7  a       foaf:Person ;
+      dcterms:identifier "Experimenter:1" ;
+      foaf:familyName "Smith"@en ;
+      foaf:givenName "John"@en ;
+      foaf:mbox "john@example.org" ;
+      foaf:middleName "Andrew"@en .
+
+unit:nm
+      a       :Unit ;
+      rdfs:label "nano-meter"@en ;
+      :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
+      :prefix <http://purl.obolibrary.org/obo/uo#0000300> .
+
+screen:screen1
+      a       :Screen ;
+      rdfs:comment "Screen 1 Description"@en ;
+      rdfs:label "ScreenName1"@en ;
+      dcterms:identifier "Screen:1" ;
+      :annotation _:b4 ;
+      :plate  plate:plate1 , plate:plate0 ;
+      :protocol
+              [ a       :Protocol ;
+                rdfs:comment "Protocol Description Test1"@en ;
+                dcterms:identifier "ProtocolTest1ID"
+              ] ;
+      :reagentSet
+              [ a       :ReagentSet ;
+                rdfs:comment "Reragents Set PQR"@en ;
+                dcterms:identifier "ReagentsPQR-ID" ;
+                :reagent reagent:reagent1
+              ] ;
+      :screenType "ScreenType1" .
+
+experimenterGroup:experimenterGroup4
+      a       :ExperimenterGroup ;
+      rdfs:comment "A description for my group 4. Complate with basic formatting, like new lines."@en ;
+      rdfs:label "ContactMatch"@en ;
+      dcterms:identifier "ExperimenterGroup:Group:4" ;
+      :leader _:b1 .
+
+_:b5  a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
+      rdf:value "2.0"^^xsd:float ;
+      qudt:unit unit:pt .
+
+screen:screen0
+      a       :Screen ;
+      rdfs:comment "Screen 0 Description"@en ;
+      rdfs:label "ScreenName0"@en ;
+      dcterms:identifier "Screen:0" ;
+      :annotation _:b4 ;
+      :plate  plate:plate0 ;
+      :protocol
+              [ a       :Protocol ;
+                rdfs:comment "Protocol Description Test0"@en ;
+                dcterms:identifier "ProtocolTest0ID"
+              ] ;
+      :reagentSet
+              [ a       :ReagentSet ;
+                rdfs:comment "Reagents Set XYZ"@en ;
+                dcterms:identifier "ReagentsXYZ-ID" ;
+                :reagent reagent:reagent0
+              ] ;
+      :screenType "ScreenType0" .
+
+fillRule:evenOdd
+      a       :FillRule .
+
+reagent:reagent3
+      a       :Reagent ;
+      dcterms:identifier "Reagent:3" .
+
+experimenterGroup:experimenterGroup3
+      a       :ExperimenterGroup ;
+      rdfs:comment "A description for my group 3. Complate with basic formatting, like new lines."@en ;
+      rdfs:label "LeaderMatch"@en ;
+      dcterms:identifier "ExperimenterGroup:Group:3" ;
+      :leader _:b1 .
+
+<http://purl.obolibrary.org/obo/uo#0000300>
+      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+
+image:image0
+      a       :Image ;
+      dcterms:identifier "Image:0" ;
+      :acquisitionDate "2012-03-05T02:48:38" ;
+      :experimenter _:b7 ;
+      :pixels [ a       :Pixels ;
+                dcterms:identifier "Pixels:0.0" ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "//+szuv/AP95n8PiAABHbZO3AP8dPF+G" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "AP+rzuv/AAB5n8Pi/wBHbJO3//8dPGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :binData
+                        [ a       :BinData ;
+                          :bigEndian "false"^^xsd:boolean ;
+                          :data   "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+                          :length "32"^^xsd:long
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:1" ;
+                          :acquisitionMode acquisitionMode:laserScanningConfocalMicroscopy ;
+                          :color  [ a       :Color ;
+                                    rdf:value "-1474836488"
+                                  ]
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:2" ;
+                          :acquisitionMode acquisitionMode:multiPhotonMicroscopy ;
+                          :color  [ a       :Color ;
+                                    rdf:value "-2144364811"
+                                  ]
+                        ] ;
+                :channel
+                        [ a       :Channel ;
+                          dcterms:identifier "Channel:0" ;
+                          :acquisitionMode acquisitionMode:laserScanningConfocalMicroscopy ;
+                          :color  [ a       :Color ;
+                                    rdf:value "-1147483648"
+                                  ]
+                        ] ;
+                :dimensionOrder dimensionOrder:xyczt ;
+                :physicalSizeX _:b6 ;
+                :physicalSizeY _:b6 ;
+                :pixelType pixelType:uint8 ;
+                :sizeC  "3"^^xsd:int ;
+                :sizeT  "1"^^xsd:int ;
+                :sizeX  "6"^^xsd:int ;
+                :sizeY  "4"^^xsd:int ;
+                :sizeZ  "1"^^xsd:int
+              ] ;
+      :regionOfInterest roi:roi0 , roi:roi1 , roi:roi2 .
+
+fontStyle:normal
+      a       :FontStyle .
+
+[]    a       :StructuredAnnotations ;
+      :annotation _:b8 , _:b4 ;
+      :annotation
+              [ a       :TimestampAnnotation , :annotation ;
+                dcterms:identifier "Annotation:7" ;
+                :nameSpace "sample.openmicroscopy.org/time/gregorian-start" ;
+                :timestampAnnotationValue
+                        "1582-10-15T00:00:00"
+              ] ;
+      :annotation
+              [ a       :TimestampAnnotation , :annotation ;
+                dcterms:identifier "Annotation:6" ;
+                :nameSpace "sample.openmicroscopy.org/time/houseofstewart" ;
+                :timestampAnnotationValue
+                        "1714-08-01T00:00:00"
+              ] ;
+      :annotation
+              [ a       :TimestampAnnotation , :annotation ;
+                dcterms:identifier "Annotation:9" ;
+                :nameSpace "sample.openmicroscopy.org/time/romefire" ;
+                :timestampAnnotationValue
+                        "0066-07-18T00:00:00"
+              ] ;
+      :annotation
+              [ a       :TimestampAnnotation , :annotation ;
+                dcterms:identifier "Annotation:8" ;
+                :nameSpace "sample.openmicroscopy.org/time/kingjohn" ;
+                :timestampAnnotationValue
+                        "1199-05-27T00:00:00"
+              ] ;
+      :annotation
+              [ a       :TimestampAnnotation , :annotation ;
+                dcterms:identifier "Annotation:11" ;
+                :nameSpace "sample.openmicroscopy.org/time/dinosaur" ;
+                :timestampAnnotationValue
+                        "-231400000-01-01T00:00:00"
+              ] ;
+      :annotation
+              [ a       :TimestampAnnotation , :annotation ;
+                dcterms:identifier "Annotation:3" ;
+                :nameSpace "sample.openmicroscopy.org/time/post1972" ;
+                :timestampAnnotationValue
+                        "1996-03-23T14:45:00"
+              ] ;
+      :annotation
+              [ a       :TimestampAnnotation , :annotation ;
+                dcterms:identifier "Annotation:2" ;
+                :nameSpace "sample.openmicroscopy.org/time/retirement" ;
+                :timestampAnnotationValue
+                        "2037-12-15T17:30:00"
+              ] ;
+      :annotation
+              [ a       :TimestampAnnotation , :annotation ;
+                dcterms:identifier "Annotation:5" ;
+                :nameSpace "sample.openmicroscopy.org/time/oldestlivingDOB" ;
+                :timestampAnnotationValue
+                        "1898-03-05T02:48:38+03:00"
+              ] ;
+      :annotation
+              [ a       :TimestampAnnotation , :annotation ;
+                dcterms:identifier "Annotation:4" ;
+                :nameSpace "sample.openmicroscopy.org/time/1970-1972" ;
+                :timestampAnnotationValue
+                        "1971-05-06T18:34:59"
+              ] ;
+      :annotation
+              [ a       :TimestampAnnotation , :annotation ;
+                dcterms:identifier "Annotation:10" ;
+                :nameSpace "sample.openmicroscopy.org/time/birthday" ;
+                :timestampAnnotationValue
+                        "-0005-12-25T00:00:00"
+              ] .
+
+marker:arrow
+      a       :Marker .
+
+roi:roi3
+      a       :RegionOfInterest ;
+      dcterms:identifier "ROI:3" ;
+      :union  [ a       rdf:Bag ;
+                rdf:li  [ a       :Label , :Shape ;
+                          dcterms:identifier "Shape:11" ;
+                          :text   "Removed Path" ;
+                          :x      "0.0"^^xsd:float ;
+                          :y      "0.0"^^xsd:float
+                        ]
+              ] .
+
+reagent:reagent2
+      a       :Reagent ;
+      dcterms:identifier "Reagent:2" .
+
+screen:screen3
+      a       :Screen ;
+      rdfs:comment "Screen 3 Description"@en ;
+      rdfs:label "ScreenName3"@en ;
+      dcterms:identifier "Screen:3" ;
+      :annotation _:b4 ;
+      :plate  plate:plate0 ;
+      :protocol
+              [ a       :Protocol ;
+                rdfs:comment "Protocol Description Test3"@en ;
+                dcterms:identifier "ProtocolTest3ID"
+              ] ;
+      :reagentSet
+              [ a       :ReagentSet ;
+                rdfs:comment "Reagents Set AJP"@en ;
+                dcterms:identifier "ReagentsAJP-ID" ;
+                :reagent reagent:reagent3
+              ] ;
+      :screenType "ScreenType3" .
+
+experimenterGroup:experimenterGroup2
+      a       :ExperimenterGroup ;
+      rdfs:comment "A description for my group 2. Complate with basic formatting, like new lines."@en ;
+      rdfs:label "NoMatch"@en ;
+      dcterms:identifier "ExperimenterGroup:Group:2" ;
+      :experimenter
+              [ a       foaf:Person ;
+                dcterms:identifier "Experimenter:4"
+              ] ;
+      :leader [ a       foaf:Person ;
+                dcterms:identifier "Experimenter:6"
+              ] .
+
+unit:um
+      a       rdfs:Class .
+
+<http://purl.obolibrary.org/obo/uo#0000008>
+      a       <http://purl.obolibrary.org/obo/uo#0000000> .
+
+plate:plate0
+      a       :Plate ;
+      rdfs:comment "Plate 0 Description"@en ;
+      dcterms:identifier "Plate:0" ;
+      :annotation _:b8 ;
+      :plateAcquisition
+              [ a       :PlateAcquisition ;
+                rdfs:comment "Plate Acquisition 0 Description"@en ;
+                dcterms:identifier "PlateAcquisition:0" ;
+                :annotation _:b4
+              ] ;
+      :well   [ a       :Well ;
+                dcterms:identifier "Well:0" ;
+                :color  [ a       :Color ;
+                          rdf:value "-2147483648"
+                        ] ;
+                :column "1"^^xsd:int ;
+                :row    "1"^^xsd:int ;
+                :wellSample
+                        [ a       :WellSample ;
+                          dcterms:identifier "WellSample:0" ;
+                          :image  image:image0 ;
+                          :index  "1"^^xsd:int
+                        ] ;
+                :wellType "TheWell0Status"
+              ] .
+
+project:project0
+      a       :Project ;
+      dcterms:identifier "Project:0" ;
+      :annotation
+              [ a       :Annotation
+              ] ;
+      :dataset
+              [ a       :Dataset ;
+                dcterms:identifier "Dataset:0" ;
+                :annotation _:b8 ;
+                :image  image:image0
+              ] .
+
+unit:pt
+      a       :Unit , rdfs:Class ;
+      rdfs:label "point"@en .
+
+roi:roi4
+      a       :RegionOfInterest ;
+      dcterms:identifier "ROI:4" ;
+      :union  [ a       rdf:Bag ;
+                rdf:li  [ a       :Label , :Shape ;
+                          dcterms:identifier "Shape:12" ;
+                          :text   "Removed Path" ;
+                          :x      "0.0"^^xsd:float ;
+                          :y      "0.0"^^xsd:float
+                        ] ;
+                rdf:li  [ a       :Label , :Shape ;
+                          dcterms:identifier "Shape:13" ;
+                          :text   "Removed Path" ;
+                          :x      "0.0"^^xsd:float ;
+                          :y      "0.0"^^xsd:float
+                        ]
+              ] .
+
+screen:screen2
+      a       :Screen ;
+      rdfs:comment "Screen 2 Description"@en ;
+      rdfs:label "ScreenName2"@en ;
+      dcterms:identifier "Screen:2" ;
+      :annotation _:b4 ;
+      :protocol
+              [ a       :Protocol ;
+                rdfs:comment "Protocol Description Test2"@en ;
+                dcterms:identifier "ProtocolTest2ID"
+              ] ;
+      :reagentSet
+              [ a       :ReagentSet ;
+                rdfs:comment "Reagents Set IJK"@en ;
+                dcterms:identifier "ReagentsIJK-ID" ;
+                :reagent reagent:reagent2
+              ] ;
+      :screenType "ScreenType2" .
+
+_:b2  a       :Color ;
+      rdf:value "1" .
+
+experimenterGroup:experimenterGroup1
+      a       :ExperimenterGroup ;
+      rdfs:comment "A description for my group 1. Complate with basic formatting, like new lines."@en ;
+      rdfs:label "MyOtherGroup"@en ;
+      dcterms:identifier "ExperimenterGroup:Group:1" ;
+      :experimenter
+              [ a       foaf:Person ;
+                dcterms:identifier "Experimenter:3"
+              ] ;
+      :experimenter
+              [ a       foaf:Person ;
+                dcterms:identifier "Experimenter:2"
+              ] ;
+      :leader _:b1 , _:b7 .
+
+fontFamily:serif
+      a       :FontFamily .
+
+reagent:reagent1
+      a       :Reagent ;
+      dcterms:identifier "Reagent:1" .
+
+fontStyle:bold
+      a       :FontStyle .
+
+_:b3  a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
+      rdf:value "1.0"^^xsd:float ;
+      qudt:unit unit:pt .
+
+_:b8  a       :Annotation , :XMLAnnotation , :annotation ;
+      dcterms:identifier "Annotation:0" ;
+      :XMLAnnotationValue "<test1/>"^^rdf:XMLLiteral .
+
+plate:plate1
+      a       :Plate ;
+      dcterms:identifier "Plate:1" .
