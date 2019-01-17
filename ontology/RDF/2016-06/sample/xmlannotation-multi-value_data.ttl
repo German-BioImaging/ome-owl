@@ -41,7 +41,7 @@ unit:um
 <http://purl.obolibrary.org/obo/uo#0000008>
       a       <http://purl.obolibrary.org/obo/uo#0000000> .
 
-_:b2  a       :Annotation , :XMLAnnotation , :annotation ;
+_:b2  a       :Annotation , :XMLAnnotation ;
       dcterms:identifier "Annotation:1" ;
       :XMLAnnotationValue """<valueA>A</valueA>
         <valueB xmlns=\"http://example.com/xmlschema/\"

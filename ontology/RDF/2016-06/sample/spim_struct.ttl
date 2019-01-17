@@ -1,0 +1,1627 @@
+@prefix :        <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
+@prefix laserType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LazerType#> .
+@prefix qudt:    <http://qudt.org/schema/qudt/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix detectorType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix PATO:    <http://purl.obolibrary.org/obo/PATO_> .
+@prefix screen:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/screen/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix plate:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/plate/> .
+@prefix instrument:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/instrument/> .
+@prefix pixelType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
+@prefix medium:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#> .
+@prefix fontFamily:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#> .
+@prefix fillRule:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#> .
+@prefix reagent:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/reagent/> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix acquisitioMode:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
+@prefix UO:      <http://purl.obolibrary.org/obo/uo#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix SBO:     <http://purl.obolibrary.org/obo/SBO_> .
+@prefix microscopeType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#> .
+@prefix image:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/spim/image/> .
+@prefix immersion:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#> .
+@prefix fontStyle:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#> .
+@prefix laserMedium:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LazerMedium#> .
+@prefix unit:    <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/unit/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dimensionOrder:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
+@prefix marker:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#> .
+@prefix SIO:     <http://semanticscience.org/resource/SIO_> .
+@prefix correction:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Correction#> .
+
+<>    a       <http://metadb.riken.jp/matadb/table/excel/Book> ;
+      <http://metadb.riken.jp/matadb/table/excel/prefixSheetNumber>
+              "0"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Detector" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Detectordata6> , <Detectordata5> , <Detectordata4> , <Detectordata3> , <Detectordata2> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Detector ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Detector"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "6"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Detector
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Imaging_Condition" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Imaging_Conditiondata3> , <Imaging_Conditiondata2> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :ImagingCondition ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Imaging Condition"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "9"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :ImagingCondition
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "XML_Annotation" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <XML_Annotationdata5> , <XML_Annotationdata4> , <XML_Annotationdata3> , <XML_Annotationdata2> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :XMLAnnotation ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "XML Annotation"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "18"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :XMLAnnotation
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Channel" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Channeldata4> , <Channeldata2> , <Channeldata3> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Channel ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Channel"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "13"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Channel
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "time" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <timedata2> , <timedata3> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  <http://purl.obolibrary.org/obo/PATO_0000165> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Time"@en , "時間"@ja
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "23"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        <http://purl.obolibrary.org/obo/PATO_0000165>
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Plane" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Planedata4> , <Planedata3> , <Planedata5> , <Planedata2> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Plane ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Plane"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "16"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Plane
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Laser" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Laserdata4> , <Laserdata5> , <Laserdata2> , <Laserdata3> , <Laserdata8> , <Laserdata6> , <Laserdata7> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Laser ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Laser"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "4"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Laser
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Manufacturer" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Manufacturerdata2> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Manufacturer ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Manufacturer"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "3"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Manufacturer
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Microscope" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Microscopedata2> , <Microscopedata5> , <Microscopedata4> , <Microscopedata3> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Microscope ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Microscope"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "2"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Microscope
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Binary_Data" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Binary_Datadata2> , <Binary_Datadata3> , <Binary_Datadata4> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :BinData ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Binary Data"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "15"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :BinData
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Instrument" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Instrumentdata3> , <Instrumentdata2> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Instrument ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Instrument"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "1"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Instrument
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "distance" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <distancedata2> , <distancedata3> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  <http://purl.obolibrary.org/obo/PATO_0000040> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Distance"@en , "距離"@ja
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "21"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        <http://purl.obolibrary.org/obo/PATO_0000040>
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Objective" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Objectivedata4> , <Objectivedata5> , <Objectivedata6> , <Objectivedata7> , <Objectivedata8> , <Objectivedata9> , <Objectivedata10> , <Objectivedata2> , <Objectivedata11> , <Objectivedata3> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Objective ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Objective"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "7"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Objective
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "StageLabel" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <StageLabeldata2> , <StageLabeldata3> , <StageLabeldata4> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :StageLabel ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "StageLabel"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "11"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :StageLabel
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "LED" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <LEDdata2> , <LEDdata3> , <LEDdata4> , <LEDdata5> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :LightEmittingDiode ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "LED"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "5"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :LightEmittingDiode
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "waveLength" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <waveLengthdata3> , <waveLengthdata2> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  <http://purl.obolibrary.org/obo/PATO_0001242> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "波長"@ja , "Wave Length"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "22"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        <http://purl.obolibrary.org/obo/PATO_0001242>
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "size" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <sizedata2> , <sizedata3> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  <http://purl.obolibrary.org/obo/PATO_0000117> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "サイズ"@ja , "Size"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "20"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        <http://purl.obolibrary.org/obo/PATO_0000117>
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Image" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Imagedata7> , <Imagedata6> , <Imagedata8> , <Imagedata3> , <Imagedata2> , <Imagedata5> , <Imagedata4> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Image ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Image"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "8"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Image
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Pixels" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Pixelsdata14> , <Pixelsdata13> , <Pixelsdata8> , <Pixelsdata9> , <Pixelsdata10> , <Pixelsdata12> , <Pixelsdata11> , <Pixelsdata4> , <Pixelsdata5> , <Pixelsdata6> , <Pixelsdata7> , <Pixelsdata2> , <Pixelsdata3> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Pixels ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Pixels"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "12"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Pixels
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Objective_Settings" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Objective_Settingsdata4> , <Objective_Settingsdata2> , <Objective_Settingsdata3> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :ObjectiveSettings ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Objective Settings"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "10"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :ObjectiveSettings
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Structured_Annotations" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Structured_Annotationsdata2> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :StructuredAnnotations ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Structured Annotations"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "17"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :StructuredAnnotations
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Unit" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Unitdata4> , <Unitdata3> , <Unitdata2> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Unit ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "単位"@ja , "Unit"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "19"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Unit
+              ] ;
+      <http://metadb.riken.jp/matadb/table/excel/sheet>
+              [ a       <http://metadb.riken.jp/matadb/table/excel/Sheet> ;
+                rdfs:label "Color" ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        <Colordata2> ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/ClassColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/class>
+                                  :Color ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "2"^^xsd:long ;
+                          <http://metadb.riken.jp/matadb/tableView/attribute>
+                                  "Color"@en
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/column>
+                        [ a       <http://metadb.riken.jp/matadb/table/excel/CommentColumn> ;
+                          <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+                                  "1"^^xsd:long
+                        ] ;
+                <http://metadb.riken.jp/matadb/table/excel/sheetNumber>
+                        "14"^^xsd:long ;
+                <http://metadb.riken.jp/matadb/table/propertyOfTableType>
+                        rdf:type ;
+                <http://metadb.riken.jp/matadb/table/targetClass>
+                        :Color
+              ] .
+
+<Detectordata6>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :DetectorType ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "7"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :detectorType ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "detector type"@en .
+
+<XML_Annotationdata5>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "6"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              rdf:XMLLiteral ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdf:value ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "XML annotation value"@en .
+
+<Laserdata5>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "6"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :serialNumber ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "serial number"@en .
+
+<StageLabeldata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:float ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :positionY ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "position y"@en .
+
+<Instrumentdata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :ManufacturerSpec ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :manufacturerSpec ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "manufacturer spec"@en .
+
+<Laserdata6>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              <http://purl.obolibrary.org/obo/PATO_0001242> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "7"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :waveLength ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "wave length"@en .
+
+<LEDdata5>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "6"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :serialNumber ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "serial number"@en .
+
+<sizedata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:float ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdf:value ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "値"@ja , "value"@en .
+
+<Structured_Annotationsdata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Annotation ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :annotation ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "annotation"@en .
+
+<Objectivedata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              dcterms:identifier ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "identifier"@en .
+
+<Pixelsdata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              dcterms:identifier ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "identifier"@en .
+
+<Channeldata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :flour ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "flour"@en .
+
+<XML_Annotationdata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :namespace ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "namespace"@en .
+
+<StageLabeldata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:float ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :positionX ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "position x"@en .
+
+<comment3>
+      a       <http://metadb.riken.jp/matadb/table/excel/Cell> ;
+      rdfs:comment "datatype" ;
+      <http://metadb.riken.jp/matadb/table/excel/rowNumber>
+              "4"^^xsd:long .
+
+<Microscopedata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :model ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "model"@en .
+
+<Imagedata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              dcterms:identifier ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "identifier"@en .
+
+<Laserdata7>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :LaserType ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "8"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :laserType ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "laser type"@en .
+
+<Pixelsdata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :PixelType ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :pixelType ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "pixel type"@en .
+
+<Objectivedata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Manufacturer ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :manufacturer ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "manufacturer"@en .
+
+<Objectivedata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :model ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "model"@en .
+
+<Pixelsdata9>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "10"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:positiveInteger ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :sizeX ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "size x"@en .
+
+<XML_Annotationdata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              rdf:langString ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdfs:comment ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "コメント"@ja , "comment"@en .
+
+<distancedata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:float ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdf:value ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "値"@ja , "value"@en .
+
+<Manufacturerdata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              rdf:langString ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdfs:label ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "名称"@ja , "label"@en .
+
+<comment2>
+      a       <http://metadb.riken.jp/matadb/table/excel/Cell> ;
+      rdfs:comment "PropertyURI" ;
+      <http://metadb.riken.jp/matadb/table/excel/rowNumber>
+              "3"^^xsd:long .
+
+<Unitdata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              <http://purl.obolibrary.org/obo/uo#0000046> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :prefix ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "接頭辞"@ja , "prefix"@en .
+
+<Imagedata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              rdf:langString ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdfs:label ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "名称"@ja , "label"@en .
+
+<Laserdata8>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :LaserMedium ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "9"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :laserMedium ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "laser medium"@en .
+
+<LEDdata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Manufacturer ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :manufacturer ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "manufacturer"@en .
+
+<timedata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              rdfs:Class ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              qudt:unit ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "単位"@ja , "unit:nm"@en .
+
+<Planedata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:nonNegativeInteger ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :theZ ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "the z"@en .
+
+<Objectivedata5>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "6"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :serialNumber ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "serial number"@en .
+
+<Binary_Datadata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:boolean ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :bigEndian ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "big endian"@en .
+
+<XML_Annotationdata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              dcterms:identifier ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "identifier"@en .
+
+<Imaging_Conditiondata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :StageLabel ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :stageLabel ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "stage label"@en .
+
+<Pixelsdata10>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "11"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:positiveInteger ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :sizeY ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "size y"@en .
+
+<comment1>
+      a       <http://metadb.riken.jp/matadb/table/excel/Cell> ;
+      rdfs:comment "日本語属性" ;
+      <http://metadb.riken.jp/matadb/table/excel/rowNumber>
+              "2"^^xsd:long .
+
+<Unitdata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              rdf:langString ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdfs:label ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "名称"@ja , "label"@en .
+
+<LEDdata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :model ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "model"@en .
+
+<timedata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:float ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdf:value ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "値"@ja , "value"@en .
+
+<Binary_Datadata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:base64Binary ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :data ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "data"@en .
+
+<Imagedata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Pixels ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :pixels ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "pixels"@en .
+
+<Objectivedata6>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              <http://purl.obolibrary.org/obo/PATO_0000040> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "7"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :workingDistance ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "working distance"@en .
+
+<Detectordata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              dcterms:identifier ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "identifier"@en .
+
+<comment0>
+      a       <http://metadb.riken.jp/matadb/table/excel/Cell> ;
+      rdfs:comment "English Attribution" ;
+      <http://metadb.riken.jp/matadb/table/excel/rowNumber>
+              "1"^^xsd:long .
+
+<Imaging_Conditiondata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :ObjectiveSettings ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :objectiveSettings ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "Objective Settings"@en .
+
+<Pixelsdata11>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "12"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:positiveInteger ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :sizeZ ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "size z"@en .
+
+<Planedata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:nonNegativeInteger ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :theC ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "the c"@en .
+
+<Microscopedata5>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Manufacturer ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "6"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :manufacturer ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "manufacturer"@en .
+
+<waveLengthdata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:float ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdf:value ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "値"@ja , "value"@en .
+
+<Imagedata5>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "6"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:dateTime ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :acquisitionDate ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "acquisition date"@en .
+
+<Pixelsdata6>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              <http://purl.obolibrary.org/obo/PATO_0000117> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "7"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :physicalSizeY ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "physical size y"@en .
+
+<Binary_Datadata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:nonNegativeLong ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :length ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "length"@en .
+
+<Objectivedata7>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "8"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:float ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :nominalMagnification ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "nominal maginification"@en .
+
+<Pixelsdata8>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "9"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:positiveInteger ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :sizeT ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "size t"@en .
+
+<Imagedata6>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Instrument ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "7"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :instrument ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "instrument"@en .
+
+<Detectordata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Manufacturer ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :manufacturer ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "manufacturer"@en .
+
+<Laserdata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              dcterms:identifier ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "identifier"@en .
+
+<distancedata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              rdfs:Class ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              qudt:unit ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "unit"@en , "単位"@ja .
+
+<Objective_Settingsdata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              dcterms:identifier ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "identifier"@en .
+
+<Pixelsdata12>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Channel ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "13"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :channel ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "channel"@en .
+
+<Unitdata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              <http://purl.obolibrary.org/obo/uo#0000000> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :baseUnit ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "基本単位"@ja , "base unit"@en .
+
+<LEDdata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              dcterms:identifier ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "identifier"@en .
+
+<Planedata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:nonNegativeInteger ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :theT ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "the t"@en .
+
+<Pixelsdata7>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "8"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:positiveInteger ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :sizeC ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "size c"@en .
+
+<Pixelsdata13>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :BinData ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "14"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :binData ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "bin data"@en .
+
+<Detectordata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :model ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "model"@en .
+
+<Imagedata7>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :ImagingCondition ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "8"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :imagingCondition ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "imaging condition"@en .
+
+<Objectivedata8>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Correction ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "9"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :correction ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "correction"@en .
+
+<Laserdata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Manufacturer ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :manufacturer ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "manufacturer"@en .
+
+<Channeldata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Color ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :color ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "color"@en .
+
+<Objective_Settingsdata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:float ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :correctionCollar ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "correction collar"@en .
+
+<StageLabeldata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              rdf:langString ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdfs:label ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "名称"@ja , "label"@en .
+
+<Objective_Settingsdata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Medium ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :medium ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "medium"@en .
+
+<Colordata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              rdf:value ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "value"@en .
+
+<Pixelsdata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :DimensionOrder ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :dimensionOrder ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "dimension order"@en .
+
+<Microscopedata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :serialNumber ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "serial number"@en .
+
+<Objectivedata11>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "12"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:float ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :calibratedMagnification ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "calibrated maginification"@en .
+
+<Pixelsdata14>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Plane ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "15"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :plane ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "plane"@en .
+
+<Detectordata5>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "6"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :serialNumber ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "serial number"@en .
+
+<Laserdata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :model ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "model"@en .
+
+<Objectivedata9>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "10"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:float ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :lensNA ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "lens NA"@en .
+
+<Channeldata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              dcterms:identifier ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "identifier"@en .
+
+<Imagedata8>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Annotation ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "9"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :annotation ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "annotation"@en .
+
+<Instrumentdata2>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "3"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/dataType>
+              xsd:string ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              dcterms:identifier ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "identifier"@en .
+
+<waveLengthdata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              rdfs:Class ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              qudt:unit ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "単位"@ja , "unit:nm"@en .
+
+<Pixelsdata5>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              <http://purl.obolibrary.org/obo/PATO_0000117> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "6"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :physicalSizeX ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "physical size x"@en .
+
+<Microscopedata4>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :MicroscopeType ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "5"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :microscopeType ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "microscope type"@en .
+
+<Planedata5>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              <http://purl.obolibrary.org/obo/PATO_0000165> ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "6"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :exposureTime ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "exposure time"@en .
+
+<sizedata3>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              rdfs:Class ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "4"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              qudt:unit ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "unit"@en , "単位"@ja .
+
+<Objectivedata10>
+      a       <http://metadb.riken.jp/matadb/table/excel/DataColumn> ;
+      <http://metadb.riken.jp/matadb/table/excel/class>
+              :Immersion ;
+      <http://metadb.riken.jp/matadb/table/excel/columnNumber>
+              "11"^^xsd:long ;
+      <http://metadb.riken.jp/matadb/table/excel/property>
+              :immersion ;
+      <http://metadb.riken.jp/matadb/tableView/attribute>
+              "immersion"@en .

@@ -60,19 +60,19 @@ image:image0
 pixelType:uint8
       a       :PixelType .
 
-_:b2  a       :TagAnnotation , :Annotation , :annotation ;
+_:b2  a       :TagAnnotation , :Annotation ;
       rdfs:comment "This is the description of the sample tagse"@en ;
       dcterms:identifier "Annotation:3" ;
       :annotation _:b3 , _:b4 ;
       :namespace "\"openmicroscopy.org/omero/insight/tagset\"" ;
       :tagAnnotationValue "SimpleTagset" .
 
-_:b3  a       :Annotation , :TagAnnotation , :annotation ;
+_:b3  a       :TagAnnotation , :Annotation ;
       rdfs:comment "This is the description of the sample tag B"@en ;
       dcterms:identifier "Annotation:2" ;
       :tagAnnotationValue "SampleTagB" .
 
-_:b4  a       :Annotation , :TagAnnotation , :annotation ;
+_:b4  a       :TagAnnotation , :Annotation ;
       rdfs:comment "This is the description of the sample tag A"@en ;
       dcterms:identifier "Annotation:1" ;
       :tagAnnotationValue "SampleTagA" .

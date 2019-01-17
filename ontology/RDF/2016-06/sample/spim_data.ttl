@@ -38,7 +38,7 @@ dimensionOrder:xyczt
 <http://purl.obolibrary.org/obo/uo#0000010>
       a       rdfs:Class .
 
-_:b1  a       :Annotation , :XMLAnnotation , :annotation ;
+_:b1  a       :Annotation , :XMLAnnotation ;
       rdf:value """<OME-Extra:SpimPositions
            xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">
           <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"
@@ -226,7 +226,7 @@ image:image0
 immersion:oil
       a       :Immersion .
 
-_:b2  a       :Annotation , :XMLAnnotation , :annotation ;
+_:b2  a       :Annotation , :XMLAnnotation ;
       rdf:value """        <OME-Extra:SpimSet
            xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">
           <SpimImage ID=\"Image:0\" Angle=\"0\"/>
@@ -787,7 +787,7 @@ immersion:air
 laserMedium:GaAs
       a       :LaserMedium .
 
-_:b4  a       :Annotation , :XMLAnnotation , :annotation ;
+_:b4  a       :Annotation , :XMLAnnotation ;
       rdf:value "<YourCustomXmlData>Any well formed XML allowed.</YourCustomXmlData>"^^rdf:XMLLiteral ;
       rdfs:comment "These are the values you want attached to the SPIM images specific to your system that are not covered in our general SPIM additions."@en ;
       dcterms:identifier "Annotation:SystemSpecific:1" .
@@ -807,7 +807,7 @@ unit:nm
 _:b9  a       :Manufacturer ;
       rdfs:label "OME-Sample"@en .
 
-_:b3  a       :Annotation , :XMLAnnotation , :annotation ;
+_:b3  a       :Annotation , :XMLAnnotation ;
       rdf:value """<OME-Extra:ObjectiveAttributes
            xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">
           <ObjectiveAdditions ID=\"Objective:TubeLens:1\" FocalLength=\"120\" SlitAperture=\"6\"
@@ -832,7 +832,7 @@ medium:oil
       a       <http://purl.obolibrary.org/obo/uo#0000000> .
 
 _:b12
-      a       :Annotation , :XMLAnnotation , :annotation ;
+      a       :Annotation , :XMLAnnotation ;
       rdf:value """<OME-Extra:SpimPositions
            xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">
           <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"
@@ -882,7 +882,7 @@ unit:um
       :prefix <http://purl.obolibrary.org/obo/uo#0000299> .
 
 _:b10
-      a       :Annotation , :XMLAnnotation , :annotation ;
+      a       :Annotation , :XMLAnnotation ;
       rdf:value """<OME-Extra:SpimPositions
            xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">
           <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"
@@ -925,7 +925,7 @@ laserType:semiconductor
       a       :LaserType .
 
 _:b11
-      a       :Annotation , :XMLAnnotation , :annotation ;
+      a       :Annotation , :XMLAnnotation ;
       rdf:value """<OME-Extra:SpimPositions
            xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">
           <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"

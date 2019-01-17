@@ -63,7 +63,7 @@ unit:nm
       :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
       :prefix <http://purl.obolibrary.org/obo/uo#0000300> .
 
-_:b2  a       :MapAnnotation , :Annotation , :annotation ;
+_:b2  a       :MapAnnotation , :Annotation ;
       rdfs:comment "This is the description of the sample map A"@en ;
       dcterms:identifier "Annotation:1" ;
       :mapAnnotationValue
@@ -75,7 +75,7 @@ _:b2  a       :MapAnnotation , :Annotation , :annotation ;
 []    a       :StructuredAnnotations ;
       :annotation _:b2 , _:b3 .
 
-_:b3  a       :MapAnnotation , :Annotation , :annotation ;
+_:b3  a       :MapAnnotation , :Annotation ;
       rdfs:comment "This is the description of the sample map B"@en ;
       dcterms:identifier "Annotation:2" ;
       :mapAnnotationValue

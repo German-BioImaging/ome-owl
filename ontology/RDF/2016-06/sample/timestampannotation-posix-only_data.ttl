@@ -60,7 +60,7 @@ roi:roi4
                         ]
               ] .
 
-_:b1  a       :Annotation , :XMLAnnotation , :annotation ;
+_:b1  a       :Annotation , :XMLAnnotation ;
       dcterms:identifier "Annotation:0" ;
       :XMLAnnotationValue "<test1/>"^^rdf:XMLLiteral .
 
@@ -217,7 +217,7 @@ plate:plate0
                 :wellType "TheWell0Status"
               ] .
 
-_:b5  a       :Annotation , :XMLAnnotation , :annotation ;
+_:b5  a       :Annotation , :XMLAnnotation ;
       dcterms:identifier "Annotation:1" ;
       :XMLAnnotationValue "<test2/>"^^rdf:XMLLiteral .
 
@@ -317,21 +317,21 @@ fontStyle:normal
 []    a       :StructuredAnnotations ;
       :annotation _:b1 , _:b5 ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:3" ;
                 :nameSpace "sample.openmicroscopy.org/time/post1972" ;
                 :timestampAnnotationValue
                         "1996-03-23T14:45:00"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:2" ;
                 :nameSpace "sample.openmicroscopy.org/time/retirement" ;
                 :timestampAnnotationValue
                         "2037-12-15T17:30:00"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:4" ;
                 :nameSpace "sample.openmicroscopy.org/time/1970-1972" ;
                 :timestampAnnotationValue

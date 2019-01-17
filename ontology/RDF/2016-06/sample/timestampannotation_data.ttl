@@ -85,7 +85,7 @@ reagent:reagent0
       a       :Reagent ;
       dcterms:identifier "Reagent:0" .
 
-_:b4  a       :Annotation , :XMLAnnotation , :annotation ;
+_:b4  a       :Annotation , :XMLAnnotation ;
       dcterms:identifier "Annotation:1" ;
       :XMLAnnotationValue "<test2/>"^^rdf:XMLLiteral .
 
@@ -421,70 +421,70 @@ fontStyle:normal
 []    a       :StructuredAnnotations ;
       :annotation _:b8 , _:b4 ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:7" ;
                 :nameSpace "sample.openmicroscopy.org/time/gregorian-start" ;
                 :timestampAnnotationValue
                         "1582-10-15T00:00:00"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:6" ;
                 :nameSpace "sample.openmicroscopy.org/time/houseofstewart" ;
                 :timestampAnnotationValue
                         "1714-08-01T00:00:00"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:9" ;
                 :nameSpace "sample.openmicroscopy.org/time/romefire" ;
                 :timestampAnnotationValue
                         "0066-07-18T00:00:00"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:8" ;
                 :nameSpace "sample.openmicroscopy.org/time/kingjohn" ;
                 :timestampAnnotationValue
                         "1199-05-27T00:00:00"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:11" ;
                 :nameSpace "sample.openmicroscopy.org/time/dinosaur" ;
                 :timestampAnnotationValue
                         "-231400000-01-01T00:00:00"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:3" ;
                 :nameSpace "sample.openmicroscopy.org/time/post1972" ;
                 :timestampAnnotationValue
                         "1996-03-23T14:45:00"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:2" ;
                 :nameSpace "sample.openmicroscopy.org/time/retirement" ;
                 :timestampAnnotationValue
                         "2037-12-15T17:30:00"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:5" ;
                 :nameSpace "sample.openmicroscopy.org/time/oldestlivingDOB" ;
                 :timestampAnnotationValue
                         "1898-03-05T02:48:38+03:00"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:4" ;
                 :nameSpace "sample.openmicroscopy.org/time/1970-1972" ;
                 :timestampAnnotationValue
                         "1971-05-06T18:34:59"
               ] ;
       :annotation
-              [ a       :TimestampAnnotation , :annotation ;
+              [ a       :Annotation , :TimestampAnnotation ;
                 dcterms:identifier "Annotation:10" ;
                 :nameSpace "sample.openmicroscopy.org/time/birthday" ;
                 :timestampAnnotationValue
@@ -662,7 +662,7 @@ _:b3  a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
       rdf:value "1.0"^^xsd:float ;
       qudt:unit unit:pt .
 
-_:b8  a       :Annotation , :XMLAnnotation , :annotation ;
+_:b8  a       :Annotation , :XMLAnnotation ;
       dcterms:identifier "Annotation:0" ;
       :XMLAnnotationValue "<test1/>"^^rdf:XMLLiteral .
 
