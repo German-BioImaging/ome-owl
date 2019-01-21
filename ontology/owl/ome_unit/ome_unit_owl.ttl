@@ -854,8 +854,8 @@ unitFrequency:zHz rdf:type owl:NamedIndividual ,
                   rdfs:label "zHz"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#A
-unitLength:A rdf:type owl:NamedIndividual ,
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#angstrom
+unitLength:angstrom rdf:type owl:NamedIndividual ,
                       unit:UnitLength ;
              ome:baseUnit UO: ;
              ome:unitSystem unitSystem:SI_Meter ;

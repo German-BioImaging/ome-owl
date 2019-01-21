@@ -8,7 +8,11 @@
     "@id" : "_:b1",
     "@type" : [ "MapAnnotation", "Annotation" ],
     "identifier" : "Annotation:2",
-    "mapAnnotationValue" : [ "_:b0", "_:b7" ],
+    "rdf:value" : [ {
+      "@id" : "_:b0"
+    }, {
+      "@id" : "_:b7"
+    } ],
     "comment" : {
       "@language" : "en",
       "@value" : "This is the description of the sample map B"
@@ -17,7 +21,9 @@
     "@id" : "_:b2",
     "@type" : [ "MapAnnotation", "Annotation" ],
     "identifier" : "Annotation:1",
-    "mapAnnotationValue" : "_:b4",
+    "rdf:value" : {
+      "@id" : "_:b4"
+    },
     "comment" : {
       "@language" : "en",
       "@value" : "This is the description of the sample map A"
@@ -52,9 +58,7 @@
   }, {
     "@id" : "_:b6",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:nm",
     "rdf:value" : {
       "@type" : "xsd:float",
       "@value" : "100000.0"
@@ -69,17 +73,14 @@
     "@type" : "StructuredAnnotations",
     "annotation" : [ "_:b1", "_:b2" ]
   }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000300",
-    "@type" : "UO:0000046"
-  }, {
     "@id" : "dimensionOrder:xyczt",
     "@type" : "DimensionOrder"
   }, {
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
+  }, {
+    "@id" : "unitLength:nm",
+    "@type" : "rdfs:Class"
   }, {
     "@id" : "image:image0",
     "@type" : "Image",
@@ -91,18 +92,6 @@
       "@language" : "en",
       "@value" : "6x6x1x8-swatch.tif"
     }
-  }, {
-    "@id" : "unit:nm",
-    "@type" : "Unit",
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000300",
-    "label" : {
-      "@language" : "en",
-      "@value" : "nano-meter"
-    }
-  }, {
-    "@id" : "unit:um",
-    "@type" : "rdfs:Class"
   } ],
   "@context" : {
     "value" : {
@@ -110,17 +99,6 @@
     },
     "key" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/key"
-    },
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
-      "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
-      "@type" : "@id"
-    },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "annotation" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/annotation",
@@ -133,12 +111,11 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels",
       "@type" : "@id"
     },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
     "identifier" : {
       "@id" : "http://purl.org/dc/terms/identifier"
-    },
-    "mapAnnotationValue" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/mapAnnotationValue",
-      "@type" : "@id"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
@@ -154,7 +131,10 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
-    "unit" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/mapannotation/unit/",
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
+      "@type" : "@id"
+    },
     "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
     "pixcelType" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixcelType",
@@ -200,6 +180,7 @@
     "PATO" : "http://purl.obolibrary.org/obo/PATO_",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "dcterms" : "http://purl.org/dc/terms/",

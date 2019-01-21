@@ -3,7 +3,7 @@
     "@id" : "_:b0",
     "@type" : [ "TagAnnotation", "Annotation" ],
     "identifier" : "Annotation:1",
-    "tagAnnotationValue" : "SampleTagA",
+    "value" : "SampleTagA",
     "comment" : {
       "@language" : "en",
       "@value" : "This is the description of the sample tag A"
@@ -12,7 +12,7 @@
     "@id" : "_:b1",
     "@type" : [ "TagAnnotation", "Annotation" ],
     "identifier" : "Annotation:2",
-    "tagAnnotationValue" : "SampleTagB",
+    "value" : "SampleTagB",
     "comment" : {
       "@language" : "en",
       "@value" : "This is the description of the sample tag B"
@@ -20,10 +20,11 @@
   }, {
     "@id" : "_:b2",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
-    "value" : "100000.0"
+    "unit" : "unitLength:um",
+    "value" : {
+      "@type" : "xsd:float",
+      "@value" : "100000.0"
+    }
   }, {
     "@id" : "_:b3",
     "@type" : "StructuredAnnotations",
@@ -34,7 +35,7 @@
     "identifier" : "Annotation:3",
     "annotation" : [ "_:b1", "_:b0" ],
     "namespace" : "\"openmicroscopy.org/omero/insight/tagset\"",
-    "tagAnnotationValue" : "SimpleTagset",
+    "value" : "SimpleTagset",
     "comment" : {
       "@language" : "en",
       "@value" : "This is the description of the sample tagse"
@@ -64,17 +65,14 @@
     "sizeY" : "4",
     "sizeZ" : "1"
   }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000300",
-    "@type" : "UO:0000046"
-  }, {
     "@id" : "dimensionOrder:xyczt",
     "@type" : "DimensionOrder"
   }, {
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
+  }, {
+    "@id" : "unitLength:um",
+    "@type" : "rdfs:Class"
   }, {
     "@id" : "image:image0",
     "@type" : "Image",
@@ -86,22 +84,10 @@
       "@language" : "en",
       "@value" : "6x6x1x8-swatch.tif"
     }
-  }, {
-    "@id" : "unit:nm",
-    "@type" : "Unit",
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000300",
-    "label" : {
-      "@language" : "en",
-      "@value" : "nano-meter"
-    }
-  }, {
-    "@id" : "unit:um",
-    "@type" : "rdfs:Class"
   } ],
   "@context" : {
-    "tagAnnotationValue" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/tagAnnotationValue"
+    "value" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
@@ -109,21 +95,9 @@
     "identifier" : {
       "@id" : "http://purl.org/dc/terms/identifier"
     },
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
       "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
-      "@type" : "@id"
-    },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "unit" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/tagannotation/unit/",
-    "value" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
-      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "annotation" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/annotation",
@@ -184,6 +158,9 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels",
       "@type" : "@id"
     },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
     "@vocab" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "qudt" : "http://qudt.org/schema/qudt/",
     "image" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/tagannotation/image/",
@@ -191,6 +168,7 @@
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "PATO" : "http://purl.obolibrary.org/obo/PATO_",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "dcterms" : "http://purl.org/dc/terms/",

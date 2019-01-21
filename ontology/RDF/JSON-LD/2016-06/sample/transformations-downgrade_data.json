@@ -62,7 +62,7 @@
     "@type" : [ "CommentAnnotation", "Annotation" ],
     "identifier" : "Annotation:4",
     "annotator" : "_:b3",
-    "comment" : {
+    "value" : {
       "@language" : "en",
       "@value" : "Abc123"
     }
@@ -125,7 +125,7 @@
   }, {
     "@id" : "_:b2",
     "@type" : "BinaryFile",
-    "binData" : "_:b53",
+    "binData" : "_:b54",
     "size" : "8",
     "label" : {
       "@language" : "en",
@@ -182,10 +182,8 @@
     "y2" : "4.0"
   }, {
     "@id" : "_:b27",
-    "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:pt"
-    },
+    "@type" : "PATO:0000921",
+    "unit" : "unitLength:pt",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "2.0"
@@ -215,9 +213,7 @@
   }, {
     "@id" : "_:b31",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:um",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "100000.0"
@@ -304,9 +300,7 @@
   }, {
     "@id" : "_:b42",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:pt"
-    },
+    "unit" : "unitLength:pt",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "1.0"
@@ -318,33 +312,41 @@
     "y" : "20.0"
   }, {
     "@id" : "_:b44",
+    "@type" : "PATO:0000921",
+    "unit" : "unitLength:pt",
+    "value" : {
+      "@type" : "xsd:float",
+      "@value" : "1.0"
+    }
+  }, {
+    "@id" : "_:b45",
     "@type" : [ "Shape", "Polyline" ],
     "identifier" : "Shape:6a",
     "markerStart" : "marker:arrow",
-    "point" : [ "_:b43", "_:b29", "_:b45", "_:b46" ],
+    "point" : [ "_:b43", "_:b29", "_:b46", "_:b47" ],
     "strokeColor" : "_:b28",
     "strokeWidth" : "_:b27"
   }, {
-    "@id" : "_:b45",
+    "@id" : "_:b46",
     "@type" : "Point",
     "x" : "1.0",
     "y" : "1.0"
   }, {
-    "@id" : "_:b46",
+    "@id" : "_:b47",
     "@type" : "Point",
     "x" : "10.0",
     "y" : "20.0"
   }, {
-    "@id" : "_:b47",
+    "@id" : "_:b48",
     "@type" : [ "Detector", "ManufacturerSpec" ],
     "identifier" : "Detector:1"
   }, {
-    "@id" : "_:b48",
+    "@id" : "_:b49",
     "@type" : "Pixels",
     "identifier" : "Pixels:0.0",
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "binData" : [ "_:b4", "_:b51", "_:b34" ],
-    "channel" : [ "_:b39", "_:b49", "_:b50" ],
+    "binData" : [ "_:b4", "_:b52", "_:b34" ],
+    "channel" : [ "_:b39", "_:b50", "_:b51" ],
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
       "@id" : "dimensionOrder:xyczt"
     },
@@ -360,15 +362,6 @@
     "sizeY" : "4",
     "sizeZ" : "1"
   }, {
-    "@id" : "_:b49",
-    "@type" : "Channel",
-    "identifier" : "Channel:0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/acquisitionMode" : {
-      "@id" : "acquisitionMode:laserScanningConfocalMicroscopy"
-    },
-    "color" : "_:b8",
-    "detectorSettings" : "_:b56"
-  }, {
     "@id" : "_:b5",
     "@type" : [ "Label", "Shape" ],
     "identifier" : "Shape:11",
@@ -378,60 +371,73 @@
   }, {
     "@id" : "_:b50",
     "@type" : "Channel",
+    "identifier" : "Channel:0",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/acquisitionMode" : {
+      "@id" : "acquisitionMode:laserScanningConfocalMicroscopy"
+    },
+    "color" : "_:b8",
+    "detectorSettings" : "_:b57"
+  }, {
+    "@id" : "_:b51",
+    "@type" : "Channel",
     "identifier" : "Channel:1",
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/acquisitionMode" : {
       "@id" : "acquisitionMode:laserScanningConfocalMicroscopy"
     },
     "color" : "_:b8"
   }, {
-    "@id" : "_:b51",
+    "@id" : "_:b52",
     "@type" : "BinData",
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
     "data" : "//+szuv/AP95n8PiAABHbZO3AP8dPF+G",
     "length" : "32"
   }, {
-    "@id" : "_:b52",
+    "@id" : "_:b53",
     "@type" : "Manufacturer",
     "label" : {
       "@language" : "en",
       "@value" : "OME-Labs"
     }
   }, {
-    "@id" : "_:b53",
+    "@id" : "_:b54",
     "@type" : "BinData",
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
     "data" : "12345678",
     "length" : "8"
   }, {
-    "@id" : "_:b54",
+    "@id" : "_:b55",
     "@type" : [ "Objective", "ManufacturerSpec" ],
     "identifier" : "Objective:1",
     "calibratedMagnification" : "20.34",
     "lotNumber" : "123",
-    "manufacturer" : "_:b52",
+    "manufacturer" : "_:b53",
     "nominalMagnification" : "20.0"
   }, {
-    "@id" : "_:b55",
+    "@id" : "_:b56",
     "@type" : "rdf:Bag",
     "li" : [ "_:b5", "_:b38" ]
   }, {
-    "@id" : "_:b56",
+    "@id" : "_:b57",
     "@type" : "DetectorSettings",
     "identifier" : "Detector:1",
     "integration" : "3",
     "zoom" : "2.0"
   }, {
-    "@id" : "_:b57",
+    "@id" : "_:b58",
     "@type" : "Point",
     "x" : "25.0",
     "y" : "15.0"
   }, {
-    "@id" : "_:b58",
+    "@id" : "_:b59",
     "@type" : "Point",
     "x" : "20.0",
     "y" : "10.0"
   }, {
-    "@id" : "_:b59",
+    "@id" : "_:b6",
+    "@type" : "rdf:Bag",
+    "li" : "_:b7"
+  }, {
+    "@id" : "_:b60",
     "@type" : [ "Line", "Shape" ],
     "identifier" : "Shape:7a",
     "markerEnd" : "marker:arrow",
@@ -442,22 +448,18 @@
     "y1" : "2.0",
     "y2" : "4.0"
   }, {
-    "@id" : "_:b6",
-    "@type" : "rdf:Bag",
-    "li" : "_:b7"
-  }, {
-    "@id" : "_:b60",
-    "@type" : "rdf:Bag",
-    "li" : "_:b61"
-  }, {
     "@id" : "_:b61",
+    "@type" : "rdf:Bag",
+    "li" : "_:b62"
+  }, {
+    "@id" : "_:b62",
     "@type" : [ "Label", "Shape" ],
     "identifier" : "Shape:9",
     "text" : "Removed Path",
     "x" : "0.0",
     "y" : "0.0"
   }, {
-    "@id" : "_:b62",
+    "@id" : "_:b63",
     "@type" : "foaf:Person",
     "identifier" : "Experimenter:3",
     "familyName" : {
@@ -473,17 +475,17 @@
       "@value" : "Group"
     }
   }, {
-    "@id" : "_:b63",
+    "@id" : "_:b64",
     "@type" : [ "Shape", "Label" ],
     "identifier" : "Shape:4",
     "fillColor" : "_:b28",
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/fillRule" : {
       "@id" : "fillRule:evenOdd"
     },
-    "font" : "_:b64",
+    "font" : "_:b65",
     "strokeColor" : "_:b28",
     "strokeDashArray" : "10 10",
-    "strokeWidth" : "_:b42",
+    "strokeWidth" : "_:b44",
     "text" : "Hello",
     "theC" : "1",
     "theT" : "0",
@@ -491,7 +493,7 @@
     "x" : "1.0",
     "y" : "1.0"
   }, {
-    "@id" : "_:b64",
+    "@id" : "_:b65",
     "@type" : "Font",
     "font:Family" : {
       "@id" : "fontFamily:serif"
@@ -500,40 +502,29 @@
       "@id" : "fontStyle:normal"
     }
   }, {
-    "@id" : "_:b65",
+    "@id" : "_:b66",
     "@type" : "Point",
     "x" : "20.0",
     "y" : "20.0"
   }, {
-    "@id" : "_:b66",
+    "@id" : "_:b67",
     "@type" : [ "Polyline", "Shape" ],
     "identifier" : "Shape:6",
     "markerEnd" : "marker:arrow",
     "markerStart" : "marker:arrow",
-    "point" : [ "_:b32", "_:b67", "_:b57", "_:b68" ],
+    "point" : [ "_:b32", "_:b68", "_:b58", "_:b69" ],
     "strokeColor" : "_:b28",
     "strokeWidth" : "_:b27"
   }, {
-    "@id" : "_:b67",
+    "@id" : "_:b68",
     "@type" : "Point",
     "x" : "25.0",
     "y" : "25.0"
   }, {
-    "@id" : "_:b68",
+    "@id" : "_:b69",
     "@type" : "Point",
     "x" : "15.0",
     "y" : "25.0"
-  }, {
-    "@id" : "_:b69",
-    "@type" : [ "Shape", "Line" ],
-    "identifier" : "Shape:7b",
-    "markerEnd" : "marker:arrow",
-    "strokeColor" : "_:b28",
-    "strokeWidth" : "_:b27",
-    "x1" : "1.0",
-    "x2" : "3.0",
-    "y1" : "2.0",
-    "y2" : "4.0"
   }, {
     "@id" : "_:b7",
     "@type" : [ "Shape", "Point" ],
@@ -546,24 +537,35 @@
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/locked" : true,
     "strokeColor" : "_:b28",
     "strokeDashArray" : "1",
-    "strokeWidth" : "_:b42",
+    "strokeWidth" : "_:b44",
     "text" : "Hello",
     "theC" : "2",
     "x" : "1.0",
     "y" : "1.0"
   }, {
     "@id" : "_:b70",
-    "@type" : "rdf:Bag",
-    "li" : [ "_:b59", "_:b69", "_:b26", "_:b44", "_:b66", "_:b71", "_:b63", "_:b72" ]
+    "@type" : [ "Shape", "Line" ],
+    "identifier" : "Shape:7b",
+    "markerEnd" : "marker:arrow",
+    "strokeColor" : "_:b28",
+    "strokeWidth" : "_:b27",
+    "x1" : "1.0",
+    "x2" : "3.0",
+    "y1" : "2.0",
+    "y2" : "4.0"
   }, {
     "@id" : "_:b71",
+    "@type" : "rdf:Bag",
+    "li" : [ "_:b60", "_:b70", "_:b26", "_:b45", "_:b67", "_:b72", "_:b64", "_:b73" ]
+  }, {
+    "@id" : "_:b72",
     "@type" : [ "Polygon", "Shape" ],
     "identifier" : "Shape:5",
-    "point" : [ "_:b58", "_:b65", "_:b0", "_:b33" ],
+    "point" : [ "_:b59", "_:b66", "_:b0", "_:b33" ],
     "strokeColor" : "_:b28",
     "strokeWidth" : "_:b27"
   }, {
-    "@id" : "_:b72",
+    "@id" : "_:b73",
     "@type" : [ "Rectangle", "Shape" ],
     "identifier" : "Shape:3",
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/fillRule" : {
@@ -583,12 +585,6 @@
     "@id" : "_:b9",
     "@type" : "StructuredAnnotations",
     "annotation" : [ "_:b10", "_:b11", "_:b12", "_:b13", "_:b1", "_:b14", "_:b15", "_:b16", "_:b17", "_:b18", "_:b19" ]
-  }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000300",
-    "@type" : "UO:0000046"
   }, {
     "@id" : "acquisitionMode:laserScanningConfocalMicroscopy",
     "@type" : "AcquisitionMode"
@@ -623,10 +619,16 @@
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
   }, {
+    "@id" : "unitLength:pt",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "unitLength:um",
+    "@type" : "rdfs:Class"
+  }, {
     "@id" : "experimenterGroup:experimenterGroup1",
     "@type" : [ "foaf:Person", "ExperimenterGroup" ],
     "identifier" : "ExperimenterGroup:1",
-    "experimenter" : "_:b62",
+    "experimenter" : "_:b63",
     "leader" : [ "_:b3", "_:b35" ],
     "comment" : {
       "@language" : "en",
@@ -688,7 +690,7 @@
     "@id" : "instrument:instrument1",
     "@type" : "Instrument",
     "identifier" : "Instrument:1",
-    "manufacturerSpec" : [ "_:b47", "_:b54" ]
+    "manufacturerSpec" : [ "_:b48", "_:b55" ]
   }, {
     "@id" : "roi:roi1",
     "@type" : "RegionOfInterest",
@@ -703,41 +705,22 @@
     "@id" : "roi:roi3",
     "@type" : "RegionOfInterest",
     "identifier" : "ROI:3",
-    "union" : "_:b70"
+    "union" : "_:b71"
   }, {
     "@id" : "roi:roi4",
     "@type" : "RegionOfInterest",
     "identifier" : "ROI:4",
-    "union" : "_:b60"
+    "union" : "_:b61"
   }, {
     "@id" : "roi:roi5",
     "@type" : "RegionOfInterest",
     "identifier" : "ROI:5",
-    "union" : "_:b55"
+    "union" : "_:b56"
   }, {
     "@id" : "rights:rights0",
     "@type" : "Rights",
     "rightsHeld" : "Held",
     "rightsHolder" : "Holder"
-  }, {
-    "@id" : "unit:nm",
-    "@type" : "Unit",
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000300",
-    "label" : {
-      "@language" : "en",
-      "@value" : "nano-meter"
-    }
-  }, {
-    "@id" : "unit:pt",
-    "@type" : [ "rdfs:Class", "Unit" ],
-    "label" : {
-      "@language" : "en",
-      "@value" : "point"
-    }
-  }, {
-    "@id" : "unit:um",
-    "@type" : "rdfs:Class"
   }, {
     "@id" : "image:image0",
     "@type" : "Image",
@@ -748,7 +731,7 @@
     "experimenter:Group" : {
       "@id" : "experimenterGroup:experimenterGroup1"
     },
-    "pixels" : "_:b48",
+    "pixels" : "_:b49",
     "regionOfInterest" : [ "roi:roi3", "roi:roi1", "roi:roi2" ],
     "label" : {
       "@language" : "en",
@@ -830,10 +813,6 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/y2",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
-    "strokeWidth" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/strokeWidth",
-      "@type" : "@id"
-    },
     "x1" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/x1",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
@@ -844,6 +823,10 @@
     },
     "markerStart" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/markerStart",
+      "@type" : "@id"
+    },
+    "strokeWidth" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/strokeWidth",
       "@type" : "@id"
     },
     "strokeColor" : {
@@ -874,7 +857,10 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/a00",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
-    "unit" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/unit/",
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
+      "@type" : "@id"
+    },
     "mbox" : {
       "@id" : "http://xmlns.com/foaf/0.1/mbox"
     },
@@ -943,14 +929,6 @@
     "significantBits" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/significantBits",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
-    },
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
-      "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
-      "@type" : "@id"
     },
     "strokeDashArray" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/strokeDashArray"
@@ -1055,6 +1033,7 @@
     "plate" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/plate/",
     "instrument" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/instrument/",
     "roi" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/regionOfInterest/",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "reagent" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/reagent/",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "rights" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/rights/",

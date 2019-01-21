@@ -7,7 +7,10 @@
     "@id" : "_:b1",
     "@type" : [ "CommentAnnotation", "Annotation" ],
     "identifier" : "Annotation:1",
-    "value" : "Fred"
+    "value" : {
+      "@language" : "en",
+      "@value" : "Fred"
+    }
   }, {
     "@id" : "_:b2",
     "@type" : "Pixels",
@@ -41,9 +44,7 @@
   }, {
     "@id" : "_:b5",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "100000.0"
@@ -53,17 +54,14 @@
     "@type" : "StructuredAnnotations",
     "annotation" : "_:b1"
   }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000300",
-    "@type" : "UO:0000046"
-  }, {
     "@id" : "dimensionOrder:xyczt",
     "@type" : "DimensionOrder"
   }, {
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
+  }, {
+    "@id" : "unitLength:nm",
+    "@type" : "rdfs:Class"
   }, {
     "@id" : "image:image0",
     "@type" : "Image",
@@ -75,18 +73,6 @@
       "@language" : "en",
       "@value" : "6x6x1x8-swatch.tif"
     }
-  }, {
-    "@id" : "unit:nm",
-    "@type" : "Unit",
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000300",
-    "label" : {
-      "@language" : "en",
-      "@value" : "nano-meter"
-    }
-  }, {
-    "@id" : "unit:um",
-    "@type" : "rdfs:Class"
   } ],
   "@context" : {
     "value" : {
@@ -124,13 +110,8 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
-    "unit" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/commentannotation/unit/",
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
-      "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
       "@type" : "@id"
     },
     "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
@@ -178,6 +159,7 @@
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "PATO" : "http://purl.obolibrary.org/obo/PATO_",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "dcterms" : "http://purl.org/dc/terms/",

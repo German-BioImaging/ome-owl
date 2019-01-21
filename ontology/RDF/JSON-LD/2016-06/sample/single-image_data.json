@@ -25,9 +25,7 @@
   }, {
     "@id" : "_:b2",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:um",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "100000.0"
@@ -44,17 +42,14 @@
     "identifier" : "Channel:0",
     "color" : "_:b0"
   }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000300",
-    "@type" : "UO:0000046"
-  }, {
     "@id" : "dimensionOrder:xyczt",
     "@type" : "DimensionOrder"
   }, {
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
+  }, {
+    "@id" : "unitLength:um",
+    "@type" : "rdfs:Class"
   }, {
     "@id" : "image:image0",
     "@type" : "Image",
@@ -65,18 +60,6 @@
       "@language" : "en",
       "@value" : "6x6x1x8-swatch.tif"
     }
-  }, {
-    "@id" : "unit:nm",
-    "@type" : "Unit",
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000300",
-    "label" : {
-      "@language" : "en",
-      "@value" : "nano-meter"
-    }
-  }, {
-    "@id" : "unit:um",
-    "@type" : "rdfs:Class"
   } ],
   "@context" : {
     "value" : {
@@ -95,13 +78,8 @@
     "identifier" : {
       "@id" : "http://purl.org/dc/terms/identifier"
     },
-    "unit" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/single-image/unit/",
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
-      "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
       "@type" : "@id"
     },
     "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
@@ -165,6 +143,7 @@
     "PATO" : "http://purl.obolibrary.org/obo/PATO_",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "acquisitionMode" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "dcterms" : "http://purl.org/dc/terms/",

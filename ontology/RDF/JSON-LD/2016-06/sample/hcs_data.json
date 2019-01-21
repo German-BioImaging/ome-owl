@@ -17,37 +17,27 @@
   }, {
     "@id" : "_:b10",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : "561.0"
   }, {
     "@id" : "_:b11",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:um",
     "value" : "127.24"
   }, {
     "@id" : "_:b12",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : "523.0"
   }, {
     "@id" : "_:b13",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : "578.0"
   }, {
     "@id" : "_:b14",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:um",
     "value" : "103.5"
   }, {
     "@id" : "_:b2",
@@ -113,9 +103,7 @@
   }, {
     "@id" : "_:b6",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:um",
     "value" : "0.207"
   }, {
     "@id" : "_:b7",
@@ -139,26 +127,13 @@
   }, {
     "@id" : "_:b8",
     "@type" : "PATO:0000165",
-    "qudt:unit" : {
-      "@id" : "UO:0000010"
-    },
+    "unit" : "unitTime:s",
     "value" : "120.1302"
   }, {
     "@id" : "_:b9",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : "488.0"
-  }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000010",
-    "@type" : "rdfs:Class"
-  }, {
-    "@id" : "UO:0000299",
-    "@type" : "UO:0000046"
   }, {
     "@id" : "acquisitionMode:laserScanningConfocalMicroscopy",
     "@type" : "AcquisitionMode"
@@ -178,6 +153,15 @@
     "@id" : "pixelType:uint16",
     "@type" : "PixelType"
   }, {
+    "@id" : "unitLength:nm",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "unitLength:um",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "unitTime:s",
+    "@type" : "rdfs:Class"
+  }, {
     "@id" : "plate:plate1",
     "@type" : "Plate",
     "identifier" : "Plate:1",
@@ -189,18 +173,6 @@
     "label" : {
       "@language" : "en",
       "@value" : "Control Plate"
-    }
-  }, {
-    "@id" : "unit:nm",
-    "@type" : "rdfs:Class"
-  }, {
-    "@id" : "unit:um",
-    "@type" : [ "rdfs:Class", "Unit" ],
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000299",
-    "label" : {
-      "@language" : "en",
-      "@value" : "micro-meter"
     }
   }, {
     "@id" : "image:image0",
@@ -288,7 +260,10 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeX",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
-    "unit" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/hcs/unit/",
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
+      "@type" : "@id"
+    },
     "value" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
@@ -325,14 +300,6 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/emissionWavelength",
       "@type" : "@id"
     },
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
-      "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
-      "@type" : "@id"
-    },
     "columns" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/columns",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
@@ -358,10 +325,12 @@
     "PATO" : "http://purl.obolibrary.org/obo/PATO_",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "plate" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/hcs/plate/",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "dcterms" : "http://purl.org/dc/terms/",
     "UO" : "http://purl.obolibrary.org/obo/uo#",
-    "foaf" : "http://xmlns.com/foaf/0.1/"
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "unitTime" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitTime#"
   }
 }

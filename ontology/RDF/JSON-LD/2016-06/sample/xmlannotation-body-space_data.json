@@ -2,16 +2,17 @@
   "@graph" : [ {
     "@id" : "_:b0",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:um",
     "value" : "100000.0"
   }, {
     "@id" : "_:b1",
     "@type" : [ "XMLAnnotation", "Annotation" ],
     "identifier" : "Annotation:1",
-    "XMLAnnotationValue" : "        <body>There should be a <b>space</b>\n          <i>between</i> the bold and italics words.</body>\n        <body>There should not be a <b>space</b><i>between</i> the bold and italics\n          words.</body>\n        <body xml:space=\"preserve\">There should be a <b>space</b> <i>between</i> the bold\n          and italics words.</body>\n        <body xml:space=\"preserve\">There should not be a <b>space</b><i>between</i> the bold\n          and italics words.</body>",
-    "nameSpace" : "\"openmicroscopy.org/sample/body/whitespace\""
+    "nameSpace" : "\"openmicroscopy.org/sample/body/whitespace\"",
+    "rdf:value" : {
+      "@type" : "rdf:XMLLiteral",
+      "@value" : "        <body>There should be a <b>space</b>\n          <i>between</i> the bold and italics words.</body>\n        <body>There should not be a <b>space</b><i>between</i> the bold and italics\n          words.</body>\n        <body xml:space=\"preserve\">There should be a <b>space</b> <i>between</i> the bold\n          and italics words.</body>\n        <body xml:space=\"preserve\">There should not be a <b>space</b><i>between</i> the bold\n          and italics words.</body>"
+    }
   }, {
     "@id" : "_:b2",
     "@type" : "Pixels",
@@ -41,17 +42,14 @@
     "@type" : "StructuredAnnotations",
     "annotation" : "_:b1"
   }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000300",
-    "@type" : "UO:0000046"
-  }, {
     "@id" : "dimensionOrder:xyczt",
     "@type" : "DimensionOrder"
   }, {
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
+  }, {
+    "@id" : "unitLength:um",
+    "@type" : "rdfs:Class"
   }, {
     "@id" : "image:image0",
     "@type" : "Image",
@@ -63,21 +61,12 @@
       "@language" : "en",
       "@value" : "6x6x1x8-swatch.tif"
     }
-  }, {
-    "@id" : "unit:nm",
-    "@type" : "Unit",
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000300",
-    "label" : {
-      "@language" : "en",
-      "@value" : "nano-meter"
-    }
-  }, {
-    "@id" : "unit:um",
-    "@type" : "rdfs:Class"
   } ],
   "@context" : {
-    "unit" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/xmlannotation-body-space/unit/",
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
+      "@type" : "@id"
+    },
     "value" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
@@ -101,18 +90,6 @@
     },
     "nameSpace" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/nameSpace"
-    },
-    "XMLAnnotationValue" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/XMLAnnotationValue",
-      "@type" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"
-    },
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
-      "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
-      "@type" : "@id"
     },
     "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
     "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
@@ -166,6 +143,7 @@
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "PATO" : "http://purl.obolibrary.org/obo/PATO_",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "dcterms" : "http://purl.org/dc/terms/",

@@ -18,9 +18,7 @@
   }, {
     "@id" : "_:b10",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "350.0"
@@ -47,9 +45,7 @@
   }, {
     "@id" : "_:b13",
     "@type" : "PATO:0001024",
-    "qudt:unit" : {
-      "@id" : "unit:mW"
-    },
+    "unit" : "unitPower:ｍW",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "200.0"
@@ -74,9 +70,7 @@
   }, {
     "@id" : "_:b17",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:um",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "100000.0"
@@ -91,9 +85,7 @@
   }, {
     "@id" : "_:b19",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "34.0"
@@ -108,9 +100,7 @@
   }, {
     "@id" : "_:b20",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "25.0"
@@ -118,9 +108,7 @@
   }, {
     "@id" : "_:b21",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "30.0"
@@ -128,9 +116,7 @@
   }, {
     "@id" : "_:b22",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "23.0"
@@ -171,9 +157,7 @@
   }, {
     "@id" : "_:b26",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "21.0"
@@ -181,9 +165,7 @@
   }, {
     "@id" : "_:b27",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "463.0"
@@ -216,9 +198,7 @@
   }, {
     "@id" : "_:b30",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "535.0"
@@ -226,9 +206,7 @@
   }, {
     "@id" : "_:b31",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "11.0"
@@ -311,9 +289,7 @@
   }, {
     "@id" : "_:b39",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "562.0"
@@ -343,9 +319,7 @@
   }, {
     "@id" : "_:b42",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "560.0"
@@ -353,9 +327,7 @@
   }, {
     "@id" : "_:b43",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "633.0"
@@ -371,9 +343,7 @@
   }, {
     "@id" : "_:b45",
     "@type" : "SBO:0000259",
-    "qudt:unit" : {
-      "@id" : "UO:0000218"
-    },
+    "unit" : "unitElectricPotential:V",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "120.0"
@@ -381,9 +351,7 @@
   }, {
     "@id" : "_:b46",
     "@type" : "PATO:0000044",
-    "qudt:unit" : {
-      "@id" : "UO:0000106"
-    },
+    "unit" : "unitFrequency:Hz",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "3200.0"
@@ -391,9 +359,7 @@
   }, {
     "@id" : "_:b47",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "630.0"
@@ -401,9 +367,7 @@
   }, {
     "@id" : "_:b48",
     "@type" : "PATO:0001024",
-    "qudt:unit" : {
-      "@id" : "unit:mW"
-    },
+    "unit" : "unitPower:ｍW",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "300.0"
@@ -419,9 +383,7 @@
   }, {
     "@id" : "_:b5",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "510.0"
@@ -429,9 +391,7 @@
   }, {
     "@id" : "_:b50",
     "@type" : "PATO:0000040",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:um",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "20.0"
@@ -446,9 +406,7 @@
   }, {
     "@id" : "_:b7",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "20.0"
@@ -456,9 +414,7 @@
   }, {
     "@id" : "_:b8",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "10.0"
@@ -466,37 +422,11 @@
   }, {
     "@id" : "_:b9",
     "@type" : "PATO:0001242",
-    "qudt:unit" : {
-      "@id" : "unit:nm"
-    },
+    "unit" : "unitLength:nm",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "450.0"
     }
-  }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000106",
-    "@type" : [ "rdfs:Class", "UO:0000000" ]
-  }, {
-    "@id" : "UO:0000114",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000218",
-    "@type" : "rdfs:Class"
-  }, {
-    "@id" : "UO:0000293",
-    "@type" : "UO:0000046"
-  }, {
-    "@id" : "UO:0000297",
-    "@type" : "UO:0000046"
-  }, {
-    "@id" : "UO:0000299",
-    "@type" : "UO:0000046"
-  }, {
-    "@id" : "UO:0000300",
-    "@type" : "UO:0000046"
   }, {
     "@id" : "arcType:Xe",
     "@type" : "ArcType"
@@ -531,6 +461,21 @@
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
   }, {
+    "@id" : "unitElectricPotential:V",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "unitFrequency:Hz",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "unitLength:nm",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "unitLength:um",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "unitPower:ｍW",
+    "@type" : "rdfs:Class"
+  }, {
     "@id" : "image:image0",
     "@type" : "Image",
     "identifier" : "Image:0",
@@ -552,42 +497,6 @@
     "@type" : "Instrument",
     "identifier" : "Instrument:0",
     "manufacturerSpec" : [ "_:b32", "_:b15", "_:b33", "_:b34", "_:b35", "_:b28", "_:b36", "_:b0", "_:b37", "_:b12", "_:b38" ]
-  }, {
-    "@id" : "unit:MHz",
-    "@type" : "Unit",
-    "baseUnit" : "UO:0000106",
-    "prefix" : "UO:0000293",
-    "label" : {
-      "@language" : "en",
-      "@value" : "mega-heltz"
-    }
-  }, {
-    "@id" : "unit:mW",
-    "@type" : [ "rdfs:Class", "Unit" ],
-    "baseUnit" : "UO:0000114",
-    "prefix" : "UO:0000297",
-    "label" : {
-      "@language" : "en",
-      "@value" : "milli-watt"
-    }
-  }, {
-    "@id" : "unit:nm",
-    "@type" : [ "rdfs:Class", "Unit" ],
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000300",
-    "label" : {
-      "@language" : "en",
-      "@value" : "nano-meter"
-    }
-  }, {
-    "@id" : "unit:um",
-    "@type" : [ "rdfs:Class", "Unit" ],
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000299",
-    "label" : {
-      "@language" : "en",
-      "@value" : "micro-meter"
-    }
   } ],
   "@context" : {
     "transmittanceRange" : {
@@ -641,14 +550,6 @@
     "value" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
     },
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
-      "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
-      "@type" : "@id"
-    },
     "power" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/power",
       "@type" : "@id"
@@ -662,7 +563,10 @@
       "@type" : "@id"
     },
     "laserMedium" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserMedium#",
-    "unit" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/unit/",
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
+      "@type" : "@id"
+    },
     "sizeZ" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeZ",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
@@ -806,6 +710,7 @@
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "plate" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/plate/",
     "fontFamily" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "fillRule" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#",
     "reagent" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/reagent/",
     "xml" : "http://www.w3.org/XML/1998/namespace",
@@ -815,9 +720,13 @@
     "foaf" : "http://xmlns.com/foaf/0.1/",
     "SBO" : "http://purl.obolibrary.org/obo/SBO_",
     "image" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/image/",
+    "unitPower" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitPower#",
+    "unitElectricPotential" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitElectricPotential#",
+    "unitFrequency" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitFrequency#",
     "fontStyle" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "marker" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#",
-    "SIO" : "http://semanticscience.org/resource/SIO_"
+    "SIO" : "http://semanticscience.org/resource/SIO_",
+    "unitTime" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitTime#"
   }
 }

@@ -32,9 +32,7 @@
   }, {
     "@id" : "_:b13",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:um",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "100000.0"
@@ -103,28 +101,13 @@
     "data" : "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD///8A/wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAA/wAA/wAAAAAA/wAAAP8AAAD/AAAA/wAAAAAA/wAA/wAAAAD/AAAAAP//AAAA/wAA/////wD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD/AAAAAAAAAAAAAAD/AAAAAP//AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "length" : "576"
   }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000300",
-    "@type" : "UO:0000046"
-  }, {
     "@id" : "dimensionOrder:xyctz",
     "@type" : "DimensionOrder"
   }, {
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
   }, {
-    "@id" : "unit:nm",
-    "@type" : "Unit",
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000300",
-    "label" : {
-      "@language" : "en",
-      "@value" : "nano-meter"
-    }
-  }, {
-    "@id" : "unit:um",
+    "@id" : "unitLength:um",
     "@type" : "rdfs:Class"
   }, {
     "@id" : "image:image0",
@@ -193,17 +176,6 @@
     "value" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
     },
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
-      "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
-      "@type" : "@id"
-    },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
     "acquisitionDate" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/acquisitionDate"
     },
@@ -211,11 +183,17 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels",
       "@type" : "@id"
     },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
     "color" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/color",
       "@type" : "@id"
     },
-    "unit" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/multi-channel-z-series/unit/",
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
+      "@type" : "@id"
+    },
     "@vocab" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "SBO" : "http://purl.obolibrary.org/obo/SBO_",
     "qudt" : "http://qudt.org/schema/qudt/",
@@ -225,6 +203,7 @@
     "PATO" : "http://purl.obolibrary.org/obo/PATO_",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "acquisitionMode" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "SIO" : "http://semanticscience.org/resource/SIO_",

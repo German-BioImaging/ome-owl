@@ -21,9 +21,7 @@
   }, {
     "@id" : "_:b1",
     "@type" : "PATO:0000117",
-    "qudt:unit" : {
-      "@id" : "unit:um"
-    },
+    "unit" : "unitLength:um",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "100000.0"
@@ -492,17 +490,14 @@
     "identifier" : "Channel:7",
     "color" : "_:b4"
   }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000300",
-    "@type" : "UO:0000046"
-  }, {
     "@id" : "dimensionOrder:xyczt",
     "@type" : "DimensionOrder"
   }, {
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
+  }, {
+    "@id" : "unitLength:um",
+    "@type" : "rdfs:Class"
   }, {
     "@id" : "image:image0",
     "@type" : "Image",
@@ -635,18 +630,6 @@
       "@id" : "plate:plate1"
     },
     "reagentSet" : "_:b47"
-  }, {
-    "@id" : "unit:nm",
-    "@type" : "Unit",
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000300",
-    "label" : {
-      "@language" : "en",
-      "@value" : "nano-meter"
-    }
-  }, {
-    "@id" : "unit:um",
-    "@type" : "rdfs:Class"
   } ],
   "@context" : {
     "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
@@ -718,7 +701,10 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/color",
       "@type" : "@id"
     },
-    "unit" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/one-screen-one-plate-four-wells/unit/",
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
+      "@type" : "@id"
+    },
     "index" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/index",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
@@ -759,14 +745,6 @@
       "@type" : "@id"
     },
     "plate" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/one-screen-one-plate-four-wells/plate/",
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
-      "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
-      "@type" : "@id"
-    },
     "@vocab" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "qudt" : "http://qudt.org/schema/qudt/",
     "owl" : "http://www.w3.org/2002/07/owl#",
@@ -775,6 +753,7 @@
     "screen" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/one-screen-one-plate-four-wells/screen/",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "acquisitionMode" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "dcterms" : "http://purl.org/dc/terms/",

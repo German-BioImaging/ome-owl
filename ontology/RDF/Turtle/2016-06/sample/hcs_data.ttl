@@ -1,168 +1,137 @@
-@prefix :        <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
-@prefix image:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/hcs/image/> .
-@prefix qudt:    <http://qudt.org/schema/qudt/> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix PATO:    <http://purl.obolibrary.org/obo/PATO_> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix plate:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/hcs/plate/> .
-@prefix pixelType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
-@prefix acquisitionMode:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
-@prefix contrastMethod:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/ContrastMethod#> .
-@prefix illuminationType:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/IlliminationType#> .
-@prefix unit:    <http://www.openmicroscopy.org/rdf/2016-06/ome_core/hcs/unit/> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix dimensionOrder:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
-@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
-@prefix dcterms:  <http://purl.org/dc/terms/> .
-@prefix UO:      <http://purl.obolibrary.org/obo/uo#> .
-@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
+@prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/hcs/image/> .
+@prefix qudt:  <http://qudt.org/schema/qudt/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix plate: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/hcs/plate/> .
+@prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
+@prefix acquisitionMode: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
+@prefix contrastMethod: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/ContrastMethod#> .
+@prefix illuminationType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/IlliminationType#> .
+@prefix unitLength: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix UO:    <http://purl.obolibrary.org/obo/uo#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix unitTime: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitTime#> .
 
-illuminationType:transmitted
-      a       :IlluminationType .
+_:b0    a          PATO:0001242 ;
+        rdf:value  "488.0"^^xsd:float ;
+        qudt:unit  unitLength:nm .
 
-dimensionOrder:xyczt
-      a       :DimensionOrder .
+_:b1    a          PATO:0000117 ;
+        rdf:value  "0.207"^^xsd:float ;
+        qudt:unit  unitLength:um .
 
-<http://purl.obolibrary.org/obo/uo#0000010>
-      a       rdfs:Class .
+image:image0  a             :Image ;
+        rdfs:comment        "An example OME compliant file, based on Olympus.oib"@en ;
+        rdfs:label          "Series 1"@en ;
+        dcterms:identifier  "Image:0" ;
+        :acquisitionDate    "2008-02-06T13:43:19" ;
+        :pixels             [ a                   :Pixels ;
+                              dcterms:identifier  "Pixels:0" ;
+                              :binData            [ a           :BinData ;
+                                                    :bigEndian  false ;
+                                                    :length     "0"^^xsd:long
+                                                  ] ;
+                              :channel            [ a                      :Channel ;
+                                                    rdfs:label             "CH1"@en ;
+                                                    dcterms:identifier     "Channel:0:0" ;
+                                                    :acquisitionMode       acquisitionMode:laserScanningConfocalMicroscopy ;
+                                                    :emissionWavelength    [ a          PATO:0001242 ;
+                                                                             rdf:value  "523.0"^^xsd:float ;
+                                                                             qudt:unit  unitLength:nm
+                                                                           ] ;
+                                                    :excitationWavelength  _:b0 ;
+                                                    :illuminationType      illuminationType:epiflorescence ;
+                                                    :pinholeSize           [ a          PATO:0000117 ;
+                                                                             rdf:value  "103.5"^^xsd:float ;
+                                                                             qudt:unit  unitLength:um
+                                                                           ] ;
+                                                    :samplesPerPixel       "1"^^xsd:int
+                                                  ] ;
+                              :channel            [ a                      :Channel ;
+                                                    rdfs:label             "CH3"@en ;
+                                                    dcterms:identifier     "Channel:0:1" ;
+                                                    :acquisitionMode       acquisitionMode:laserScanningConfocalMicroscopy ;
+                                                    :emissionWavelength    [ a          PATO:0001242 ;
+                                                                             rdf:value  "578.0"^^xsd:float ;
+                                                                             qudt:unit  unitLength:nm
+                                                                           ] ;
+                                                    :excitationWavelength  [ a          PATO:0001242 ;
+                                                                             rdf:value  "561.0"^^xsd:float ;
+                                                                             qudt:unit  unitLength:nm
+                                                                           ] ;
+                                                    :illuminationType      illuminationType:epiflorescence ;
+                                                    :pinholeSize           [ a          PATO:0000117 ;
+                                                                             rdf:value  "127.24"^^xsd:float ;
+                                                                             qudt:unit  unitLength:um
+                                                                           ] ;
+                                                    :samplesPerPixel       "1"^^xsd:int
+                                                  ] ;
+                              :channel            [ a                      :Channel ;
+                                                    rdfs:label             "TD1"@en ;
+                                                    dcterms:identifier     "Channel:0:2" ;
+                                                    :acquisitionMode       acquisitionMode:laserScanningConfocalMicroscopy ;
+                                                    :contrastMethod        contrastMethod:dic ;
+                                                    :excitationWavelength  _:b0 ;
+                                                    :illuminationType      illuminationType:transmitted ;
+                                                    :samplesPerPixel       "1"^^xsd:int
+                                                  ] ;
+                              :dimensionOrder     dimensionOrder:xyczt ;
+                              :physicalSizeX      _:b1 ;
+                              :physicalSizeY      _:b1 ;
+                              :pixelType          pixelType:uint16 ;
+                              :sizeC              "3"^^xsd:int ;
+                              :sizeT              "16"^^xsd:int ;
+                              :sizeX              "1024"^^xsd:int ;
+                              :sizeY              "1024"^^xsd:int ;
+                              :sizeZ              "1"^^xsd:int ;
+                              :timeInclrement     [ a          PATO:0000165 ;
+                                                    rdf:value  "120.1302"^^xsd:float ;
+                                                    qudt:unit  unitTime:s
+                                                  ]
+                            ] .
 
-pixelType:uint16
-      a       :PixelType .
-
-<http://purl.obolibrary.org/obo/uo#0000008>
-      a       <http://purl.obolibrary.org/obo/uo#0000000> .
-
-image:image0
-      a       :Image ;
-      rdfs:comment "An example OME compliant file, based on Olympus.oib"@en ;
-      rdfs:label "Series 1"@en ;
-      dcterms:identifier "Image:0" ;
-      :acquisitionDate "2008-02-06T13:43:19" ;
-      :pixels [ a       :Pixels ;
-                dcterms:identifier "Pixels:0" ;
-                :binData
-                        [ a       :BinData ;
-                          :bigEndian "false"^^xsd:boolean ;
-                          :length "0"^^xsd:long
-                        ] ;
-                :channel
-                        [ a       :Channel ;
-                          rdfs:label "TD1"@en ;
-                          dcterms:identifier "Channel:0:2" ;
-                          :acquisitionMode acquisitionMode:laserScanningConfocalMicroscopy ;
-                          :contrastMethod contrastMethod:dic ;
-                          :excitationWavelength
-                                  _:b1 ;
-                          :illuminationType illuminationType:transmitted ;
-                          :samplesPerPixel "1"^^xsd:int
-                        ] ;
-                :channel
-                        [ a       :Channel ;
-                          rdfs:label "CH1"@en ;
-                          dcterms:identifier "Channel:0:0" ;
-                          :acquisitionMode acquisitionMode:laserScanningConfocalMicroscopy ;
-                          :emissionWavelength
-                                  [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
-                                    rdf:value "523.0"^^xsd:float ;
-                                    qudt:unit unit:nm
-                                  ] ;
-                          :excitationWavelength
-                                  _:b1 ;
-                          :illuminationType illuminationType:epiflorescence ;
-                          :pinholeSize
-                                  [ a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
-                                    rdf:value "103.5"^^xsd:float ;
-                                    qudt:unit unit:um
-                                  ] ;
-                          :samplesPerPixel "1"^^xsd:int
-                        ] ;
-                :channel
-                        [ a       :Channel ;
-                          rdfs:label "CH3"@en ;
-                          dcterms:identifier "Channel:0:1" ;
-                          :acquisitionMode acquisitionMode:laserScanningConfocalMicroscopy ;
-                          :emissionWavelength
-                                  [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
-                                    rdf:value "578.0"^^xsd:float ;
-                                    qudt:unit unit:nm
-                                  ] ;
-                          :excitationWavelength
-                                  [ a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
-                                    rdf:value "561.0"^^xsd:float ;
-                                    qudt:unit unit:nm
-                                  ] ;
-                          :illuminationType illuminationType:epiflorescence ;
-                          :pinholeSize
-                                  [ a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
-                                    rdf:value "127.24"^^xsd:float ;
-                                    qudt:unit unit:um
-                                  ] ;
-                          :samplesPerPixel "1"^^xsd:int
-                        ] ;
-                :dimensionOrder dimensionOrder:xyczt ;
-                :physicalSizeX _:b2 ;
-                :physicalSizeY _:b2 ;
-                :pixelType pixelType:uint16 ;
-                :sizeC  "3"^^xsd:int ;
-                :sizeT  "16"^^xsd:int ;
-                :sizeX  "1024"^^xsd:int ;
-                :sizeY  "1024"^^xsd:int ;
-                :sizeZ  "1"^^xsd:int ;
-                :timeInclrement
-                        [ a       <http://purl.obolibrary.org/obo/PATO_0000165> ;
-                          rdf:value "120.1302"^^xsd:float ;
-                          qudt:unit <http://purl.obolibrary.org/obo/uo#0000010>
-                        ]
-              ] .
-
-contrastMethod:dic
-      a       :ContrastMethod .
-
-plate:plate1
-      a       :Plate ;
-      rdfs:label "Control Plate"@en ;
-      dcterms:identifier "Plate:1" ;
-      :columnNamingConvention
-              "letter" ;
-      :columns "12"^^xsd:int ;
-      :rowNamingConvention
-              "number" ;
-      :rows   "8"^^xsd:int ;
-      :well   [ a       :Well ;
-                dcterms:identifier "Well:1" ;
-                :column "0"^^xsd:int ;
-                :row    "0"^^xsd:int ;
-                :wellSample
-                        [ a       :WellSample ;
-                          dcterms:identifier "WellSample:1" ;
-                          :image  image:image0 ;
-                          :index  "0"^^xsd:int
-                        ]
-              ] .
-
-unit:nm
-      a       rdfs:Class .
-
-<http://purl.obolibrary.org/obo/uo#0000299>
-      a       <http://purl.obolibrary.org/obo/uo#0000046> .
+pixelType:uint16  a  :PixelType .
 
 acquisitionMode:laserScanningConfocalMicroscopy
-      a       :AcquisitionMode .
+        a       :AcquisitionMode .
 
-unit:um
-      a       :Unit , rdfs:Class ;
-      rdfs:label "micro-meter"@en ;
-      :baseUnit <http://purl.obolibrary.org/obo/uo#0000008> ;
-      :prefix <http://purl.obolibrary.org/obo/uo#0000299> .
+unitTime:s  a   rdfs:Class .
+
+unitLength:nm  a  rdfs:Class .
+
+contrastMethod:dic  a  :ContrastMethod .
+
+illuminationType:transmitted
+        a       :IlluminationType .
+
+plate:plate1  a                  :Plate ;
+        rdfs:label               "Control Plate"@en ;
+        dcterms:identifier       "Plate:1" ;
+        :columnNamingConvention  "letter" ;
+        :columns                 "12"^^xsd:int ;
+        :rowNamingConvention     "number" ;
+        :rows                    "8"^^xsd:int ;
+        :well                    [ a                   :Well ;
+                                   dcterms:identifier  "Well:1" ;
+                                   :column             "0"^^xsd:int ;
+                                   :row                "0"^^xsd:int ;
+                                   :wellSample         [ a                   :WellSample ;
+                                                         dcterms:identifier  "WellSample:1" ;
+                                                         :image              image:image0 ;
+                                                         :index              "0"^^xsd:int
+                                                       ]
+                                 ] .
+
+dimensionOrder:xyczt  a  :DimensionOrder .
 
 illuminationType:epiflorescence
-      a       :IlluminationType .
+        a       :IlluminationType .
 
-_:b1  a       <http://purl.obolibrary.org/obo/PATO_0001242> ;
-      rdf:value "488.0"^^xsd:float ;
-      qudt:unit unit:nm .
-
-_:b2  a       <http://purl.obolibrary.org/obo/PATO_0000117> ;
-      rdf:value "0.207"^^xsd:float ;
-      qudt:unit unit:um .
+unitLength:um  a  rdfs:Class .

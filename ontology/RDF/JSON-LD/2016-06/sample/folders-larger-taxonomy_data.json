@@ -28,7 +28,7 @@
     "@id" : "_:b14",
     "@type" : "PATO:0000165",
     "qudt:unit" : {
-      "@id" : "UO:0000010"
+      "@id" : "unitTime:s"
     },
     "value" : {
       "@type" : "xsd:float",
@@ -38,7 +38,7 @@
     "@id" : "_:b15",
     "@type" : "PATO:0000117",
     "qudt:unit" : {
-      "@id" : "unit:um"
+      "@id" : "unitLength:um"
     },
     "value" : {
       "@type" : "xsd:float",
@@ -146,20 +146,17 @@
       "@value" : "Red"
     }
   }, {
-    "@id" : "UO:0000008",
-    "@type" : "UO:0000000"
-  }, {
-    "@id" : "UO:0000010",
-    "@type" : "rdfs:Class"
-  }, {
-    "@id" : "UO:0000299",
-    "@type" : "UO:0000046"
-  }, {
     "@id" : "dimensionOrder:xyczt",
     "@type" : "DimensionOrder"
   }, {
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
+  }, {
+    "@id" : "unitLength:um",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "unitTime:s",
+    "@type" : "rdfs:Class"
   }, {
     "@id" : "folder:folder1",
     "@type" : "Folder",
@@ -492,15 +489,6 @@
       "@language" : "en",
       "@value" : "green.png"
     }
-  }, {
-    "@id" : "unit:um",
-    "@type" : [ "rdfs:Class", "Unit" ],
-    "baseUnit" : "UO:0000008",
-    "prefix" : "UO:0000299",
-    "label" : {
-      "@language" : "en",
-      "@value" : "micro-meter"
-    }
   } ],
   "@context" : {
     "label" : {
@@ -623,14 +611,6 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels",
       "@type" : "@id"
     },
-    "baseUnit" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/baseUnit",
-      "@type" : "@id"
-    },
-    "prefix" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/prefix",
-      "@type" : "@id"
-    },
     "@vocab" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "qudt" : "http://qudt.org/schema/qudt/",
     "image" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/folders-larger-taxonomy/image/",
@@ -638,9 +618,11 @@
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "PATO" : "http://purl.obolibrary.org/obo/PATO_",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "dcterms" : "http://purl.org/dc/terms/",
-    "UO" : "http://purl.obolibrary.org/obo/uo#"
+    "UO" : "http://purl.obolibrary.org/obo/uo#",
+    "unitTime" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitTime#"
   }
 }
