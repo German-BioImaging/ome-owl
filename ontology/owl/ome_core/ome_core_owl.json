@@ -1,0 +1,4168 @@
+{
+  "@graph" : [ {
+    "@id" : "PATO:0000040",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:0000044",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:0000117",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:00001242",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:0000140",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:0000146",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:0000165",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:0000921",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:0001024",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:0001025",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:0001242",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "PATO:0015009",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "SBO:0000259",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "dcterms:FileFormat",
+    "@type" : "rdfs:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "File Format"
+    }
+  }, {
+    "@id" : "qudt:unit",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"unit\\\" specifies the appropriate unit of measure."
+    },
+    "domain" : "rdfs:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "unit"
+    },
+    "range" : "rdfs:Class"
+  }, {
+    "@id" : "ome:AcquisitionMode",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"AcquisitionMode\\\" is a type of microscopy performed for each channel."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Acquisition Mode"
+    }
+  }, {
+    "@id" : "acquisitionMode:FSM",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "FSM"
+    }
+  }, {
+    "@id" : "acquisitionMode:LCM",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "LCM"
+    }
+  }, {
+    "@id" : "acquisitionMode:PALM",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "PALM"
+    }
+  }, {
+    "@id" : "acquisitionMode:SPIM",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPIM"
+    }
+  }, {
+    "@id" : "acquisitionMode:STED",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "STED"
+    }
+  }, {
+    "@id" : "acquisitionMode:STORM",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "STORM"
+    }
+  }, {
+    "@id" : "acquisitionMode:TIRF",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "TIRF"
+    }
+  }, {
+    "@id" : "acquisitionMode:brightField",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "bright field"
+    }
+  }, {
+    "@id" : "acquisitionMode:fluorescenceCorrelationSpectroscopy",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fluorescence correlation spectroscopy"
+    }
+  }, {
+    "@id" : "acquisitionMode:fluorescenceLifetime",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fluorescence lifetime"
+    }
+  }, {
+    "@id" : "acquisitionMode:laserScanningConfocalMicroscopy",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "laser scanning confocal microscopy"
+    }
+  }, {
+    "@id" : "acquisitionMode:multiPhotonMicroscopy",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "multi photon microscopy"
+    }
+  }, {
+    "@id" : "acquisitionMode:nearFieldScanningOpticalMicroscopy",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "near field scanning optical microscopy"
+    }
+  }, {
+    "@id" : "acquisitionMode:other",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "acquisitionMode:secondHarmonicGenerationImaging",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "second harmonic generation imaging"
+    }
+  }, {
+    "@id" : "acquisitionMode:singleMoleculeImaging",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "single molecule imaging"
+    }
+  }, {
+    "@id" : "acquisitionMode:slitScanConfocal",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "slit scan confocal"
+    }
+  }, {
+    "@id" : "acquisitionMode:spectralImaging",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "spectral imaging"
+    }
+  }, {
+    "@id" : "acquisitionMode:spinningDiskConfocal",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "spinning disk confocal"
+    }
+  }, {
+    "@id" : "acquisitionMode:structuredIllumination",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "structured illumination"
+    }
+  }, {
+    "@id" : "acquisitionMode:sweptFieldConfocal",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "swept field confocal"
+    }
+  }, {
+    "@id" : "acquisitionMode:totalInternalReflection",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "total internal reflection"
+    }
+  }, {
+    "@id" : "acquisitionMode:wideField",
+    "@type" : "ome:AcquisitionMode",
+    "label" : {
+      "@language" : "en",
+      "@value" : "wide field"
+    }
+  }, {
+    "@id" : "ome:AffineTransform",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"AffineTransform\\\" is a matrix used to transform the shape. The element has 6 xsd:float attributes. If the element is present then all 6 values must be included."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "AffineTransform"
+    }
+  }, {
+    "@id" : "ome:Annotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Annotation\\\" is an annotation from which all others are ultimately derived."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Annotation"
+    }
+  }, {
+    "@id" : "ome:Arc",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Arc\\\" is various kinds of Arc lamps."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Arc"
+    },
+    "subClassOf" : "ome:LightSource"
+  }, {
+    "@id" : "ome:ArcType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ArcType\\\" is the type of Arc lamps - Hg, Xe, HgXe."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Arc Type"
+    }
+  }, {
+    "@id" : "arcType:Hg",
+    "@type" : "ome:ArcType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Hg"
+    }
+  }, {
+    "@id" : "arcType:HgXe",
+    "@type" : "ome:ArcType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "HgXe"
+    }
+  }, {
+    "@id" : "arcType:Xe",
+    "@type" : "ome:ArcType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Xe"
+    }
+  }, {
+    "@id" : "arcType:other",
+    "@type" : "ome:ArcType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "ome:BasicAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"BasicAnnotation\\\" is an abstract Basic Annotation from which some others are derived."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Basic Annotation"
+    },
+    "subClassOf" : "ome:Annotation"
+  }, {
+    "@id" : "ome:BinData",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"BinData\\\" is contents of this element are base64-encoded."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Binary Data"
+    }
+  }, {
+    "@id" : "ome:BinaryFile",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"BinaryFile\\\" is binary files."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Binary File"
+    }
+  }, {
+    "@id" : "ome:Binning",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Binning\\\" is numbers of pixels that are combined to form larger pixels. {used:CCD,EMCCD}."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Binning"
+    }
+  }, {
+    "@id" : "binning:eightXEight",
+    "@type" : "ome:Binning",
+    "label" : {
+      "@language" : "en",
+      "@value" : "8x8"
+    }
+  }, {
+    "@id" : "binning:fourXFour",
+    "@type" : "ome:Binning",
+    "label" : {
+      "@language" : "en",
+      "@value" : "4x4"
+    }
+  }, {
+    "@id" : "binning:oneXOne",
+    "@type" : "ome:Binning",
+    "label" : {
+      "@language" : "en",
+      "@value" : "1x1"
+    }
+  }, {
+    "@id" : "binning:other",
+    "@type" : "ome:Binning",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "binning:twoXTwo",
+    "@type" : "ome:Binning",
+    "label" : {
+      "@language" : "en",
+      "@value" : "2x2"
+    }
+  }, {
+    "@id" : "ome:BooleanAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"BooleanAnnotation\\\" is simple boolean annotations of type xsd:boolean."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Boolean Annotation"
+    },
+    "subClassOf" : "ome:BasicAnnotation"
+  }, {
+    "@id" : "ome:Channel",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Channel\\\" is channels in the Image, even for a single-plane image."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Channel"
+    }
+  }, {
+    "@id" : "ome:Color",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Color\\\" is colrs. The value is an integer between -2,147,483,648 and 2,147,483,647 (inclusive). The value is a signed 32 bit encoding of RGBA so \\\"-1\\\" is #FFFFFFFF or solid white."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Color"
+    }
+  }, {
+    "@id" : "ome:CommentAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"CommentAnnotation\\\" is simple comment annotations."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Comment Annotation"
+    },
+    "subClassOf" : "ome:TextAnnotation"
+  }, {
+    "@id" : "ome:Compression",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Compression\\\" is compression schemes used to encode the data."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Compression"
+    }
+  }, {
+    "@id" : "compression:bzip2",
+    "@type" : "ome:Compression",
+    "label" : {
+      "@language" : "en",
+      "@value" : "bzip2"
+    }
+  }, {
+    "@id" : "compression:none",
+    "@type" : "ome:Compression",
+    "label" : {
+      "@language" : "en",
+      "@value" : "none"
+    }
+  }, {
+    "@id" : "compression:other",
+    "@type" : "ome:Compression",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "compression:zlib",
+    "@type" : "ome:Compression",
+    "label" : {
+      "@language" : "en",
+      "@value" : "zlib"
+    }
+  }, {
+    "@id" : "ome:ContrastMethod",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ContrastMethod\\\" is the techniques used to achieve contrast for each channel."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Contrast Method"
+    }
+  }, {
+    "@id" : "contrastMethod:DIC",
+    "@type" : "ome:ContrastMethod",
+    "label" : {
+      "@language" : "en",
+      "@value" : "DIC"
+    }
+  }, {
+    "@id" : "contrastMethod:brightfield",
+    "@type" : "ome:ContrastMethod",
+    "label" : {
+      "@language" : "en",
+      "@value" : "brightfield"
+    }
+  }, {
+    "@id" : "contrastMethod:darkfield",
+    "@type" : "ome:ContrastMethod",
+    "label" : {
+      "@language" : "en",
+      "@value" : "darkfield"
+    }
+  }, {
+    "@id" : "contrastMethod:fluorescence",
+    "@type" : "ome:ContrastMethod",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fluorescence"
+    }
+  }, {
+    "@id" : "contrastMethod:hoffmanModulation",
+    "@type" : "ome:ContrastMethod",
+    "label" : {
+      "@language" : "en",
+      "@value" : "hoffman modulation"
+    }
+  }, {
+    "@id" : "contrastMethod:obliqueIllumination",
+    "@type" : "ome:ContrastMethod",
+    "label" : {
+      "@language" : "en",
+      "@value" : "oblique illumination"
+    }
+  }, {
+    "@id" : "contrastMethod:other",
+    "@type" : "ome:ContrastMethod",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "contrastMethod:phase",
+    "@type" : "ome:ContrastMethod",
+    "label" : {
+      "@language" : "en",
+      "@value" : "phase"
+    }
+  }, {
+    "@id" : "contrastMethod:polarizedLight",
+    "@type" : "ome:ContrastMethod",
+    "label" : {
+      "@language" : "en",
+      "@value" : "polarized light"
+    }
+  }, {
+    "@id" : "ome:Correction",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Correction\\\" is the collections applied to the lens."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Correction"
+    }
+  }, {
+    "@id" : "correction:UV",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "UV"
+    }
+  }, {
+    "@id" : "correction:achro",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "achro"
+    }
+  }, {
+    "@id" : "correction:achromat",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "achromat"
+    }
+  }, {
+    "@id" : "correction:apo",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "apo"
+    }
+  }, {
+    "@id" : "correction:fl",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fl"
+    }
+  }, {
+    "@id" : "correction:fluar",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fluar"
+    }
+  }, {
+    "@id" : "correction:fluor",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fluor"
+    }
+  }, {
+    "@id" : "correction:fluotar",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fluotar"
+    }
+  }, {
+    "@id" : "correction:neofluar",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "neo fluar"
+    }
+  }, {
+    "@id" : "correction:other",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "correction:planApo",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "plan apo"
+    }
+  }, {
+    "@id" : "correction:planFluor",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "plan fluor"
+    }
+  }, {
+    "@id" : "correction:planNeofluar",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "plan neofluar"
+    }
+  }, {
+    "@id" : "correction:superFluor",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "super fluor"
+    }
+  }, {
+    "@id" : "correction:violetCorrected",
+    "@type" : "ome:Correction",
+    "label" : {
+      "@language" : "en",
+      "@value" : "violet corrected"
+    }
+  }, {
+    "@id" : "ome:Dataset",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Dataset\\\" is collections of images that are always processed together. Images can belong to more than one Dataset, and a Dataset may contain more than one Image."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Dataset"
+    },
+    "subClassOf" : "owl:Thing"
+  }, {
+    "@id" : "ome:Detector",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Detector\\\" is types of detectors used to capture the image."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Detector"
+    },
+    "subClassOf" : "ome:ManufacturerSpec"
+  }, {
+    "@id" : "ome:DetectorSettings",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"DetectorSettings\\\" is settings applied to a detector as well as a reference to the detector."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Detector Settings"
+    },
+    "subClassOf" : "ome:Settings"
+  }, {
+    "@id" : "ome:DetectorType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"DetectorType\\\" is the types of detectors. E.g. CCD, PMT, EMCCD etc."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "DetectorType"
+    }
+  }, {
+    "@id" : "detectorType:APD",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "APD"
+    }
+  }, {
+    "@id" : "detectorType:CCD",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "CCD"
+    }
+  }, {
+    "@id" : "detectorType:CMOS",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "CMOS"
+    }
+  }, {
+    "@id" : "detectorType:EBCCD",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "EBCCD"
+    }
+  }, {
+    "@id" : "detectorType:EMCCD",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "EMCCD"
+    }
+  }, {
+    "@id" : "detectorType:FTIR",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "FTIR"
+    }
+  }, {
+    "@id" : "detectorType:PMT",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "PMT"
+    }
+  }, {
+    "@id" : "detectorType:analogVideo",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "analog video"
+    }
+  }, {
+    "@id" : "detectorType:correlationSpectroscopy",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "correlation spectroscopy"
+    }
+  }, {
+    "@id" : "detectorType:intensifiedCCD",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "intensified CCD"
+    }
+  }, {
+    "@id" : "detectorType:lifetimeImaging",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "lifetime imaging"
+    }
+  }, {
+    "@id" : "detectorType:other",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "detectorType:photodiode",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "photodiode"
+    }
+  }, {
+    "@id" : "detectorType:spectroscopy",
+    "@type" : "ome:DetectorType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "spectroscopy"
+    }
+  }, {
+    "@id" : "ome:Dichroic",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Dichroic\\\" is dichromatic beamsplitters or dichroic mirrors used for this filter combination."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Dichroic"
+    }
+  }, {
+    "@id" : "ome:DimensionOrder",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"DimensionOrder\\\" is the orders in which the individual planes of data are interleaved."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "DimensionOrder"
+    }
+  }, {
+    "@id" : "dimensionOrder:xyctz",
+    "@type" : "ome:DimensionOrder",
+    "label" : {
+      "@language" : "en",
+      "@value" : "xyctz"
+    }
+  }, {
+    "@id" : "dimensionOrder:xyczt",
+    "@type" : "ome:DimensionOrder",
+    "label" : {
+      "@language" : "en",
+      "@value" : "xyczt"
+    }
+  }, {
+    "@id" : "dimensionOrder:xytcz",
+    "@type" : "ome:DimensionOrder",
+    "label" : {
+      "@language" : "en",
+      "@value" : "xytcz"
+    }
+  }, {
+    "@id" : "dimensionOrder:xytzc",
+    "@type" : "ome:DimensionOrder",
+    "label" : {
+      "@language" : "en",
+      "@value" : "xytzc"
+    }
+  }, {
+    "@id" : "dimensionOrder:xyzct",
+    "@type" : "ome:DimensionOrder",
+    "label" : {
+      "@language" : "en",
+      "@value" : "xyzct"
+    }
+  }, {
+    "@id" : "dimensionOrder:xyztc",
+    "@type" : "ome:DimensionOrder",
+    "label" : {
+      "@language" : "en",
+      "@value" : "xyztc"
+    }
+  }, {
+    "@id" : "ome:DoubleAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"DoubleAnnotation\\\" is simple numerical annotations of type xsd:double."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Double Annotation"
+    },
+    "subClassOf" : "ome:NumericAnnotation"
+  }, {
+    "@id" : "ome:Ellipse",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Ellipse\\\" is simple ellipse objects. If rotation is required apply a transformation at the Shape level."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Ellipse"
+    },
+    "subClassOf" : "ome:Shape"
+  }, {
+    "@id" : "ome:EmissionFilter",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"EmissionFilter\\\" is a filter placed in the Emission light path."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "EmissionFilter"
+    },
+    "subClassOf" : "ome:Filter"
+  }, {
+    "@id" : "ome:ExcitationFilter",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ExcitationFilter\\\" is a filter placed in the Excitation light path."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "ExcitationFilter"
+    },
+    "subClassOf" : "ome:Filter"
+  }, {
+    "@id" : "ome:Experiment",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Experiment\\\" is experiments."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Experiment"
+    }
+  }, {
+    "@id" : "ome:ExperimentType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ExperimentType\\\" is the types of experiments."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Experiment Type"
+    }
+  }, {
+    "@id" : "expType:FISH",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "FISH"
+    }
+  }, {
+    "@id" : "expType:FP",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "FP"
+    }
+  }, {
+    "@id" : "expType:FRET",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "FRET"
+    }
+  }, {
+    "@id" : "expType:PGIDocumentation",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "PGI documentation"
+    }
+  }, {
+    "@id" : "expType:SPIM",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "SPIM"
+    }
+  }, {
+    "@id" : "expType:colocalization",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "colocalization"
+    }
+  }, {
+    "@id" : "expType:electrophysiology",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "electrophysiology"
+    }
+  }, {
+    "@id" : "expType:fluorescenceLifetime",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fluorescence lifetime"
+    }
+  }, {
+    "@id" : "expType:fourDPlus",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "4D plus"
+    }
+  }, {
+    "@id" : "expType:immunocytochemistry",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "immunocytochemistry"
+    }
+  }, {
+    "@id" : "expType:immunofluorescence",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "immunofluorescence"
+    }
+  }, {
+    "@id" : "expType:ionImaging",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ion imaging"
+    }
+  }, {
+    "@id" : "expType:other",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "expType:photobleaching",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "photobleaching"
+    }
+  }, {
+    "@id" : "expType:screen",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "screen"
+    }
+  }, {
+    "@id" : "expType:spectralImaging",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "spectral imaging"
+    }
+  }, {
+    "@id" : "expType:timeLapse",
+    "@type" : "ome:ExperimentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "time lapse"
+    }
+  }, {
+    "@id" : "ome:ExperimenterGroup",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ExperimenterGroup\\\" is groups of experimenters. The information should ideally be specified for at least one Leader as a contact for the group. The Leaders are themselves Experimenters.the types of experiments."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Experimenter Group"
+    }
+  }, {
+    "@id" : "ome:External",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"External\\\" is a file location. Can optionally specify a portion of a file using Offset and a ReadLength. If Offset and ReadLength are specified in conjuction with Compression, then they point into the uncompressed file."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "External"
+    }
+  }, {
+    "@id" : "ome:Filament",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Filament\\\" is various kinds of filament bulbs such as Incadescent or Halogen."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Filament"
+    },
+    "subClassOf" : "ome:LightSource"
+  }, {
+    "@id" : "ome:FilamentType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"FilamentType\\\" is the types of filaments."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "FilamentType"
+    }
+  }, {
+    "@id" : "filamentType:halogen",
+    "@type" : "ome:FilamentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "halogen"
+    }
+  }, {
+    "@id" : "filamentType:incandescent",
+    "@type" : "ome:FilamentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "incandescent"
+    }
+  }, {
+    "@id" : "filamentType:other",
+    "@type" : "ome:FilamentType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "ome:FileAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"FileAnnotation\\\" is file object annotations."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "File Annotation"
+    },
+    "subClassOf" : "ome:TypeAnnotation"
+  }, {
+    "@id" : "ome:FillRule",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"FillRule\\\" is fill ruless."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Fill Rule"
+    }
+  }, {
+    "@id" : "fillRule:evenOdd",
+    "@type" : "ome:FillRule",
+    "label" : {
+      "@language" : "en",
+      "@value" : "even odd"
+    }
+  }, {
+    "@id" : "fillRule:nonZero",
+    "@type" : "ome:FillRule",
+    "label" : {
+      "@language" : "en",
+      "@value" : "non zero"
+    }
+  }, {
+    "@id" : "ome:Filter",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Filter\\\" is filters. A filter is either an excitation or emission filters. There should be one filter element specified per wavelength in the image. The channel number associated with a filter set is specified in Channel. It is based on the FilterSpec type, so has the required attributes Manufacturer, Model, and LotNumber."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Filter"
+    },
+    "subClassOf" : "ome:ManufacturerSpec"
+  }, {
+    "@id" : "ome:FilterSet",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"FilterSet\\\" is filter set manufacturer specifications."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Filter Set"
+    },
+    "subClassOf" : "ome:ManufacturerSpec"
+  }, {
+    "@id" : "ome:FilterType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"FilterType\\\" is the types of filters."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Filter Type"
+    }
+  }, {
+    "@id" : "filterType:bandPass",
+    "@type" : "ome:FilterType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "band pass"
+    }
+  }, {
+    "@id" : "filterType:dichroic",
+    "@type" : "ome:FilterType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "dichroic"
+    }
+  }, {
+    "@id" : "filterType:longPass",
+    "@type" : "ome:FilterType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "long pass"
+    }
+  }, {
+    "@id" : "filterType:multiPass",
+    "@type" : "ome:FilterType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "multi pass"
+    }
+  }, {
+    "@id" : "filterType:neutralDensity",
+    "@type" : "ome:FilterType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "neutral density"
+    }
+  }, {
+    "@id" : "filterType:other",
+    "@type" : "ome:FilterType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "filterType:shortPass",
+    "@type" : "ome:FilterType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "short pass"
+    }
+  }, {
+    "@id" : "filterType:tuneable",
+    "@type" : "ome:FilterType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "tuneable"
+    }
+  }, {
+    "@id" : "ome:Folder",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Folder\\\" is possibly heterogeneous collections of data. Folders may contain Folders so that data may be organized within a tree of Folders. Data may be in multiple Folders but a Folder may not be in more than one other Folder."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Folder"
+    }
+  }, {
+    "@id" : "ome:Font",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Font\\\" is fonts used to draw the texts."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Font"
+    }
+  }, {
+    "@id" : "ome:FontFamily",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"FontFamily\\\" is font families used to draw the texts."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Font Family"
+    }
+  }, {
+    "@id" : "fontFamily:cursive",
+    "@type" : "ome:FontFamily",
+    "label" : {
+      "@language" : "en",
+      "@value" : "cursive"
+    }
+  }, {
+    "@id" : "fontFamily:fantasy",
+    "@type" : "ome:FontFamily",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fantasy"
+    }
+  }, {
+    "@id" : "fontFamily:monospace",
+    "@type" : "ome:FontFamily",
+    "label" : {
+      "@language" : "en",
+      "@value" : "monospace"
+    }
+  }, {
+    "@id" : "fontFamily:sansSerif",
+    "@type" : "ome:FontFamily",
+    "label" : {
+      "@language" : "en",
+      "@value" : "sans-serif"
+    }
+  }, {
+    "@id" : "fontFamily:serif",
+    "@type" : "ome:FontFamily",
+    "label" : {
+      "@language" : "en",
+      "@value" : "serif"
+    }
+  }, {
+    "@id" : "ome:FontStyle",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"FontStyle\\\" is font styles used to draw the texts."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Font Style"
+    }
+  }, {
+    "@id" : "fontStyle:bold",
+    "@type" : "ome:FontStyle",
+    "label" : {
+      "@language" : "en",
+      "@value" : "bold"
+    }
+  }, {
+    "@id" : "fontStyle:boldItalic",
+    "@type" : "ome:FontStyle",
+    "label" : {
+      "@language" : "en",
+      "@value" : "bold italic"
+    }
+  }, {
+    "@id" : "fontStyle:italic",
+    "@type" : "ome:FontStyle",
+    "label" : {
+      "@language" : "en",
+      "@value" : "italic"
+    }
+  }, {
+    "@id" : "fontStyle:normal",
+    "@type" : "ome:FontStyle",
+    "label" : {
+      "@language" : "en",
+      "@value" : "normal"
+    }
+  }, {
+    "@id" : "ome:GenericExcitationSource",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"GenericExcitationSource\\\" is sources as collections of key/value pairs, stored in Maps. The other lightsource objects should always be used in preference to this if possible.."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "General Excitation Source"
+    },
+    "subClassOf" : "ome:LightSource"
+  }, {
+    "@id" : "ome:IlluminationType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"IlluminationType\\\" is methods of illumination used to capture the channel."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Illumination Type"
+    }
+  }, {
+    "@id" : "illuminationType:epifluorescence",
+    "@type" : "ome:IlluminationType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "epifluorescence"
+    }
+  }, {
+    "@id" : "illuminationType:nonLinear",
+    "@type" : "ome:IlluminationType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "non linear"
+    }
+  }, {
+    "@id" : "illuminationType:oblique",
+    "@type" : "ome:IlluminationType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "oblique"
+    }
+  }, {
+    "@id" : "illuminationType:other",
+    "@type" : "ome:IlluminationType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "illuminationType:transmitted",
+    "@type" : "ome:IlluminationType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "transmitted"
+    }
+  }, {
+    "@id" : "ome:Image",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Image\\\" is actual images and their meta-data."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Image"
+    }
+  }, {
+    "@id" : "ome:ImageFile",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ImageFile\\\" is actual image files."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Image File"
+    },
+    "subClassOf" : "ome:BinaryFile"
+  }, {
+    "@id" : "ome:ImagingCondition",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ImagingCondition\\\" is image conditions introduced in the OWL ontology."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Imaging Condition"
+    }
+  }, {
+    "@id" : "ome:ImagingEnvironment",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ImagingEnvironment\\\" is environments that the biological samples were in during the experiments."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Imaging Environment"
+    }
+  }, {
+    "@id" : "ome:Immersion",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Immersion\\\" is immersion mediums the lens are designed for."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Immersion"
+    }
+  }, {
+    "@id" : "immersion:air",
+    "@type" : "ome:Immersion",
+    "label" : {
+      "@language" : "en",
+      "@value" : "air"
+    }
+  }, {
+    "@id" : "immersion:glycerol",
+    "@type" : "ome:Immersion",
+    "label" : {
+      "@language" : "en",
+      "@value" : "glycerol"
+    }
+  }, {
+    "@id" : "immersion:multi",
+    "@type" : "ome:Immersion",
+    "label" : {
+      "@language" : "en",
+      "@value" : "multi"
+    }
+  }, {
+    "@id" : "immersion:oil",
+    "@type" : "ome:Immersion",
+    "label" : {
+      "@language" : "en",
+      "@value" : "oil"
+    }
+  }, {
+    "@id" : "immersion:other",
+    "@type" : "ome:Immersion",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "immersion:water",
+    "@type" : "ome:Immersion",
+    "label" : {
+      "@language" : "en",
+      "@value" : "water"
+    }
+  }, {
+    "@id" : "immersion:waterDipping",
+    "@type" : "ome:Immersion",
+    "label" : {
+      "@language" : "en",
+      "@value" : "water dipping"
+    }
+  }, {
+    "@id" : "ome:Instrument",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Instrument\\\" is instruments used to capture the Images. It is primarily a container for manufacturer\\'s model and catalog numbers for the Microscope, LightSource, Detector, Objective and Filters components."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Instrument"
+    }
+  }, {
+    "@id" : "ome:Label",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Label\\\" is text labels. Any transformation should be applied at the shape level."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Label"
+    },
+    "subClassOf" : "ome:Shape"
+  }, {
+    "@id" : "ome:Laser",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Laser\\\" is laser."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Laser"
+    },
+    "subClassOf" : "ome:LightSource"
+  }, {
+    "@id" : "ome:LaserMedium",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"LaserMedium\\\" is actual lasing mediums for given laser types."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Laser Medium"
+    },
+    "subClassOf" : "ome:Medium"
+  }, {
+    "@id" : "laserMedium:Ag",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Ag"
+    }
+  }, {
+    "@id" : "laserMedium:Alexandrite",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Alexandrite"
+    }
+  }, {
+    "@id" : "laserMedium:Ar",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Ar"
+    }
+  }, {
+    "@id" : "laserMedium:ArCl",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ArCl"
+    }
+  }, {
+    "@id" : "laserMedium:ArFl",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ArFl"
+    }
+  }, {
+    "@id" : "laserMedium:CO",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "CO"
+    }
+  }, {
+    "@id" : "laserMedium:CO2",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "CO2"
+    }
+  }, {
+    "@id" : "laserMedium:CoumarinC30",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "CoumarinC30"
+    }
+  }, {
+    "@id" : "laserMedium:Cu",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Cu"
+    }
+  }, {
+    "@id" : "laserMedium:EMinus",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "EMinus"
+    }
+  }, {
+    "@id" : "laserMedium:ErGlass",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ErGlass"
+    }
+  }, {
+    "@id" : "laserMedium:ErYAG",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ErYAG"
+    }
+  }, {
+    "@id" : "laserMedium:GaAlAs",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "GaAlAs"
+    }
+  }, {
+    "@id" : "laserMedium:GaAs",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "GaAs"
+    }
+  }, {
+    "@id" : "laserMedium:H2O",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "H2O"
+    }
+  }, {
+    "@id" : "laserMedium:HFl",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "HFl"
+    }
+  }, {
+    "@id" : "laserMedium:HeCd",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "HeCd"
+    }
+  }, {
+    "@id" : "laserMedium:HeNe",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "HeNe"
+    }
+  }, {
+    "@id" : "laserMedium:HoYAG",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "HoYAG"
+    }
+  }, {
+    "@id" : "laserMedium:HoYLF",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "HoYLF"
+    }
+  }, {
+    "@id" : "laserMedium:Kr",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Kr"
+    }
+  }, {
+    "@id" : "laserMedium:KrCl",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "KrCl"
+    }
+  }, {
+    "@id" : "laserMedium:KrFl",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "KrFl"
+    }
+  }, {
+    "@id" : "laserMedium:N",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "N"
+    }
+  }, {
+    "@id" : "laserMedium:NdGlass",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "NdGlass"
+    }
+  }, {
+    "@id" : "laserMedium:NdYAG",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "NdYAG"
+    }
+  }, {
+    "@id" : "laserMedium:Rhodamine6G",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Rhodamine6G"
+    }
+  }, {
+    "@id" : "laserMedium:Ruby",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Ruby"
+    }
+  }, {
+    "@id" : "laserMedium:TiSapphire",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "TiSapphire"
+    }
+  }, {
+    "@id" : "laserMedium:Xe",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Xe"
+    }
+  }, {
+    "@id" : "laserMedium:XeBr",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "XeBr"
+    }
+  }, {
+    "@id" : "laserMedium:XeCl",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "XeCl"
+    }
+  }, {
+    "@id" : "laserMedium:XeFl",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "XeFl"
+    }
+  }, {
+    "@id" : "laserMedium:other",
+    "@type" : "ome:LaserMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "ome:LaserType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"LaserType\\\" is a laser type."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Laser Type"
+    }
+  }, {
+    "@id" : "laserType:dye",
+    "@type" : "ome:LaserType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "dye"
+    }
+  }, {
+    "@id" : "laserType:excimer",
+    "@type" : "ome:LaserType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "excimer"
+    }
+  }, {
+    "@id" : "laserType:freeElectron",
+    "@type" : "ome:LaserType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "free electron"
+    }
+  }, {
+    "@id" : "laserType:gas",
+    "@type" : "ome:LaserType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "gas"
+    }
+  }, {
+    "@id" : "laserType:metalVapor",
+    "@type" : "ome:LaserType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "metal vapor"
+    }
+  }, {
+    "@id" : "laserType:other",
+    "@type" : "ome:LaserType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "laserType:semiconductor",
+    "@type" : "ome:LaserType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "semiconductor"
+    }
+  }, {
+    "@id" : "laserType:solidState",
+    "@type" : "ome:LaserType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "solid state"
+    }
+  }, {
+    "@id" : "ome:LightEmittingDiode",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"LightEmittingDiode\\\" is various kinds of LED lamps."
+    },
+    "label" : [ {
+      "@language" : "en",
+      "@value" : "LED"
+    }, {
+      "@language" : "en",
+      "@value" : "Light Emitting Diode"
+    } ],
+    "subClassOf" : "ome:LightSource"
+  }, {
+    "@id" : "ome:LightPath",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"LightPath\\\" is light paths."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Lignt Path"
+    }
+  }, {
+    "@id" : "ome:LightSource",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"LightSource\\\" is light sources for the instruments."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Light Source"
+    },
+    "subClassOf" : "ome:ManufacturerSpec"
+  }, {
+    "@id" : "ome:LightSourceSettings",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"LightSourceSettings\\\" is settings of light sources for the instruments."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Light Source Settings"
+    },
+    "subClassOf" : "ome:Settings"
+  }, {
+    "@id" : "ome:Line",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Line\\\" is straight lines defined by their end points."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Line"
+    },
+    "subClassOf" : "ome:Shape"
+  }, {
+    "@id" : "ome:ListAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ListAnnotation\\\" is groups of annotation objects. It uses the sequence of annotation refs from the base Annotation to form the list."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "List Annotation"
+    },
+    "subClassOf" : "ome:Annotation"
+  }, {
+    "@id" : "ome:LongAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"LongAnnotation\\\" is simple numerical annotations of type xsd:long"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Long Annotation"
+    },
+    "subClassOf" : "ome:NumericAnnotation"
+  }, {
+    "@id" : "ome:Manufacturer",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Manufacturer\\\" is manufacturers of the components."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Manufacturer"
+    }
+  }, {
+    "@id" : "ome:ManufacturerSpec",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ManufacturerSpec\\\" is the base from which many microscope components are extended. E.g Objective, Filter etc. Provides attributes for recording common properties of these components such as Manufacturer name, Model etc, all of which are optional."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Manufacture Spec"
+    }
+  }, {
+    "@id" : "ome:Map",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Map\\\" is mappings of key/value pairs."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Map"
+    }
+  }, {
+    "@id" : "ome:MapAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"MapAnnotation\\\" is map annotations. The contents of this is a list of key/value pairs."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Map Annotation"
+    },
+    "subClassOf" : "ome:Annotation"
+  }, {
+    "@id" : "ome:Marker",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Marker\\\" is shapes of marker on the ends of lines."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Marker"
+    }
+  }, {
+    "@id" : "marker:arrow",
+    "@type" : "ome:Marker",
+    "label" : {
+      "@language" : "en",
+      "@value" : "arrow"
+    }
+  }, {
+    "@id" : "ome:Mask",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Mask\\\" is masks. A mask ROI shape is a link to a BinData object that is a BIT mask drawn on top of the image as an ROI. It is applied at the same scale, pixel to pixel, as the Image the ROI is applied to, unless a transform is applied at the shape level.shapes of marker on the ends of lines."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Mask"
+    },
+    "subClassOf" : "ome:Shape"
+  }, {
+    "@id" : "ome:Medium",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Medium\\\" is the mediums used for lenses."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Medium"
+    }
+  }, {
+    "@id" : "ome:MicrobeamManipulation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"MicrobeamManipulation\\\" is microbeam operation types and the regions of the images."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Microbeam Manipulation"
+    }
+  }, {
+    "@id" : "mbmp:FLIP",
+    "@type" : "ome:MicrobeamManipulation",
+    "label" : {
+      "@language" : "en",
+      "@value" : "FLIP"
+    }
+  }, {
+    "@id" : "mbmp:FRAP",
+    "@type" : "ome:MicrobeamManipulation",
+    "label" : {
+      "@language" : "en",
+      "@value" : "FRAP"
+    }
+  }, {
+    "@id" : "mbmp:inverseFRAP",
+    "@type" : "ome:MicrobeamManipulation",
+    "label" : {
+      "@language" : "en",
+      "@value" : "inverse FRAP"
+    }
+  }, {
+    "@id" : "mbmp:opticalTrapping",
+    "@type" : "ome:MicrobeamManipulation",
+    "label" : {
+      "@language" : "en",
+      "@value" : "optical trapping"
+    }
+  }, {
+    "@id" : "mbmp:other",
+    "@type" : "ome:MicrobeamManipulation",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "mbmp:photoablation",
+    "@type" : "ome:MicrobeamManipulation",
+    "label" : {
+      "@language" : "en",
+      "@value" : "photoablation"
+    }
+  }, {
+    "@id" : "mbmp:photoactivation",
+    "@type" : "ome:MicrobeamManipulation",
+    "label" : {
+      "@language" : "en",
+      "@value" : "photoactivation"
+    }
+  }, {
+    "@id" : "mbmp:uncaging",
+    "@type" : "ome:MicrobeamManipulation",
+    "label" : {
+      "@language" : "en",
+      "@value" : "uncaging"
+    }
+  }, {
+    "@id" : "ome:MicrobeanManipulation",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "ome:Microscope",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Microscope\\\" is microscopes\\' manufacturer specifications."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Microscope"
+    },
+    "subClassOf" : "ome:ManufacturerSpec"
+  }, {
+    "@id" : "ome:MicroscopeType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"MicroscopeType\\\" is a type of microscope."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "MicroscopeType"
+    }
+  }, {
+    "@id" : "microscopeType:dissection",
+    "@type" : "ome:MicroscopeType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "dissection"
+    }
+  }, {
+    "@id" : "microscopeType:electrophysiology",
+    "@type" : "ome:MicroscopeType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "electrophysiology"
+    }
+  }, {
+    "@id" : "microscopeType:inverted",
+    "@type" : "ome:MicroscopeType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "inverted"
+    }
+  }, {
+    "@id" : "microscopeType:other",
+    "@type" : "ome:MicroscopeType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "microscopeType:upright",
+    "@type" : "ome:MicroscopeType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "upright"
+    }
+  }, {
+    "@id" : "ome:NamingConvention",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"NamingConvention\\\" is predefined lists of values for the well labels."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Naming Convention"
+    }
+  }, {
+    "@id" : "ome:NumericAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"NumericAnnotation\\\" is an abstract Numeric Annotation from which some others are derived."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Numeric Annotation"
+    },
+    "subClassOf" : "ome:BasicAnnotation"
+  }, {
+    "@id" : "ome:Objective",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Objective\\\" is microscopes\\' objective lens."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Objective"
+    },
+    "subClassOf" : "ome:ManufacturerSpec"
+  }, {
+    "@id" : "ome:ObjectiveMedium",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ObjectiveMedium\\\" is a description of a Medium used for the lens. The Medium is the actual immersion medium used in this case."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Objective Medium"
+    },
+    "subClassOf" : "ome:Medium"
+  }, {
+    "@id" : "objectMedium:air",
+    "@type" : "ome:ObjectiveMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "air"
+    }
+  }, {
+    "@id" : "objectMedium:glycerol",
+    "@type" : "ome:ObjectiveMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "glycerol"
+    }
+  }, {
+    "@id" : "objectMedium:oil",
+    "@type" : "ome:ObjectiveMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "oil"
+    }
+  }, {
+    "@id" : "objectMedium:other",
+    "@type" : "ome:ObjectiveMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "objectMedium:water",
+    "@type" : "ome:ObjectiveMedium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "water"
+    }
+  }, {
+    "@id" : "ome:ObjectiveSettings",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ObjectiveSettings\\\" is settings applied to an objective as well as a reference to the objective."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Objective Settings"
+    },
+    "subClassOf" : "ome:Settings"
+  }, {
+    "@id" : "ome:PixelType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"PixelType\\\" is numbers size/kind used to represent pixels."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Pixel Type"
+    }
+  }, {
+    "@id" : "pixelType:bit",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "bit"
+    }
+  }, {
+    "@id" : "pixelType:complex",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "complex"
+    }
+  }, {
+    "@id" : "pixelType:double",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "double"
+    }
+  }, {
+    "@id" : "pixelType:doubleComplex",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "double-complex"
+    }
+  }, {
+    "@id" : "pixelType:float",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "float"
+    }
+  }, {
+    "@id" : "pixelType:int16",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "int16"
+    }
+  }, {
+    "@id" : "pixelType:int32",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "int32"
+    }
+  }, {
+    "@id" : "pixelType:int8",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "int8"
+    }
+  }, {
+    "@id" : "pixelType:uint16",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "uint16"
+    }
+  }, {
+    "@id" : "pixelType:uint32",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "uint32"
+    }
+  }, {
+    "@id" : "pixelType:uint8",
+    "@type" : "ome:PixelType",
+    "label" : {
+      "@language" : "en",
+      "@value" : "uint8"
+    }
+  }, {
+    "@id" : "ome:Pixels",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Pixels\\\" is pixels. Pixels is going to be removed in the future, but it is still required."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Pixels"
+    }
+  }, {
+    "@id" : "ome:Plane",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Plane\\\" is microscope stages and image timing data for given channels/z-sections/timepoints."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Plane"
+    }
+  }, {
+    "@id" : "ome:Plate",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Plate\\\" is microtiter plates within a screen. A plate can belong to more than one screen. The Screen(s) that a plate belongs to are specified by the ScreenRef element. The Plate ID and Name attributes are required.The Wells in a plate are numbers from the top-left corner in a grid starting at zero. i.e. The top-left well of a plate is index (0,0)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Plate"
+    }
+  }, {
+    "@id" : "ome:PlateAcquisition",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"PlateAcquisition\\\" is single acquisition runs for plates. This object is used to record the set of images acquired in a single acquisition run. The Images for this run are linked to PlateAcquisition through WellSample."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Plate Acquisition"
+    }
+  }, {
+    "@id" : "ome:Point",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Point\\\" is points."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Point"
+    },
+    "subClassOf" : "ome:Shape"
+  }, {
+    "@id" : "ome:Polygon",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Polygon\\\" is closed shapes formed of straight lines. Note: Polygon uses counterclockwise winding (this is the default OpenGL behavior)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Polygon"
+    },
+    "subClassOf" : "ome:Shape"
+  }, {
+    "@id" : "ome:Polyline",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Polyline\\\" is  open shapes formed of straight lines. Note: Polyline uses counterclockwise winding (this is the default OpenGL behavior)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Polyline"
+    },
+    "subClassOf" : "ome:Shape"
+  }, {
+    "@id" : "ome:Project",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Project\\\" is projects. Datasets can be grouped into projects using a many-to-many relationship. A Dataset may belong to one or more Projects. Projects do not directly contain images - only by virtue of containing datasets, which themselves contain images."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Project"
+    }
+  }, {
+    "@id" : "ome:Protocol",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Protocol\\\" is screen protocols."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Protocol"
+    }
+  }, {
+    "@id" : "ome:Pulse",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Pulse\\\" is the pulse modes of the lasers."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Pulse"
+    }
+  }, {
+    "@id" : "pulse:CW",
+    "@type" : "ome:Pulse",
+    "label" : {
+      "@language" : "en",
+      "@value" : "CW"
+    }
+  }, {
+    "@id" : "pulse:modeLocked",
+    "@type" : "ome:Pulse",
+    "label" : {
+      "@language" : "en",
+      "@value" : "modeLocked"
+    }
+  }, {
+    "@id" : "pulse:other",
+    "@type" : "ome:Pulse",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "pulse:qSwitched",
+    "@type" : "ome:Pulse",
+    "label" : {
+      "@language" : "en",
+      "@value" : "q switched"
+    }
+  }, {
+    "@id" : "pulse:repetitive",
+    "@type" : "ome:Pulse",
+    "label" : {
+      "@language" : "en",
+      "@value" : "repetitive"
+    }
+  }, {
+    "@id" : "pulse:single",
+    "@type" : "ome:Pulse",
+    "label" : {
+      "@language" : "en",
+      "@value" : "single"
+    }
+  }, {
+    "@id" : "ome:Pump",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Pump\\\" is references to the light sources.  It is used within the Laser element to specify the light source for the laser\\'s pump (if any)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Pump"
+    }
+  }, {
+    "@id" : "ome:Reagent",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Reagent\\\" is chemical or some other physical experimental parameters."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Reagent"
+    }
+  }, {
+    "@id" : "ome:ReagentSet",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ReagentSet\\\" is sets of reagents; may contain very detailed information toreproduce some of that information found in a screening database."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Reagent Set"
+    }
+  }, {
+    "@id" : "ome:Rectangle",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Rectangle\\\" is simple rectangle objects. If rotation is required apply a transformation at the Shape level."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Rectangle"
+    },
+    "subClassOf" : "ome:Shape"
+  }, {
+    "@id" : "ome:RegionOfInterest",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"RigionOfInterest\\\" is four dimensional \\'Region of Interests\\'. If they are not used, and the Image has more than one plane, the entire set of planes is assumed to be included in the ROI. Multiple ROIs may be specified."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Region of Interest"
+    }
+  }, {
+    "@id" : "ome:Rights",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Rights\\\" is the rights holder of the data and the rights held."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Rights"
+    }
+  }, {
+    "@id" : "ome:Screen",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Screen\\\" is groupings for Plates."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Screen"
+    }
+  }, {
+    "@id" : "ome:ScreenType",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"ScreenType\\\" is the type of the Screen."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Screen Type"
+    }
+  }, {
+    "@id" : "ome:Settings",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Settings\\\" is a super class of \\\"DetectorSettings\\\", \\\"LightSourceSettings\\\" and \\\"ObjectiveSettings\\\"."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Settings"
+    }
+  }, {
+    "@id" : "ome:Shape",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Shape\\\" is single specific ROI shapes and links that to any channels, and timepoints and z-sections. It alsorecords any transform applied to the ROI shape."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Shape"
+    }
+  }, {
+    "@id" : "ome:StageLabel",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"StageLabel\\\" is used to specify a name and position for a stage position in the microscope\\'s reference frame."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "StageLabel"
+    }
+  }, {
+    "@id" : "ome:StructuredAnnotations",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"StructuredAnnotations\\\" is unordered collections of annotations attached to objects in the OME data model."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Structured Annotations"
+    }
+  }, {
+    "@id" : "ome:TagAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"TagAnnotation\\\" is a tag annotation (represents a tag or a tagset)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Tag Annotation"
+    },
+    "subClassOf" : "ome:TextAnnotation"
+  }, {
+    "@id" : "ome:TermAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"TermAnnotation\\\" is tag annotations. A tag annotation represents a tag or a tagset."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Term Annotation"
+    },
+    "subClassOf" : "ome:BasicAnnotation"
+  }, {
+    "@id" : "ome:TextAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"TextAnnotation\\\" is an abstract Text Annotation from which some others are derived."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Text Annotation"
+    },
+    "subClassOf" : "ome:Annotation"
+  }, {
+    "@id" : "ome:TiffData",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"TiffData\\\" is locations of the pixel data in tiff files."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Tiff Data"
+    }
+  }, {
+    "@id" : "ome:TimestampAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"TimestampAnnotation\\\" is date/time annotations of type xsd:dateTime"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Timestamp Annotation"
+    },
+    "subClassOf" : "ome:BasicAnnotation"
+  }, {
+    "@id" : "ome:TransmittanceRange",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"TransmittanceRange\\\" is ranges of wavelengths that are transmitted by the filters. It also records the maximum amount of light transmitted."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Transmittance Range"
+    }
+  }, {
+    "@id" : "ome:TypeAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"TypeAnnotation\\\" is an abstract Type Annotation from which some others are derived."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Type Annotation"
+    },
+    "subClassOf" : "ome:Annotation"
+  }, {
+    "@id" : "ome:Well",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"Well\\\" is components of the Well/Plate/Screen constructs to describe screening applications. A Well has a number of WellSample elements that link to the Images collected in this well. The ReagentRef links any Reagents that were used in this Well. A well is part of only one Plate. The origin for the row and column identifiers is the top left corner of the plate starting at zero. i.e The top left well of a plate is index (0,0)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Well"
+    }
+  }, {
+    "@id" : "ome:WellSample",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"WellSample\\\" is individual images that have been captured within Wells."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Well Sample"
+    }
+  }, {
+    "@id" : "ome:XMLAnnotation",
+    "@type" : "rdfs:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Class \\\"XMLAnnotation\\\" is general xml annotations. The contents of this is not processed as OME XML but should still be well-formed XML."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "XML Annotation"
+    },
+    "subClassOf" : "ome:TextAnnotation"
+  }, {
+    "@id" : "ome:acquisitionMode",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"acquisitionMode\\\" specifies the acquisition mode that describes the type of microscopy performed for each channel."
+    },
+    "domain" : "ome:Channel",
+    "label" : {
+      "@language" : "en",
+      "@value" : "acquisition mode"
+    },
+    "range" : "ome:AcquisitionMode"
+  }, {
+    "@id" : "ome:airPressure",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"airPressure\\\" specifies the air pressure which is the define units."
+    },
+    "domain" : "ome:ImagingEnvironment",
+    "label" : {
+      "@language" : "en",
+      "@value" : "air pressure"
+    },
+    "range" : "PATO:0001025"
+  }, {
+    "@id" : "ome:annotation",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"annotation\\\" specifies an annotation from which all others are ultimately derived."
+    },
+    "domain" : [ "ome:Reagent", "ome:Dataset", "ome:ExperimenterGroup", "ome:Plate", "ome:StructuredAnnotations", "ome:PlateAcquisition", "ome:Screen", "ome:Image", "ome:Project", "ome:Experiment" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "annotation"
+    },
+    "range" : "ome:Annotation"
+  }, {
+    "@id" : "ome:annotator",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"annotator\\\" specifies the person who attached this annotation.  e.g. If UserA annotates something with TagB, owned by UserB, UserA is still the Annotator."
+    },
+    "domain" : "ome:Annotation",
+    "label" : {
+      "@language" : "en",
+      "@value" : "annotator"
+    },
+    "range" : "foaf:Person"
+  }, {
+    "@id" : "ome:arcType",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"arcType\\\" specifies the type of the arc."
+    },
+    "domain" : "ome:Arc",
+    "label" : {
+      "@language" : "en",
+      "@value" : "arcType"
+    },
+    "range" : "ome:ArcType"
+  }, {
+    "@id" : "ome:binData",
+    "@type" : "rdf:Property",
+    "domain" : [ "ome:BinaryFile", "ome:Pixels", "ome:Mask" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "bin data"
+    },
+    "range" : "ome:BinData"
+  }, {
+    "@id" : "ome:binaryFile",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"binaryFile\\\" specifies the binary file. "
+    },
+    "domain" : "ome:FileAnnotation",
+    "label" : {
+      "@language" : "en",
+      "@value" : "binary file"
+    },
+    "range" : "ome:BinaryFile"
+  }, {
+    "@id" : "ome:binning",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"binning\\\" specifies the binning data that represents the number of pixels combined to form larger pixels."
+    },
+    "domain" : "ome:DetectorSettings",
+    "label" : {
+      "@language" : "en",
+      "@value" : "binning"
+    },
+    "range" : "ome:Binning"
+  }, {
+    "@id" : "ome:channel",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"channel\\\" speficies the channel."
+    },
+    "domain" : "ome:Pixels",
+    "label" : {
+      "@language" : "en",
+      "@value" : "channel"
+    },
+    "range" : "ome:Channel"
+  }, {
+    "@id" : "ome:color",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"color\\\" speficies the color, such as the color used to reder the channel and the marker color used to highlight the well."
+    },
+    "domain" : [ "ome:Well", "ome:Shape", "ome:Channel" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "color"
+    },
+    "range" : "ome:Color"
+  }, {
+    "@id" : "ome:compression",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"compression\\\" specifies the compression scheme used to encode the data."
+    },
+    "domain" : [ "ome:External", "ome:BinData" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "compression"
+    },
+    "range" : "ome:Compression"
+  }, {
+    "@id" : "ome:contrastMethod",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"contrastMethod\\\" specifies the technique used to achieve contrast for each channel."
+    },
+    "domain" : "ome:Channel",
+    "label" : {
+      "@language" : "en",
+      "@value" : "contrast method"
+    },
+    "range" : "ome:ContrastMethod"
+  }, {
+    "@id" : "ome:correction",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"correction\\\" specifies the correction applied to the lens."
+    },
+    "domain" : "ome:Objective",
+    "label" : {
+      "@language" : "en",
+      "@value" : "correction"
+    },
+    "range" : "ome:Correction"
+  }, {
+    "@id" : "ome:cutIn",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"cutIn\\\" speficies the wavelength below which there is less than 50% transmittance for a filter."
+    },
+    "domain" : "ome:TransmittanceRange",
+    "label" : {
+      "@language" : "en",
+      "@value" : "cut in"
+    },
+    "range" : "PATO:0001242"
+  }, {
+    "@id" : "ome:cutInTolerance",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"cutInTolerance\\\" speficies the cutIn tolerance."
+    },
+    "domain" : "ome:TransmittanceRange",
+    "label" : {
+      "@language" : "en",
+      "@value" : "cut in tolerance"
+    },
+    "range" : "PATO:0001242"
+  }, {
+    "@id" : "ome:cutOut",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"cutOut\\\" speficies the wavelength above which there is less than 50% transmittance for a filter."
+    },
+    "domain" : "ome:TransmittanceRange",
+    "label" : {
+      "@language" : "en",
+      "@value" : "cut out"
+    },
+    "range" : "PATO:0001242"
+  }, {
+    "@id" : "ome:cutOutTolerance",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"cutOutTolerance\\\" speficies the cutOut tolerance."
+    },
+    "domain" : "ome:TransmittanceRange",
+    "label" : {
+      "@language" : "en",
+      "@value" : "cut out tolerance"
+    },
+    "range" : "PATO:0001242"
+  }, {
+    "@id" : "ome:dataset",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"dataset\\\" specifies a collection of images that are always processed together."
+    },
+    "domain" : "ome:Project",
+    "label" : {
+      "@language" : "en",
+      "@value" : "dataset"
+    },
+    "range" : "ome:Dataset"
+  }, {
+    "@id" : "ome:deltaT",
+    "@type" : "rdf:Property",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "Property \\\"deltaT\\\" specifies time since the beginning of the experiment."
+    }, {
+      "@language" : "en",
+      "@value" : "Property \\\"detectorType\\\" specifies the type of the detector."
+    } ],
+    "domain" : [ "ome:Plane", "ome:Detector" ],
+    "label" : [ {
+      "@language" : "en",
+      "@value" : "detectorType"
+    }, {
+      "@language" : "en",
+      "@value" : "delta t"
+    } ],
+    "range" : [ "ome:DetectorType", "PATO:0000165" ]
+  }, {
+    "@id" : "ome:dichroic",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"dichroic\\\" specifies the dichromatic beamsplitter or dichroic mirror used for this filter combination."
+    },
+    "domain" : [ "ome:LightPath", "ome:Instrument", "ome:FilterSet" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "dichroic"
+    },
+    "range" : "ome:Dichroic"
+  }, {
+    "@id" : "ome:dimensionOrder",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"dimensionOrder\\\" specifies the order in which the individual planes of data are interleaved."
+    },
+    "domain" : "ome:Pixels",
+    "label" : {
+      "@language" : "en",
+      "@value" : "dimension order"
+    },
+    "range" : "ome:DimensionOrder"
+  }, {
+    "@id" : "ome:emissionFilter",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"emissionFilter\\\" specifies the filters placed in the emission light path."
+    },
+    "domain" : [ "ome:LightPath", "ome:FilterSet" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "emission filter"
+    },
+    "range" : "ome:EmissionFilter"
+  }, {
+    "@id" : "ome:emissionWavelength",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"emissionWavelength\\\" specifies the wavelength of emission for a particular channel."
+    },
+    "domain" : "ome:Channel",
+    "label" : {
+      "@language" : "en",
+      "@value" : "emission wavelength"
+    },
+    "range" : "PATO:00001242"
+  }, {
+    "@id" : "ome:excitationFilter",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"excitationFilter\\\" specifies the filters placed in the excitation light path."
+    },
+    "domain" : [ "ome:LightPath", "ome:FilterSet" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "excitation filter"
+    },
+    "range" : "ome:ExcitationFilter"
+  }, {
+    "@id" : "ome:excitationWavelength",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"excitationWavelength\\\" spefifies the wavelength of excitation for a particular channel."
+    },
+    "domain" : "ome:Channel",
+    "label" : {
+      "@language" : "en",
+      "@value" : "excitation wavelength"
+    },
+    "range" : "PATO:00001242"
+  }, {
+    "@id" : "ome:experiment",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"experiment\\\" specifies the experiment."
+    },
+    "domain" : [ "ome:Project", "ome:Image", "ome:ExperimenterGroup", "ome:Dataset" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "experiment"
+    },
+    "range" : "ome:Experiment"
+  }, {
+    "@id" : "ome:experimentType",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"experimentType\\\" specifies the type of experiment."
+    },
+    "domain" : "ome:Experiment",
+    "label" : {
+      "@language" : "en",
+      "@value" : "experiment type"
+    },
+    "range" : "ome:ExperimentType"
+  }, {
+    "@id" : "ome:experimenter",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"experimenter\\\" specifies the person performed an imaging experiment."
+    },
+    "domain" : [ "ome:MicrobeamManipulation", "ome:Project", "ome:Image", "ome:ExperimenterGroup", "ome:Dataset" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "experimenter"
+    },
+    "range" : "foaf:Person"
+  }, {
+    "@id" : "ome:experimenterGroup",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"experimenterGroup\\\" specifies the group of experimenters who performed an imaging experiment."
+    },
+    "domain" : [ "ome:Project", "ome:Image", "ome:Dataset" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "experimenter group"
+    },
+    "range" : "ome:ExperimenterGroup"
+  }, {
+    "@id" : "ome:exposureTime",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"exposureTime\\\" specifies the length of the exposure."
+    },
+    "domain" : "ome:Plane",
+    "label" : {
+      "@language" : "en",
+      "@value" : "exposure time"
+    },
+    "range" : "PATO:0000165"
+  }, {
+    "@id" : "ome:external",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"external\\\" specifies the file location."
+    },
+    "domain" : "ome:BinaryFile",
+    "label" : {
+      "@language" : "en",
+      "@value" : "external"
+    },
+    "range" : "ome:External"
+  }, {
+    "@id" : "ome:fillColor",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"fillColor\\\" specifies the color of the fill."
+    },
+    "domain" : "ome:Shape",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fill color"
+    },
+    "range" : "ome:Color"
+  }, {
+    "@id" : "ome:fillRule",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"fillRule\\\" specifies the rule used to decide which parts of the shape to fill."
+    },
+    "domain" : "ome:Shape",
+    "label" : {
+      "@language" : "en",
+      "@value" : "fill rule"
+    },
+    "range" : "ome:FillRule"
+  }, {
+    "@id" : "ome:filterType",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"filterType\\\" specifies the type of the filter."
+    },
+    "domain" : "ome:Filter",
+    "label" : {
+      "@language" : "en",
+      "@value" : "filer type"
+    },
+    "range" : "ome:FilterType"
+  }, {
+    "@id" : "ome:folder",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"folder\\\" specifies a folder which is a possibly heterogeneous collection of data."
+    },
+    "domain" : "ome:Folder",
+    "label" : {
+      "@language" : "en",
+      "@value" : "folder"
+    },
+    "range" : "ome:Folder"
+  }, {
+    "@id" : "ome:font",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"font\\\" specifies the font used to draw the text."
+    },
+    "domain" : "ome:Shape",
+    "label" : {
+      "@language" : "en",
+      "@value" : "font"
+    },
+    "range" : "ome:Font"
+  }, {
+    "@id" : "ome:fontFamily",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"fonfFamily\\\" specifies the font family used to draw the text."
+    },
+    "domain" : "ome:Font",
+    "label" : {
+      "@language" : "en",
+      "@value" : "font family"
+    },
+    "range" : "ome:FontFamily"
+  }, {
+    "@id" : "ome:fontSize",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"fontSize\\\" specifies the size of the font."
+    },
+    "domain" : "ome:Font",
+    "label" : {
+      "@language" : "en",
+      "@value" : "font size"
+    },
+    "range" : "PATO:0000117"
+  }, {
+    "@id" : "ome:fontStyle",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"fontStyle\\\" specifies the style and weight applied to the text."
+    },
+    "domain" : "ome:Font",
+    "label" : {
+      "@language" : "en",
+      "@value" : "font style"
+    },
+    "range" : "ome:FontStyle"
+  }, {
+    "@id" : "ome:humidity",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"humidity\\\" specifies the humidity around the sample."
+    },
+    "domain" : "ome:ImagingEnvironment",
+    "label" : {
+      "@language" : "en",
+      "@value" : "humidity"
+    },
+    "range" : "PATO:0015009"
+  }, {
+    "@id" : "ome:illuminationType",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"illuminationType\\\" specifies the method illumination used to capture the channel."
+    },
+    "domain" : "ome:Channel",
+    "label" : {
+      "@language" : "en",
+      "@value" : "illumination type"
+    },
+    "range" : "ome:IlluminationType"
+  }, {
+    "@id" : "ome:image",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"image\\\" specifies the actual image."
+    },
+    "domain" : [ "ome:Dataset", "ome:Folder", "ome:WellSample" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "image"
+    },
+    "range" : "ome:Image"
+  }, {
+    "@id" : "ome:imageFile",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"imageFile\\\" specifies the actual image file."
+    },
+    "domain" : "ome:Pixels",
+    "label" : {
+      "@language" : "en",
+      "@value" : "imageFile"
+    },
+    "range" : "ome:ImageFile"
+  }, {
+    "@id" : "ome:imagingCondition",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"imagingCondition\\\" specifies the imaging condition."
+    },
+    "domain" : "ome:Image",
+    "label" : {
+      "@language" : "en",
+      "@value" : "imaging condition"
+    },
+    "range" : "ome:ImagingCondition"
+  }, {
+    "@id" : "ome:imagingEnvironment",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"imagingEnvironment\\\" specifies the environment that the biological sample was in during the experiment."
+    },
+    "domain" : "ome:ImagingCondition",
+    "label" : {
+      "@language" : "en",
+      "@value" : "imaging environment"
+    },
+    "range" : "ome:ImagingEnvironment"
+  }, {
+    "@id" : "ome:immersion",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"immersion\\\" specifies the immersion medium the lens is designed for."
+    },
+    "domain" : "ome:Objective",
+    "label" : {
+      "@language" : "en",
+      "@value" : "immersion"
+    },
+    "range" : "ome:Immersion"
+  }, {
+    "@id" : "ome:laserMedium",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"laserMedium\\\" specifies the Medium attribute specifies the actual lasing medium for a given laser type."
+    },
+    "domain" : "ome:Laser",
+    "label" : {
+      "@language" : "en",
+      "@value" : "laser medium"
+    },
+    "range" : "ome:LaserMedium"
+  }, {
+    "@id" : "ome:laserType",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"laserType\\\" specifies the type of laser."
+    },
+    "domain" : "ome:Laser",
+    "label" : {
+      "@language" : "en",
+      "@value" : "laser type"
+    },
+    "range" : "ome:LaserType"
+  }, {
+    "@id" : "ome:leader",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"leader\\\" specifies an experimenter group leader."
+    },
+    "domain" : "ome:ExperimenterGroup",
+    "label" : {
+      "@language" : "en",
+      "@value" : "leader"
+    },
+    "range" : "foaf:Person"
+  }, {
+    "@id" : "ome:manufacturer",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"manufacturer\\\" specifies the manufacturer of the component."
+    },
+    "domain" : "ome:ManufacturerSpec",
+    "label" : {
+      "@language" : "en",
+      "@value" : "manufacturer"
+    },
+    "range" : "ome:Manufacturer"
+  }, {
+    "@id" : "ome:manufacturerSpec",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"manufacturerSpec\\\" specifies the base from which many microscope components are extended."
+    },
+    "domain" : [ "ome:Dichroic", "ome:Filter", "ome:Objective", "ome:LightSource", "ome:Microscope", "ome:Detector", "ome:FilterSet" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "manufacturer spec"
+    },
+    "range" : "ome:ManufacturerSpec"
+  }, {
+    "@id" : "ome:map",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"map\\\" specifies the value of the map that contains of a list of key/value pairs."
+    },
+    "domain" : [ "ome:ImagingEnvironment", "ome:GenericExcitationSource" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "map"
+    },
+    "range" : "ome:Map"
+  }, {
+    "@id" : "ome:markerEnd",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"markerEnd\\\" specifies the end of the marker."
+    },
+    "domain" : [ "ome:Line", "ome:Polyline" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "maker end"
+    },
+    "range" : "ome:Marker"
+  }, {
+    "@id" : "ome:markerStart",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"markerStart\\\" specifies the start of the marker."
+    },
+    "domain" : [ "ome:Line", "ome:Polyline" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "marker start"
+    },
+    "range" : "ome:Marker"
+  }, {
+    "@id" : "ome:medium",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"medium\\\" specifies a medium used for the lens."
+    },
+    "domain" : "ome:ObjectiveSettings",
+    "label" : {
+      "@language" : "en",
+      "@value" : "medium"
+    },
+    "range" : "ome:Medium"
+  }, {
+    "@id" : "ome:microbeamManipulation",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"microbeamManipulation\\\" specifies the microbeam operation that describes a microbeam operation type and the region of the image it was applied to."
+    },
+    "domain" : [ "ome:Experiment", "ome:ImagingCondition" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "microbeam manipulation"
+    },
+    "range" : "ome:MicrobeamManipulation"
+  }, {
+    "@id" : "ome:microscope",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"microscope\\\" specifies the microscope."
+    },
+    "domain" : "ome:Instrument",
+    "label" : {
+      "@language" : "en",
+      "@value" : "microscope"
+    },
+    "range" : "ome:Microscope"
+  }, {
+    "@id" : "ome:microscopeType",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"microscopeType\\\" specifies the type of the microscope."
+    },
+    "domain" : "ome:Microscope",
+    "label" : {
+      "@language" : "en",
+      "@value" : "microscopeType"
+    },
+    "range" : "ome:MicroscopeType"
+  }, {
+    "@id" : "ome:mimeType",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"mimeType\\\" specifies the MIME type of the binary file."
+    },
+    "domain" : "ome:BinaryFile",
+    "label" : {
+      "@language" : "en",
+      "@value" : "MIME type"
+    },
+    "range" : "dcterms:FileFormat"
+  }, {
+    "@id" : "ome:objectiveSettings",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"objectiveSettings\\\" specifies the physical size of a pixel."
+    },
+    "domain" : "ome:ImagingCondition",
+    "label" : {
+      "@language" : "en",
+      "@value" : "objective settings"
+    },
+    "range" : "ome:ObjectiveSettings"
+  }, {
+    "@id" : "ome:physicalSizeX",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"physicalSizeX\\\" specifies the physical size of a pixel on the x axis."
+    },
+    "domain" : "ome:Pixels",
+    "label" : {
+      "@language" : "en",
+      "@value" : "physical size x"
+    },
+    "range" : "PATO:0000117"
+  }, {
+    "@id" : "ome:physicalSizeY",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"physicalSizeY\\\" specifies the physical size of a pixel on the y axis."
+    },
+    "domain" : "ome:Pixels",
+    "label" : {
+      "@language" : "en",
+      "@value" : "physical size y"
+    },
+    "range" : "PATO:0000117"
+  }, {
+    "@id" : "ome:physicalSizeZ",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"physicalSizeZ\\\" specifies the physical size of a pixel on the z axis."
+    },
+    "domain" : "ome:Pixels",
+    "label" : {
+      "@language" : "en",
+      "@value" : "physical size z"
+    },
+    "range" : "PATO:0000117"
+  }, {
+    "@id" : "ome:pinholeSize",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"pinholeSize\\\" specifies the adjustable pin hole diameters for confocal microscopes."
+    },
+    "domain" : "ome:Channel",
+    "label" : {
+      "@language" : "en",
+      "@value" : "pinhole size"
+    },
+    "range" : "PATO:0000117"
+  }, {
+    "@id" : "ome:pixcelType",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"pixcelType\\\" specifies the number size/kind used to represent a pixel."
+    },
+    "domain" : "ome:Pixels",
+    "label" : {
+      "@language" : "en",
+      "@value" : "pixcel type"
+    },
+    "range" : "ome:PixelType"
+  }, {
+    "@id" : "ome:pixels",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"pixels\\\" specifies the pixels of the image."
+    },
+    "domain" : "ome:Image",
+    "label" : {
+      "@language" : "en",
+      "@value" : "pixels"
+    },
+    "range" : "ome:Pixels"
+  }, {
+    "@id" : "ome:plane",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"plane\\\" specifies the microscope stage and image timing data for a given channel/z-section/timepoint."
+    },
+    "domain" : "ome:Pixels",
+    "label" : {
+      "@language" : "en",
+      "@value" : "plane"
+    },
+    "range" : "ome:Plane"
+  }, {
+    "@id" : "ome:plate",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"plate\\\" specifies a microtiter plate within the screen."
+    },
+    "domain" : "ome:Screen",
+    "label" : {
+      "@language" : "en",
+      "@value" : "plate"
+    },
+    "range" : "ome:Plate"
+  }, {
+    "@id" : "ome:plateAcquisition",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"plateAcquisition\\\" specifies the plate qcquisition that describes a single acquisition run for a plate."
+    },
+    "domain" : "ome:Plate",
+    "label" : {
+      "@language" : "en",
+      "@value" : "plate acquisition"
+    },
+    "range" : "ome:PlateAcquisition"
+  }, {
+    "@id" : "ome:point",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"point\\\" specifies the point."
+    },
+    "domain" : [ "ome:Polyline", "ome:Polygon" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "point"
+    },
+    "range" : "ome:Point"
+  }, {
+    "@id" : "ome:positionX",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"positionX\\\" specifies the x position of the stage."
+    },
+    "domain" : [ "ome:Plane", "ome:StageLabel", "ome:WellSample" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "position x"
+    },
+    "range" : "PATO:0000140"
+  }, {
+    "@id" : "ome:positionY",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"positionY\\\" specifies the y position of the stage."
+    },
+    "domain" : [ "ome:Plane", "ome:StageLabel", "ome:WellSample" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "position y"
+    },
+    "range" : "PATO:0000140"
+  }, {
+    "@id" : "ome:positionZ",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"positionZ\\\" specifies the z position of the stage."
+    },
+    "domain" : [ "ome:Plane", "ome:StageLabel" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "position z"
+    },
+    "range" : "PATO:0000140"
+  }, {
+    "@id" : "ome:power",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"power\\\" specifies the light-source power."
+    },
+    "domain" : "ome:LightSource",
+    "label" : {
+      "@language" : "en",
+      "@value" : "power"
+    },
+    "range" : "PATO:0001024"
+  }, {
+    "@id" : "ome:protocol",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"protocol\\\" specifies the protocol such as the screen protocol."
+    },
+    "domain" : "ome:Screen",
+    "label" : {
+      "@language" : "en",
+      "@value" : "protocol"
+    },
+    "range" : "ome:Protocol"
+  }, {
+    "@id" : "ome:pulse",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"pulse\\\" specifies the pulse mode of the laser."
+    },
+    "domain" : "ome:Laser",
+    "label" : {
+      "@language" : "en",
+      "@value" : "pulse"
+    },
+    "range" : "ome:Pulse"
+  }, {
+    "@id" : "ome:pump",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"pump\\\" specifies the pump of the laser."
+    },
+    "domain" : "ome:Laser",
+    "label" : {
+      "@language" : "en",
+      "@value" : "pump"
+    },
+    "range" : "ome:Pump"
+  }, {
+    "@id" : "ome:readOutRate",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"readOutRate\\\" specifies the speed at which the detector can count pixels. {used:CCD,EMCCD}  This is the bytes per second that can be read from the detector (like a baud rate)."
+    },
+    "domain" : "ome:DetectorSettings",
+    "label" : {
+      "@language" : "en",
+      "@value" : "read out rate"
+    },
+    "range" : "PATO:0000044"
+  }, {
+    "@id" : "ome:reagent",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"reagent\\\" specifies the reagent that describes a chemical or some other physical experimental parameters."
+    },
+    "domain" : [ "ome:Well", "ome:ReagentSet" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "reagent"
+    },
+    "range" : "ome:Reagent"
+  }, {
+    "@id" : "ome:reagentSet",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"reagentSet\\\" specifies a set of reagents."
+    },
+    "domain" : "ome:Screen",
+    "label" : {
+      "@language" : "en",
+      "@value" : "reagent set"
+    },
+    "range" : "ome:ReagentSet"
+  }, {
+    "@id" : "ome:regionOfInterest",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"regionOfInterest\\\" specifies a four dimensional region of interest (ROI)."
+    },
+    "domain" : [ "ome:MicrobeanManipulation", "ome:Image", "ome:Folder" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "region of interest"
+    },
+    "range" : "ome:RegionOfInterest"
+  }, {
+    "@id" : "ome:repetitionRate",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"repetitionRate\\\" specifies the rate in Hz at which the laser pulses if the Pulse type is \\'Repetitive\\'."
+    },
+    "domain" : "ome:Laser",
+    "label" : {
+      "@language" : "en",
+      "@value" : "repeteion rate"
+    },
+    "range" : "PATO:0000044"
+  }, {
+    "@id" : "ome:screenType",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"screenType\\\" specifies the screen type."
+    },
+    "domain" : "ome:Screen",
+    "label" : {
+      "@language" : "en",
+      "@value" : "screen type"
+    },
+    "range" : "ome:ScreenType"
+  }, {
+    "@id" : "ome:shape",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"shape\\\" specifies the shape that contains a single specific ROI shape and links that to any channels, and a timepoint and a z-section."
+    },
+    "domain" : "ome:Shape",
+    "label" : {
+      "@language" : "en",
+      "@value" : "shape"
+    },
+    "range" : "ome:Shape"
+  }, {
+    "@id" : "ome:stageLabel",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"stageLabel\\\" specifies the stage labe which is a name and position for a stage position in the microscope\\'s reference frame."
+    },
+    "domain" : "ome:ImagingCondition",
+    "label" : {
+      "@language" : "en",
+      "@value" : "stage label"
+    },
+    "range" : "ome:StageLabel"
+  }, {
+    "@id" : "ome:strokeColor",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"strokeColor\\\" specifies the color of stroke."
+    },
+    "domain" : "ome:Shape",
+    "label" : {
+      "@language" : "en",
+      "@value" : "stroke color"
+    },
+    "range" : "ome:Color"
+  }, {
+    "@id" : "ome:strokeWidth",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"strokeWidth\\\" specifies the width of the stroke."
+    },
+    "domain" : "ome:Shape",
+    "label" : {
+      "@language" : "en",
+      "@value" : "stroke width"
+    },
+    "range" : "PATO:0000921"
+  }, {
+    "@id" : "ome:temperature",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"temperature\\\" specifies the temperature."
+    },
+    "domain" : "ome:ImagingEnvironment",
+    "label" : {
+      "@language" : "en",
+      "@value" : "temperature"
+    },
+    "range" : "PATO:0000146"
+  }, {
+    "@id" : "ome:tiffData",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"tiffData\\\" specifies the location of the pixel data in a tiff file."
+    },
+    "domain" : "ome:Pixels",
+    "label" : {
+      "@language" : "en",
+      "@value" : "tiffData"
+    },
+    "range" : "ome:TiffData"
+  }, {
+    "@id" : "ome:timeIncrement",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"timeIncrement\\\" specifies the timeinclement that is used for time series that have a global timing specification instead of per-timepoint timing information."
+    },
+    "domain" : "ome:Pixels",
+    "label" : {
+      "@language" : "en",
+      "@value" : "time increment"
+    },
+    "range" : "PATO:0000165"
+  }, {
+    "@id" : "ome:transform",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"transform\\\" specifies a matrix used to transform the shape."
+    },
+    "domain" : "ome:Shape",
+    "label" : {
+      "@language" : "en",
+      "@value" : "transform"
+    },
+    "range" : "ome:AffineTransform"
+  }, {
+    "@id" : "ome:transmittanceRange",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"transmittanceRange\\\" specifies the transmittance range that describes wavelengths that are transmitted by the filter."
+    },
+    "domain" : "ome:Filter",
+    "label" : {
+      "@language" : "en",
+      "@value" : "transmittance range"
+    },
+    "range" : "ome:TransmittanceRange"
+  }, {
+    "@id" : "ome:union",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"union\\\" specifies the union of sets."
+    },
+    "domain" : "ome:RegionOfInterest",
+    "label" : {
+      "@language" : "en",
+      "@value" : "union"
+    },
+    "range" : "rdf:Bag"
+  }, {
+    "@id" : "ome:voltage",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"voltage\\\" specifies the voltage of the detector."
+    },
+    "domain" : [ "ome:DetectorSettings", "ome:Detector" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "voltage"
+    },
+    "range" : "SBO:0000259"
+  }, {
+    "@id" : "ome:waveLength",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"waveLength\\\" specifies the wave length of the laser."
+    },
+    "domain" : [ "ome:LightSourceSettings", "ome:Laser" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "wave length"
+    },
+    "range" : "PATO:0001242"
+  }, {
+    "@id" : "ome:well",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"well\\\" specifies the well which is a component of the well/plate/screen construct to describe screening applications."
+    },
+    "domain" : "ome:Plate",
+    "label" : {
+      "@language" : "en",
+      "@value" : "well"
+    },
+    "range" : "ome:Well"
+  }, {
+    "@id" : "ome:wellOriginX",
+    "@type" : "rdf:Property",
+    "domain" : "ome:Plate",
+    "label" : {
+      "@language" : "en",
+      "@value" : "well origin x"
+    },
+    "range" : "PATO:0000140"
+  }, {
+    "@id" : "ome:wellOriginY",
+    "@type" : "rdf:Property",
+    "domain" : "ome:Plate",
+    "label" : {
+      "@language" : "en",
+      "@value" : "well origin y"
+    },
+    "range" : "PATO:0000140"
+  }, {
+    "@id" : "ome:wellSample",
+    "@type" : "rdf:Property",
+    "domain" : [ "ome:Well", "ome:PlateAcquisition" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "well sample"
+    },
+    "range" : "ome:WellSample"
+  }, {
+    "@id" : "ome:workingDistance",
+    "@type" : "rdf:Property",
+    "domain" : "ome:Objective",
+    "label" : {
+      "@language" : "en",
+      "@value" : "working distance"
+    },
+    "range" : "PATO:0000040"
+  }, {
+    "@id" : "rdf:Bag",
+    "@type" : "rdfs:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Bag"
+    }
+  }, {
+    "@id" : "rdf:Seq",
+    "@type" : "rdfs:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Seq"
+    }
+  }, {
+    "@id" : "rdf:li",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"li\\\" specifies an element of the Bag."
+    },
+    "domain" : "rdf:Bag",
+    "label" : {
+      "@language" : "en",
+      "@value" : "li"
+    },
+    "range" : "ome:Shape"
+  }, {
+    "@id" : "rdfs:Class",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "rdfs:Resource",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "owl:Thing",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : "rdfs:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Person"
+    }
+  }, {
+    "@id" : "foaf:depicts",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"http://xmlns.com/foaf/0.1/depicts\\\" specifies a relationship between the image and something that the image depicts."
+    },
+    "domain" : "ome:Image",
+    "label" : {
+      "@language" : "en",
+      "@value" : "depicts"
+    },
+    "range" : "rdfs:Resource"
+  }, {
+    "@id" : "foaf:thumbnail",
+    "@type" : "rdf:Property",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Property \\\"http://xmlns.com/foaf/0.1/thumnail\\\" specifies  a relationship between a full-size image and a smaller, representative image that has been derrived from it."
+    },
+    "domain" : "ome:Image",
+    "range" : "ome:ImageFile"
+  } ],
+  "@context" : {
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "laserType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#",
+    "qudt" : "http://qudt.org/schema/qudt#",
+    "filamentType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilamentType#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "detectorType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#",
+    "ome" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "PATO" : "http://purl.obolibrary.org/obo/PATO_",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "mbmp" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipulation#",
+    "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
+    "arcType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ArcType#",
+    "acquisitionMode" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#",
+    "contrastMethod" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ContrastMethod#",
+    "objectMedium" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#",
+    "fontFamily" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#",
+    "fillRule" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#",
+    "xml" : "http://www.w3.org/XML/1998/namespace",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "expType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimentType#",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "microscopeType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#",
+    "SBO" : "http://purl.obolibrary.org/obo/SBO_",
+    "immersion" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#",
+    "binning" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Binning#",
+    "fontStyle" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#",
+    "laserMedium" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserMedium#",
+    "illuminationType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/IlluminationType#",
+    "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "marker" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#",
+    "pulse" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pulse#",
+    "compression" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Compression#",
+    "correction" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Correction#",
+    "filterType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilterType#"
+  }
+}
