@@ -1,71 +1,81 @@
 @prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/mapannotation/image/> .
+@prefix mapAnnotation: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/mapannotation/mapAnnotation/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
 @prefix unitLength: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#> .
+@prefix pixels: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/mapannotation/pixels/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
 @prefix xml:   <http://www.w3.org/XML/1998/namespace> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix UO:    <http://purl.obolibrary.org/obo/uo#> .
+@prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/mapannotation/bindata/> .
+@prefix map:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/mapannotation/map/> .
 
 unitLength:nm  a  rdfs:Class .
+
+mapAnnotation:mapAnnotation1
+        a                   :MapAnnotation , :Annotation ;
+        rdf:value           map:map1 ;
+        rdfs:comment        "This is the description of the sample map A"@en ;
+        dcterms:identifier  "Annotation:1" .
+
+map:map2.2  a   :Map ;
+        :key    "SampleKeyB-2" ;
+        :value  "SampleValueB-2" .
 
 image:image0  a             :Image ;
         rdfs:label          "6x6x1x8-swatch.tif"@en ;
         dcterms:identifier  "Image:0" ;
         :acquisitionDate    "2010-02-23T12:51:30" ;
-        :annotation         _:b0 , _:b1 ;
-        :pixels             [ a                   :Pixels ;
-                              dcterms:identifier  "Pixels:0.0" ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-                                                    :length     "32"^^xsd:long
-                                                  ] ;
-                              :dimensionOrder     dimensionOrder:xyczt ;
-                              :physicalSizeX      _:b2 ;
-                              :physicalSizeY      _:b2 ;
-                              :pixcelType         pixelType:uint8 ;
-                              :sizeC              "1"^^xsd:int ;
-                              :sizeT              "1"^^xsd:int ;
-                              :sizeX              "6"^^xsd:int ;
-                              :sizeY              "4"^^xsd:int ;
-                              :sizeZ              "1"^^xsd:int
-                            ] .
+        :annotation         mapAnnotation:mapAnnotation2 , mapAnnotation:mapAnnotation1 ;
+        :pixels             pixels:pixels0.0 .
 
-_:b1    a                   :MapAnnotation , :Annotation ;
-        rdf:value           [ a       :Map ;
-                              :key    "SampleKeyA" ;
-                              :value  "SampleValueA"
-                            ] ;
-        rdfs:comment        "This is the description of the sample map A"@en ;
-        dcterms:identifier  "Annotation:1" .
+pixels:pixels0.0  a         :Pixels ;
+        dcterms:identifier  "Pixels:0.0" ;
+        :binData            bindata:bindata0 ;
+        :dimensionOrder     dimensionOrder:xyczt ;
+        :physicalSizeX      _:b0 ;
+        :physicalSizeY      _:b0 ;
+        :pixcelType         pixelType:uint8 ;
+        :sizeC              "1"^^xsd:int ;
+        :sizeT              "1"^^xsd:int ;
+        :sizeX              "6"^^xsd:int ;
+        :sizeY              "4"^^xsd:int ;
+        :sizeZ              "1"^^xsd:int .
 
-_:b2    a          PATO:0000117 ;
+_:b0    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:nm .
 
+map:map1  a     :Map ;
+        :key    "SampleKeyA" ;
+        :value  "SampleValueA" .
+
 dimensionOrder:xyczt  a  :DimensionOrder .
 
-_:b0    a                   :MapAnnotation , :Annotation ;
-        rdf:value           [ a       :Map ;
-                              :key    "SampleKeyB-2" ;
-                              :value  "SampleValueB-2"
-                            ] ;
-        rdf:value           [ a       :Map ;
-                              :key    "SampleKeyB-1" ;
-                              :value  "SampleValueB-1"
-                            ] ;
+mapAnnotation:mapAnnotation2
+        a                   :MapAnnotation , :Annotation ;
+        rdf:value           map:map2.2 , map:map2.1 ;
         rdfs:comment        "This is the description of the sample map B"@en ;
         dcterms:identifier  "Annotation:2" .
 
 pixelType:uint8  a  :PixelType .
 
+bindata:bindata0  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+        :length     "32"^^xsd:long .
+
 [ a            :StructuredAnnotations ;
-  :annotation  _:b0 , _:b1
+  :annotation  mapAnnotation:mapAnnotation2 , mapAnnotation:mapAnnotation1
 ] .
+
+map:map2.1  a   :Map ;
+        :key    "SampleKeyB-1" ;
+        :value  "SampleValueB-1" .

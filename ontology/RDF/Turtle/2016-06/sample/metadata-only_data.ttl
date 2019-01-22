@@ -1,38 +1,42 @@
 @prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/metadata-only/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
-@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/metadata-only/channel/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
 @prefix acquisitionMode: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
+@prefix pixels: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/metadata-only/pixels/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+channel:channel0  a         :Channel ;
+        dcterms:identifier  "Channel:0" ;
+        :color              [ a          :Color ;
+                              rdf:value  "-2147483648"
+                            ] .
 
 dimensionOrder:xyzct  a  :DimensionOrder .
 
-image:image  a              :Image ;
+pixels:pixels0  a           :Pixels ;
+        dcterms:identifier  "Pixels:0.0" ;
+        :channel            channel:channel0 ;
+        :dimensionOrder     dimensionOrder:xyzct ;
+        :metadataOnly       true ;
+        :pixelType          pixelType:uint8 ;
+        :sizeC              "1"^^xsd:int ;
+        :sizeT              "5"^^xsd:int ;
+        :sizeX              "18"^^xsd:int ;
+        :sizeY              "24"^^xsd:int ;
+        :sizeZ              "5"^^xsd:int .
+
+image:image0  a             :Image ;
         rdfs:label          "18x24y1z5t1c8b-text"@en ;
         dcterms:identifier  "Image:0" ;
         :acquisitionDate    "2010-03-02T10:01:15" ;
-        :pixels             [ a                   :Pixels ;
-                              dcterms:identifier  "Pixels:0.0" ;
-                              :channel            [ a                   :Channel ;
-                                                    dcterms:identifier  "Channel:0" ;
-                                                    :color              [ a          :Color ;
-                                                                          rdf:value  "-2147483648"
-                                                                        ]
-                                                  ] ;
-                              :dimensionOrder     dimensionOrder:xyzct ;
-                              :metadataOnly       true ;
-                              :pixelType          pixelType:uint8 ;
-                              :sizeC              "1"^^xsd:int ;
-                              :sizeT              "5"^^xsd:int ;
-                              :sizeX              "18"^^xsd:int ;
-                              :sizeY              "24"^^xsd:int ;
-                              :sizeZ              "5"^^xsd:int
-                            ] .
+        :pixels             pixels:pixels0 .
 
 pixelType:uint8  a  :PixelType .

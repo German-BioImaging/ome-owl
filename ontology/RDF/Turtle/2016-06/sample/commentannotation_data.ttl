@@ -3,15 +3,24 @@
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/commentannotation/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/commentannotation/channel/> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
 @prefix unitLength: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#> .
+@prefix pixels: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/commentannotation/pixels/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
 @prefix xml:   <http://www.w3.org/XML/1998/namespace> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix UO:    <http://purl.obolibrary.org/obo/uo#> .
+@prefix commentAnnotation: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/commentannotation/commentAnnoation/> .
+@prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/commentannotation/bindata/> .
+
+bindata:bindata0  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+        :length     "32"^^xsd:long .
 
 unitLength:nm  a  rdfs:Class .
 
@@ -19,43 +28,42 @@ image:image0  a             :Image ;
         rdfs:label          "6x6x1x8-swatch.tif"@en ;
         dcterms:identifier  "Image:0" ;
         :acquisitionDate    "2010-02-23T12:51:30" ;
-        :annotation         _:b0 ;
-        :pixels             [ a                   :Pixels ;
-                              dcterms:identifier  "Pixels:0.0" ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-                                                    :length     "32"^^xsd:long
-                                                  ] ;
-                              :channel            [ a                   :Channel ;
-                                                    dcterms:identifier  "Channel:0" ;
-                                                    :color              [ a          :Color ;
-                                                                          rdf:value  "-2147483648"
-                                                                        ]
-                                                  ] ;
-                              :dimensionOrder     dimensionOrder:xyczt ;
-                              :physicalSizeX      _:b1 ;
-                              :physicalSizeY      _:b1 ;
-                              :pixelType          pixelType:uint8 ;
-                              :sizeC              "1"^^xsd:int ;
-                              :sizeT              "1"^^xsd:int ;
-                              :sizeX              "6"^^xsd:int ;
-                              :sizeY              "4"^^xsd:int ;
-                              :sizeZ              "1"^^xsd:int
-                            ] .
+        :annotation         commentAnnotation:commentAnnotation1 ;
+        :pixels             pixels:pixels0.0 .
 
-_:b1    a          PATO:0000117 ;
+_:b0    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:nm .
 
-dimensionOrder:xyczt  a  :DimensionOrder .
-
-pixelType:uint8  a  :PixelType .
-
-_:b0    a                   :CommentAnnotation , :Annotation ;
+commentAnnotation:commentAnnotation1
+        a                   :CommentAnnotation , :Annotation ;
         rdf:value           "Fred"@en ;
         dcterms:identifier  "Annotation:1" .
 
+dimensionOrder:xyczt  a  :DimensionOrder .
+
+pixels:pixels0.0  a         :Pixels ;
+        dcterms:identifier  "Pixels:0.0" ;
+        :binData            bindata:bindata0 ;
+        :channel            channel:channel0 ;
+        :dimensionOrder     dimensionOrder:xyczt ;
+        :physicalSizeX      _:b0 ;
+        :physicalSizeY      _:b0 ;
+        :pixelType          pixelType:uint8 ;
+        :sizeC              "1"^^xsd:int ;
+        :sizeT              "1"^^xsd:int ;
+        :sizeX              "6"^^xsd:int ;
+        :sizeY              "4"^^xsd:int ;
+        :sizeZ              "1"^^xsd:int .
+
+pixelType:uint8  a  :PixelType .
+
+channel:channel0  a         :Channel ;
+        dcterms:identifier  "Channel:0" ;
+        :color              [ a          :Color ;
+                              rdf:value  "-2147483648"
+                            ] .
+
 [ a            :StructuredAnnotations ;
-  :annotation  _:b0
+  :annotation  commentAnnotation:commentAnnotation1
 ] .

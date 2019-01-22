@@ -3,51 +3,57 @@
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/no-date/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/no-date/channel/> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
 @prefix acquisitionMode: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
 @prefix unitLength: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#> .
+@prefix pixels: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/no-date/pixels/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
 @prefix xml:   <http://www.w3.org/XML/1998/namespace> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix UO:    <http://purl.obolibrary.org/obo/uo#> .
+@prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/no-date/bindata/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+bindata:bindata0  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+        :length     "32"^^xsd:long .
 
 unitLength:um  a  rdfs:Class .
 
 image:image0  a             :Image ;
         rdfs:label          "6x6x1x8-swatch.tif"@en ;
         dcterms:identifier  "Image:0" ;
-        :pixels             [ a                   :Pixels ;
-                              dcterms:identifier  "Pixels:0.0" ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-                                                    :length     "32"^^xsd:long
-                                                  ] ;
-                              :channel            [ a                   :Channel ;
-                                                    dcterms:identifier  "Channel:0" ;
-                                                    :color              [ a          :Color ;
-                                                                          rdf:value  "-2147483648"
-                                                                        ]
-                                                  ] ;
-                              :dimensionOrder     dimensionOrder:xyczt ;
-                              :physicalSizeX      _:b0 ;
-                              :physicalSizeY      _:b0 ;
-                              :pixelType          pixelType:uint8 ;
-                              :sizeC              "1"^^xsd:int ;
-                              :sizeT              "1"^^xsd:int ;
-                              :sizeX              "6"^^xsd:int ;
-                              :sizeY              "4"^^xsd:int ;
-                              :sizeZ              "1"^^xsd:int
-                            ] .
+        :pixels             pixels:pixels0 .
 
 _:b0    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
+pixels:pixels0  a           :Pixels ;
+        dcterms:identifier  "Pixels:0.0" ;
+        :binData            bindata:bindata0 ;
+        :channel            channel:channel0 ;
+        :dimensionOrder     dimensionOrder:xyczt ;
+        :physicalSizeX      _:b0 ;
+        :physicalSizeY      _:b0 ;
+        :pixelType          pixelType:uint8 ;
+        :sizeC              "1"^^xsd:int ;
+        :sizeT              "1"^^xsd:int ;
+        :sizeX              "6"^^xsd:int ;
+        :sizeY              "4"^^xsd:int ;
+        :sizeZ              "1"^^xsd:int .
+
 dimensionOrder:xyczt  a  :DimensionOrder .
 
 pixelType:uint8  a  :PixelType .
+
+channel:channel0  a         :Channel ;
+        dcterms:identifier  "Channel:0" ;
+        :color              [ a          :Color ;
+                              rdf:value  "-2147483648"
+                            ] .

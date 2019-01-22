@@ -1,222 +1,258 @@
 @prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
-@prefix laserType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix dichroic: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/dichroic/> .
 @prefix detectorType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix lightPath: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/lightPath/> .
+@prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/channel/> .
 @prefix screen: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/screen/> .
+@prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
+@prefix objective: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/objective/> .
+@prefix fontFamily: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#> .
+@prefix unitLength: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#> .
+@prefix fillRule: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix UO:    <http://purl.obolibrary.org/obo/uo#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/image/> .
+@prefix immersion: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#> .
+@prefix unitFrequency: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitFrequency#> .
+@prefix binning: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Binning#> .
+@prefix fontStyle: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#> .
+@prefix laserMedium: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserMedium#> .
+@prefix pixels: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/pixels/> .
+@prefix marker: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#> .
+@prefix detectorSettings: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/detectorSettings/> .
+@prefix SIO:   <http://semanticscience.org/resource/SIO_> .
+@prefix filterType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilerType#> .
+@prefix correction: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Collection#> .
+@prefix detector: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/detector/> .
+@prefix filterSet: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/filterSet/> .
+@prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/bindata/> .
+@prefix laserType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix plate: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/plate/> .
 @prefix instrument: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/instrument/> .
 @prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
 @prefix arcType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/ArcType#> .
-@prefix fontFamily: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#> .
-@prefix unitLength: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#> .
-@prefix fillRule: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#> .
+@prefix microscope: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/microscope/> .
+@prefix arc:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/arc/> .
+@prefix laser: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/laser/> .
 @prefix reagent: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/reagent/> .
-@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix transmittanceRange: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/transmittanceRange/> .
+@prefix lightSourceSettings: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/lightSourceSettings/> .
 @prefix acquisitioMode: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
-@prefix UO:    <http://purl.obolibrary.org/obo/uo#> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix pump:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/pump/> .
 @prefix SBO:   <http://purl.obolibrary.org/obo/SBO_> .
 @prefix microscopeType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#> .
-@prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/image/> .
-@prefix immersion: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#> .
 @prefix unitPower: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitPower#> .
 @prefix unitElectricPotential: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitElectricPotential#> .
-@prefix unitFrequency: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitFrequency#> .
-@prefix binning: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Binning#> .
-@prefix fontStyle: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#> .
-@prefix laserMedium: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserMedium#> .
+@prefix filter: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/filter/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
-@prefix marker: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#> .
-@prefix SIO:   <http://semanticscience.org/resource/SIO_> .
-@prefix filterType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilerType#> .
-@prefix correction: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Collection#> .
 @prefix unitTime: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitTime#> .
-
-_:b0    a                    :Filter , :ExcitationFilter , :ManufacturerSpec ;
-        dcterms:identifier   "Filter:0" ;
-        :filterWheel         "Disc A" ;
-        :manufacturer        _:b1 ;
-        :model               "Model1" ;
-        :transmittanceRange  [ a                 :TransmittanceRange ;
-                               :cutIn            [ a          PATO:0001242 ;
-                                                   rdf:value  "350.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutInTolerance   [ a          PATO:0001242 ;
-                                                   rdf:value  "10.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutOut           [ a          PATO:0001242 ;
-                                                   rdf:value  "450.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutOutTolerance  [ a          PATO:0001242 ;
-                                                   rdf:value  "20.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :transmittance    "0.3"^^xsd:float
-                             ] .
 
 unitLength:nm  a  rdfs:Class .
 
-_:b2    a           :Manufacturer ;
+_:b0    a           :Manufacturer ;
         rdfs:label  "OME Lights"@en .
 
 correction:UV  a  :Correction .
+
+objective:objective0  a           :ManufacturerSpec , :Objective ;
+        dcterms:identifier        "Objective:0" ;
+        :calibratedMagnification  "60.12"^^xsd:float ;
+        :correction               correction:UV ;
+        :immersion                immersion:air ;
+        :lensNA                   "1.2"^^xsd:float ;
+        :manufacturer             [ a           :Manufacturer ;
+                                    rdfs:label  "OME Objectives"@en
+                                  ] ;
+        :model                    "60xUV-Air" ;
+        :nominalMagnification     "60.0"^^xsd:float ;
+        :workingDistance          [ a          PATO:0000040 ;
+                                    rdf:value  "20.0"^^xsd:float ;
+                                    qudt:unit  unitLength:um
+                                  ] .
 
 arcType:Xe  a   :ArcType .
 
 filterType:bandPass  a  :FilterType .
 
-_:b3    a                   :Dichroic , :ManufacturerSpec ;
-        dcterms:identifier  "Dichroic:0" ;
-        :manufacturer       _:b4 ;
-        :model              "Standard Mk3" .
-
-_:b5    a          PATO:0000117 ;
+_:b1    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
 immersion:air  a  :Immersion .
 
+detectorSettings:detectorSettings0
+        a                   :DetectorSettings ;
+        dcterms:identifier  "Detector:0" ;
+        :binning            binning:twoXTwo ;
+        :gain               "1.2"^^xsd:float ;
+        :offset             "0.7"^^xsd:float ;
+        :readOutRate        [ a          PATO:0000044 ;
+                              rdf:value  "3200.0"^^xsd:float ;
+                              qudt:unit  unitFrequency:Hz
+                            ] ;
+        :voltage            [ a          SBO:0000259 ;
+                              rdf:value  "120.0"^^xsd:float ;
+                              qudt:unit  unitElectricPotential:V
+                            ] .
+
+laser:laser0  a             :ManufacturerSpec , :Laser ;
+        dcterms:identifier  "LightSource:0" ;
+        :laserMedium        laserMedium:Ruby ;
+        :laserType          laserType:solidState ;
+        :manufacturer       _:b0 ;
+        :model              "Ruby60" ;
+        :power              [ a          PATO:0001024 ;
+                              rdf:value  "200.0"^^xsd:float ;
+                              qudt:unit  unitPower:ｍW
+                            ] ;
+        :pump               pump:pump0 ;
+        :serialNumber       "A654321" .
+
+dichroic:dichroic0  a       :Dichroic , :ManufacturerSpec ;
+        dcterms:identifier  "Dichroic:0" ;
+        :manufacturer       _:b2 ;
+        :model              "Standard Mk3" .
+
 laserType:solidState  a  :LaserType .
 
-_:b1    a           :Manufacturer ;
-        rdfs:label  "OME Filters"@en .
+channel:channel0.1  a         :Channel ;
+        dcterms:identifier    "Channel:0.1" ;
+        :color                [ a          :Color ;
+                                rdf:value  "-2147483648"
+                              ] ;
+        :detectorSettings     detectorSettings:detectorSettings0 ;
+        :lightPath            lightPath:lightPath0 ;
+        :lightSourceSettings  lightSourceSettings:lightSourceSettings0 .
 
-_:b4    a           :Manufacturer ;
-        rdfs:label  "OME Instruments"@en .
-
-_:b6    a                    :ExcitationFilter , :Filter , :ManufacturerSpec ;
+filter:filter3  a            :ExcitationFilter , :Filter , :ManufacturerSpec ;
         dcterms:identifier   "Filter:3" ;
         :filterType          filterType:bandPass ;
-        :manufacturer        _:b1 ;
+        :manufacturer        _:b3 ;
         :model               "Delux Mk6" ;
-        :transmittanceRange  [ a                 :TransmittanceRange ;
-                               :cutIn            [ a          PATO:0001242 ;
-                                                   rdf:value  "463.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutInTolerance   [ a          PATO:0001242 ;
-                                                   rdf:value  "21.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutOut           [ a          PATO:0001242 ;
-                                                   rdf:value  "535.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutOutTolerance  [ a          PATO:0001242 ;
-                                                   rdf:value  "34.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :transmittance    "0.7"^^xsd:float
-                             ] .
+        :transmittanceRange  transmittanceRange:transmittanceRange3 .
+
+_:b3    a           :Manufacturer ;
+        rdfs:label  "OME Filters"@en .
+
+transmittanceRange:transmittanceRange3
+        a                 :TransmittanceRange ;
+        :cutIn            [ a          PATO:0001242 ;
+                            rdf:value  "463.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutInTolerance   [ a          PATO:0001242 ;
+                            rdf:value  "21.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutOut           [ a          PATO:0001242 ;
+                            rdf:value  "535.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutOutTolerance  [ a          PATO:0001242 ;
+                            rdf:value  "34.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :transmittance    "0.7"^^xsd:float .
+
+lightSourceSettings:lightSourceSettings0
+        a                   :LightSourceSettings ;
+        dcterms:identifier  "LightSource:0" ;
+        :attenuation        "0.8"^^xsd:float ;
+        :waveLength         [ a          PATO:0001242 ;
+                              rdf:value  "510.0"^^xsd:float ;
+                              qudt:unit  unitLength:nm
+                            ] .
+
+_:b2    a           :Manufacturer ;
+        rdfs:label  "OME Instruments"@en .
+
+microscope:microscope0
+        a                :Microscope , :ManufacturerSpec ;
+        :manufacturer    _:b2 ;
+        :microscopeType  microscopeType:inverted ;
+        :model           "Lab Mk3" ;
+        :serialNumber    "L3-1234" .
+
+pixels:pixels0  a           :Pixels ;
+        dcterms:identifier  "Pixels:0.0" ;
+        :binData            bindata:bindata0 ;
+        :channel            channel:channel0.1 ;
+        :dimensionOrder     dimensionOrder:xyczt ;
+        :physicalSizeX      _:b1 ;
+        :physicalSizeY      _:b1 ;
+        :pixelType          pixelType:uint8 ;
+        :sizeC              "1"^^xsd:int ;
+        :sizeT              "1"^^xsd:int ;
+        :sizeX              "6"^^xsd:int ;
+        :sizeY              "4"^^xsd:int ;
+        :sizeZ              "1"^^xsd:int .
+
+filter:filter2  a            :EmissionFilter , :Filter , :ManufacturerSpec ;
+        dcterms:identifier   "Filter:2" ;
+        :filterType          filterType:bandPass ;
+        :manufacturer        _:b3 ;
+        :model               "Delux Mk5" ;
+        :transmittanceRange  transmittanceRange:transmittanceRange2 .
 
 instrument:instrument0
         a                   :Instrument ;
         dcterms:identifier  "Instrument:0" ;
-        :manufacturerSpec   _:b3 , _:b7 , _:b6 , _:b0 , _:b8 ;
-        :manufacturerSpec   [ a                         :Objective , :ManufacturerSpec ;
-                              dcterms:identifier        "Objective:0" ;
-                              :calibratedMagnification  "60.12"^^xsd:float ;
-                              :correction               correction:UV ;
-                              :immersion                immersion:air ;
-                              :lensNA                   "1.2"^^xsd:float ;
-                              :manufacturer             [ a           :Manufacturer ;
-                                                          rdfs:label  "OME Objectives"@en
-                                                        ] ;
-                              :model                    "60xUV-Air" ;
-                              :nominalMagnification     "60.0"^^xsd:float ;
-                              :workingDistance          [ a          PATO:0000040 ;
-                                                          rdf:value  "20.0"^^xsd:float ;
-                                                          qudt:unit  unitLength:um
-                                                        ]
-                            ] ;
-        :manufacturerSpec   [ a                   :FilterSet , :ManufacturerSpec ;
-                              dcterms:identifier  "FilterSet:0" ;
-                              :dichroic           _:b3 ;
-                              :emissionFilter     _:b7 ;
-                              :excitationFilter   _:b0 ;
-                              :lotNumber          "Lot174-A" ;
-                              :manufacturer       _:b1 ;
-                              :model              "Standard Mk3"
-                            ] ;
-        :manufacturerSpec   [ a                   :Arc , :ManufacturerSpec ;
-                              dcterms:identifier  "LightSource:1" ;
-                              :arcType            arcType:Xe ;
-                              :manufacturer       _:b2 ;
-                              :model              "Arc60" ;
-                              :power              [ a          PATO:0001024 ;
-                                                    rdf:value  "300.0"^^xsd:float ;
-                                                    qudt:unit  unitPower:ｍW
-                                                  ] ;
-                              :serialNumber       "A123456"
-                            ] ;
-        :manufacturerSpec   [ a                :Microscope , :ManufacturerSpec ;
-                              :manufacturer    _:b4 ;
-                              :microscopeType  microscopeType:inverted ;
-                              :model           "Lab Mk3" ;
-                              :serialNumber    "L3-1234"
-                            ] ;
-        :manufacturerSpec   [ a                   :Detector , :ManufacturerSpec ;
-                              dcterms:identifier  "Detector:0" ;
-                              :detectorType       detectorType:CCD ;
-                              :manufacturer       [ a           :Manufacturer ;
-                                                    rdfs:label  "OME Detectors"@en
-                                                  ] ;
-                              :model              "OME-CCD Mk2"
-                            ] ;
-        :manufacturerSpec   [ a                   :Laser , :ManufacturerSpec ;
-                              dcterms:identifier  "LightSource:0" ;
-                              :laserMedium        laserMedium:Ruby ;
-                              :laserType          laserType:solidState ;
-                              :manufacturer       _:b2 ;
-                              :model              "Ruby60" ;
-                              :power              [ a          PATO:0001024 ;
-                                                    rdf:value  "200.0"^^xsd:float ;
-                                                    qudt:unit  unitPower:ｍW
-                                                  ] ;
-                              :pump               [ a                   :Pump ;
-                                                    dcterms:identifier  "LightSource:1"
-                                                  ] ;
-                              :serialNumber       "A654321"
-                            ] .
+        :manufacturerSpec   filter:filter2 , filter:filter0 , laser:laser0 , filterSet:filterSet0 , detector:detector0 , arc:arc0 , filter:filter1 , filter:filter3 , objective:objective0 , microscope:microscope0 , dichroic:dichroic0 .
+
+transmittanceRange:transmittanceRange2
+        a                 :TransmittanceRange ;
+        :cutIn            [ a          PATO:0001242 ;
+                            rdf:value  "562.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutInTolerance   [ a          PATO:0001242 ;
+                            rdf:value  "11.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutOut           [ a          PATO:0001242 ;
+                            rdf:value  "633.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutOutTolerance  [ a          PATO:0001242 ;
+                            rdf:value  "23.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :transmittance    "0.5"^^xsd:float .
 
 microscopeType:inverted
         a       :MicroscopeType .
 
+lightPath:lightPath0  a    :LightPath ;
+        :emissionFilter    filter:filter2 ;
+        :excitationFilter  filter:filter3 .
+
 binning:twoXTwo  a  :Binning .
 
-_:b8    a                    :EmissionFilter , :Filter , :ManufacturerSpec ;
-        dcterms:identifier   "Filter:2" ;
-        :filterType          filterType:bandPass ;
-        :manufacturer        _:b1 ;
-        :model               "Delux Mk5" ;
-        :transmittanceRange  [ a                 :TransmittanceRange ;
-                               :cutIn            [ a          PATO:0001242 ;
-                                                   rdf:value  "562.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutInTolerance   [ a          PATO:0001242 ;
-                                                   rdf:value  "11.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutOut           [ a          PATO:0001242 ;
-                                                   rdf:value  "633.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutOutTolerance  [ a          PATO:0001242 ;
-                                                   rdf:value  "23.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :transmittance    "0.5"^^xsd:float
-                             ] .
+detector:detector0  a       :Detector , :ManufacturerSpec ;
+        dcterms:identifier  "Detector:0" ;
+        :detectorType       detectorType:CCD ;
+        :manufacturer       [ a           :Manufacturer ;
+                              rdfs:label  "OME Detectors"@en
+                            ] ;
+        :model              "OME-CCD Mk2" .
+
+arc:arc0  a                 :Arc , :ManufacturerSpec ;
+        dcterms:identifier  "LightSource:1" ;
+        :arcType            arcType:Xe ;
+        :manufacturer       _:b0 ;
+        :model              "Arc60" ;
+        :power              [ a          PATO:0001024 ;
+                              rdf:value  "300.0"^^xsd:float ;
+                              qudt:unit  unitPower:ｍW
+                            ] ;
+        :serialNumber       "A123456" .
 
 unitElectricPotential:V
         a       rdfs:Class .
@@ -225,90 +261,88 @@ unitPower:ｍW  a  rdfs:Class .
 
 unitFrequency:Hz  a  rdfs:Class .
 
+filter:filter1  a            :Filter , :EmissionFilter , :ManufacturerSpec ;
+        dcterms:identifier   "Filter:1" ;
+        :filterType          filterType:bandPass ;
+        :manufacturer        _:b3 ;
+        :model               "Delux Mk4" ;
+        :transmittanceRange  transmittanceRange:transmittanceRange1 .
+
 image:image0  a             :Image ;
         rdfs:comment        "This image is linked to the Control Set"@en ;
         rdfs:label          "6x6x1x8-swatch.tif"@en ;
         dcterms:identifier  "Image:0" ;
         :acquisitionDate    "2010-02-23T12:51:30" ;
         :instrument         instrument:instrument0 ;
-        :pixels             [ a                   :Pixels ;
-                              dcterms:identifier  "Pixels:0.0" ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-                                                    :length     "32"^^xsd:long
-                                                  ] ;
-                              :channel            [ a                     :Channel ;
-                                                    dcterms:identifier    "Channel:0.1" ;
-                                                    :color                [ a          :Color ;
-                                                                            rdf:value  "-2147483648"
-                                                                          ] ;
-                                                    :detectorSettings     [ a                   :DetectorSettings ;
-                                                                            dcterms:identifier  "Detector:0" ;
-                                                                            :binning            binning:twoXTwo ;
-                                                                            :gain               "1.2"^^xsd:float ;
-                                                                            :offset             "0.7"^^xsd:float ;
-                                                                            :readOutRate        [ a          PATO:0000044 ;
-                                                                                                  rdf:value  "3200.0"^^xsd:float ;
-                                                                                                  qudt:unit  unitFrequency:Hz
-                                                                                                ] ;
-                                                                            :voltage            [ a          SBO:0000259 ;
-                                                                                                  rdf:value  "120.0"^^xsd:float ;
-                                                                                                  qudt:unit  unitElectricPotential:V
-                                                                                                ]
-                                                                          ] ;
-                                                    :lightPath            [ a                  :LightPath ;
-                                                                            :emissionFilter    _:b8 ;
-                                                                            :excitationFilter  _:b6
-                                                                          ] ;
-                                                    :lightSourceSettings  [ a                   :LightSourceSettings ;
-                                                                            dcterms:identifier  "LightSource:0" ;
-                                                                            :attenuation        "0.8"^^xsd:float ;
-                                                                            :waveLength         [ a          PATO:0001242 ;
-                                                                                                  rdf:value  "510.0"^^xsd:float ;
-                                                                                                  qudt:unit  unitLength:nm
-                                                                                                ]
-                                                                          ]
-                                                  ] ;
-                              :dimensionOrder     dimensionOrder:xyczt ;
-                              :physicalSizeX      _:b5 ;
-                              :physicalSizeY      _:b5 ;
-                              :pixelType          pixelType:uint8 ;
-                              :sizeC              "1"^^xsd:int ;
-                              :sizeT              "1"^^xsd:int ;
-                              :sizeX              "6"^^xsd:int ;
-                              :sizeY              "4"^^xsd:int ;
-                              :sizeZ              "1"^^xsd:int
-                            ] .
+        :pixels             pixels:pixels0 .
+
+transmittanceRange:transmittanceRange1
+        a                 :TransmittanceRange ;
+        :cutIn            [ a          PATO:0001242 ;
+                            rdf:value  "560.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutInTolerance   [ a          PATO:0001242 ;
+                            rdf:value  "25.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutOut           [ a          PATO:0001242 ;
+                            rdf:value  "630.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutOutTolerance  [ a          PATO:0001242 ;
+                            rdf:value  "30.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :transmittance    "0.8"^^xsd:float .
 
 laserMedium:Ruby  a  :LaserMedium .
 
-_:b7    a                    :Filter , :EmissionFilter , :ManufacturerSpec ;
-        dcterms:identifier   "Filter:1" ;
-        :filterType          filterType:bandPass ;
-        :manufacturer        _:b1 ;
-        :model               "Delux Mk4" ;
-        :transmittanceRange  [ a                 :TransmittanceRange ;
-                               :cutIn            [ a          PATO:0001242 ;
-                                                   rdf:value  "560.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutInTolerance   [ a          PATO:0001242 ;
-                                                   rdf:value  "25.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutOut           [ a          PATO:0001242 ;
-                                                   rdf:value  "630.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :cutOutTolerance  [ a          PATO:0001242 ;
-                                                   rdf:value  "30.0"^^xsd:float ;
-                                                   qudt:unit  unitLength:nm
-                                                 ] ;
-                               :transmittance    "0.8"^^xsd:float
-                             ] .
+pump:pump0  a               :Pump ;
+        dcterms:identifier  "LightSource:1" .
+
+filterSet:filterSet0  a     :FilterSet , :ManufacturerSpec ;
+        dcterms:identifier  "FilterSet:0" ;
+        :dichroic           dichroic:dichroic0 ;
+        :emissionFilter     filter:filter1 ;
+        :excitationFilter   filter:filter0 ;
+        :lotNumber          "Lot174-A" ;
+        :manufacturer       _:b3 ;
+        :model              "Standard Mk3" .
 
 unitLength:um  a  rdfs:Class .
+
+filter:filter0  a            :Filter , :ExcitationFilter , :ManufacturerSpec ;
+        dcterms:identifier   "Filter:0" ;
+        :filterWheel         "Disc A" ;
+        :manufacturer        _:b3 ;
+        :model               "Model1" ;
+        :transmittanceRange  transmittanceRange:transmittanceRange0 .
+
+transmittanceRange:transmittanceRange0
+        a                 :TransmittanceRange ;
+        :cutIn            [ a          PATO:0001242 ;
+                            rdf:value  "350.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutInTolerance   [ a          PATO:0001242 ;
+                            rdf:value  "10.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutOut           [ a          PATO:0001242 ;
+                            rdf:value  "450.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :cutOutTolerance  [ a          PATO:0001242 ;
+                            rdf:value  "20.0"^^xsd:float ;
+                            qudt:unit  unitLength:nm
+                          ] ;
+        :transmittance    "0.3"^^xsd:float .
+
+bindata:bindata0  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+        :length     "32"^^xsd:long .
 
 pixelType:uint8  a  :PixelType .
 

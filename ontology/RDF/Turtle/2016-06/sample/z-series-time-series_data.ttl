@@ -1,160 +1,166 @@
 @prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/z-series-time-series/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/z-series-time-series/channel/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
+@prefix pixels: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/z-series-time-series/pixels/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
 @prefix xml:   <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
+@prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/z-series-time-series/bindata/> .
+
+bindata:bindata19  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP///wAAAP////8AAP//////AP///wAAAP//////AP////8A////AP8AAP//////AP////8A////AP8AAP//////AP///wD///8A//8AAP//////AP///wD///8AAAAAAP//////AP//AP////////8A/wAA////AP//AAAAAP////8A/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8AAP////////////8A//////8AAP////////////8A/////wD/AP////////////8A/////wD/AP////////////8A////AP//AP////////////8A////AAAAAAD///////////8A////////AP////////////8A////////AP//////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata13  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A////AAD/AP//////AP///wD///////8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////////AP////////////8A////////AP////////////8A/////wAA//////////////8A////////AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata1  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata7  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP8AAAD/AP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A/////wD/AP//////AP///wD/////AP//AP//////AP///wD///8A////AP//////AP//AP////8A/////wAA////AP//AAAAAP8AAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAA//////////////8A////////AP////////////8A////////AP////////////8A//////8A//////////////8A/////wD///////////////8A////AP////////////////8A////AP////////////////8A////AAAAAP//////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata22  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD///8A/wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAA/wAA/wAAAAAA/wAAAP8AAAD/AAAA/wAAAAAA/wAA/wAAAAD/AAAAAP//AAAA/wAA/////wD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA/////wAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA////AAAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata18  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD//////wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAA//8A/wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAA/wAAAAAAAAD/AP//AAAA/wAA/////wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD//wAAAAAAAAAAAAD/AAAAAAD//wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAA//////8AAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata12  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD///8A/wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAA/wAA/wAAAAAA/wAAAP8AAAD/AAAA/wAAAAAA/wAA/wAAAAD/AAAAAP//AAAA/wAA/////wD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA/////wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAP//AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata6  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wAAAP8A/wAAAAD//wAAAAAA/wAA//8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAA/wAAAAAAAP8AAP//AAAA/wAA/////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA////AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAP8AAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata21  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////AP////////////////8A////AP////////////////8A////AAAA//////////////8A////AP//AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+channel:channel0  a         :Channel ;
+        dcterms:identifier  "Channel:0" ;
+        :color              [ a          :Color ;
+                              rdf:value  "-2147483648"
+                            ] .
+
+bindata:bindata17  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP8AAAD/AP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A/////wD/AP//////AP///wD/////AP//AP//////AP///wD///8A////AP//////AP//AP////8A/////wAA////AP//AAAAAP8AAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8AAP////////////8A//////8AAP////////////8A/////wD/AP////////////8A/////wD/AP////////////8A////AP//AP////////////8A////AAAAAAD///////////8A////////AP////////////8A////////AP//////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata11  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////////AP////////////8A////////AP////////////8A/////wAA//////////////8A////////AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata5  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP8A////AP//////AP////8A//8A////AP//////AP////8A//8AAAD/AP//////AP///wD///8A//8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+pixels:pixels0:0  a         :Pixels ;
+        dcterms:identifier  "Pixels:0.0" ;
+        :binData            bindata:bindata14 , bindata:bindata11 , bindata:bindata7 , bindata:bindata24 , bindata:bindata17 , bindata:bindata3 , bindata:bindata22 , bindata:bindata15 , bindata:bindata1 , bindata:bindata8 , bindata:bindata20 , bindata:bindata4 , bindata:bindata18 , bindata:bindata12 , bindata:bindata25 , bindata:bindata6 , bindata:bindata2 , bindata:bindata10 , bindata:bindata23 , bindata:bindata19 , bindata:bindata16 , bindata:bindata13 , bindata:bindata9 , bindata:bindata21 , bindata:bindata5 ;
+        :channel            channel:channel0 ;
+        :dimensionOrder     dimensionOrder:xyzct ;
+        :pixelType          pixelType:uint8 ;
+        :sizeC              "1"^^xsd:int ;
+        :sizeT              "5"^^xsd:int ;
+        :sizeX              "18"^^xsd:int ;
+        :sizeY              "24"^^xsd:int ;
+        :sizeZ              "5"^^xsd:int .
+
+bindata:bindata20  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD//////wAAAAD//wAAAAAA/wD/AAAA/wAAAAAA/wAAAAD/AAD/AAAA/wAAAAAA/wAAAAD/AAD///8A/wAAAAAA/wAAAP8AAAD/AAD//wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAA/wAAAAAAAAD/AP//AAAA/wAA/////wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD//wAAAAAAAAAAAAD/AAAAAAD//wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAA//////8AAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
 
 image:image0  a             :Image ;
         rdfs:label          "18x24y1z5t1c8b-text"@en ;
         dcterms:identifier  "Image:0" ;
         :acquisitionDate    "2010-03-02T10:01:15" ;
-        :pixels             [ a                   :Pixels ;
-                              dcterms:identifier  "Pixels:0.0" ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP///wAAAP////8AAP//////AP///wAAAP//////AP////8A////AP8AAP//////AP////8A////AP8AAP//////AP///wD///8A//8AAP//////AP///wD///8AAAAAAP//////AP//AP////////8A/wAA////AP//AAAAAP////8A/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8AAP////////////8A//////8AAP////////////8A/////wD/AP////////////8A/////wD/AP////////////8A////AP//AP////////////8A////AAAAAAD///////////8A////////AP////////////8A////////AP//////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP8AAAD/AP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A/////wD/AP//////AP///wD/////AP//AP//////AP///wD///8A////AP//////AP//AP////8A/////wAA////AP//AAAAAP8AAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAA//////////////8A////////AP////////////8A////////AP////////////8A//////8A//////////////8A/////wD///////////////8A////AP////////////////8A////AP////////////////8A////AAAAAP//////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP8AAAD/AP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A/////wD/AP//////AP///wD/////AP//AP//////AP///wD///8A////AP//////AP//AP////8A/////wAA////AP//AAAAAP8AAAAA/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8AAP////////////8A//////8AAP////////////8A/////wD/AP////////////8A/////wD/AP////////////8A////AP//AP////////////8A////AAAAAAD///////////8A////////AP////////////8A////////AP//////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD//////wAAAAD//wAAAAAA/wD/AAAA/wAAAAAA/wAAAAD/AAD/AAAA/wAAAAAA/wAAAAD/AAD///8A/wAAAAAA/wAAAP8AAAD/AAD//wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAA/wAAAAAAAAD/AP//AAAA/wAA/////wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA////AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAP8AAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wAAAP8A/wAAAAD//wAAAAAA/wAA//8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAA/wAAAAAAAP8AAP//AAAA/wAA/////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA////AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAP8AAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wAAAP8A/wAAAAD//wAAAAAA/wAA//8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAA/wAAAAAAAP8AAP//AAAA/wAA/////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD//wAAAAAAAAAAAAD/AAAAAAD//wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAA//////8AAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP8A////AP//////AP////8A//8A////AP//////AP////8A//8AAAD/AP//////AP///wD///8A//8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////////AP////////////8A////////AP////////////8A/////wAA//////////////8A////////AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP8A////AP//////AP////8A//8A////AP//////AP////8A//8AAAD/AP//////AP///wD///8A//8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP8A////AP//////AP////8A//8A////AP//////AP////8A//8AAAD/AP//////AP///wD///8A//8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////AP////////////////8A////AP////////////////8A////AAAA//////////////8A////AP//AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAPz8AAAA/AAA/Pz8/AAAAPz8/AAAAAD8/AAAAAAA/AAAAPz8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAPwAAAD8AAD8/AAAAAAA/AAAAPwAAAD8/Pz8/AAAAAAA/AAA/AAAAAAAAAD8APz8AAAA/AAA/Pz8/AAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz8/AAAAAD8AAAAAAAAAAAAAAD8AAAAAPz8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAPz8AAAA/AAA/Pz8/AAAAPz8/AAAAAD8/AAAAAAA/AAAAPz8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAPwAAAD8AAD8/AAAAAAA/AAAAPwAAAD8/Pz8/AAAAAAA/AAA/AAAAAAAAAD8APz8AAAA/AAA/Pz8/AAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz8/AAA/Pz8/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAAAPz8AAAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAA/Pz8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////AP////////////////8A////AP////////////////8A////AAAA//////////////8A////AP//AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAPz8AAAA/AAA/Pz8/AAAAPz8/AAAAAD8/AAAAAAA/AAAAPz8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAPwAAAD8AAD8/AAAAAAA/AAAAPwAAAD8/Pz8/AAAAAAA/AAA/AAAAAAAAAD8APz8AAAA/AAA/Pz8/AAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz8/AAA/Pz8/AAAAAAAAAAAAAD8AAAA/AAAAAAAAAAAAAAAAAD8AAAA/AAAAAAAAAAAAAAAAAD8AAAA/Pz8AAAAAAAAAAAAAAD8AAAA/AAA/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAA/Pz8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A////AAD/AP//////AP///wD///////8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A////AAD/AP//////AP///wD///////8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////////AP////////////8A////////AP////////////8A/////wAA//////////////8A////////AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD//////wAAAAD//wAAAAAA/wD/AAAA/wAAAAAA/wAAAAD/AAD/AAAA/wAAAAAA/wAAAAD/AAD///8A/wAAAAAA/wAAAP8AAAD/AAD//wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAA/wAAAAAAAAD/AP//AAAA/wAA/////wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD//wAAAAAAAAAAAAD/AAAAAAD//wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAA//////8AAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A////AAD/AP//////AP///wD///////8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////AP////////////////8A////AP////////////////8A////AAAA//////////////8A////AP//AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD///8A/wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAA/wAA/wAAAAAA/wAAAP8AAAD/AAAA/wAAAAAA/wAA/wAAAAD/AAAAAP//AAAA/wAA/////wD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA/////wAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA////AAAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD///8A/wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAA/wAA/wAAAAAA/wAAAP8AAAD/AAAA/wAAAAAA/wAA/wAAAAD/AAAAAP//AAAA/wAA/////wD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD/AAAAAAAAAAAAAAD/AAAAAP//AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP///wAAAP////8AAP//////AP///wAAAP//////AP////8A////AP8AAP//////AP////8A////AP8AAP//////AP///wD///8A//8AAP//////AP///wD///8AAAAAAP//////AP//AP////////8A/wAA////AP//AAAAAP////8A/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAA//////////////8A////////AP////////////8A////////AP////////////8A//////8A//////////////8A/////wD///////////////8A////AP////////////////8A////AP////////////////8A////AAAAAP//////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD///8A/wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAA/wAA/wAAAAAA/wAAAP8AAAD/AAAA/wAAAAAA/wAA/wAAAAD/AAAAAP//AAAA/wAA/////wD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA/////wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAP//AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD//////wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAA//8A/wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAA/wAAAAAAAAD/AP//AAAA/wAA/////wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA////AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAP8AAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////////AP////////////8A////////AP////////////8A/////wAA//////////////8A////////AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD//////wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAA//8A/wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAA/wAAAAAAAAD/AP//AAAA/wAA/////wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD//wAAAAAAAAAAAAD/AAAAAAD//wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAA//////8AAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-                                                    :length     "576"^^xsd:long
-                                                  ] ;
-                              :channel            [ a                   :Channel ;
-                                                    dcterms:identifier  "Channel:0" ;
-                                                    :color              [ a          :Color ;
-                                                                          rdf:value  "-2147483648"
-                                                                        ]
-                                                  ] ;
-                              :dimensionOrder     dimensionOrder:xyzct ;
-                              :pixelType          pixelType:uint8 ;
-                              :sizeC              "1"^^xsd:int ;
-                              :sizeT              "5"^^xsd:int ;
-                              :sizeX              "18"^^xsd:int ;
-                              :sizeY              "24"^^xsd:int ;
-                              :sizeZ              "5"^^xsd:int
-                            ] .
+        :pixels             pixels:pixels0:0 .
+
+bindata:bindata16  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wAAAP8A/wAAAAD//wAAAAAA/wAA//8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAA/wAAAAAAAP8AAP//AAAA/wAA/////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD//wAAAAAAAAAAAAD/AAAAAAD//wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAA//////8AAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata10  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD//////wAAAAD//wAAAAAA/wD/AAAA/wAAAAAA/wAAAAD/AAD/AAAA/wAAAAAA/wAAAAD/AAD///8A/wAAAAAA/wAAAP8AAAD/AAD//wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAA/wAAAAAAAAD/AP//AAAA/wAA/////wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA////AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAP8AAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata4  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAPz8AAAA/AAA/Pz8/AAAAPz8/AAAAAD8/AAAAAAA/AAAAPz8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAPwAAAD8AAD8/AAAAAAA/AAAAPwAAAD8/Pz8/AAAAAAA/AAA/AAAAAAAAAD8APz8AAAA/AAA/Pz8/AAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz8/AAAAAD8AAAAAAAAAAAAAAD8AAAAAPz8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata25  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP8A////AP//////AP////8A//8A////AP//////AP////8A//8AAAD/AP//////AP///wD///8A//8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////AP////////////////8A////AP////////////////8A////AAAA//////////////8A////AP//AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata15  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP8A////AP//////AP////8A//8A////AP//////AP////8A//8AAAD/AP//////AP///wD///8A//8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////////AP////////////8A////////AP////////////8A/////wAA//////////////8A////////AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata3  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A////AAD/AP//////AP///wD///////8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata9  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP///wAAAP////8AAP//////AP///wAAAP//////AP////8A////AP8AAP//////AP////8A////AP8AAP//////AP///wD///8A//8AAP//////AP///wD///8AAAAAAP//////AP//AP////////8A/wAA////AP//AAAAAP////8A/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAA//////////////8A////////AP////////////8A////////AP////////////8A//////8A//////////////8A/////wD///////////////8A////AP////////////////8A////AP////////////////8A////AAAAAP//////////////////////////////" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata24  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAPz8AAAA/AAA/Pz8/AAAAPz8/AAAAAD8/AAAAAAA/AAAAPz8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAPwAAAD8AAD8/AAAAAAA/AAAAPwAAAD8/Pz8/AAAAAAA/AAA/AAAAAAAAAD8APz8AAAA/AAA/Pz8/AAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz8/AAA/Pz8/AAAAAAAAAAAAAD8AAAA/AAAAAAAAAAAAAAAAAD8AAAA/AAAAAAAAAAAAAAAAAD8AAAA/Pz8AAAAAAAAAAAAAAD8AAAA/AAA/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAA/Pz8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
 
 pixelType:uint8  a  :PixelType .
+
+bindata:bindata14  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAPz8AAAA/AAA/Pz8/AAAAPz8/AAAAAD8/AAAAAAA/AAAAPz8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAPwAAAD8AAD8/AAAAAAA/AAAAPwAAAD8/Pz8/AAAAAAA/AAA/AAAAAAAAAD8APz8AAAA/AAA/Pz8/AAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz8/AAA/Pz8/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAAAPz8AAAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAAAAAA/AAAAAAAAAAAAAD8AAAA/Pz8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata2  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD///8A/wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAA/wAA/wAAAAAA/wAAAP8AAAD/AAAA/wAAAAAA/wAA/wAAAAD/AAAAAP//AAAA/wAA/////wD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD/AAAAAAAAAAAAAAD/AAAAAP//AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata8  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD//////wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAA//8A/wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAAAP8AAAAAAAD//wAAAAAA/wAA/wAAAAAAAAD/AP//AAAA/wAA/////wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA////AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAP8AAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
+        :length     "576"^^xsd:long .
+
+bindata:bindata23  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A////AAD/AP//////AP///wD///////8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////AP////////////////8A////AP////////////////8A////AAAA//////////////8A////AP//AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
+        :length     "576"^^xsd:long .
 
 dimensionOrder:xyzct  a  :DimensionOrder .

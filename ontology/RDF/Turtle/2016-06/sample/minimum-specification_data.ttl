@@ -4,36 +4,40 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
+@prefix pixels: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/minimum-specification/pixels/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
 @prefix xml:   <http://www.w3.org/XML/1998/namespace> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix acquisitioMode: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
 @prefix compression: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Compression#> .
+@prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/minimum-specification/bindata/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
 compression:none  a  :Compression .
+
+bindata:bindata0  a   :BinData ;
+        :bigEndian    false ;
+        :compression  compression:none ;
+        :data         "ZGVmYXVsdA==" ;
+        :length       "12"^^xsd:long .
 
 pixelType:int8  a  :PixelType .
 
 dimensionOrder:xyzct  a  :DimensionOrder .
 
+pixels:pixels1  a           :Pixels ;
+        dcterms:identifier  "Pixels:1" ;
+        :binData            bindata:bindata0 ;
+        :dimensionOrder     dimensionOrder:xyzct ;
+        :pixelType          pixelType:int8 ;
+        :sizeC              "2"^^xsd:int ;
+        :sizeT              "2"^^xsd:int ;
+        :sizeX              "2"^^xsd:int ;
+        :sizeY              "2"^^xsd:int ;
+        :sizeZ              "2"^^xsd:int .
+
 image:image1  a             :Image ;
         rdfs:label          "Name92"@en ;
         dcterms:identifier  "Image:1" ;
-        :pixels             [ a                   :Pixels ;
-                              dcterms:identifier  "Pixels:1" ;
-                              :binData            [ a             :BinData ;
-                                                    :bigEndian    false ;
-                                                    :compression  compression:none ;
-                                                    :data         "ZGVmYXVsdA==" ;
-                                                    :length       "12"^^xsd:long
-                                                  ] ;
-                              :dimensionOrder     dimensionOrder:xyzct ;
-                              :pixelType          pixelType:int8 ;
-                              :sizeC              "2"^^xsd:int ;
-                              :sizeT              "2"^^xsd:int ;
-                              :sizeX              "2"^^xsd:int ;
-                              :sizeY              "2"^^xsd:int ;
-                              :sizeZ              "2"^^xsd:int
-                            ] .
+        :pixels             pixels:pixels1 .

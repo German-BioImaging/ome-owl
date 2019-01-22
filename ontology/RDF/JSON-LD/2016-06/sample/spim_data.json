@@ -1,203 +1,6 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "@type" : "Pixels",
-    "identifier" : "Pixels:2.0",
-    "binData" : [ "_:b3", "_:b8", "_:b12", "_:b14", "_:b15", "_:b16", "_:b17", "_:b18" ],
-    "channel" : [ "_:b11", "_:b13" ],
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
-      "@id" : "dimensionOrder:xyczt"
-    },
-    "physicalSizeX" : "_:b2",
-    "physicalSizeY" : "_:b2",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
-      "@id" : "pixelType:uint8"
-    },
-    "plane" : [ "_:b1", "_:b4", "_:b5", "_:b6", "_:b7", "_:b9", "_:b10", "_:b19" ],
-    "sizeC" : "2",
-    "sizeT" : "2",
-    "sizeX" : "6",
-    "sizeY" : "4",
-    "sizeZ" : "2"
-  }, {
-    "@id" : "_:b1",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "1",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b10",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "1",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b100",
-    "@type" : "Channel",
-    "identifier" : "Channel:3.0",
-    "color" : "_:b25",
-    "flour" : "Autofluorescence"
-  }, {
-    "@id" : "_:b101",
-    "@type" : [ "Objective", "ManufacturerSpec" ],
-    "identifier" : "Objective:TubeLens:1",
-    "manufacturer" : "_:b39",
-    "model" : "OME - Tube lens 120 mm Mk1"
-  }, {
-    "@id" : "_:b102",
-    "@type" : [ "Objective", "ManufacturerSpec" ],
-    "identifier" : "Objective:1",
-    "calibratedMagnification" : "20.0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/correction" : {
-      "@id" : "correction:other"
-    },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/immersion" : {
-      "@id" : "immersion:oil"
-    },
-    "lensNA" : "0.95",
-    "manufacturer" : "_:b39",
-    "model" : "Objective Mk1",
-    "nominalMagnification" : "20.0",
-    "serialNumber" : "OBJ1",
-    "workingDistance" : "_:b65"
-  }, {
-    "@id" : "_:b103",
-    "@type" : [ "Microscope", "ManufacturerSpec" ],
-    "manufacturer" : "_:b39",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/microscopeType" : {
-      "@id" : "microscopeType:other"
-    },
-    "model" : "Spim-Sample",
-    "serialNumber" : "SPIM-1"
-  }, {
-    "@id" : "_:b104",
-    "@type" : "ImagingCondition",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
-      "@id" : "instrument:instrument0"
-    },
-    "objectiveSettings" : "_:b106",
-    "stageLabel" : "_:b67"
-  }, {
-    "@id" : "_:b105",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b106",
-    "@type" : "ObjectiveSettings",
-    "identifier" : "Objective:1",
-    "correctionCollar" : "6.0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/medium" : {
-      "@id" : "medium:oil"
-    }
-  }, {
-    "@id" : "_:b107",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "1",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b108",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "1",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b109",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "1",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b11",
-    "@type" : "Channel",
-    "identifier" : "Channel:2.0",
-    "color" : "_:b25",
-    "flour" : "Autofluorescence"
-  }, {
-    "@id" : "_:b110",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "0",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b111",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b112",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b12",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b13",
-    "@type" : "Channel",
-    "identifier" : "Channel:2.1",
-    "color" : "_:b34",
-    "flour" : "Green-OME"
-  }, {
-    "@id" : "_:b14",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b15",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b16",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b17",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b18",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b19",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "0",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b2",
-    "@type" : "PATO:0000117",
-    "unit" : "unitLength:um",
-    "value" : {
-      "@type" : "xsd:float",
-      "@value" : "100000.0"
-    }
-  }, {
-    "@id" : "_:b20",
     "@type" : "PATO:0000165",
     "unit" : "unitTime:s",
     "value" : {
@@ -205,389 +8,11 @@
       "@value" : "500.0"
     }
   }, {
-    "@id" : "_:b21",
-    "@type" : "StageLabel",
-    "positionX" : "_:b23",
-    "positionY" : "_:b22",
-    "label" : {
-      "@language" : "en",
-      "@value" : "(1,2) of 1x2"
-    }
-  }, {
-    "@id" : "_:b22",
-    "@type" : "PATO:0000140",
-    "unit" : "unitLength:referenceFrame",
-    "value" : {
-      "@type" : "xsd:float",
-      "@value" : "2.0"
-    }
-  }, {
-    "@id" : "_:b23",
-    "@type" : "PATO:0000140",
-    "unit" : "unitLength:referenceFrame",
-    "value" : {
-      "@type" : "xsd:float",
-      "@value" : "1.0"
-    }
-  }, {
-    "@id" : "_:b24",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b25",
-    "@type" : "Color",
-    "value" : "-1"
-  }, {
-    "@id" : "_:b26",
+    "@id" : "_:b1",
     "@type" : "StructuredAnnotations",
-    "annotation" : [ "_:b27", "_:b28", "_:b29", "_:b30", "_:b31", "_:b32", "_:b33" ]
+    "annotation" : [ "xmlAnnotation:SystemSpecific1", "xmlAnnotation:ObjectiveAdditions1", "xmlAnnotation:SpimSet1", "xmlAnnotation:ExtraStageLabel1:3", "xmlAnnotation:ExtraStageLabel1:2", "xmlAnnotation:ExtraStageLabel1:1", "xmlAnnotation:ExtraStageLabel1:0" ]
   }, {
-    "@id" : "_:b27",
-    "@type" : [ "XMLAnnotation", "Annotation" ],
-    "identifier" : "Annotation:SystemSpecific:1",
-    "value" : {
-      "@type" : "rdf:XMLLiteral",
-      "@value" : "<YourCustomXmlData>Any well formed XML allowed.</YourCustomXmlData>"
-    },
-    "comment" : {
-      "@language" : "en",
-      "@value" : "These are the values you want attached to the SPIM images specific to your system that are not covered in our general SPIM additions."
-    }
-  }, {
-    "@id" : "_:b28",
-    "@type" : [ "XMLAnnotation", "Annotation" ],
-    "identifier" : "Annotation:ObjectiveAdditions:1",
-    "namespace" : "ome-xml.org:additions:post2010-06:objective",
-    "value" : {
-      "@type" : "rdf:XMLLiteral",
-      "@value" : "<OME-Extra:ObjectiveAttributes\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <ObjectiveAdditions ID=\"Objective:TubeLens:1\" FocalLength=\"120\" SlitAperture=\"6\"\n                              LightSheetWidth=\"0.8\"/>\n          <ObjectiveAdditions ID=\"Objective:Illumation:1\" FocalLength=\"25\"/>\n        </OME-Extra:ObjectiveAttributes>"
-    },
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Extra attribute values for the objective objects."
-    }
-  }, {
-    "@id" : "_:b29",
-    "@type" : [ "XMLAnnotation", "Annotation" ],
-    "identifier" : "Annotation:SpimSet:1",
-    "namespace" : "ome-xml.org:additions:post2010-06:spim:set",
-    "value" : {
-      "@type" : "rdf:XMLLiteral",
-      "@value" : "        <OME-Extra:SpimSet\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <SpimImage ID=\"Image:0\" Angle=\"0\"/>\n          <SpimImage ID=\"Image:1\" Angle=\"0\"/>\n          <SpimImage ID=\"Image:2\" Angle=\"45\"/>\n          <SpimImage ID=\"Image:3\" Angle=\"45\"/>\n        </OME-Extra:SpimSet>"
-    },
-    "comment" : {
-      "@language" : "en",
-      "@value" : "This structure combines the images into a SPIM set and defines the angles the images were taken from."
-    }
-  }, {
-    "@id" : "_:b3",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b30",
-    "@type" : [ "XMLAnnotation", "Annotation" ],
-    "identifier" : "Annotation:ExtraStageLabel:1:3",
-    "namespace" : "ome-xml.org:additions:post2010-06:spim:positions",
-    "value" : {
-      "@type" : "rdf:XMLLiteral",
-      "@value" : "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"
-    },
-    "comment" : {
-      "@language" : "en",
-      "@value" : "Extra position of "
-    }
-  }, {
-    "@id" : "_:b31",
-    "@type" : [ "XMLAnnotation", "Annotation" ],
-    "identifier" : "Annotation:ExtraStageLabel:1:2",
-    "namespace" : "ome-xml.org:additions:post2010-06:spim:positions",
-    "value" : {
-      "@type" : "rdf:XMLLiteral",
-      "@value" : "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"
-    }
-  }, {
-    "@id" : "_:b32",
-    "@type" : [ "XMLAnnotation", "Annotation" ],
-    "identifier" : "Annotation:ExtraStageLabel:1:1",
-    "namespace" : "ome-xml.org:additions:post2010-06:spim:positions",
-    "value" : {
-      "@type" : "rdf:XMLLiteral",
-      "@value" : "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"
-    }
-  }, {
-    "@id" : "_:b33",
-    "@type" : [ "XMLAnnotation", "Annotation" ],
-    "identifier" : "Annotation:ExtraStageLabel:1:0",
-    "namespace" : "ome-xml.org:additions:post2010-06:spim:positions",
-    "value" : {
-      "@type" : "rdf:XMLLiteral",
-      "@value" : "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"
-    }
-  }, {
-    "@id" : "_:b34",
-    "@type" : "Color",
-    "value" : "16711935"
-  }, {
-    "@id" : "_:b35",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b36",
-    "@type" : "PATO:0000040",
-    "unit" : "unitLength:um",
-    "value" : {
-      "@type" : "xsd:float",
-      "@value" : "19800.0"
-    }
-  }, {
-    "@id" : "_:b37",
-    "@type" : [ "Laser", "ManufacturerSpec" ],
-    "identifier" : "LightSource:1",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/laserMedium" : {
-      "@id" : "laserMedium:GaAs"
-    },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/laserType" : {
-      "@id" : "laserType:semiconductor"
-    },
-    "manufacturer" : "_:b39",
-    "model" : "Laser Mk1",
-    "serialNumber" : "LASER-1",
-    "waveLength" : "_:b38"
-  }, {
-    "@id" : "_:b38",
-    "@type" : "PATO:0001242",
-    "unit" : "unitLength:nm",
-    "value" : {
-      "@type" : "xsd:float",
-      "@value" : "448.0"
-    }
-  }, {
-    "@id" : "_:b39",
-    "@type" : "Manufacturer",
-    "label" : {
-      "@language" : "en",
-      "@value" : "OME-Sample"
-    }
-  }, {
-    "@id" : "_:b4",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "0",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b40",
-    "@type" : [ "LightEmittingDiode", "ManufacturerSpec" ],
-    "identifier" : "LightSource:2",
-    "manufacturer" : "_:b39",
-    "model" : "Green LED Mk1",
-    "serialNumber" : "LED-1"
-  }, {
-    "@id" : "_:b41",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "1",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b42",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "0",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b43",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b44",
-    "@type" : "ImagingCondition",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
-      "@id" : "instrument:instrument0"
-    },
-    "objectiveSettings" : "_:b68",
-    "stageLabel" : "_:b90"
-  }, {
-    "@id" : "_:b45",
-    "@type" : "Pixels",
-    "identifier" : "Pixels:3.0",
-    "binData" : [ "_:b73", "_:b66", "_:b111", "_:b95", "_:b88", "_:b46", "_:b112", "_:b105" ],
-    "channel" : [ "_:b100", "_:b91" ],
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
-      "@id" : "dimensionOrder:xyczt"
-    },
-    "physicalSizeX" : "_:b2",
-    "physicalSizeY" : "_:b2",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
-      "@id" : "pixelType:uint8"
-    },
-    "plane" : [ "_:b108", "_:b109", "_:b92", "_:b97", "_:b70", "_:b110", "_:b107", "_:b42" ],
-    "sizeC" : "2",
-    "sizeT" : "2",
-    "sizeX" : "6",
-    "sizeY" : "4",
-    "sizeZ" : "2"
-  }, {
-    "@id" : "_:b46",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b47",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "1",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b48",
-    "@type" : "Pixels",
-    "identifier" : "Pixels:1.0",
-    "binData" : [ "_:b50", "_:b51", "_:b52", "_:b53", "_:b55", "_:b35", "_:b63", "_:b64" ],
-    "channel" : [ "_:b49", "_:b62" ],
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
-      "@id" : "dimensionOrder:xyczt"
-    },
-    "physicalSizeX" : "_:b2",
-    "physicalSizeY" : "_:b2",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
-      "@id" : "pixelType:uint8"
-    },
-    "plane" : [ "_:b54", "_:b41", "_:b56", "_:b57", "_:b58", "_:b59", "_:b60", "_:b61" ],
-    "sizeC" : "2",
-    "sizeT" : "2",
-    "sizeX" : "6",
-    "sizeY" : "4",
-    "sizeZ" : "2"
-  }, {
-    "@id" : "_:b49",
-    "@type" : "Channel",
-    "identifier" : "Channel:1.1",
-    "color" : "_:b34",
-    "flour" : "Green-OME"
-  }, {
-    "@id" : "_:b5",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "1",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b50",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b51",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b52",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b53",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b54",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "1",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b55",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b56",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "0",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b57",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "1",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b58",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "0",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b59",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "1",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b6",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "0",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b60",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "0",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b61",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "0",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b62",
-    "@type" : "Channel",
-    "identifier" : "Channel:1.0",
-    "color" : "_:b25",
-    "flour" : "Autofluorescence"
-  }, {
-    "@id" : "_:b63",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b64",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b65",
+    "@id" : "_:b10",
     "@type" : "PATO:0000040",
     "unit" : "unitLength:um",
     "value" : {
@@ -595,283 +20,59 @@
       "@value" : "0.0"
     }
   }, {
-    "@id" : "_:b66",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
+    "@id" : "_:b2",
+    "@type" : "Color",
+    "value" : "16711935"
   }, {
-    "@id" : "_:b67",
-    "@type" : "StageLabel",
-    "positionX" : "_:b23",
-    "positionY" : "_:b23",
+    "@id" : "_:b3",
+    "@type" : "Color",
+    "value" : "-1"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "PATO:0001242",
+    "unit" : "unitLength:nm",
+    "value" : {
+      "@type" : "xsd:float",
+      "@value" : "448.0"
+    }
+  }, {
+    "@id" : "_:b5",
+    "@type" : "Manufacturer",
     "label" : {
       "@language" : "en",
-      "@value" : "(1,1) of 1x2"
+      "@value" : "OME-Sample"
     }
   }, {
-    "@id" : "_:b68",
-    "@type" : "ObjectiveSettings",
-    "identifier" : "Objective:1",
-    "correctionCollar" : "6.0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/medium" : {
-      "@id" : "medium:oil"
+    "@id" : "_:b6",
+    "@type" : "PATO:0000140",
+    "unit" : "unitLength:referenceFrame",
+    "value" : {
+      "@type" : "xsd:float",
+      "@value" : "2.0"
     }
-  }, {
-    "@id" : "_:b69",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
   }, {
     "@id" : "_:b7",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "1",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b70",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "0",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b71",
-    "@type" : "ImagingCondition",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
-      "@id" : "instrument:instrument0"
-    },
-    "objectiveSettings" : "_:b89",
-    "stageLabel" : "_:b99"
-  }, {
-    "@id" : "_:b72",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b73",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b74",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "0",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b75",
-    "@type" : "Pixels",
-    "identifier" : "Pixels:0.0",
-    "binData" : [ "_:b72", "_:b76", "_:b77", "_:b43", "_:b24", "_:b81", "_:b69", "_:b86" ],
-    "channel" : [ "_:b82", "_:b83" ],
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
-      "@id" : "dimensionOrder:xyczt"
-    },
-    "physicalSizeX" : "_:b2",
-    "physicalSizeY" : "_:b2",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
-      "@id" : "pixelType:uint8"
-    },
-    "plane" : [ "_:b78", "_:b79", "_:b80", "_:b74", "_:b47", "_:b84", "_:b85", "_:b87" ],
-    "sizeC" : "2",
-    "sizeT" : "2",
-    "sizeX" : "6",
-    "sizeY" : "4",
-    "sizeZ" : "2"
-  }, {
-    "@id" : "_:b76",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b77",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b78",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "1",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b79",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "0",
-    "theZ" : "1"
+    "@type" : "PATO:0000140",
+    "unit" : "unitLength:referenceFrame",
+    "value" : {
+      "@type" : "xsd:float",
+      "@value" : "1.0"
+    }
   }, {
     "@id" : "_:b8",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b80",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "1",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b81",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b82",
-    "@type" : "Channel",
-    "identifier" : "Channel:0.0",
-    "color" : "_:b25",
-    "flour" : "Autofluorescence"
-  }, {
-    "@id" : "_:b83",
-    "@type" : "Channel",
-    "identifier" : "Channel:0.1",
-    "color" : "_:b34",
-    "flour" : "Green-OME"
-  }, {
-    "@id" : "_:b84",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "1",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b85",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "0",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b86",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b87",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "0",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b88",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b89",
-    "@type" : "ObjectiveSettings",
-    "identifier" : "Objective:1",
-    "correctionCollar" : "6.0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/medium" : {
-      "@id" : "medium:oil"
+    "@type" : "PATO:0000040",
+    "unit" : "unitLength:um",
+    "value" : {
+      "@type" : "xsd:float",
+      "@value" : "19800.0"
     }
   }, {
     "@id" : "_:b9",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "0",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b90",
-    "@type" : "StageLabel",
-    "positionX" : "_:b23",
-    "positionY" : "_:b22",
-    "label" : {
-      "@language" : "en",
-      "@value" : "(1,2) of 1x2"
-    }
-  }, {
-    "@id" : "_:b91",
-    "@type" : "Channel",
-    "identifier" : "Channel:3.1",
-    "color" : "_:b34",
-    "flour" : "Green-OME"
-  }, {
-    "@id" : "_:b92",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "0",
-    "theT" : "0",
-    "theZ" : "0"
-  }, {
-    "@id" : "_:b93",
-    "@type" : "ImagingCondition",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
-      "@id" : "instrument:instrument0"
-    },
-    "objectiveSettings" : "_:b96",
-    "stageLabel" : "_:b21"
-  }, {
-    "@id" : "_:b94",
-    "@type" : [ "Detector", "ManufacturerSpec" ],
-    "identifier" : "Detector:1",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/detectorType" : {
-      "@id" : "detectorType:CCD"
-    },
-    "manufacturer" : "_:b39",
-    "model" : "OME-CCD Mk1",
-    "serialNumber" : "CCD1"
-  }, {
-    "@id" : "_:b95",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b96",
-    "@type" : "ObjectiveSettings",
-    "identifier" : "Objective:1",
-    "correctionCollar" : "6.0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/medium" : {
-      "@id" : "medium:oil"
-    }
-  }, {
-    "@id" : "_:b97",
-    "@type" : "Plane",
-    "exposureTime" : "_:b20",
-    "theC" : "1",
-    "theT" : "1",
-    "theZ" : "1"
-  }, {
-    "@id" : "_:b98",
-    "@type" : [ "Objective", "ManufacturerSpec" ],
-    "identifier" : "Objective:Illumation:1",
-    "calibratedMagnification" : "5.12",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/immersion" : {
-      "@id" : "immersion:air"
-    },
-    "lensNA" : "0.5",
-    "manufacturer" : "_:b39",
-    "model" : "Objective Mk2",
-    "nominalMagnification" : "5.0",
-    "serialNumber" : "OBJ2",
-    "workingDistance" : "_:b36"
-  }, {
-    "@id" : "_:b99",
-    "@type" : "StageLabel",
-    "positionX" : "_:b23",
-    "positionY" : "_:b23",
-    "label" : {
-      "@language" : "en",
-      "@value" : "(1,1) of 1x2"
+    "@type" : "PATO:0000117",
+    "unit" : "unitLength:um",
+    "value" : {
+      "@type" : "xsd:float",
+      "@value" : "100000.0"
     }
   }, {
     "@id" : "correction:other",
@@ -916,21 +117,270 @@
     "@id" : "unitTime:s",
     "@type" : "rdfs:Class"
   }, {
-    "@id" : "instrument:instrument0",
-    "@type" : "Instrument",
-    "identifier" : "Instrument:SpimSampleMicroscope1",
-    "manufacturerSpec" : [ "_:b98", "_:b101", "_:b102", "_:b40", "_:b94", "_:b37", "_:b103" ]
+    "@id" : "bindata:bindata1",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata10",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata11",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata12",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata13",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata14",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata15",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata16",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata17",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata18",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata19",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata2",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata20",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata21",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata22",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata23",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata24",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata25",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata26",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata27",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata28",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata29",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata3",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata30",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata31",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata32",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata4",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata5",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata6",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata7",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata8",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "bindata:bindata9",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "channel:channel0.0",
+    "@type" : "Channel",
+    "identifier" : "Channel:0.0",
+    "color" : "_:b3",
+    "flour" : "Autofluorescence"
+  }, {
+    "@id" : "channel:channel0.1",
+    "@type" : "Channel",
+    "identifier" : "Channel:0.1",
+    "color" : "_:b2",
+    "flour" : "Green-OME"
+  }, {
+    "@id" : "channel:channel1.0",
+    "@type" : "Channel",
+    "identifier" : "Channel:1.0",
+    "color" : "_:b3",
+    "flour" : "Autofluorescence"
+  }, {
+    "@id" : "channel:channel1.1",
+    "@type" : "Channel",
+    "identifier" : "Channel:1.1",
+    "color" : "_:b2",
+    "flour" : "Green-OME"
+  }, {
+    "@id" : "channel:channel2.0",
+    "@type" : "Channel",
+    "identifier" : "Channel:2.0",
+    "color" : "_:b3",
+    "flour" : "Autofluorescence"
+  }, {
+    "@id" : "channel:channel2.1",
+    "@type" : "Channel",
+    "identifier" : "Channel:2.1",
+    "color" : "_:b2",
+    "flour" : "Green-OME"
+  }, {
+    "@id" : "channel:channel3.0",
+    "@type" : "Channel",
+    "identifier" : "Channel:3.0",
+    "color" : "_:b3",
+    "flour" : "Autofluorescence"
+  }, {
+    "@id" : "channel:channel3.1",
+    "@type" : "Channel",
+    "identifier" : "Channel:3.1",
+    "color" : "_:b2",
+    "flour" : "Green-OME"
+  }, {
+    "@id" : "detector:detector0",
+    "@type" : [ "Detector", "ManufacturerSpec" ],
+    "identifier" : "Detector:1",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/detectorType" : {
+      "@id" : "detectorType:CCD"
+    },
+    "manufacturer" : "_:b5",
+    "model" : "OME-CCD Mk1",
+    "serialNumber" : "CCD1"
   }, {
     "@id" : "image:image0",
     "@type" : "Image",
     "identifier" : "Image:0",
     "acquisitionDate" : "2010-11-10T14:42:38",
-    "annotation" : [ "_:b28", "_:b33", "_:b27", "_:b29" ],
-    "imagingCondition" : "_:b104",
+    "annotation" : [ "xmlAnnotation:SystemSpecific1", "xmlAnnotation:SpimSet1", "xmlAnnotation:ExtraStageLabel1.0", "xmlAnnotation:ObjectiveAdditions1" ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/imagingCondition" : {
+      "@id" : "imagingCondition:image0"
+    },
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
       "@id" : "instrument:instrument0"
     },
-    "pixels" : "_:b75",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels" : {
+      "@id" : "pixels:image0"
+    },
     "label" : {
       "@language" : "en",
       "@value" : "Spim Sample Tile 1 Angle 1"
@@ -940,12 +390,16 @@
     "@type" : "Image",
     "identifier" : "Image:1",
     "acquisitionDate" : "2010-11-10T14:42:38",
-    "annotation" : [ "_:b28", "_:b29", "_:b32", "_:b27" ],
-    "imagingCondition" : "_:b93",
+    "annotation" : [ "xmlAnnotation:SpimSet1", "xmlAnnotation:SystemSpecific1", "xmlAnnotation:ExtraStageLabel1.1", "xmlAnnotation:ObjectiveAdditions1" ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/imagingCondition" : {
+      "@id" : "imagingCondition:image1"
+    },
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
       "@id" : "instrument:instrument0"
     },
-    "pixels" : "_:b48",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels" : {
+      "@id" : "pixels:image1"
+    },
     "label" : {
       "@language" : "en",
       "@value" : "Spin Sample Tile 2 Angle 1"
@@ -955,12 +409,16 @@
     "@type" : "Image",
     "identifier" : "Image:2",
     "acquisitionDate" : "2010-11-10T14:42:38",
-    "annotation" : [ "_:b27", "_:b28", "_:b29", "_:b31" ],
-    "imagingCondition" : "_:b71",
+    "annotation" : [ "xmlAnnotation:SystemSpecific1", "xmlAnnotation:ExtraStageLabel1:2", "xmlAnnotation:SpimSet1", "xmlAnnotation:ObjectiveAdditions1" ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/imagingCondition" : {
+      "@id" : "imagingCondition:image2"
+    },
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
       "@id" : "instrument:instrument0"
     },
-    "pixels" : "_:b0",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels" : {
+      "@id" : "pixels:image2"
+    },
     "label" : {
       "@language" : "en",
       "@value" : "Spim Sample Tile 1 Angle 2"
@@ -970,74 +428,678 @@
     "@type" : "Image",
     "identifier" : "Image:3",
     "acquisitionDate" : "2010-11-10T14:42:38",
-    "annotation" : [ "_:b29", "_:b30", "_:b27", "_:b28" ],
-    "imagingCondition" : "_:b44",
+    "annotation" : [ "xmlAnnotation:SystemSpecific1", "xmlAnnotation:ExtraStageLabel1:3", "xmlAnnotation:ObjectiveAdditions1", "xmlAnnotation:SpimSet1" ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/imagingCondition" : {
+      "@id" : "imagingCondition:image3"
+    },
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
       "@id" : "instrument:instrument0"
     },
-    "pixels" : "_:b45",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels" : {
+      "@id" : "pixels:image3"
+    },
     "label" : {
       "@language" : "en",
       "@value" : "Spim Sample Tile 2 Angle 2"
     }
+  }, {
+    "@id" : "imagingCondition:image0",
+    "@type" : "ImagingCondition",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
+      "@id" : "instrument:instrument0"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/objectiveSettings" : {
+      "@id" : "objectiveSettings:image0"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/stageLabel" : {
+      "@id" : "stageLabel:image0"
+    }
+  }, {
+    "@id" : "imagingCondition:image1",
+    "@type" : "ImagingCondition",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
+      "@id" : "instrument:instrument0"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/objectiveSettings" : {
+      "@id" : "objectiveSettings:image1"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/stageLabel" : {
+      "@id" : "stageLabel:image1"
+    }
+  }, {
+    "@id" : "imagingCondition:image2",
+    "@type" : "ImagingCondition",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
+      "@id" : "instrument:instrument0"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/objectiveSettings" : {
+      "@id" : "objectiveSettings:image2"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/stageLabel" : {
+      "@id" : "stageLabel:image2"
+    }
+  }, {
+    "@id" : "imagingCondition:image3",
+    "@type" : "ImagingCondition",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
+      "@id" : "instrument:instrument0"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/objectiveSettings" : {
+      "@id" : "objectiveSettings:image3"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/stageLabel" : {
+      "@id" : "stageLabel:image3"
+    }
+  }, {
+    "@id" : "instrument:instrument0",
+    "@type" : "Instrument",
+    "identifier" : "Instrument:SpimSampleMicroscope1",
+    "manufacturerSpec" : [ "objective:objective2", "objective:objective1", "objective:objective0", "led:led0", "detector:detector0", "laser:laser0", "microscope:microscope0" ]
+  }, {
+    "@id" : "laser:laser0",
+    "@type" : [ "Laser", "ManufacturerSpec" ],
+    "identifier" : "LightSource:1",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/laserMedium" : {
+      "@id" : "laserMedium:GaAs"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/laserType" : {
+      "@id" : "laserType:semiconductor"
+    },
+    "manufacturer" : "_:b5",
+    "model" : "Laser Mk1",
+    "serialNumber" : "LASER-1",
+    "waveLength" : "_:b4"
+  }, {
+    "@id" : "led:led0",
+    "@type" : [ "LightEmittingDiode", "ManufacturerSpec" ],
+    "identifier" : "LightSource:2",
+    "manufacturer" : "_:b5",
+    "model" : "Green LED Mk1",
+    "serialNumber" : "LED-1"
+  }, {
+    "@id" : "microscope:microscope0",
+    "@type" : [ "Microscope", "ManufacturerSpec" ],
+    "manufacturer" : "_:b5",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/microscopeType" : {
+      "@id" : "microscopeType:other"
+    },
+    "model" : "Spim-Sample",
+    "serialNumber" : "SPIM-1"
+  }, {
+    "@id" : "objective:objective0",
+    "@type" : [ "Objective", "ManufacturerSpec" ],
+    "identifier" : "Objective:1",
+    "calibratedMagnification" : "20.0",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/correction" : {
+      "@id" : "correction:other"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/immersion" : {
+      "@id" : "immersion:oil"
+    },
+    "lensNA" : "0.95",
+    "manufacturer" : "_:b5",
+    "model" : "Objective Mk1",
+    "nominalMagnification" : "20.0",
+    "serialNumber" : "OBJ1",
+    "workingDistance" : "_:b10"
+  }, {
+    "@id" : "objective:objective1",
+    "@type" : [ "Objective", "ManufacturerSpec" ],
+    "identifier" : "Objective:TubeLens:1",
+    "manufacturer" : "_:b5",
+    "model" : "OME - Tube lens 120 mm Mk1"
+  }, {
+    "@id" : "objective:objective2",
+    "@type" : [ "Objective", "ManufacturerSpec" ],
+    "identifier" : "Objective:Illumation:1",
+    "calibratedMagnification" : "5.12",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/immersion" : {
+      "@id" : "immersion:air"
+    },
+    "lensNA" : "0.5",
+    "manufacturer" : "_:b5",
+    "model" : "Objective Mk2",
+    "nominalMagnification" : "5.0",
+    "serialNumber" : "OBJ2",
+    "workingDistance" : "_:b8"
+  }, {
+    "@id" : "objectiveSettings:image0",
+    "@type" : "ObjectiveSettings",
+    "identifier" : "Objective:1",
+    "correctionCollar" : "6.0",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/medium" : {
+      "@id" : "medium:oil"
+    }
+  }, {
+    "@id" : "objectiveSettings:image1",
+    "@type" : "ObjectiveSettings",
+    "identifier" : "Objective:1",
+    "correctionCollar" : "6.0",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/medium" : {
+      "@id" : "medium:oil"
+    }
+  }, {
+    "@id" : "objectiveSettings:image2",
+    "@type" : "ObjectiveSettings",
+    "identifier" : "Objective:1",
+    "correctionCollar" : "6.0",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/medium" : {
+      "@id" : "medium:oil"
+    }
+  }, {
+    "@id" : "objectiveSettings:image3",
+    "@type" : "ObjectiveSettings",
+    "identifier" : "Objective:1",
+    "correctionCollar" : "6.0",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/medium" : {
+      "@id" : "medium:oil"
+    }
+  }, {
+    "@id" : "pixels:image0",
+    "@type" : "Pixels",
+    "identifier" : "Pixels:0.0",
+    "binData" : [ "bindata:bindata7", "bindata:bindata4", "bindata:bindata1", "bindata:bindata8", "bindata:bindata6", "bindata:bindata3", "bindata:bindata5", "bindata:bindata2" ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/channel" : [ {
+      "@id" : "channel:channel0.0"
+    }, {
+      "@id" : "channel:channel0.1"
+    } ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
+      "@id" : "dimensionOrder:xyczt"
+    },
+    "physicalSizeX" : "_:b9",
+    "physicalSizeY" : "_:b9",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
+      "@id" : "pixelType:uint8"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/plane" : [ {
+      "@id" : "plane:plane4"
+    }, {
+      "@id" : "plane:plane5"
+    }, {
+      "@id" : "plane:plane2"
+    }, {
+      "@id" : "plane:plane3"
+    }, {
+      "@id" : "plane:plane8"
+    }, {
+      "@id" : "plane:plane6"
+    }, {
+      "@id" : "plane:plane7"
+    }, {
+      "@id" : "plane:plane1"
+    } ],
+    "sizeC" : "2",
+    "sizeT" : "2",
+    "sizeX" : "6",
+    "sizeY" : "4",
+    "sizeZ" : "2"
+  }, {
+    "@id" : "pixels:image1",
+    "@type" : "Pixels",
+    "identifier" : "Pixels:1.0",
+    "binData" : [ "bindata:bindata9", "bindata:bindata14", "bindata:bindata16", "bindata:bindata13", "bindata:bindata15", "bindata:bindata12", "bindata:bindata11", "bindata:bindata10" ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/channel" : [ {
+      "@id" : "channel:channel1.0"
+    }, {
+      "@id" : "channel:channel1.1"
+    } ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
+      "@id" : "dimensionOrder:xyczt"
+    },
+    "physicalSizeX" : "_:b9",
+    "physicalSizeY" : "_:b9",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
+      "@id" : "pixelType:uint8"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/plane" : [ {
+      "@id" : "plane:plane9"
+    }, {
+      "@id" : "plane:plane14"
+    }, {
+      "@id" : "plane:plane11"
+    }, {
+      "@id" : "plane:plane16"
+    }, {
+      "@id" : "plane:plane15"
+    }, {
+      "@id" : "plane:plane10"
+    }, {
+      "@id" : "plane:plane12"
+    }, {
+      "@id" : "plane:plane13"
+    } ],
+    "sizeC" : "2",
+    "sizeT" : "2",
+    "sizeX" : "6",
+    "sizeY" : "4",
+    "sizeZ" : "2"
+  }, {
+    "@id" : "pixels:image2",
+    "@type" : "Pixels",
+    "identifier" : "Pixels:2.0",
+    "binData" : [ "bindata:bindata21", "bindata:bindata19", "bindata:bindata17", "bindata:bindata22", "bindata:bindata20", "bindata:bindata18", "bindata:bindata24", "bindata:bindata23" ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/channel" : [ {
+      "@id" : "channel:channel2.1"
+    }, {
+      "@id" : "channel:channel2.0"
+    } ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
+      "@id" : "dimensionOrder:xyczt"
+    },
+    "physicalSizeX" : "_:b9",
+    "physicalSizeY" : "_:b9",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
+      "@id" : "pixelType:uint8"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/plane" : [ {
+      "@id" : "plane:plane19"
+    }, {
+      "@id" : "plane:plane22"
+    }, {
+      "@id" : "plane:plane17"
+    }, {
+      "@id" : "plane:plane20"
+    }, {
+      "@id" : "plane:plane24"
+    }, {
+      "@id" : "plane:plane18"
+    }, {
+      "@id" : "plane:plane21"
+    }, {
+      "@id" : "plane:plane23"
+    } ],
+    "sizeC" : "2",
+    "sizeT" : "2",
+    "sizeX" : "6",
+    "sizeY" : "4",
+    "sizeZ" : "2"
+  }, {
+    "@id" : "pixels:image3",
+    "@type" : "Pixels",
+    "identifier" : "Pixels:3.0",
+    "binData" : [ "bindata:bindata27", "bindata:bindata30", "bindata:bindata26", "bindata:bindata28", "bindata:bindata31", "bindata:bindata29", "bindata:bindata32", "bindata:bindata25" ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/channel" : [ {
+      "@id" : "channel:channel3.0"
+    }, {
+      "@id" : "channel:channel3.1"
+    } ],
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
+      "@id" : "dimensionOrder:xyczt"
+    },
+    "physicalSizeX" : "_:b9",
+    "physicalSizeY" : "_:b9",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
+      "@id" : "pixelType:uint8"
+    },
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/plane" : [ {
+      "@id" : "plane:plane30"
+    }, {
+      "@id" : "plane:plane32"
+    }, {
+      "@id" : "plane:plane31"
+    }, {
+      "@id" : "plane:plane27"
+    }, {
+      "@id" : "plane:plane25"
+    }, {
+      "@id" : "plane:plane26"
+    }, {
+      "@id" : "plane:plane29"
+    }, {
+      "@id" : "plane:plane28"
+    } ],
+    "sizeC" : "2",
+    "sizeT" : "2",
+    "sizeX" : "6",
+    "sizeY" : "4",
+    "sizeZ" : "2"
+  }, {
+    "@id" : "plane:plane1",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "0",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane10",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "0",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane11",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "0",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane12",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "0",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane13",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "1",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane14",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "1",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane15",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "1",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane16",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "1",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane17",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "0",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane18",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "0",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane19",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "0",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane2",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "0",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane20",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "0",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane21",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "1",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane22",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "1",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane23",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "1",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane24",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "1",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane25",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "0",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane26",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "0",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane27",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "0",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane28",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "0",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane29",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "1",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane3",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "0",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane30",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "1",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane31",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "1",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane32",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "1",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane4",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "0",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane5",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "1",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane6",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "1",
+    "theZ" : "0"
+  }, {
+    "@id" : "plane:plane7",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "1",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane8",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "1",
+    "theT" : "1",
+    "theZ" : "1"
+  }, {
+    "@id" : "plane:plane9",
+    "@type" : "Plane",
+    "exposureTime" : "_:b0",
+    "theC" : "0",
+    "theT" : "0",
+    "theZ" : "0"
+  }, {
+    "@id" : "stageLabel:image0",
+    "@type" : "StageLabel",
+    "positionX" : "_:b7",
+    "positionY" : "_:b7",
+    "label" : {
+      "@language" : "en",
+      "@value" : "(1,1) of 1x2"
+    }
+  }, {
+    "@id" : "stageLabel:image1",
+    "@type" : "StageLabel",
+    "positionX" : "_:b7",
+    "positionY" : "_:b6",
+    "label" : {
+      "@language" : "en",
+      "@value" : "(1,2) of 1x2"
+    }
+  }, {
+    "@id" : "stageLabel:image2",
+    "@type" : "StageLabel",
+    "positionX" : "_:b7",
+    "positionY" : "_:b7",
+    "label" : {
+      "@language" : "en",
+      "@value" : "(1,1) of 1x2"
+    }
+  }, {
+    "@id" : "stageLabel:image3",
+    "@type" : "StageLabel",
+    "positionX" : "_:b7",
+    "positionY" : "_:b6",
+    "label" : {
+      "@language" : "en",
+      "@value" : "(1,2) of 1x2"
+    }
+  }, {
+    "@id" : "xmlAnnotation:ExtraStageLabel1.0",
+    "@type" : "Annotation"
+  }, {
+    "@id" : "xmlAnnotation:ExtraStageLabel1.1",
+    "@type" : "Annotation"
+  }, {
+    "@id" : "xmlAnnotation:ExtraStageLabel1:0",
+    "@type" : [ "XMLAnnotation", "Annotation" ],
+    "identifier" : "Annotation:ExtraStageLabel:1:0",
+    "namespace" : "ome-xml.org:additions:post2010-06:spim:positions",
+    "value" : {
+      "@type" : "rdf:XMLLiteral",
+      "@value" : "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"
+    }
+  }, {
+    "@id" : "xmlAnnotation:ExtraStageLabel1:1",
+    "@type" : [ "XMLAnnotation", "Annotation" ],
+    "identifier" : "Annotation:ExtraStageLabel:1:1",
+    "namespace" : "ome-xml.org:additions:post2010-06:spim:positions",
+    "value" : {
+      "@type" : "rdf:XMLLiteral",
+      "@value" : "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"
+    }
+  }, {
+    "@id" : "xmlAnnotation:ExtraStageLabel1:2",
+    "@type" : [ "XMLAnnotation", "Annotation" ],
+    "identifier" : "Annotation:ExtraStageLabel:1:2",
+    "namespace" : "ome-xml.org:additions:post2010-06:spim:positions",
+    "value" : {
+      "@type" : "rdf:XMLLiteral",
+      "@value" : "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"
+    }
+  }, {
+    "@id" : "xmlAnnotation:ExtraStageLabel1:3",
+    "@type" : [ "XMLAnnotation", "Annotation" ],
+    "identifier" : "Annotation:ExtraStageLabel:1:3",
+    "namespace" : "ome-xml.org:additions:post2010-06:spim:positions",
+    "value" : {
+      "@type" : "rdf:XMLLiteral",
+      "@value" : "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Extra position of "
+    }
+  }, {
+    "@id" : "xmlAnnotation:ObjectiveAdditions1",
+    "@type" : [ "XMLAnnotation", "Annotation" ],
+    "identifier" : "Annotation:ObjectiveAdditions:1",
+    "namespace" : "ome-xml.org:additions:post2010-06:objective",
+    "value" : {
+      "@type" : "rdf:XMLLiteral",
+      "@value" : "<OME-Extra:ObjectiveAttributes\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <ObjectiveAdditions ID=\"Objective:TubeLens:1\" FocalLength=\"120\" SlitAperture=\"6\"\n                              LightSheetWidth=\"0.8\"/>\n          <ObjectiveAdditions ID=\"Objective:Illumation:1\" FocalLength=\"25\"/>\n        </OME-Extra:ObjectiveAttributes>"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Extra attribute values for the objective objects."
+    }
+  }, {
+    "@id" : "xmlAnnotation:SpimSet1",
+    "@type" : [ "XMLAnnotation", "Annotation" ],
+    "identifier" : "Annotation:SpimSet:1",
+    "namespace" : "ome-xml.org:additions:post2010-06:spim:set",
+    "value" : {
+      "@type" : "rdf:XMLLiteral",
+      "@value" : "        <OME-Extra:SpimSet\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <SpimImage ID=\"Image:0\" Angle=\"0\"/>\n          <SpimImage ID=\"Image:1\" Angle=\"0\"/>\n          <SpimImage ID=\"Image:2\" Angle=\"45\"/>\n          <SpimImage ID=\"Image:3\" Angle=\"45\"/>\n        </OME-Extra:SpimSet>"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This structure combines the images into a SPIM set and defines the angles the images were taken from."
+    }
+  }, {
+    "@id" : "xmlAnnotation:SystemSpecific1",
+    "@type" : [ "XMLAnnotation", "Annotation" ],
+    "identifier" : "Annotation:SystemSpecific:1",
+    "value" : {
+      "@type" : "rdf:XMLLiteral",
+      "@value" : "<YourCustomXmlData>Any well formed XML allowed.</YourCustomXmlData>"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "These are the values you want attached to the SPIM images specific to your system that are not covered in our general SPIM additions."
+    }
   } ],
   "@context" : {
-    "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
-    "plane" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/plane",
-      "@type" : "@id"
-    },
-    "physicalSizeY" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeY",
-      "@type" : "@id"
-    },
-    "binData" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/binData",
-      "@type" : "@id"
-    },
-    "sizeC" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeC",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
-    },
-    "sizeY" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeY",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
-    },
-    "sizeT" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeT",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
-    },
-    "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
-    "channel" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/channel",
-      "@type" : "@id"
-    },
-    "identifier" : {
-      "@id" : "http://purl.org/dc/terms/identifier"
-    },
-    "physicalSizeX" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeX",
-      "@type" : "@id"
-    },
-    "sizeZ" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeZ",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
-    },
-    "sizeX" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeX",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
-    },
-    "length" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/length",
-      "@type" : "http://www.w3.org/2001/XMLSchema#long"
-    },
-    "data" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data"
-    },
-    "bigEndian" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian",
-      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
-    },
     "exposureTime" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/exposureTime",
       "@type" : "@id"
@@ -1054,27 +1116,35 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/theZ",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
-    "positionY" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/positionY",
-      "@type" : "@id"
+    "length" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/length",
+      "@type" : "http://www.w3.org/2001/XMLSchema#long"
     },
-    "positionX" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/positionX",
-      "@type" : "@id"
+    "data" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data"
     },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "value" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+    "bigEndian" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "annotation" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/annotation",
       "@type" : "@id"
     },
-    "unit" : {
-      "@id" : "http://qudt.org/schema/qudt/unit",
-      "@type" : "@id"
+    "value" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+    },
+    "imagingCondition" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/imagingCondition/",
+    "acquisitionDate" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/acquisitionDate"
+    },
+    "instrument" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/instrument/",
+    "pixels" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/pixels/",
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "laserMedium" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LazerMedium#",
     "laserType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LazerType#",
@@ -1092,36 +1162,61 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/manufacturer",
       "@type" : "@id"
     },
-    "comment" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    "positionY" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/positionY",
+      "@type" : "@id"
+    },
+    "positionX" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/positionX",
+      "@type" : "@id"
+    },
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit",
+      "@type" : "@id"
     },
     "namespace" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/namespace"
     },
-    "imagingCondition" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/imagingCondition",
+    "plane" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/plane/",
+    "sizeY" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeY",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "sizeT" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeT",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "binData" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/binData",
       "@type" : "@id"
     },
-    "instrument" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/instrument/",
-    "acquisitionDate" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/acquisitionDate"
+    "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
+    "sizeZ" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeZ",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
-    "pixels" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels",
+    "sizeC" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeC",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "physicalSizeX" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeX",
+      "@type" : "@id"
+    },
+    "sizeX" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeX",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
+    "channel" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/channel/",
+    "physicalSizeY" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeY",
       "@type" : "@id"
     },
     "medium" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#",
     "correctionCollar" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/correctionCollar",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
-    },
-    "stageLabel" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/stageLabel",
-      "@type" : "@id"
-    },
-    "objectiveSettings" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/objectiveSettings",
-      "@type" : "@id"
     },
     "flour" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/flour"
@@ -1130,30 +1225,35 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/color",
       "@type" : "@id"
     },
-    "detectorType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#",
-    "lensNA" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/lensNA",
-      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "nominalMagnification" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/nominalMagnification",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
-    "calibratedMagnification" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/calibratedMagnification",
-      "@type" : "http://www.w3.org/2001/XMLSchema#float"
-    },
-    "immersion" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#",
     "workingDistance" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/workingDistance",
       "@type" : "@id"
     },
+    "calibratedMagnification" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/calibratedMagnification",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "lensNA" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/lensNA",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "immersion" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#",
+    "correction" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Correction#",
+    "stageLabel" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/stageLabel/",
+    "objectiveSettings" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/objectiveSettings/",
+    "detectorType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#",
+    "microscopeType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#",
     "manufacturerSpec" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/manufacturerSpec",
       "@type" : "@id"
     },
-    "microscopeType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#",
-    "correction" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Correction#",
     "@vocab" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "qudt" : "http://qudt.org/schema/qudt/",
     "owl" : "http://www.w3.org/2002/07/owl#",
@@ -1162,8 +1262,13 @@
     "screen" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/screen/",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "plate" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/plate/",
+    "led" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/led/",
+    "xmlAnnotation" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/xmlAnnotation/",
+    "microscope" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/microscope/",
+    "objective" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/objective/",
     "fontFamily" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#",
     "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
+    "laser" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/laser/",
     "fillRule" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#",
     "reagent" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/reagent/",
     "xml" : "http://www.w3.org/XML/1998/namespace",
@@ -1172,11 +1277,13 @@
     "UO" : "http://purl.obolibrary.org/obo/uo#",
     "foaf" : "http://xmlns.com/foaf/0.1/",
     "SBO" : "http://purl.obolibrary.org/obo/SBO_",
-    "image" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/spim/image/",
+    "image" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/image/",
     "fontStyle" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "marker" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#",
     "SIO" : "http://semanticscience.org/resource/SIO_",
+    "detector" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/detector/",
+    "bindata" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/bindata/",
     "unitTime" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitTime#"
   }
 }

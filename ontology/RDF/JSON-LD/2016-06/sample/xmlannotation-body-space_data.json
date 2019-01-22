@@ -6,18 +6,41 @@
     "value" : "100000.0"
   }, {
     "@id" : "_:b1",
-    "@type" : [ "XMLAnnotation", "Annotation" ],
-    "identifier" : "Annotation:1",
-    "nameSpace" : "\"openmicroscopy.org/sample/body/whitespace\"",
-    "rdf:value" : {
-      "@type" : "rdf:XMLLiteral",
-      "@value" : "        <body>There should be a <b>space</b>\n          <i>between</i> the bold and italics words.</body>\n        <body>There should not be a <b>space</b><i>between</i> the bold and italics\n          words.</body>\n        <body xml:space=\"preserve\">There should be a <b>space</b> <i>between</i> the bold\n          and italics words.</body>\n        <body xml:space=\"preserve\">There should not be a <b>space</b><i>between</i> the bold\n          and italics words.</body>"
+    "@type" : "StructuredAnnotations",
+    "annotation" : "xmlAnnotation:image0"
+  }, {
+    "@id" : "dimensionOrder:xyczt",
+    "@type" : "DimensionOrder"
+  }, {
+    "@id" : "pixelType:uint8",
+    "@type" : "PixelType"
+  }, {
+    "@id" : "unitLength:um",
+    "@type" : "rdfs:Class"
+  }, {
+    "@id" : "bindata:bindata1",
+    "@type" : "BinData",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
+    "length" : "32"
+  }, {
+    "@id" : "image:image0",
+    "@type" : "Image",
+    "identifier" : "Image:0",
+    "acquisitionDate" : "2010-02-23T12:51:30",
+    "annotation" : "xmlAnnotation:image0",
+    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels" : {
+      "@id" : "pixels:pixels0:0"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "6x6x1x8-swatch.tif"
     }
   }, {
-    "@id" : "_:b2",
+    "@id" : "pixels:pixels0:0",
     "@type" : "Pixels",
     "identifier" : "Pixels:0.0",
-    "binData" : "_:b3",
+    "binData" : "bindata:bindata1",
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
       "@id" : "dimensionOrder:xyczt"
     },
@@ -32,37 +55,27 @@
     "sizeY" : "4",
     "sizeZ" : "1"
   }, {
-    "@id" : "_:b3",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
-    "length" : "32"
-  }, {
-    "@id" : "_:b4",
-    "@type" : "StructuredAnnotations",
-    "annotation" : "_:b1"
-  }, {
-    "@id" : "dimensionOrder:xyczt",
-    "@type" : "DimensionOrder"
-  }, {
-    "@id" : "pixelType:uint8",
-    "@type" : "PixelType"
-  }, {
-    "@id" : "unitLength:um",
-    "@type" : "rdfs:Class"
-  }, {
-    "@id" : "image:image0",
-    "@type" : "Image",
-    "identifier" : "Image:0",
-    "acquisitionDate" : "2010-02-23T12:51:30",
-    "annotation" : "_:b1",
-    "pixels" : "_:b2",
-    "label" : {
-      "@language" : "en",
-      "@value" : "6x6x1x8-swatch.tif"
+    "@id" : "xmlAnnotation:image0",
+    "@type" : [ "XMLAnnotation", "Annotation" ],
+    "identifier" : "Annotation:1",
+    "nameSpace" : "\"openmicroscopy.org/sample/body/whitespace\"",
+    "rdf:value" : {
+      "@type" : "rdf:XMLLiteral",
+      "@value" : "        <body>There should be a <b>space</b>\n          <i>between</i> the bold and italics words.</body>\n        <body>There should not be a <b>space</b><i>between</i> the bold and italics\n          words.</body>\n        <body xml:space=\"preserve\">There should be a <b>space</b> <i>between</i> the bold\n          and italics words.</body>\n        <body xml:space=\"preserve\">There should not be a <b>space</b><i>between</i> the bold\n          and italics words.</body>"
     }
   } ],
   "@context" : {
+    "length" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/length",
+      "@type" : "http://www.w3.org/2001/XMLSchema#long"
+    },
+    "data" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data"
+    },
+    "bigEndian" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "unit" : {
       "@id" : "http://qudt.org/schema/qudt/unit",
       "@type" : "@id"
@@ -78,37 +91,39 @@
     "acquisitionDate" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/acquisitionDate"
     },
-    "pixels" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels",
-      "@type" : "@id"
-    },
+    "pixels" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/xmlannotation-body-space/pixels/",
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "identifier" : {
       "@id" : "http://purl.org/dc/terms/identifier"
     },
-    "nameSpace" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/nameSpace"
-    },
-    "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
-    "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
-    "physicalSizeY" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeY",
-      "@type" : "@id"
-    },
     "sizeZ" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeZ",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
+    "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
+    "physicalSizeX" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeX",
+      "@type" : "@id"
+    },
     "sizeC" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeC",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "physicalSizeY" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeY",
+      "@type" : "@id"
+    },
+    "sizeY" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeY",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
     "binData" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/binData",
       "@type" : "@id"
     },
+    "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
     "sizeX" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeX",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
@@ -117,24 +132,8 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeT",
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
-    "sizeY" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeY",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
-    },
-    "physicalSizeX" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeX",
-      "@type" : "@id"
-    },
-    "length" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/length",
-      "@type" : "http://www.w3.org/2001/XMLSchema#long"
-    },
-    "data" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data"
-    },
-    "bigEndian" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian",
-      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    "nameSpace" : {
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/nameSpace"
     },
     "@vocab" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "qudt" : "http://qudt.org/schema/qudt/",
@@ -143,10 +142,12 @@
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "PATO" : "http://purl.obolibrary.org/obo/PATO_",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "xmlAnnotation" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/xmlannotation-body-space/xmlAnnotation/",
     "unitLength" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "dcterms" : "http://purl.org/dc/terms/",
-    "UO" : "http://purl.obolibrary.org/obo/uo#"
+    "UO" : "http://purl.obolibrary.org/obo/uo#",
+    "bindata" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/xmlannotation-body-space/bindata/"
   }
 }

@@ -2336,7 +2336,7 @@ ome:Plate rdf:type owl:Class ;
 
 ###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/PlateAcquisition
 ome:PlateAcquisition rdf:type owl:Class ;
-    rdfs:label "Plate Acquision"@en ;
+    rdfs:label "Plate Acquisition"@en ;
     rdfs:comment "Class \"PlateAcquisition\" is single acquisition runs for plates. This object is used to record the set of images acquired in a single acquisition run. The Images for this run are linked to PlateAcquisition through WellSample."@en .
 
 

@@ -1,183 +1,248 @@
 @prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
-@prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix line:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/line/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/channel/> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
-@prefix fontStyle: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#> .
-@prefix roi:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/roi/> .
+@prefix roi:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/reagionOfInterest/> .
 @prefix acquisitionMode: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#> .
-@prefix fontFamily: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#> .
+@prefix point: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/point/> .
+@prefix transform: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/transform/> .
 @prefix unitLength: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitLength#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
+@prefix fontFamily: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#> .
 @prefix fillRule: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#> .
 @prefix xml:   <http://www.w3.org/XML/1998/namespace> .
-@prefix marker: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix UO:    <http://purl.obolibrary.org/obo/uo#> .
+@prefix mask:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/mask/> .
+@prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/image/> .
+@prefix label: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/label/> .
+@prefix fontStyle: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontStyle#> .
+@prefix pixels: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/pixels/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dimensionOrder: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#> .
+@prefix marker: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#> .
+@prefix rectangle: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/rectangle> .
+@prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/bindata/> .
+@prefix font:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/font/> .
+
+transform:rectangle_shape6
+        a       :AffineTransform , :Transform ;
+        :a00    "1.0"^^xsd:float ;
+        :a01    "0.0"^^xsd:float ;
+        :a02    "3.82"^^xsd:float ;
+        :a10    "0.0"^^xsd:float ;
+        :a11    "1.0"^^xsd:float ;
+        :a12    "2.21"^^xsd:float .
+
+font:shape4  a       :Font ;
+        :fontFamily  fontFamily:serif ;
+        :fontStyle   fontStyle:normal .
 
 _:b0    a          :Color ;
         rdf:value  "-2147483648" .
 
-_:b1    a          PATO:0000117 ;
+point:shape2  a             :Point , :Shape ;
+        dcterms:identifier  "Shape:2" ;
+        :fillColor          _:b1 ;
+        :fillRule           fillRule:nonZero ;
+        :font               font:shape1 ;
+        :strokeColor        _:b1 ;
+        :strokeDashArray    "1" ;
+        :strokeWidth        [ a          PATO:0000921 ;
+                              rdf:value  "1.0"^^xsd:float ;
+                              qudt:unit  unitLength:pt
+                            ] ;
+        :text               "Hello" ;
+        :theC               "2"^^xsd:int ;
+        :x                  "1.0"^^xsd:float ;
+        :y                  "1.0"^^xsd:float .
+
+pixels:pixels0  a           :Pixels ;
+        dcterms:identifier  "Pixels:0.0" ;
+        :binData            bindata:bindata3 , bindata:bindata1 , bindata:bindata2 ;
+        :channel            channel:channel2 , channel:channel1 , channel:channel3 ;
+        :dimensionOrder     dimensionOrder:xyczt ;
+        :physicalSizeX      _:b2 ;
+        :physicalSizeY      _:b2 ;
+        :pixelType          pixelType:uint8 ;
+        :sizeC              "3"^^xsd:int ;
+        :sizeT              "1"^^xsd:int ;
+        :sizeX              "6"^^xsd:int ;
+        :sizeY              "4"^^xsd:int ;
+        :sizeZ              "1"^^xsd:int .
+
+channel:channel3  a         :Channel ;
+        dcterms:identifier  "Channel:2" ;
+        :acquisitionMode    acquisitionMode:multiPhotonMicroscopy ;
+        :color              _:b0 .
+
+roi:roi5  a                 :RegionOfInterest ;
+        dcterms:identifier  "ROI:5" ;
+        :union              [ a       rdf:Bag ;
+                              rdf:li  mask:shape7
+                            ] .
+
+_:b2    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
-roi:roi1  a                 :RegionOfInterest ;
-        dcterms:identifier  "ROI:1" ;
-        :union              [ a       rdf:Bag ;
-                              rdf:li  [ a                   :Point , :Shape ;
-                                        dcterms:identifier  "Shape:1" ;
-                                        :theC               "0"^^xsd:int ;
-                                        :x                  "1.0"^^xsd:float ;
-                                        :y                  "1.0"^^xsd:float
-                                      ]
-                            ] .
-
 marker:arrow  a  :Marker .
 
+rectangle:shape3  a         :Rectangle , :Shape ;
+        dcterms:identifier  "Shape:3" ;
+        :fillRule           fillRule:evenOdd ;
+        :height             "4.0"^^xsd:float ;
+        :text               "Hi There!" ;
+        :width              "3.0"^^xsd:float ;
+        :x                  "1.0"^^xsd:float ;
+        :y                  "2.0"^^xsd:float .
+
+bindata:bindata_mask_shape7
+        a           :BinData ;
+        :bigEndian  true ;
+        :data       "AOnpAA==" ;
+        :length     "4"^^xsd:long .
+
+point:shape1  a             :Point , :Shape ;
+        dcterms:identifier  "Shape:1" ;
+        :theC               "0"^^xsd:int ;
+        :x                  "1.0"^^xsd:float ;
+        :y                  "1.0"^^xsd:float .
+
 fontStyle:bold  a  :FontStyle .
+
+channel:channel2  a         :Channel ;
+        dcterms:identifier  "Channel:1" ;
+        :acquisitionMode    acquisitionMode:laserScanningConfocalMicroscopy ;
+        :color              _:b0 .
+
+roi:roi4  a                 :RegionOfInterest ;
+        dcterms:identifier  "ROI:4" ;
+        :union              [ a       rdf:Bag ;
+                              rdf:li  rectangle:shape6
+                            ] .
+
+bindata:bindata3  a  :BinData ;
+        :bigEndian  false ;
+        :data       "//+szuv/AP95n8PiAABHbZO3AP8dPF+G" ;
+        :length     "32"^^xsd:long .
+
+label:shape4  a             :Label , :Shape ;
+        dcterms:identifier  "Shape:4" ;
+        :fillRule           fillRule:evenOdd ;
+        :font               font:shape4 ;
+        :x                  "1.0"^^xsd:float ;
+        :y                  "1.0"^^xsd:float .
 
 [ a          PATO:0000117 ;
   rdf:value  "2.0"^^xsd:float ;
   qudt:unit  unitLength:pt
 ] .
 
-roi:roi5  a                 :RegionOfInterest ;
-        dcterms:identifier  "ROI:5" ;
-        :union              [ a       rdf:Bag ;
-                              rdf:li  [ a                   :Mask , :Shape ;
-                                        dcterms:identifier  "Shape:7" ;
-                                        :binData            [ a           :BinData ;
-                                                              :bigEndian  true ;
-                                                              :data       "AOnpAA==" ;
-                                                              :length     "4"^^xsd:long
-                                                            ] ;
-                                        :height             "2.0"^^xsd:float ;
-                                        :transform          [ a       :AffineTransform , :Transform ;
-                                                              :a00    "1.0"^^xsd:float ;
-                                                              :a01    "0.0"^^xsd:float ;
-                                                              :a02    "2.0"^^xsd:float ;
-                                                              :a10    "0.0"^^xsd:float ;
-                                                              :a11    "1.0"^^xsd:float ;
-                                                              :a12    "2.0"^^xsd:float
-                                                            ] ;
-                                        :width              "2.0"^^xsd:float ;
-                                        :x                  "1.0"^^xsd:float ;
-                                        :y                  "1.0"^^xsd:float
-                                      ]
-                            ] .
+mask:shape7  a              :Mask , :Shape ;
+        dcterms:identifier  "Shape:7" ;
+        :binData            bindata:mask_shape7 ;
+        :height             "2.0"^^xsd:float ;
+        :transform          transform:mask_shape7 ;
+        :width              "2.0"^^xsd:float ;
+        :x                  "1.0"^^xsd:float ;
+        :y                  "1.0"^^xsd:float .
 
-fillRule:nonZero  a  :FillRule .
-
-image:image0  a             :Image ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             [ a                   :Pixels ;
-                              dcterms:identifier  "Pixels:0.0" ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-                                                    :length     "32"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "//+szuv/AP95n8PiAABHbZO3AP8dPF+G" ;
-                                                    :length     "32"^^xsd:long
-                                                  ] ;
-                              :binData            [ a           :BinData ;
-                                                    :bigEndian  false ;
-                                                    :data       "AP+rzuv/AAB5n8Pi/wBHbJO3//8dPGCF" ;
-                                                    :length     "32"^^xsd:long
-                                                  ] ;
-                              :channel            [ a                   :Channel ;
-                                                    dcterms:identifier  "Channel:1" ;
-                                                    :acquisitionMode    acquisitionMode:laserScanningConfocalMicroscopy ;
-                                                    :color              _:b0
-                                                  ] ;
-                              :channel            [ a                   :Channel ;
-                                                    dcterms:identifier  "Channel:0" ;
-                                                    :acquisitionMode    acquisitionMode:laserScanningConfocalMicroscopy ;
-                                                    :color              _:b0
-                                                  ] ;
-                              :channel            [ a                   :Channel ;
-                                                    dcterms:identifier  "Channel:2" ;
-                                                    :acquisitionMode    acquisitionMode:multiPhotonMicroscopy ;
-                                                    :color              _:b0
-                                                  ] ;
-                              :dimensionOrder     dimensionOrder:xyczt ;
-                              :physicalSizeX      _:b1 ;
-                              :physicalSizeY      _:b1 ;
-                              :pixelType          pixelType:uint8 ;
-                              :sizeC              "3"^^xsd:int ;
-                              :sizeT              "1"^^xsd:int ;
-                              :sizeX              "6"^^xsd:int ;
-                              :sizeY              "4"^^xsd:int ;
-                              :sizeZ              "1"^^xsd:int
-                            ] ;
-        :regionOfInterest   roi:roi5 , roi:roi4 , roi:roi3 , roi:roi2 , roi:roi1 .
-
-acquisitionMode:laserScanningConfocalMicroscopy
-        a       :AcquisionMode .
-
-fontStyle:normal  a  :FontStyle .
-
-roi:roi4  a                 :RegionOfInterest ;
-        dcterms:identifier  "ROI:4" ;
-        :union              [ a       rdf:Bag ;
-                              rdf:li  [ a                   :Rectangle , :Shape ;
-                                        dcterms:identifier  "Shape:6" ;
-                                        :fillRule           fillRule:evenOdd ;
-                                        :height             "1.5"^^xsd:float ;
-                                        :text               "Transformed" ;
-                                        :tramsform          [ a       :AffineTransform , :Transform ;
-                                                              :a00    "1.0"^^xsd:float ;
-                                                              :a01    "0.0"^^xsd:float ;
-                                                              :a02    "3.82"^^xsd:float ;
-                                                              :a10    "0.0"^^xsd:float ;
-                                                              :a11    "1.0"^^xsd:float ;
-                                                              :a12    "2.21"^^xsd:float
-                                                            ] ;
-                                        :width              "1.5"^^xsd:float ;
-                                        :x                  "0.0"^^xsd:float ;
-                                        :y                  "0.0"^^xsd:float
-                                      ]
-                            ] .
-
-acquisitionMode:multiPhotonMicroscopy
-        a       :AcquisionMode .
-
-_:b2    a          :Color ;
-        rdf:value  "1" .
-
-fontFamily:sansSerif  a  :FontFamily .
+channel:channel1  a         :Channel ;
+        dcterms:identifier  "Channel:0" ;
+        :acquisitionMode    acquisitionMode:laserScanningConfocalMicroscopy ;
+        :color              _:b0 .
 
 roi:roi3  a                 :RegionOfInterest ;
         dcterms:identifier  "ROI:3" ;
         :union              [ a       rdf:Bag ;
-                              rdf:li  [ a                   :Label , :Shape ;
-                                        dcterms:identifier  "Shape:4" ;
-                                        :fillRule           fillRule:evenOdd ;
-                                        :font               [ a            :Font ;
-                                                              :fontFamily  fontFamily:serif ;
-                                                              :fontStyle   fontStyle:normal
-                                                            ] ;
-                                        :x                  "1.0"^^xsd:float ;
-                                        :y                  "1.0"^^xsd:float
-                                      ] ;
-                              rdf:li  [ a                   :Rectangle , :Shape ;
-                                        dcterms:identifier  "Shape:3" ;
-                                        :fillRule           fillRule:evenOdd ;
-                                        :height             "4.0"^^xsd:float ;
-                                        :text               "Hi There!" ;
-                                        :width              "3.0"^^xsd:float ;
-                                        :x                  "1.0"^^xsd:float ;
-                                        :y                  "2.0"^^xsd:float
-                                      ]
+                              rdf:li  label:shape4 , rectangle:shape3
                             ] .
+
+fillRule:nonZero  a  :FillRule .
+
+bindata:bindata2  a  :BinData ;
+        :bigEndian  false ;
+        :data       "AP+rzuv/AAB5n8Pi/wBHbJO3//8dPGCF" ;
+        :length     "32"^^xsd:long .
+
+image:image0  a             :Image ;
+        dcterms:identifier  "Image:0" ;
+        :acquisitionDate    "2010-02-23T12:51:30" ;
+        :pixels             pixels:pixels0 ;
+        :regionOfInterest   roi:roi5 , roi:roi4 , roi:roi3 , roi:roi2 , roi:roi1 .
+
+font:shape1  a       :Font ;
+        :fontFamily  fontFamily:sansSerif ;
+        :fontSize    [ a          PATO:0000117 ;
+                       rdf:value  "1.0"^^xsd:float ;
+                       qudt:unit  unitLength:pt
+                     ] ;
+        :fontStyle   fontStyle:bold .
+
+acquisitionMode:laserScanningConfocalMicroscopy
+        a       :AcquisionMode .
+
+transform:mask_shape7
+        a       :AffineTransform , :Transform ;
+        :a00    "1.0"^^xsd:float ;
+        :a01    "0.0"^^xsd:float ;
+        :a02    "2.0"^^xsd:float ;
+        :a10    "0.0"^^xsd:float ;
+        :a11    "1.0"^^xsd:float ;
+        :a12    "2.0"^^xsd:float .
+
+line:shape5  a              :Line , :Shape ;
+        dcterms:identifier  "Shape:5" ;
+        :markerEnd          marker:arrow ;
+        :markerStart        marker:arrow ;
+        :x1                 "1.0"^^xsd:float ;
+        :x2                 "2.0"^^xsd:float ;
+        :y1                 "1.0"^^xsd:float ;
+        :y2                 "2.0"^^xsd:float .
+
+fontStyle:normal  a  :FontStyle .
+
+roi:roi2  a                 :RegionOfInterest ;
+        dcterms:identifier  "ROI:2" ;
+        :union              [ a       rdf:Bag ;
+                              rdf:li  line:shape5 , point:shape2
+                            ] .
+
+bindata:bindata1  a  :BinData ;
+        :bigEndian  false ;
+        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
+        :length     "32"^^xsd:long .
+
+rectangle:shape6  a         :Shape , :Rectangle ;
+        dcterms:identifier  "Shape:6" ;
+        :fillRule           fillRule:evenOdd ;
+        :height             "1.5"^^xsd:float ;
+        :text               "Transformed" ;
+        :tramsform          transform:rectangle_shape6 ;
+        :width              "1.5"^^xsd:float ;
+        :x                  "0.0"^^xsd:float ;
+        :y                  "0.0"^^xsd:float .
+
+acquisitionMode:multiPhotonMicroscopy
+        a       :AcquisionMode .
+
+_:b1    a          :Color ;
+        rdf:value  "1" .
+
+fontFamily:sansSerif  a  :FontFamily .
+
+roi:roi1  a                 :RegionOfInterest ;
+        dcterms:identifier  "ROI:1" ;
+        :union              [ a       rdf:Bag ;
+                              rdf:li  point:shape1
+                            ] .
+
+bindata:mask_shape7  a  :BinData .
 
 unitLength:um  a  rdfs:Class .
 
@@ -188,42 +253,5 @@ pixelType:uint8  a  :PixelType .
 fillRule:evenOdd  a  :FillRule .
 
 dimensionOrder:xyczt  a  :DimensionOrder .
-
-roi:roi2  a                 :RegionOfInterest ;
-        dcterms:identifier  "ROI:2" ;
-        :union              [ a       rdf:Bag ;
-                              rdf:li  [ a                   :Line , :Shape ;
-                                        dcterms:identifier  "Shape:5" ;
-                                        :markerEnd          marker:arrow ;
-                                        :markerStart        marker:arrow ;
-                                        :x1                 "1.0"^^xsd:float ;
-                                        :x2                 "2.0"^^xsd:float ;
-                                        :y1                 "1.0"^^xsd:float ;
-                                        :y2                 "2.0"^^xsd:float
-                                      ] ;
-                              rdf:li  [ a                   :Shape , :Point ;
-                                        dcterms:identifier  "Shape:2" ;
-                                        :fillColor          _:b2 ;
-                                        :fillRule           fillRule:nonZero ;
-                                        :font               [ a            :Font ;
-                                                              :fontFamily  fontFamily:sansSerif ;
-                                                              :fontSize    [ a          PATO:0000117 ;
-                                                                             rdf:value  "1.0"^^xsd:float ;
-                                                                             qudt:unit  unitLength:pt
-                                                                           ] ;
-                                                              :fontStyle   fontStyle:bold
-                                                            ] ;
-                                        :strokeColor        _:b2 ;
-                                        :strokeDashArray    "1" ;
-                                        :strokeWidth        [ a          PATO:0000921 ;
-                                                              rdf:value  "1.0"^^xsd:float ;
-                                                              qudt:unit  unitLength:pt
-                                                            ] ;
-                                        :text               "Hello" ;
-                                        :theC               "2"^^xsd:int ;
-                                        :x                  "1.0"^^xsd:float ;
-                                        :y                  "1.0"^^xsd:float
-                                      ]
-                            ] .
 
 fontFamily:serif  a  :FontFamily .
