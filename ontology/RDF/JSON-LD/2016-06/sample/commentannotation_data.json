@@ -6,7 +6,7 @@
   }, {
     "@id" : "_:b1",
     "@type" : "PATO:0000117",
-    "unit" : "unitLength:nm",
+    "unit" : "unitLength:um",
     "value" : {
       "@type" : "xsd:float",
       "@value" : "100000.0"
@@ -22,7 +22,7 @@
     "@id" : "pixelType:uint8",
     "@type" : "PixelType"
   }, {
-    "@id" : "unitLength:nm",
+    "@id" : "unitLength:um",
     "@type" : "rdfs:Class"
   }, {
     "@id" : "bindata:bindata0",

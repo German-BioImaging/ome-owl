@@ -2568,27 +2568,36 @@
       "@value" : "fs"
     }
   }, {
+    "@id" : "unitTime:h",
+    "@type" : "unit:UnitTime",
+    "baseUnit" : "UO:0000032",
+    "ome:unitSystem" : {
+      "@id" : "unitSystem:SI_Second"
+    },
+    "comment" : {
+      "@language" : "en",
+      "@value" : "hour"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "h"
+    }
+  }, {
     "@id" : "unitTime:hs",
     "@type" : "unit:UnitTime",
-    "baseUnit" : [ "UO:0000032", "UO:0000010" ],
+    "baseUnit" : "UO:0000010",
     "prefix" : "UO:0000287",
     "ome:unitSystem" : {
       "@id" : "unitSystem:SI_Second"
     },
-    "comment" : [ {
-      "@language" : "en",
-      "@value" : "hour"
-    }, {
+    "comment" : {
       "@language" : "en",
       "@value" : "hecto-second"
-    } ],
-    "label" : [ {
-      "@language" : "en",
-      "@value" : "h"
-    }, {
+    },
+    "label" : {
       "@language" : "en",
       "@value" : "hs"
-    } ]
+    }
   }, {
     "@id" : "unitTime:ks",
     "@type" : "unit:UnitTime",

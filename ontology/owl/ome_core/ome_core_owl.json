@@ -455,13 +455,6 @@
       "@value" : "none"
     }
   }, {
-    "@id" : "compression:other",
-    "@type" : "ome:Compression",
-    "label" : {
-      "@language" : "en",
-      "@value" : "other"
-    }
-  }, {
     "@id" : "compression:zlib",
     "@type" : "ome:Compression",
     "label" : {
@@ -2045,6 +2038,41 @@
       "@value" : "Medium"
     }
   }, {
+    "@id" : "medium:air",
+    "@type" : "ome:Medium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "air"
+    }
+  }, {
+    "@id" : "medium:glycerol",
+    "@type" : "ome:Medium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "glycerol"
+    }
+  }, {
+    "@id" : "medium:oil",
+    "@type" : "ome:Medium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "oil"
+    }
+  }, {
+    "@id" : "medium:other",
+    "@type" : "ome:Medium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "other"
+    }
+  }, {
+    "@id" : "medium:water",
+    "@type" : "ome:Medium",
+    "label" : {
+      "@language" : "en",
+      "@value" : "water"
+    }
+  }, {
     "@id" : "ome:MicrobeamManipulation",
     "@type" : "rdfs:Class",
     "comment" : {
@@ -2184,6 +2212,20 @@
       "@value" : "Naming Convention"
     }
   }, {
+    "@id" : "namingConvention:letter",
+    "@type" : "ome:NamingConvention",
+    "label" : {
+      "@language" : "en",
+      "@value" : "letter"
+    }
+  }, {
+    "@id" : "namingConvention:number",
+    "@type" : "ome:NamingConvention",
+    "label" : {
+      "@language" : "en",
+      "@value" : "number"
+    }
+  }, {
     "@id" : "ome:NumericAnnotation",
     "@type" : "rdfs:Class",
     "comment" : {
@@ -2219,41 +2261,6 @@
       "@value" : "Objective Medium"
     },
     "subClassOf" : "ome:Medium"
-  }, {
-    "@id" : "objectMedium:air",
-    "@type" : "ome:ObjectiveMedium",
-    "label" : {
-      "@language" : "en",
-      "@value" : "air"
-    }
-  }, {
-    "@id" : "objectMedium:glycerol",
-    "@type" : "ome:ObjectiveMedium",
-    "label" : {
-      "@language" : "en",
-      "@value" : "glycerol"
-    }
-  }, {
-    "@id" : "objectMedium:oil",
-    "@type" : "ome:ObjectiveMedium",
-    "label" : {
-      "@language" : "en",
-      "@value" : "oil"
-    }
-  }, {
-    "@id" : "objectMedium:other",
-    "@type" : "ome:ObjectiveMedium",
-    "label" : {
-      "@language" : "en",
-      "@value" : "other"
-    }
-  }, {
-    "@id" : "objectMedium:water",
-    "@type" : "ome:ObjectiveMedium",
-    "label" : {
-      "@language" : "en",
-      "@value" : "water"
-    }
   }, {
     "@id" : "ome:ObjectiveSettings",
     "@type" : "rdfs:Class",
@@ -4132,24 +4139,25 @@
     "laserType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#",
     "qudt" : "http://qudt.org/schema/qudt#",
     "filamentType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilamentType#",
-    "owl" : "http://www.w3.org/2002/07/owl#",
     "detectorType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
     "ome" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "PATO" : "http://purl.obolibrary.org/obo/PATO_",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "mbmp" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipulation#",
+    "medium" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#",
     "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
     "arcType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ArcType#",
     "acquisitionMode" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#",
     "contrastMethod" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ContrastMethod#",
-    "objectMedium" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#",
     "fontFamily" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily#",
     "fillRule" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "dcterms" : "http://purl.org/dc/terms/",
     "expType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimentType#",
     "foaf" : "http://xmlns.com/foaf/0.1/",
+    "namingConvention" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/NamingConvention#",
     "microscopeType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#",
     "SBO" : "http://purl.obolibrary.org/obo/SBO_",
     "immersion" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#",

@@ -55,6 +55,12 @@
     "@id" : "illuminationType:transmitted",
     "@type" : "IlluminationType"
   }, {
+    "@id" : "namingConvention:letter",
+    "@type" : "NamingConvention"
+  }, {
+    "@id" : "namingConvention:number",
+    "@type" : "NamingConvention"
+  }, {
     "@id" : "pixelType:uint16",
     "@type" : "PixelType"
   }, {
@@ -159,9 +165,9 @@
     "@id" : "plate:plate1",
     "@type" : "Plate",
     "identifier" : "Plate:1",
-    "columnNamingConvention" : "letter",
+    "columnNamingConvention" : "namingConvention:letter",
     "columns" : "12",
-    "rowNamingConvention" : "number",
+    "rowNamingConvention" : "namingConvention:number",
     "rows" : "8",
     "http://www.openmicroscopy.org/rdf/2016-06/ome_core/well" : {
       "@id" : "well:well1"
@@ -315,10 +321,12 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#int"
     },
     "columnNamingConvention" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/columnNamingConvention"
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/columnNamingConvention",
+      "@type" : "@id"
     },
     "rowNamingConvention" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/rowNamingConvention"
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/rowNamingConvention",
+      "@type" : "@id"
     },
     "well" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/hcs/well/",
     "@vocab" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
@@ -333,6 +341,7 @@
     "dcterms" : "http://purl.org/dc/terms/",
     "UO" : "http://purl.obolibrary.org/obo/uo#",
     "foaf" : "http://xmlns.com/foaf/0.1/",
+    "namingConvention" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/NamingConvention#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "bindata" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/hcs/bindata/",
     "unitTime" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Unit/UnitTime#"

@@ -22,7 +22,7 @@ bindata:bindata0  a  :BinData ;
         :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
         :length     "32"^^xsd:long .
 
-unitLength:nm  a  rdfs:Class .
+unitLength:um  a  rdfs:Class .
 
 image:image0  a             :Image ;
         rdfs:label          "6x6x1x8-swatch.tif"@en ;
@@ -33,7 +33,7 @@ image:image0  a             :Image ;
 
 _:b0    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
-        qudt:unit  unitLength:nm .
+        qudt:unit  unitLength:um .
 
 commentAnnotation:commentAnnotation1
         a                   :CommentAnnotation , :Annotation ;

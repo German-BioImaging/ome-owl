@@ -31,7 +31,7 @@
 @prefix marker: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker#> .
 @prefix mbmp: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#> .
 @prefix microscopeType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#> .
-@prefix objectMedium: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#> .
+@prefix medium: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#> .
 @prefix pixelType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#> .
 @prefix pulse: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pulse#> .
 
@@ -1173,7 +1173,7 @@ ome:column rdf:type owl:DatatypeProperty ;
 ###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/columnNamingConvention
 ome:columnNamingConvention rdf:type owl:DatatypeProperty ;
     rdfs:domain ome:Plate ;
-    rdfs:range xsd:string ;
+    rdfs:range ome:NamingConvention ;
     rdfs:label "column naming convention"@en ;
     rdfs:comment "Property \"columnNamingConvention\" specifies the naming convention for columns that is a predefined list of values for the well labels."@en .
 
@@ -1537,7 +1537,7 @@ ome:row rdf:type owl:DatatypeProperty ;
 ###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/rowNamingConvention
 ome:rowNamingConvention rdf:type owl:DatatyeProperty ;
     rdfs:domain ome:Plate ;
-    rdfs:range xsd:string ;
+    rdfs:range NamingConvention ;
     rdfs:label "row naming conversion"@en ;
     rdfs:comment "Property \"rowNamingConvention\" specifies the naming convention for rows that is a predefined list of values for the well labels."@en .
 
@@ -2294,13 +2294,6 @@ ome:Objective rdf:type owl:Class ;
     rdfs:subClassOf ome:ManufacturerSpec ;
     rdfs:label "Objective"@en ;
     rdfs:comment "Class \"Objective\" is microscopes' objective lens."@en .
-
-
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium
-ome:ObjectiveMedium rdf:type owl:Class ;
-    rdfs:subClassOf ome:Medium ;
-    rdfs:label "Objective Medium"@en ;
-    rdfs:comment "Class \"ObjectiveMedium\" is a description of a Medium used for the lens. The Medium is the actual immersion medium used in this case."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveSettings
@@ -3659,36 +3652,6 @@ mbmp:uncaging rdf:type owl:NamedIndividual ,
     rdfs:label "upright"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#air
-<http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#air> rdf:type owl:NamedIndividual ,
-    ome:ObjectiveMedium ;
-    rdfs:label "air"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#glycerol
-<http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#glycerol> rdf:type owl:NamedIndividual ,
-    ome:ObjectiveMedium ;
-    rdfs:label "glycerol"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#oil
-<http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#oil> rdf:type owl:NamedIndividual ,
-    ome:ObjectiveMedium ;
-    rdfs:label "oil"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#other
-<http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#other> rdf:type owl:NamedIndividual ,
-    ome:ObjectiveMedium ;
-    rdfs:label "other"@en .
-
-
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#water
-<http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#water> rdf:type owl:NamedIndividual ,
-    ome:ObjectiveMedium ;
-    rdfs:label "water"@en .
-
-
 ###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#bit
 <http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#bit> rdf:type owl:NamedIndividual ,
     ome:PixelType ;
@@ -3795,3 +3758,46 @@ mbmp:uncaging rdf:type owl:NamedIndividual ,
 <http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pulse#single> rdf:type owl:NamedIndividual ,
     ome:Pulse ;
     rdfs:label "single"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/NamingConvention#letter
+<http://www.openmicroscopy.org/rdf/2016-06/ome_core/NamingConvention#letter> rdf:type owl:NamedIndividual ,
+    ome:NamingConvention ;
+    rdfs:label "letter"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/NamingConvention#number
+<http://www.openmicroscopy.org/rdf/2016-06/ome_core/NamingConvention#number> rdf:type owl:NamedIndividual ,
+    ome:NamingConvention ;
+    rdfs:number "letter"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#air
+<http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#air> rdf:type owl:NamedIndividual ,
+    ome:Medium ;
+    rdfs:label "air"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#glycerol
+<http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#glycerol> rdf:type owl:NamedIndividual ,
+    ome:Medium ;
+    rdfs:label "glycerol"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#oil
+<http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#oil> rdf:type owl:NamedIndividual ,
+    ome:Medium ;
+    rdfs:label "oil"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#other
+<http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#other> rdf:type owl:NamedIndividual ,
+    ome:Medium ;
+    rdfs:label "other"@en .
+
+
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#water
+<http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#water> rdf:type owl:NamedIndividual ,
+    ome:Medium ;
+    rdfs:label "water"@en .
+
