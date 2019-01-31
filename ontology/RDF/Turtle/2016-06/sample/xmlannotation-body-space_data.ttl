@@ -1,7 +1,7 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/xmlannotation-body-space/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -18,44 +18,44 @@
 
 unitLength:um  a  rdfs:Class .
 
-bindata:bindata1  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata1  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 _:b0    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
-image:image0  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :annotation         xmlAnnotation:image0 ;
-        :pixels             pixels:pixels0:0 .
+image:image0  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif"@en ;
+        dcterms:identifier   "Image:0" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:annotation       xmlAnnotation:image0 ;
+        ome:pixels           pixels:pixels0:0 .
 
-dimensionOrder:xyczt  a  :DimensionOrder .
+dimensionOrder:xyczt  a  ome:DimensionOrder .
 
-pixels:pixels0:0  a         :Pixels ;
+pixels:pixels0:0  a         ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :binData            bindata:bindata1 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b0 ;
-        :physicalSizeY      _:b0 ;
-        :pixelType          pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata1 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b0 ;
+        ome:physicalSizeY   _:b0 ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .
 
-xmlAnnotation:image0  a     :XMLAnnotation , :Annotation ;
+xmlAnnotation:image0  a     ome:XMLAnnotation , ome:Annotation ;
         rdf:value           "        <body>There should be a <b>space</b>\n          <i>between</i> the bold and italics words.</body>\n        <body>There should not be a <b>space</b><i>between</i> the bold and italics\n          words.</body>\n        <body xml:space=\"preserve\">There should be a <b>space</b> <i>between</i> the bold\n          and italics words.</body>\n        <body xml:space=\"preserve\">There should not be a <b>space</b><i>between</i> the bold\n          and italics words.</body>"^^rdf:XMLLiteral ;
         dcterms:identifier  "Annotation:1" ;
-        :nameSpace          "\"openmicroscopy.org/sample/body/whitespace\"" .
+        ome:nameSpace       "\"openmicroscopy.org/sample/body/whitespace\"" .
 
-[ a            :StructuredAnnotations ;
-  :annotation  xmlAnnotation:image0
+[ a               ome:StructuredAnnotations ;
+  ome:annotation  xmlAnnotation:image0
 ] .

@@ -1,6 +1,6 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/metadata-only/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/metadata-only/channel/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -13,30 +13,30 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
-channel:channel0  a         :Channel ;
+channel:channel0  a         ome:Channel ;
         dcterms:identifier  "Channel:0" ;
-        :color              [ a          :Color ;
+        ome:color           [ a          ome:Color ;
                               rdf:value  "-2147483648"
                             ] .
 
-dimensionOrder:xyzct  a  :DimensionOrder .
+dimensionOrder:xyzct  a  ome:DimensionOrder .
 
-pixels:pixels0  a           :Pixels ;
+pixels:pixels0  a           ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :channel            channel:channel0 ;
-        :dimensionOrder     dimensionOrder:xyzct ;
-        :metadataOnly       true ;
-        :pixelType          pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "5"^^xsd:int ;
-        :sizeX              "18"^^xsd:int ;
-        :sizeY              "24"^^xsd:int ;
-        :sizeZ              "5"^^xsd:int .
+        ome:channel         channel:channel0 ;
+        ome:dimensionOrder  dimensionOrder:xyzct ;
+        ome:metadataOnly    true ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "5"^^xsd:positiveInteger ;
+        ome:sizeX           "18"^^xsd:positiveInteger ;
+        ome:sizeY           "24"^^xsd:positiveInteger ;
+        ome:sizeZ           "5"^^xsd:positiveInteger .
 
-image:image0  a             :Image ;
-        rdfs:label          "18x24y1z5t1c8b-text"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-03-02T10:01:15" ;
-        :pixels             pixels:pixels0 .
+image:image0  a              ome:Image ;
+        rdfs:label           "18x24y1z5t1c8b-text"@en ;
+        dcterms:identifier   "Image:0" ;
+        ome:acquisitionDate  "2010-03-02T10:01:15" ;
+        ome:pixels           pixels:pixels0 .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .

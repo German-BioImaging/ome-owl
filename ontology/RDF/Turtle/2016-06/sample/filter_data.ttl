@@ -1,9 +1,9 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix laserType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix dichroic: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/filter/dichroic/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix detectorType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix lightPath: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/filter/lightPath/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/filter/channel/> .
@@ -50,268 +50,268 @@ _:b0    a          PATO:0001242 ;
 
 unitLength:nm  a  rdfs:Class .
 
-filter:filter3  a            :ExcitationFilter , :Filter , :ManufacturerSpec ;
-        dcterms:identifier   "Filter:3" ;
-        :filterType          filterType:bandPass ;
-        :filterWheel         "Disk 7" ;
-        :lotNumber           "J12" ;
-        :manufacturer        _:b1 ;
-        :model               "Medium 580" ;
-        :transmittanceRange  transmittanceRange:transmittanceRange3 .
+filter:filter3  a               ome:ExcitationFilter , ome:Filter , ome:ManufacturerSpec ;
+        dcterms:identifier      "Filter:3" ;
+        ome:filterType          filterType:bandPass ;
+        ome:filterWheel         "Disk 7" ;
+        ome:lotNumber           "J12" ;
+        ome:manufacturer        _:b1 ;
+        ome:model               "Medium 580" ;
+        ome:transmittanceRange  transmittanceRange:transmittanceRange3 .
 
 instrument:instrument0
-        a                   :Instrument ;
-        dcterms:identifier  "Instrument:0" ;
-        :manufacturerSpec   filter:filter7 , filter:filter5 , filterSet:filterSet1 , filter:filter1 , laser:laser2 , filter:filter4 , detector:detector0 , filter:filter6 , laser:laser1 , filterSet:filterSet2 , filter:filter8 , filter:filter2 , dichroic:dichroic3 , filter:filter3 , objective:objective0 , laser:laser0 , dichroic:dichroic1 .
+        a                     ome:Instrument ;
+        dcterms:identifier    "Instrument:0" ;
+        ome:manufacturerSpec  filter:filter7 , filter:filter5 , filterSet:filterSet1 , filter:filter1 , laser:laser2 , filter:filter4 , detector:detector0 , filter:filter6 , laser:laser1 , filterSet:filterSet2 , filter:filter8 , filter:filter2 , dichroic:dichroic3 , filter:filter3 , objective:objective0 , laser:laser0 , dichroic:dichroic1 .
 
-channel:channel1  a         :Channel ;
+channel:channel1  a         ome:Channel ;
         dcterms:identifier  "Channel:1" ;
-        :lightPath          lightPath:lightPath1 .
+        ome:lightPath       lightPath:lightPath1 .
 
-laser:laser2  a             :Laser , :ManufacturerSpec ;
+laser:laser2  a             ome:Laser , ome:ManufacturerSpec ;
         dcterms:identifier  "LightSource:0:2" ;
-        :laserMedium        laserMedium:Ag ;
-        :laserType          laserType:gas .
+        ome:laserMedium     laserMedium:Ag ;
+        ome:laserType       laserType:gas .
 
-lightPath:lightPath2  a  :LightPath ;
-        :emissionFilter  filter:filter6 .
+lightPath:lightPath2  a     ome:LightPath ;
+        ome:emissionFilter  filter:filter6 .
 
-filter:filter8  a           :ExcitationFilter , :Filter , :ManufacturerSpec ;
+filter:filter8  a           ome:ExcitationFilter , ome:Filter , ome:ManufacturerSpec ;
         dcterms:identifier  "Filter:Dichroic:2" ;
-        :filterType         filterType:dichroic ;
-        :lotNumber          "M538" ;
-        :model              "MirrorBlock Mk II" .
+        ome:filterType      filterType:dichroic ;
+        ome:lotNumber       "M538" ;
+        ome:model           "MirrorBlock Mk II" .
 
 transmittanceRange:transmittanceRange5
-        a               :TransmittanceRange ;
-        :cutIn          _:b0 ;
-        :cutOut         _:b2 ;
-        :transmittance  "0.75"^^xsd:float .
+        a                  ome:TransmittanceRange ;
+        ome:cutIn          _:b0 ;
+        ome:cutOut         _:b2 ;
+        ome:transmittance  "0.75"^^xsd:float .
 
-immersion:air  a  :Immersion .
+immersion:air  a  ome:Immersion .
 
 _:b3    a          PATO:0001242 ;
         rdf:value  "680.0"^^xsd:float ;
         qudt:unit  unitLength:nm .
 
-filter:filter2  a            :Filter , :ManufacturerSpec , :ExcitationFilter ;
-        dcterms:identifier   "Filter:2" ;
-        :filterType          filterType:bandPass ;
-        :filterWheel         "Disk 7" ;
-        :lotNumber           "J34" ;
-        :manufacturer        _:b1 ;
-        :model               "Medium 520" ;
-        :transmittanceRange  transmittanceRange:transmittanceRange2 .
+filter:filter2  a               ome:Filter , ome:ManufacturerSpec , ome:ExcitationFilter ;
+        dcterms:identifier      "Filter:2" ;
+        ome:filterType          filterType:bandPass ;
+        ome:filterWheel         "Disk 7" ;
+        ome:lotNumber           "J34" ;
+        ome:manufacturer        _:b1 ;
+        ome:model               "Medium 520" ;
+        ome:transmittanceRange  transmittanceRange:transmittanceRange2 .
 
-filterType:multiPass  a  :FilterType .
+filterType:multiPass  a  ome:FilterType .
 
 _:b4    a          PATO:0001242 ;
         rdf:value  "590.0"^^xsd:float ;
         qudt:unit  unitLength:nm .
 
-detector:detector0  a       :Detector , :ManufacturerSpec ;
-        dcterms:identifier  "Detector:0:0" ;
-        :amplificationGain  "1.0"^^xsd:float ;
-        :detectorType       detectorType:other ;
-        :gain               "350.0"^^xsd:float ;
-        :zoom               "1.0"^^xsd:float .
+detector:detector0  a          ome:Detector , ome:ManufacturerSpec ;
+        dcterms:identifier     "Detector:0:0" ;
+        ome:amplificationGain  "1.0"^^xsd:float ;
+        ome:detectorType       detectorType:other ;
+        ome:gain               "350.0"^^xsd:float ;
+        ome:zoom               "1.0"^^xsd:float .
 
-pixels:pixels1  a           :Pixels ;
+pixels:pixels1  a           ome:Pixels ;
         dcterms:identifier  "Pixels:1" ;
-        :channel            channel:channel1 , channel:channel2 ;
-        :dimensionOrder     dimensionOrder:xyctz ;
-        :metadataOnly       true ;
-        :pixelType          pixelType:int16 ;
-        :sizeC              "2"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "128"^^xsd:int ;
-        :sizeY              "128"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:channel         channel:channel1 , channel:channel2 ;
+        ome:dimensionOrder  dimensionOrder:xyctz ;
+        ome:metadataOnly    true ;
+        ome:pixelType       pixelType:int16 ;
+        ome:sizeC           "2"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "128"^^xsd:positiveInteger ;
+        ome:sizeY           "128"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-laser:laser1  a             :Laser , :ManufacturerSpec ;
+laser:laser1  a             ome:Laser , ome:ManufacturerSpec ;
         dcterms:identifier  "LightSource:0:1" ;
-        :laserMedium        laserMedium:HeNe ;
-        :laserType          laserType:gas .
+        ome:laserMedium     laserMedium:HeNe ;
+        ome:laserType       laserType:gas .
 
-lightPath:lightPath1  a    :LightPath ;
-        :dichroic          dichroic:dichroic1 ;
-        :emissionFilter    filter:filter5 ;
-        :excitationFilter  filter:filter8 , filter:filter1 .
+lightPath:lightPath1  a       ome:LightPath ;
+        ome:dichroic          dichroic:dichroic1 ;
+        ome:emissionFilter    filter:filter5 ;
+        ome:excitationFilter  filter:filter8 , filter:filter1 .
 
-filterType:bandPass  a  :FilterType .
+filterType:bandPass  a  ome:FilterType .
 
-filter:filter7  a            :Filter , :ManufacturerSpec ;
-        dcterms:identifier   "Filter:7" ;
-        :filterType          filterType:shortPass ;
-        :lotNumber           "J09" ;
-        :manufacturer        _:b1 ;
-        :model               "Medium 672" ;
-        :transmittanceRange  transmittanceRange:transmittanceRange7 .
+filter:filter7  a               ome:Filter , ome:ManufacturerSpec ;
+        dcterms:identifier      "Filter:7" ;
+        ome:filterType          filterType:shortPass ;
+        ome:lotNumber           "J09" ;
+        ome:manufacturer        _:b1 ;
+        ome:model               "Medium 672" ;
+        ome:transmittanceRange  transmittanceRange:transmittanceRange7 .
 
 transmittanceRange:transmittanceRange4
-        a               :TransmittanceRange ;
-        :cutIn          _:b4 ;
-        :cutOut         _:b3 ;
-        :transmittance  "0.9"^^xsd:float .
+        a                  ome:TransmittanceRange ;
+        ome:cutIn          _:b4 ;
+        ome:cutOut         _:b3 ;
+        ome:transmittance  "0.9"^^xsd:float .
 
-detectorType:other  a  :DetectorType .
+detectorType:other  a  ome:DetectorType .
 
-filter:filter1  a            :ExcitationFilter , :ManufacturerSpec , :Filter ;
-        dcterms:identifier   "Filter:1" ;
-        :filterType          filterType:bandPass ;
-        :filterWheel         "Disk 7" ;
-        :lotNumber           "J23" ;
-        :manufacturer        _:b1 ;
-        :model               "Medium 490" ;
-        :transmittanceRange  transmittanceRange:transmittanceRange1 .
+filter:filter1  a               ome:ExcitationFilter , ome:ManufacturerSpec , ome:Filter ;
+        dcterms:identifier      "Filter:1" ;
+        ome:filterType          filterType:bandPass ;
+        ome:filterWheel         "Disk 7" ;
+        ome:lotNumber           "J23" ;
+        ome:manufacturer        _:b1 ;
+        ome:model               "Medium 490" ;
+        ome:transmittanceRange  transmittanceRange:transmittanceRange1 .
 
-filterSet:filterSet2  a     :FilterSet , :ManufacturerSpec ;
+filterSet:filterSet2  a     ome:FilterSet , ome:ManufacturerSpec ;
         dcterms:identifier  "FilterSet:2" ;
-        :lotNumber          "K753" ;
-        :manufacturer       _:b1 ;
-        :model              "Mk 3" .
+        ome:lotNumber       "K753" ;
+        ome:manufacturer    _:b1 ;
+        ome:model           "Mk 3" .
 
-dichroic:dichroic3  a       :Dichroic , :ManufacturerSpec ;
+dichroic:dichroic3  a       ome:Dichroic , ome:ManufacturerSpec ;
         dcterms:identifier  "Dichroic:3" ;
-        :lotNumber          "M539" ;
-        :model              "MirrorBlock MK II" .
+        ome:lotNumber       "M539" ;
+        ome:model           "MirrorBlock MK II" .
 
-filterType:dichroic  a  :FilterType .
+filterType:dichroic  a  ome:FilterType .
 
-correction:achromat  a  :Correction .
+correction:achromat  a  ome:Correction .
 
-laser:laser0  a             :Laser , :ManufacturerSpec ;
+laser:laser0  a             ome:Laser , ome:ManufacturerSpec ;
         dcterms:identifier  "LightSource:0:0" ;
-        :laserMedium        laserMedium:HeNe ;
-        :laserType          laserType:gas .
+        ome:laserMedium     laserMedium:HeNe ;
+        ome:laserType       laserType:gas .
 
 _:b2    a          PATO:0001242 ;
         rdf:value  "570.0"^^xsd:float ;
         qudt:unit  unitLength:nm .
 
-filter:filter6  a            :Filter , :EmissionFilter , :ManufacturerSpec ;
-        dcterms:identifier   "Filter:6" ;
-        :filterType          filterType:multiPass ;
-        :lotNumber           "J12" ;
-        :manufacturer        _:b1 ;
-        :model               "Medium 762" ;
-        :transmittanceRange  transmittanceRange:transmittanceRange6 .
+filter:filter6  a               ome:Filter , ome:EmissionFilter , ome:ManufacturerSpec ;
+        dcterms:identifier      "Filter:6" ;
+        ome:filterType          filterType:multiPass ;
+        ome:lotNumber           "J12" ;
+        ome:manufacturer        _:b1 ;
+        ome:model               "Medium 762" ;
+        ome:transmittanceRange  transmittanceRange:transmittanceRange6 .
 
 transmittanceRange:transmittanceRange3
-        a               :TransmittanceRange ;
-        :cutIn          _:b5 ;
-        :cutOut         _:b6 ;
-        :transmittance  "0.85"^^xsd:float .
+        a                  ome:TransmittanceRange ;
+        ome:cutIn          _:b5 ;
+        ome:cutOut         _:b6 ;
+        ome:transmittance  "0.85"^^xsd:float .
 
-laserType:gas  a  :LaserType .
+laserType:gas  a  ome:LaserType .
 
-filterSet:filterSet1  a     :FilterSet , :ManufacturerSpec ;
-        dcterms:identifier  "FilterSet:1" ;
-        :dichroic           dichroic:dichroic1 ;
-        :emissionFilter     filter:filter6 , filter:filter5 ;
-        :excitationFilter   filter:filter3 , filter:filter1 , filter:filter4 , filter:filter2 ;
-        :lotNumber          "K753" ;
-        :manufacturer       _:b1 ;
-        :model              "Mk 3" .
+filterSet:filterSet1  a       ome:FilterSet , ome:ManufacturerSpec ;
+        dcterms:identifier    "FilterSet:1" ;
+        ome:dichroic          dichroic:dichroic1 ;
+        ome:emissionFilter    filter:filter6 , filter:filter5 ;
+        ome:excitationFilter  filter:filter3 , filter:filter1 , filter:filter4 , filter:filter2 ;
+        ome:lotNumber         "K753" ;
+        ome:manufacturer      _:b1 ;
+        ome:model             "Mk 3" .
 
-dimensionOrder:xyctz  a  :DimensionOrder .
+dimensionOrder:xyctz  a  ome:DimensionOrder .
 
-filter:filter5  a            :Filter , :EmissionFilter , :ManufacturerSpec ;
-        dcterms:identifier   "Filter:5" ;
-        :filterType          filterType:multiPass ;
-        :lotNumber           "J34" ;
-        :manufacturer        _:b1 ;
-        :model               "Medium 724" ;
-        :transmittanceRange  transmittanceRange:transmittanceRange5 .
+filter:filter5  a               ome:Filter , ome:EmissionFilter , ome:ManufacturerSpec ;
+        dcterms:identifier      "Filter:5" ;
+        ome:filterType          filterType:multiPass ;
+        ome:lotNumber           "J34" ;
+        ome:manufacturer        _:b1 ;
+        ome:model               "Medium 724" ;
+        ome:transmittanceRange  transmittanceRange:transmittanceRange5 .
 
 transmittanceRange:transmittanceRange2
-        a               :TransmittanceRange ;
-        :cutIn          _:b0 ;
-        :cutOut         _:b2 ;
-        :transmittance  "0.75"^^xsd:float .
+        a                  ome:TransmittanceRange ;
+        ome:cutIn          _:b0 ;
+        ome:cutOut         _:b2 ;
+        ome:transmittance  "0.75"^^xsd:float .
 
-objective:objective0  a        :Objective , :ManufacturerSpec ;
-        dcterms:identifier     "Objective:0:0" ;
-        :correction            correction:achromat ;
-        :immersion             immersion:air ;
-        :lensNA                "0.3"^^xsd:float ;
-        :nominalMagnification  "10.0"^^xsd:float .
+objective:objective0  a           ome:Objective , ome:ManufacturerSpec ;
+        dcterms:identifier        "Objective:0:0" ;
+        ome:correction            correction:achromat ;
+        ome:immersion             immersion:air ;
+        ome:lensNA                "0.3"^^xsd:float ;
+        ome:nominalMagnification  "10.0"^^xsd:float .
 
-laserMedium:Ag  a  :LaserMedium .
+laserMedium:Ag  a  ome:LaserMedium .
 
 _:b5    a          PATO:0001242 ;
         rdf:value  "550.0"^^xsd:float ;
         qudt:unit  unitLength:nm .
 
 imagingCondition:ImagingCondition1
-        a                    :ImagingCondition ;
-        :imagingEnvironment  [ a  :ImagingEnvironment ] ;
-        :instrument          instrument:instrument0 ;
-        :objectiveSettings   objectiveSettings:objectiveSetting0 .
+        a                       ome:ImagingCondition ;
+        ome:imagingEnvironment  [ a  ome:ImagingEnvironment ] ;
+        ome:instrument          instrument:instrument0 ;
+        ome:objectiveSettings   objectiveSettings:objectiveSetting0 .
 
-dichroic:dichroic1  a       :Dichroic , :ManufacturerSpec ;
+dichroic:dichroic1  a       ome:Dichroic , ome:ManufacturerSpec ;
         dcterms:identifier  "Dichroic:1" ;
-        :model              "HFT 405/488/543/633" .
+        ome:model           "HFT 405/488/543/633" .
 
-laserMedium:HeNe  a  :LaserMedium .
+laserMedium:HeNe  a  ome:LaserMedium .
 
 transmittanceRange:transmittanceRange7
-        a               :TransmittanceRange ;
-        :cutIn          _:b4 ;
-        :cutOut         _:b3 ;
-        :transmittance  "0.9"^^xsd:float .
+        a                  ome:TransmittanceRange ;
+        ome:cutIn          _:b4 ;
+        ome:cutOut         _:b3 ;
+        ome:transmittance  "0.9"^^xsd:float .
 
-_:b1    a           :Manufacturer ;
+_:b1    a           ome:Manufacturer ;
         rdfs:label  "Ink Inc"@en .
 
-filter:filter4  a            :ManufacturerSpec , :Filter , :ExcitationFilter ;
-        dcterms:identifier   "Filter:4" ;
-        :filterType          filterType:bandPass ;
-        :filterWheel         "Disk 7" ;
-        :lotNumber           "J09" ;
-        :manufacturer        _:b1 ;
-        :model               "Medium 630" ;
-        :transmittanceRange  transmittanceRange:transmittanceRange4 .
+filter:filter4  a               ome:ManufacturerSpec , ome:Filter , ome:ExcitationFilter ;
+        dcterms:identifier      "Filter:4" ;
+        ome:filterType          filterType:bandPass ;
+        ome:filterWheel         "Disk 7" ;
+        ome:lotNumber           "J09" ;
+        ome:manufacturer        _:b1 ;
+        ome:model               "Medium 630" ;
+        ome:transmittanceRange  transmittanceRange:transmittanceRange4 .
 
 _:b6    a          PATO:0001242 ;
         rdf:value  "620.0"^^xsd:float ;
         qudt:unit  unitLength:nm .
 
 transmittanceRange:transmittanceRange1
-        a               :TransmittanceRange ;
-        :cutIn          [ a          PATO:0001242 ;
-                          rdf:value  "450.0"^^xsd:float ;
-                          qudt:unit  unitLength:nm
-                        ] ;
-        :cutOut         [ a          PATO:0001242 ;
-                          rdf:value  "530.0"^^xsd:float ;
-                          qudt:unit  unitLength:nm
-                        ] ;
-        :transmittance  "0.8"^^xsd:float .
+        a                  ome:TransmittanceRange ;
+        ome:cutIn          [ a          PATO:0001242 ;
+                             rdf:value  "450.0"^^xsd:float ;
+                             qudt:unit  unitLength:nm
+                           ] ;
+        ome:cutOut         [ a          PATO:0001242 ;
+                             rdf:value  "530.0"^^xsd:float ;
+                             qudt:unit  unitLength:nm
+                           ] ;
+        ome:transmittance  "0.8"^^xsd:float .
 
-filterType:shortPass  a  :FilterType .
+filterType:shortPass  a  ome:FilterType .
 
-pixelType:int16  a  :PixelType .
+pixelType:int16  a  ome:PixelType .
 
-channel:channel2  a         :Channel ;
+channel:channel2  a         ome:Channel ;
         dcterms:identifier  "Channel:2" ;
-        :filterSet          filterSet:filterSet2 ;
-        :lightPath          lightPath:lightPath2 .
+        ome:filterSet       filterSet:filterSet2 ;
+        ome:lightPath       lightPath:lightPath2 .
 
-image:image0  a             :Image ;
-        rdfs:comment        "Sample Image"@en ;
-        rdfs:label          "405100percentsetting"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2008-06-19T00:39:00" ;
-        :imagingCondition   imagingCondition:ImagingCondition1 ;
-        :pixels             pixels:pixels1 .
+image:image0  a               ome:Image ;
+        rdfs:comment          "Sample Image"@en ;
+        rdfs:label            "405100percentsetting"@en ;
+        dcterms:identifier    "Image:0" ;
+        ome:acquisitionDate   "2008-06-19T00:39:00" ;
+        ome:imagingCondition  imagingCondition:ImagingCondition1 ;
+        ome:pixels            pixels:pixels1 .
 
 objectiveSettings:objectiveSetting0
-        a                   :ObjectiveSettings ;
+        a                   ome:ObjectiveSettings ;
         dcterms:identifier  "Objective:0:0" .
 
 transmittanceRange:transmittanceRange6
-        a               :TransmittanceRange ;
-        :cutIn          _:b5 ;
-        :cutOut         _:b6 ;
-        :transmittance  "0.85"^^xsd:float .
+        a                  ome:TransmittanceRange ;
+        ome:cutIn          _:b5 ;
+        ome:cutOut         _:b6 ;
+        ome:transmittance  "0.85"^^xsd:float .

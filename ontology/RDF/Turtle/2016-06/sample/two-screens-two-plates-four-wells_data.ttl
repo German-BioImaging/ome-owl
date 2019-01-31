@@ -1,6 +1,6 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/two-screens-two-plates-four-wells/channel/> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
@@ -24,931 +24,931 @@
 @prefix well:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/two-screens-two-plates-four-wells/well/> .
 @prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/two-screens-two-plates-four-wells/bindata/> .
 
-bindata:bindata18  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata18  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 wellSample:wellSample2.2.1.1
-        a       :WellSample .
+        a       ome:WellSample .
 
-image:image18  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-18"@en ;
-        dcterms:identifier  "Image:18" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image18 .
+image:image18  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-18"@en ;
+        dcterms:identifier   "Image:18" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image18 .
 
 wellSample:wellSample1.1.2.4
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.1.2.4" ;
-        :image              image:image7 ;
-        :index              "15"^^xsd:int .
+        ome:image           image:image7 ;
+        ome:index           "15"^^xsd:nonNegativeInteger .
 
-well:well1.2.1  a           :Well ;
+well:well1.2.1  a           ome:Well ;
         dcterms:identifier  "Well1.2.1" ;
-        :column             "2"^^xsd:int ;
-        :reagent            reagent:reagent1 ;
-        :row                "1"^^xsd:int ;
-        :wellSample         wellSample:wellSample1.2.1.2 , wellSample:wellSample1.2.1.1 .
+        ome:column          "2"^^xsd:nonNegativeInteger ;
+        ome:reagent         reagent:reagent1 ;
+        ome:row             "1"^^xsd:nonNegativeInteger ;
+        ome:wellSample      wellSample:wellSample1.2.1.2 , wellSample:wellSample1.2.1.1 .
 
 wellSample:wellsample2.1.2.5
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.1.2.5" ;
-        :image              image:image19 ;
-        :index              "19"^^xsd:int .
+        ome:image           image:image19 ;
+        ome:index           "19"^^xsd:nonNegativeInteger .
 
 plateAcquisition:plate2.5
-        a                   :PlateAcquisition ;
+        a                   ome:PlateAcquisition ;
         dcterms:identifier  "PlateAcquisition:Plate:2:ScreenAcquisition:5" ;
-        :endTime            "2010-02-23T12:51:29" ;
-        :startTime          "2010-02-23T12:50:30" ;
-        :wellSample         wellSample:wellSample2.2.2.2 , wellSample:wellSample2.1.2.2 , wellSample:wellSample2.2.1.2 , wellSample:wellSample2.1.1.2 .
+        ome:endTime         "2010-02-23T12:51:29" ;
+        ome:startTime       "2010-02-23T12:50:30" ;
+        ome:wellSample      wellSample:wellSample2.2.2.2 , wellSample:wellSample2.1.2.2 , wellSample:wellSample2.2.1.2 , wellSample:wellSample2.1.1.2 .
 
-well:well1.1.1  a           :Well ;
+well:well1.1.1  a           ome:Well ;
         dcterms:identifier  "Well1.1.1" ;
-        :column             "1"^^xsd:int ;
-        :reagent            reagent:reagent1 ;
-        :row                "1"^^xsd:int ;
-        :wellSample         wellSample:wellSample1.1.1.2 , wellSample:wellSample1.1.1.1 .
+        ome:column          "1"^^xsd:nonNegativeInteger ;
+        ome:reagent         reagent:reagent1 ;
+        ome:row             "1"^^xsd:nonNegativeInteger ;
+        ome:wellSample      wellSample:wellSample1.1.1.2 , wellSample:wellSample1.1.1.1 .
 
-reagentSet:screen2  a  :ReagentSet ;
-        :reagent  reagent:reagent2 .
+reagentSet:screen2  a  ome:ReagentSet ;
+        ome:reagent  reagent:reagent2 .
 
-_:b0    a          :Color ;
+_:b0    a          ome:Color , ome:color ;
         rdf:value  "-2147483648" .
 
-bindata:bindata12  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata12  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-image:image12  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-12"@en ;
-        dcterms:identifier  "Image:12" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image12 .
+image:image12  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-12"@en ;
+        dcterms:identifier   "Image:12" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image12 .
 
-channel:channel7  a         :Channel ;
+channel:channel7  a         ome:Channel ;
         dcterms:identifier  "Channel:7" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-pixels:image16  a           :Pixels ;
+pixels:image16  a           ome:Pixels ;
         dcterms:identifier  "Pixels:16.0" ;
-        :binData            bindata:bindata16 ;
-        :channel            channel:channel16 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata16 ;
+        ome:channel         channel:channel16 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-image:image4  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-4"@en ;
-        dcterms:identifier  "Image:4" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image4 .
+image:image4  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-4"@en ;
+        dcterms:identifier   "Image:4" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image4 .
 
-well:well2.2.1  a           :Well ;
+well:well2.2.1  a           ome:Well ;
         dcterms:identifier  "Well2.2.1" ;
-        :column             "2"^^xsd:int ;
-        :reagent            reagent:reagent1 ;
-        :row                "1"^^xsd:int ;
-        :wellSample         wellSample:wellSample2.2.1.2 , wellSample:wellSample2.2.1.1 .
+        ome:column          "2"^^xsd:nonNegativeInteger ;
+        ome:reagent         reagent:reagent1 ;
+        ome:row             "1"^^xsd:nonNegativeInteger ;
+        ome:wellSample      wellSample:wellSample2.2.1.2 , wellSample:wellSample2.2.1.1 .
 
-channel:channel17  a        :Channel ;
+channel:channel17  a        ome:Channel ;
         dcterms:identifier  "Channel:17" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-bindata:bindata8  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata8  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image6  a            :Pixels ;
+pixels:image6  a            ome:Pixels ;
         dcterms:identifier  "Pixels:6.0" ;
-        :binData            bindata:bindata6 ;
-        :channel            channel:channel6 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata6 ;
+        ome:channel         channel:channel6 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-well:well2.1.1  a           :Well ;
+well:well2.1.1  a           ome:Well ;
         dcterms:identifier  "Well2.1.1" ;
-        :column             "1"^^xsd:int ;
-        :reagent            reagent:reagent2 ;
-        :row                "1"^^xsd:int ;
-        :wellSample         wellSample:wellSample2.1.1.2 , wellSample:wellSample2.1.1.1 .
+        ome:column          "1"^^xsd:nonNegativeInteger ;
+        ome:reagent         reagent:reagent2 ;
+        ome:row             "1"^^xsd:nonNegativeInteger ;
+        ome:wellSample      wellSample:wellSample2.1.1.2 , wellSample:wellSample2.1.1.1 .
 
-channel:channel1  a         :Channel ;
+channel:channel1  a         ome:Channel ;
         dcterms:identifier  "Channel:1" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-pixels:image10  a           :Pixels ;
+pixels:image10  a           ome:Pixels ;
         dcterms:identifier  "Pixels:10.0" ;
-        :binData            bindata:bindata10 ;
-        :channel            channel:channel10 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata10 ;
+        ome:channel         channel:channel10 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-channel:channel11  a        :Channel ;
+channel:channel11  a        ome:Channel ;
         dcterms:identifier  "Channel:11" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
 _:b1    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
-plate:plate2  a             :Plate ;
-        rdfs:comment        "Plate 2 description"@en ;
-        rdfs:label          "twoName"@en ;
-        dcterms:identifier  "Plate:2" ;
-        :plateAcquisition   plateAcquisition:plate2.5 ;
-        :well               well:well2.2.2 , well:well2.1.2 , well:well2.2.1 , well:well2.1.1 .
+plate:plate2  a               ome:Plate ;
+        rdfs:comment          "Plate 2 description"@en ;
+        rdfs:label            "twoName"@en ;
+        dcterms:identifier    "Plate:2" ;
+        ome:plateAcquisition  plateAcquisition:plate2.5 ;
+        ome:well              well:well2.2.2 , well:well2.1.2 , well:well2.2.1 , well:well2.1.1 .
 
-bindata:bindata2  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata2  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image0  a            :Pixels ;
+pixels:image0  a            ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :binData            bindata:bindata0 ;
-        :channel            channel:channel0 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata0 ;
+        ome:channel         channel:channel0 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-bindata:bindata17  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata17  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-image:image17  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-17"@en ;
-        dcterms:identifier  "Image:17" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image17 .
+image:image17  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-17"@en ;
+        dcterms:identifier   "Image:17" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image17 .
 
 wellSample:wellSample2.1.2.5
-        a       :WellSample .
+        a       ome:WellSample .
 
 wellSample:wellSample1.2.2.2
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.2.2.2" ;
-        :image              image:image10 ;
-        :index              "8"^^xsd:int .
+        ome:image           image:image10 ;
+        ome:index           "8"^^xsd:nonNegativeInteger .
 
 wellSample:wellSample1.1.2.3
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.1.2.3" ;
-        :image              image:image6 ;
-        :index              "11"^^xsd:int .
+        ome:image           image:image6 ;
+        ome:index           "11"^^xsd:nonNegativeInteger .
 
 wellSample:wellsample2.1.2.4
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.1.2.4" ;
-        :image              image:image18 ;
-        :index              "15"^^xsd:int .
+        ome:image           image:image18 ;
+        ome:index           "15"^^xsd:nonNegativeInteger .
 
-image:image9  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-9"@en ;
-        dcterms:identifier  "Image:9" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image9 .
+image:image9  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-9"@en ;
+        dcterms:identifier   "Image:9" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image9 .
 
 wellSample:wellSample1.2.1.2
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.2.1.2" ;
-        :image              image:image3 ;
-        :index              "6"^^xsd:int .
+        ome:image           image:image3 ;
+        ome:index           "6"^^xsd:nonNegativeInteger .
 
-reagentSet:screen1  a  :ReagentSet ;
-        :reagent  reagent:reagent1 .
+reagentSet:screen1  a  ome:ReagentSet ;
+        ome:reagent  reagent:reagent1 .
 
-bindata:bindata11  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata11  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-image:image11  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-11"@en ;
-        dcterms:identifier  "Image:11" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image11 .
+image:image11  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-11"@en ;
+        dcterms:identifier   "Image:11" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image11 .
 
-channel:channel6  a         :Channel ;
+channel:channel6  a         ome:Channel ;
         dcterms:identifier  "Channel:6" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-pixels:image15  a           :Pixels ;
+pixels:image15  a           ome:Pixels ;
         dcterms:identifier  "Pixels:15.0" ;
-        :binData            bindata:bindata15 ;
-        :channel            channel:channel15 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata15 ;
+        ome:channel         channel:channel15 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-image:image3  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-3"@en ;
-        dcterms:identifier  "Image:3" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image3 .
+image:image3  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-3"@en ;
+        dcterms:identifier   "Image:3" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image3 .
 
-channel:channel16  a        :Channel ;
+channel:channel16  a        ome:Channel ;
         dcterms:identifier  "Channel:16" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-bindata:bindata7  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata7  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image5  a            :Pixels ;
+pixels:image5  a            ome:Pixels ;
         dcterms:identifier  "Pixels:5.0" ;
-        :binData            bindata:bindata5 ;
-        :channel            channel:channel5 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata5 ;
+        ome:channel         channel:channel5 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-channel:channel0  a         :Channel ;
+channel:channel0  a         ome:Channel ;
         dcterms:identifier  "Channel:0" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-channel:channel10  a        :Channel ;
+channel:channel10  a        ome:Channel ;
         dcterms:identifier  "Channel:10" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-plate:plate1  a             :Plate ;
-        rdfs:comment        "Plate 1 description"@en ;
-        dcterms:identifier  "Plate:1" ;
-        :plateAcquisition   plateAcquisition:plate1.2 , plateAcquisition:plate1.1 ;
-        :well               well:well1.2.2 , well:well1.1.2 , well:well1.2.1 , well:well1.1.1 .
+plate:plate1  a               ome:Plate ;
+        rdfs:comment          "Plate 1 description"@en ;
+        dcterms:identifier    "Plate:1" ;
+        ome:plateAcquisition  plateAcquisition:plate1.2 , plateAcquisition:plate1.1 ;
+        ome:well              well:well1.2.2 , well:well1.1.2 , well:well1.2.1 , well:well1.1.1 .
 
-bindata:bindata1  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata1  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-bindata:bindata16  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata16  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-image:image16  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-16"@en ;
-        dcterms:identifier  "Image:16" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image16 .
+image:image16  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-16"@en ;
+        dcterms:identifier   "Image:16" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image16 .
 
 wellSample:wellSample2.1.2.4
-        a       :WellSample .
+        a       ome:WellSample .
 
 wellSample:wellSample1.2.2.1
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.2.2.1" ;
-        :image              image:image9 ;
-        :index              "4"^^xsd:int .
+        ome:image           image:image9 ;
+        ome:index           "4"^^xsd:nonNegativeInteger .
 
 wellSample:wellSample1.1.2.2
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.1.2.2" ;
-        :image              image:image5 ;
-        :index              "7"^^xsd:int .
+        ome:image           image:image5 ;
+        ome:index           "7"^^xsd:nonNegativeInteger .
 
 wellSample:wellsample2.1.2.3
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.1.2.3" ;
-        :image              image:image17 ;
-        :index              "11"^^xsd:int .
+        ome:image           image:image17 ;
+        ome:index           "11"^^xsd:nonNegativeInteger .
 
-image:image8  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-8"@en ;
-        dcterms:identifier  "Image:8" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image8 .
+image:image8  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-8"@en ;
+        dcterms:identifier   "Image:8" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image8 .
 
 wellSample:wellSample1.2.1.1
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.2.1.1" ;
-        :image              image:image2 ;
-        :index              "2"^^xsd:int .
+        ome:image           image:image2 ;
+        ome:index           "2"^^xsd:nonNegativeInteger .
 
 wellSample:wellSample1.1.1.2
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.1.1.2" ;
-        :image              image:image1 ;
-        :index              "5"^^xsd:int .
+        ome:image           image:image1 ;
+        ome:index           "5"^^xsd:nonNegativeInteger .
 
-bindata:bindata10  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata10  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-image:image10  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-10"@en ;
-        dcterms:identifier  "Image:10" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image10 .
+image:image10  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-10"@en ;
+        dcterms:identifier   "Image:10" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image10 .
 
-channel:channel5  a         :Channel ;
+channel:channel5  a         ome:Channel ;
         dcterms:identifier  "Channel:5" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-pixels:image14  a           :Pixels ;
+pixels:image14  a           ome:Pixels ;
         dcterms:identifier  "Pixels:14.0" ;
-        :binData            bindata:bindata14 ;
-        :channel            channel:channel14 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata14 ;
+        ome:channel         channel:channel14 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-image:image2  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-2"@en ;
-        dcterms:identifier  "Image:2" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image2 .
+image:image2  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-2"@en ;
+        dcterms:identifier   "Image:2" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image2 .
 
-channel:channel15  a        :Channel ;
+channel:channel15  a        ome:Channel ;
         dcterms:identifier  "Channel:015" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-bindata:bindata6  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata6  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image4  a            :Pixels ;
+pixels:image4  a            ome:Pixels ;
         dcterms:identifier  "Pixels:4.0" ;
-        :binData            bindata:bindata4 ;
-        :channel            channel:channel4 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata4 ;
+        ome:channel         channel:channel4 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-bindata:bindata0  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata0  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image21  a           :Pixels ;
+pixels:image21  a           ome:Pixels ;
         dcterms:identifier  "Pixels:21.0" ;
-        :binData            bindata:bindata21 ;
-        :channel            channel:channel21 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata21 ;
+        ome:channel         channel:channel21 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-bindata:bindata15  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata15  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 wellSample:wellSample2.1.2.3
-        a       :WellSample .
+        a       ome:WellSample .
 
-image:image15  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-15"@en ;
-        dcterms:identifier  "Image:15" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image15 .
+image:image15  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-15"@en ;
+        dcterms:identifier   "Image:15" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image15 .
 
 wellSample:wellSample1.1.2.1
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.1.2.1" ;
-        :image              image:image4 ;
-        :index              "3"^^xsd:int .
+        ome:image           image:image4 ;
+        ome:index           "3"^^xsd:nonNegativeInteger .
 
-pixels:image19  a           :Pixels ;
+pixels:image19  a           ome:Pixels ;
         dcterms:identifier  "Pixels:19.0" ;
-        :binData            bindata:bindata19 ;
-        :channel            channel:channel19 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata19 ;
+        ome:channel         channel:channel19 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
 wellSample:wellsample2.1.2.2
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.1.2.2" ;
-        :image              image:image16 ;
-        :index              "7"^^xsd:int .
+        ome:image           image:image16 ;
+        ome:index           "7"^^xsd:nonNegativeInteger .
 
-image:image7  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-7"@en ;
-        dcterms:identifier  "Image:7" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image7 .
+image:image7  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-7"@en ;
+        dcterms:identifier   "Image:7" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image7 .
 
 wellSample:wellSample1.1.1.1
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.1.1.1" ;
-        :image              image:image0 ;
-        :index              "1"^^xsd:int .
+        ome:image           image:image0 ;
+        ome:index           "1"^^xsd:nonNegativeInteger .
 
-pixels:image9  a            :Pixels ;
+pixels:image9  a            ome:Pixels ;
         dcterms:identifier  "Pixels:9.0" ;
-        :binData            bindata:bindata9 ;
-        :channel            channel:channel9 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata9 ;
+        ome:channel         channel:channel9 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
 wellSample:wellsample2.1.1.2
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.1.1.2" ;
-        :image              image:image12 ;
-        :index              "5"^^xsd:int .
+        ome:image           image:image12 ;
+        ome:index           "5"^^xsd:nonNegativeInteger .
 
 plateAcquisition:plate1.2
-        a                   :PlateAcquisition ;
+        a                   ome:PlateAcquisition ;
         dcterms:identifier  "PlateAcquisition:Plate:1:ScreenAcquisition:2" ;
-        :endTime            "2010-02-23T12:51:29" ;
-        :startTime          "2010-02-23T12:50:30" ;
-        :wellSample         wellSample:wellSample1.2.2.2 , wellSample:wellSample1.1.2.2 , wellSample:wellSample1.2.1.2 , wellSample:wellSample1.1.1.2 .
+        ome:endTime         "2010-02-23T12:51:29" ;
+        ome:startTime       "2010-02-23T12:50:30" ;
+        ome:wellSample      wellSample:wellSample1.2.2.2 , wellSample:wellSample1.1.2.2 , wellSample:wellSample1.2.1.2 , wellSample:wellSample1.1.1.2 .
 
-channel:channel4  a         :Channel ;
+channel:channel4  a         ome:Channel ;
         dcterms:identifier  "Channel:4" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-pixels:image13  a           :Pixels ;
+pixels:image13  a           ome:Pixels ;
         dcterms:identifier  "Pixels:13.0" ;
-        :binData            bindata:bindata13 ;
-        :channel            channel:channel13 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata13 ;
+        ome:channel         channel:channel13 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-image:image1  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-1"@en ;
-        dcterms:identifier  "Image:1" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image1 .
+image:image1  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-1"@en ;
+        dcterms:identifier   "Image:1" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image1 .
 
-channel:channel14  a        :Channel ;
+channel:channel14  a        ome:Channel ;
         dcterms:identifier  "Channel:14" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-bindata:bindata5  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata5  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image3  a            :Pixels ;
+pixels:image3  a            ome:Pixels ;
         dcterms:identifier  "Pixels:3.0" ;
-        :binData            bindata:bindata3 ;
-        :channel            channel:channel3 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata3 ;
+        ome:channel         channel:channel3 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
 wellSample:wellsample2.2.2.2
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.2.2.2" ;
-        :image              image:image21 ;
-        :index              "8"^^xsd:int .
+        ome:image           image:image21 ;
+        ome:index           "8"^^xsd:nonNegativeInteger .
 
-reagent:reagent2  a         :Reagent ;
+reagent:reagent2  a         ome:Reagent ;
         dcterms:identifier  "Reagent:2" .
 
 wellSample:wellsample2.2.1.2
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.2.1.2" ;
-        :image              image:image14 ;
-        :index              "6"^^xsd:int .
+        ome:image           image:image14 ;
+        ome:index           "6"^^xsd:nonNegativeInteger .
 
-pixels:image20  a           :Pixels ;
+pixels:image20  a           ome:Pixels ;
         dcterms:identifier  "Pixels:20.0" ;
-        :binData            bindata:bindata20 ;
-        :channel            channel:channel20 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata20 ;
+        ome:channel         channel:channel20 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-channel:channel21  a        :Channel ;
+channel:channel21  a        ome:Channel ;
         dcterms:identifier  "Channel:21" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-bindata:bindata14  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata14  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 wellSample:wellSample2.1.2.2
-        a       :WellSample .
+        a       ome:WellSample .
 
-image:image14  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-14"@en ;
-        dcterms:identifier  "Image:14" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image14 .
+image:image14  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-14"@en ;
+        dcterms:identifier   "Image:14" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image14 .
 
-channel:channel9  a         :Channel ;
+channel:channel9  a         ome:Channel ;
         dcterms:identifier  "Channel:9" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-channel:channel19  a        :Channel ;
+channel:channel19  a        ome:Channel ;
         dcterms:identifier  "Channel:19" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-pixels:image18  a           :Pixels ;
+pixels:image18  a           ome:Pixels ;
         dcterms:identifier  "Pixels:18.0" ;
-        :binData            bindata:bindata18 ;
-        :channel            channel:channel18 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata18 ;
+        ome:channel         channel:channel18 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
 wellSample:wellsample2.1.2.1
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.1.2.1" ;
-        :image              image:image15 ;
-        :index              "3"^^xsd:int .
+        ome:image           image:image15 ;
+        ome:index           "3"^^xsd:nonNegativeInteger .
 
-image:image6  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-6"@en ;
-        dcterms:identifier  "Image:6" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image6 .
+image:image6  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-6"@en ;
+        dcterms:identifier   "Image:6" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image6 .
 
 wellSample:wellSample2.1.1.2
-        a       :WellSample .
+        a       ome:WellSample .
 
-pixels:image8  a            :Pixels ;
+pixels:image8  a            ome:Pixels ;
         dcterms:identifier  "Pixels:8.0" ;
-        :binData            bindata:bindata8 ;
-        :channel            channel:channel8 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata8 ;
+        ome:channel         channel:channel8 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-bindata:bindata21  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata21  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 wellSample:wellsample2.1.1.1
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.1.1.1" ;
-        :image              image:image11 ;
-        :index              "1"^^xsd:int .
+        ome:image           image:image11 ;
+        ome:index           "1"^^xsd:nonNegativeInteger .
 
 plateAcquisition:plate1.1
-        a                   :PlateAcquisition ;
+        a                   ome:PlateAcquisition ;
         dcterms:identifier  "PlateAcquisition:Plate:1:ScreenAcquisition:1" ;
-        :endTime            "2010-02-23T12:50:30" ;
-        :startTime          "2010-02-23T12:49:30" ;
-        :wellSample         wellSample:wellSample1.2.2.1 , wellSample:wellSample1.1.2.1 , wellSample:wellSample1.2.1.1 , wellSample:wellSample1.1.1.1 .
+        ome:endTime         "2010-02-23T12:50:30" ;
+        ome:startTime       "2010-02-23T12:49:30" ;
+        ome:wellSample      wellSample:wellSample1.2.2.1 , wellSample:wellSample1.1.2.1 , wellSample:wellSample1.2.1.1 , wellSample:wellSample1.1.1.1 .
 
-channel:channel3  a         :Channel ;
+channel:channel3  a         ome:Channel ;
         dcterms:identifier  "Channel:3" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-channel:channel13  a        :Channel ;
+channel:channel13  a        ome:Channel ;
         dcterms:identifier  "Channel:13" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-image:image21  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-21"@en ;
-        dcterms:identifier  "Image:21" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image21 .
+image:image21  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-21"@en ;
+        dcterms:identifier   "Image:21" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image21 .
 
 wellSample:wellSample2.2.2.2
-        a       :WellSample .
+        a       ome:WellSample .
 
-pixels:image12  a           :Pixels ;
+pixels:image12  a           ome:Pixels ;
         dcterms:identifier  "Pixels:12.0" ;
-        :binData            bindata:bindata12 ;
-        :channel            channel:channel12 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata12 ;
+        ome:channel         channel:channel12 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-image:image0  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-0"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image0 .
+image:image0  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-0"@en ;
+        dcterms:identifier   "Image:0" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image0 .
 
-screen:screen2  a           :Screen ;
+screen:screen2  a           ome:Screen ;
         rdfs:comment        "twoScreen"@en ;
         dcterms:identifier  "Screen:2" ;
-        :plate              plate:plate1 ;
-        :reagentSet         reagentSet:screen2 .
+        ome:plate           plate:plate1 ;
+        ome:reagentSet      reagentSet:screen2 .
 
-bindata:bindata4  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata4  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-bindata:bindata19  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata19  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image2  a            :Pixels ;
+pixels:image2  a            ome:Pixels ;
         dcterms:identifier  "Pixels:2.0" ;
-        :binData            bindata:bindata2 ;
-        :channel            channel:channel2 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata2 ;
+        ome:channel         channel:channel2 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
 wellSample:wellsample2.2.2.1
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.2.2.1" ;
-        :image              image:image20 ;
-        :index              "4"^^xsd:int .
+        ome:image           image:image20 ;
+        ome:index           "4"^^xsd:nonNegativeInteger .
 
 wellSample:wellSample2.2.1.2
-        a       :WellSample .
+        a       ome:WellSample .
 
-image:image19  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-19"@en ;
-        dcterms:identifier  "Image:19" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image19 .
+image:image19  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-19"@en ;
+        dcterms:identifier   "Image:19" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image19 .
 
 wellSample:wellSample1.1.2.5
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:1.1.2.5" ;
-        :image              image:image8 ;
-        :index              "19"^^xsd:int .
+        ome:image           image:image8 ;
+        ome:index           "19"^^xsd:nonNegativeInteger .
 
-well:well1.2.2  a           :Well ;
+well:well1.2.2  a           ome:Well ;
         dcterms:identifier  "Well1.2.2" ;
-        :column             "2"^^xsd:int ;
-        :reagent            reagent:reagent1 ;
-        :row                "2"^^xsd:int ;
-        :wellSample         wellSample:wellSample1.2.2.2 , wellSample:wellSample1.2.2.1 .
+        ome:column          "2"^^xsd:nonNegativeInteger ;
+        ome:reagent         reagent:reagent1 ;
+        ome:row             "2"^^xsd:nonNegativeInteger ;
+        ome:wellSample      wellSample:wellSample1.2.2.2 , wellSample:wellSample1.2.2.1 .
 
 unitLength:um  a  rdfs:Class .
 
-reagent:reagent1  a         :Reagent ;
+reagent:reagent1  a         ome:Reagent ;
         dcterms:identifier  "Reagent:1" .
 
 wellSample:wellsample2.2.1.1
-        a                   :WellSample ;
+        a                   ome:WellSample ;
         dcterms:identifier  "WellSample:2.2.1.1" ;
-        :image              image:image13 ;
-        :index              "2"^^xsd:int .
+        ome:image           image:image13 ;
+        ome:index           "2"^^xsd:nonNegativeInteger .
 
-well:well1.1.2  a           :Well ;
+well:well1.1.2  a           ome:Well ;
         dcterms:identifier  "Well1.1.2" ;
-        :column             "1"^^xsd:int ;
-        :reagent            reagent:reagent1 ;
-        :row                "2"^^xsd:int ;
-        :wellSample         wellSample:wellSample1.1.2.1 , wellSample:wellSample1.1.2.3 , wellSample:wellSample1.1.2.2 , wellSample:wellSample1.1.2.4 , wellSample:wellSample1.1.2.5 .
+        ome:column          "1"^^xsd:nonNegativeInteger ;
+        ome:reagent         reagent:reagent1 ;
+        ome:row             "2"^^xsd:nonNegativeInteger ;
+        ome:wellSample      wellSample:wellSample1.1.2.1 , wellSample:wellSample1.1.2.3 , wellSample:wellSample1.1.2.2 , wellSample:wellSample1.1.2.4 , wellSample:wellSample1.1.2.5 .
 
-channel:channel20  a        :Channel ;
+channel:channel20  a        ome:Channel ;
         dcterms:identifier  "Channel:20" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-bindata:bindata13  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata13  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 wellSample:wellSample2.1.2.1
-        a       :WellSample .
+        a       ome:WellSample .
 
-image:image13  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-13"@en ;
-        dcterms:identifier  "Image:13" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image13 .
+image:image13  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-13"@en ;
+        dcterms:identifier   "Image:13" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image13 .
 
-channel:channel8  a         :Channel ;
+channel:channel8  a         ome:Channel ;
         dcterms:identifier  "Channel:8" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-channel:channel18  a        :Channel ;
+channel:channel18  a        ome:Channel ;
         dcterms:identifier  "Channel:18" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-pixels:image17  a           :Pixels ;
+pixels:image17  a           ome:Pixels ;
         dcterms:identifier  "Pixels:17.0" ;
-        :binData            bindata:bindata17 ;
-        :channel            channel:channel17 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata17 ;
+        ome:channel         channel:channel17 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-image:image5  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-5"@en ;
-        dcterms:identifier  "Image:5" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image5 .
+image:image5  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-5"@en ;
+        dcterms:identifier   "Image:5" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image5 .
 
-well:well2.2.2  a           :Well ;
+well:well2.2.2  a           ome:Well ;
         dcterms:identifier  "Well2.2.2" ;
-        :column             "2"^^xsd:int ;
-        :reagent            reagent:reagent1 ;
-        :row                "2"^^xsd:int ;
-        :wellSample         wellSample:wellSample2.2.2.2 , wellSample:wellSample2.2.2.1 .
+        ome:column          "2"^^xsd:nonNegativeInteger ;
+        ome:reagent         reagent:reagent1 ;
+        ome:row             "2"^^xsd:nonNegativeInteger ;
+        ome:wellSample      wellSample:wellSample2.2.2.2 , wellSample:wellSample2.2.2.1 .
 
 wellSample:wellSample2.1.1.1
-        a       :WellSample .
+        a       ome:WellSample .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .
 
-bindata:bindata9  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata9  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image7  a            :Pixels ;
+pixels:image7  a            ome:Pixels ;
         dcterms:identifier  "Pixels:7.0" ;
-        :binData            bindata:bindata7 ;
-        :channel            channel:channel7 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata7 ;
+        ome:channel         channel:channel7 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-bindata:bindata20  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata20  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-well:well2.1.2  a           :Well ;
+well:well2.1.2  a           ome:Well ;
         dcterms:identifier  "Well2.1.2" ;
-        :column             "1"^^xsd:int ;
-        :reagent            reagent:reagent1 ;
-        :row                "2"^^xsd:int ;
-        :wellSample         wellSample:wellSample2.1.2.5 , wellSample:wellSample2.1.2.4 , wellSample:wellSample2.1.2.1 , wellSample:wellSample2.1.2.3 , wellSample:wellSample2.1.2.2 .
+        ome:column          "1"^^xsd:nonNegativeInteger ;
+        ome:reagent         reagent:reagent1 ;
+        ome:row             "2"^^xsd:nonNegativeInteger ;
+        ome:wellSample      wellSample:wellSample2.1.2.5 , wellSample:wellSample2.1.2.4 , wellSample:wellSample2.1.2.1 , wellSample:wellSample2.1.2.3 , wellSample:wellSample2.1.2.2 .
 
-channel:channel2  a         :Channel ;
+channel:channel2  a         ome:Channel ;
         dcterms:identifier  "Channel:2" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-dimensionOrder:xyczt  a  :DimensionOrder .
+dimensionOrder:xyczt  a  ome:DimensionOrder .
 
-image:image20  a            :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif-20"@en ;
-        dcterms:identifier  "Image:20" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:image20 .
+image:image20  a             ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif-20"@en ;
+        dcterms:identifier   "Image:20" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:image20 .
 
 wellSample:wellSample2.2.2.1
-        a       :WellSample .
+        a       ome:WellSample .
 
-pixels:image11  a           :Pixels ;
+pixels:image11  a           ome:Pixels ;
         dcterms:identifier  "Pixels:11.0" ;
-        :binData            bindata:bindata11 ;
-        :channel            channel:channel11 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata11 ;
+        ome:channel         channel:channel11 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-channel:channel12  a        :Channel ;
+channel:channel12  a        ome:Channel ;
         dcterms:identifier  "Channel:12" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-screen:screen1  a           :Screen ;
+screen:screen1  a           ome:Screen ;
         dcterms:identifier  "Screen:1" ;
-        :plate              plate:plate2 , plate:plate1 ;
-        :reagentSet         reagentSet:screen1 .
+        ome:plate           plate:plate2 , plate:plate1 ;
+        ome:reagentSet      reagentSet:screen1 .
 
-bindata:bindata3  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata3  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image1  a            :Pixels ;
+pixels:image1  a            ome:Pixels ;
         dcterms:identifier  "Pixels:1.0" ;
-        :binData            bindata:bindata1 ;
-        :channel            channel:channel1 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata1 ;
+        ome:channel         channel:channel1 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .

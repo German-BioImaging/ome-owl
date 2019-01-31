@@ -1,6 +1,6 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/time-series/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/time-series/channel/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,55 +12,55 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/time-series/bindata/> .
 
-bindata:bindata2  a  :BinData ;
-        :bigEndian  false ;
-        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wAAAP8A/wAAAAD//wAAAAAA/wAA//8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAA/wAAAAAAAP8AAP//AAAA/wAA/////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA////AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAP8AAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-        :length     "576"^^xsd:long .
+bindata:bindata2  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wAAAP8A/wAAAAD//wAAAAAA/wAA//8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAA/wAAAAAAAP8AAP//AAAA/wAA/////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA////AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAP8AAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-bindata:bindata5  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////AP////////////////8A////AP////////////////8A////AAAA//////////////8A////AP//AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
-        :length     "576"^^xsd:long .
+bindata:bindata5  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////AP////////////////8A////AP////////////////8A////AAAA//////////////8A////AP//AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-dimensionOrder:xyzct  a  :DimensionOrder .
+dimensionOrder:xyzct  a  ome:DimensionOrder .
 
-pixels:pixels0.0  a         :Pixels ;
+pixels:pixels0.0  a         ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :binData            bindata:bindata3 , bindata:bindata4 , bindata:bindata1 , bindata:bindata2 , bindata:bindata5 ;
-        :channel            channel:channel1 ;
-        :dimensionOrder     dimensionOrder:xyzct ;
-        :pixelType          pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "5"^^xsd:int ;
-        :sizeX              "18"^^xsd:int ;
-        :sizeY              "24"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata3 , bindata:bindata4 , bindata:bindata1 , bindata:bindata2 , bindata:bindata5 ;
+        ome:channel         channel:channel1 ;
+        ome:dimensionOrder  dimensionOrder:xyzct ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "5"^^xsd:positiveInteger ;
+        ome:sizeX           "18"^^xsd:positiveInteger ;
+        ome:sizeY           "24"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-image:image0  a             :Image ;
-        rdfs:label          "18x24y1z5t1c8b-text"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-03-02T10:01:15" ;
-        :pixels             pixels:pixels0.0 .
+image:image0  a              ome:Image ;
+        rdfs:label           "18x24y1z5t1c8b-text"@en ;
+        dcterms:identifier   "Image:0" ;
+        ome:acquisitionDate  "2010-03-02T10:01:15" ;
+        ome:pixels           pixels:pixels0.0 .
 
-bindata:bindata3  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////////AP////////////8A////////AP////////////8A/////wAA//////////////8A////////AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////" ;
-        :length     "576"^^xsd:long .
+bindata:bindata3  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////////AP////////////8A////////AP////////////8A/////wAA//////////////8A////////AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-bindata:bindata1  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////" ;
-        :length     "576"^^xsd:long .
+bindata:bindata1  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .
 
-bindata:bindata4  a  :BinData ;
-        :bigEndian  false ;
-        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wAAAP8A/wAAAAD//wAAAAAA/wAA//8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAA/wAAAAAAAP8AAP//AAAA/wAA/////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD//wAAAAAAAAAAAAD/AAAAAAD//wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAA//////8AAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-        :length     "576"^^xsd:long .
+bindata:bindata4  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wAAAP8A/wAAAAD//wAAAAAA/wAA//8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAA/wAAAAAAAP8AAP//AAAA/wAA/////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD//wAAAAAAAAAAAAD/AAAAAAD//wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAA//////8AAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-channel:channel1  a         :Channel ;
+channel:channel1  a         ome:Channel ;
         dcterms:identifier  "Channel:0" ;
-        :color              [ a          :Color ;
+        ome:color           [ a          ome:Color ;
                               rdf:value  "-2147483648"
                             ] .

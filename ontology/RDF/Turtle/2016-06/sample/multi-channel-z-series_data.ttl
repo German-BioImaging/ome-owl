@@ -1,8 +1,8 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix SBO:   <http://purl.obolibrary.org/obo/SBO_> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/multi-channel-z-seriesl/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/multi-channel-z-seriesl/channel/> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
@@ -20,93 +20,93 @@
 @prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/multi-channel-z-seriesl/bindata/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
-bindata:bindata4  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A////AAD/AP//////AP///wD///////8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////" ;
-        :length     "576"^^xsd:long .
+bindata:bindata4  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP////8AAP//////AP////8A//////8AAP//////AP////8A////AAD/AP//////AP///wD///////8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-bindata:bindata3  a  :BinData ;
-        :bigEndian  false ;
-        :data       "QEBAQEBAQEBAQEBAQEBAQEBAQL+/QL+/v0BAv7+/v0C/v79Av0BAQEBAQL9AQEBAv0BAQEC/v0BAQEBAQL9AQEC/QEBAQEC/v0BAQEBAv0BAQEC/QEBAQL9Av0BAQEC/QEBAQL9AQEBAv0BAv0BAQL9AQEBAQL9AQEC/QEBAv0BAQL9AQEBAv0BAQEC/QEBAQL+/QL+/v79Av7+/v0C/v7+/QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQL+/v0BAQEC/QEBAQEBAQEBAQEC/QEBAQL+/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBA" ;
-        :length     "576"^^xsd:long .
+bindata:bindata3  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "QEBAQEBAQEBAQEBAQEBAQEBAQL+/QL+/v0BAv7+/v0C/v79Av0BAQEBAQL9AQEBAv0BAQEC/v0BAQEBAQL9AQEC/QEBAQEC/v0BAQEBAv0BAQEC/QEBAQL9Av0BAQEC/QEBAQL9AQEBAv0BAv0BAQL9AQEBAQL9AQEC/QEBAv0BAQL9AQEBAv0BAQEC/QEBAQL+/QL+/v79Av7+/v0C/v7+/QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQL+/v0BAQEC/QEBAQEBAQEBAQEC/QEBAQL+/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBA"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-bindata:bindata9  a  :BinData ;
-        :bigEndian  false ;
-        :data       "wMDAwMDAwMDAwMDAwMDAwMDAwEBAwEBAQMDAQEBAQMBAQEBAQMDAwMDAwEDAwMDAQMBAwMDAQMDAwMDAwEDAwMBAwMBAwMDAQMDAwMDAQMDAwMBAwMBAQEDAQMDAwMBAwMDAwEDAwMBAwMBAQMDAwEDAwMDAwEDAwMDAwMBAQMDAwEDAwMDAQMDAwMDAwMBAwEBAwEBAQEDAQEBAQMBAQEDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwEBAQMDAwMBAwMDAwMDAwMDAwMBAwMDAwEBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA" ;
-        :length     "576"^^xsd:long .
+bindata:bindata9  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "wMDAwMDAwMDAwMDAwMDAwMDAwEBAwEBAQMDAQEBAQMBAQEBAQMDAwMDAwEDAwMDAQMBAwMDAQMDAwMDAwEDAwMBAwMBAwMDAQMDAwMDAQMDAwMBAwMBAQEDAQMDAwMBAwMDAwEDAwMBAwMBAQMDAwEDAwMDAwEDAwMDAwMBAQMDAwEDAwMDAQMDAwMDAwMBAwEBAwEBAQEDAQEBAQMBAQEDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwEBAQMDAwMBAwMDAwMDAwMDAwMBAwMDAwEBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-bindata:bindata2  a  :BinData ;
-        :bigEndian  false ;
-        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD///8A/wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAA/wAA/wAAAAAA/wAAAP8AAAD/AAAA/wAAAAAA/wAA/wAAAAD/AAAAAP//AAAA/wAA/////wD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD/AAAAAAAAAAAAAAD/AAAAAP//AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-        :length     "576"^^xsd:long .
+bindata:bindata2  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wD///8A/wAAAAD//wAAAAAA/wAAAAD//wAAAAAA/wAAAAD/AAAAAAD//wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAA/wAA/wAAAAAA/wAAAP8AAAD/AAAA/wAAAAAA/wAA/wAAAAD/AAAAAP//AAAA/wAA/////wD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD/AAAAAAAAAAAAAAD/AAAAAP//AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-bindata:bindata8  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP8A////AP//////AP////8A//8A////AP//////AP////8A//8AAAD/AP//////AP///wD///8A//8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////" ;
-        :length     "576"^^xsd:long .
+bindata:bindata8  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/////////////////////////wAA////AP//AAAAAP8AAAAAAP////8AAP//////AP8A////AP//////AP////8A//8A////AP//////AP////8A//8AAAD/AP//////AP///wD///8A//8AAP//////AP///wD///////8AAP//////AP//AP////////8A/wAA////AP//AAAAAP8AAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-dimensionOrder:xyctz  a  :DimensionOrder .
+dimensionOrder:xyctz  a  ome:DimensionOrder .
 
-_:b0    a          :Color ;
+_:b0    a          ome:Color ;
         rdf:value  "-2147483648" .
 
-bindata:bindata1  a  :BinData ;
-        :bigEndian  false ;
-        :data       "wMDAwMDAwMDAwMDAwMDAwMDAwEBAwEBAQMDAQEBAQMDAwEDAQMDAwMDAwEDAwMDAQMDAQEDAQMDAwMDAwEDAwMBAwMDAwEDAQMDAwMDAQMDAwMBAwMDAwEDAQMDAwMBAwMDAwEDAwMDAwEDAQMDAwEDAwMDAwEDAwMDAwEDAQMDAwEDAwMDAQMDAwMDAwEDAwEBAwEBAQEDAQEBAQMDAwEDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwEBAQMDAwMBAwMDAwMDAwMDAwMBAwMDAwEBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA" ;
-        :length     "576"^^xsd:long .
+bindata:bindata1  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "wMDAwMDAwMDAwMDAwMDAwMDAwEBAwEBAQMDAQEBAQMDAwEDAQMDAwMDAwEDAwMDAQMDAQEDAQMDAwMDAwEDAwMBAwMDAwEDAQMDAwMDAQMDAwMBAwMDAwEDAQMDAwMBAwMDAwEDAwMDAwEDAQMDAwEDAwMDAwEDAwMDAwEDAQMDAwEDAwMDAQMDAwMDAwEDAwEBAwEBAQEDAQEBAQMDAwEDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwEBAQMDAwMBAwMDAwMDAwMDAwMBAwMDAwEBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-bindata:bindata7  a  :BinData ;
-        :bigEndian  false ;
-        :data       "QEBAQEBAQEBAQEBAQEBAQEBAQL+/QL+/v0BAv7+/v0BAQL+/v0BAQEBAQL9AQEBAv0BAQL+/v0BAQEBAQL9AQEC/QEBAv0C/v0BAQEBAv0BAQEC/QEBAv0C/v0BAQEC/QEBAQL9AQEC/QEC/v0BAQL9AQEBAQL9AQEC/v7+/v0BAQL9AQEBAv0BAQEBAQEC/QL+/QL+/v79Av7+/v0BAQEC/QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQL+/v0BAQEC/QEBAQEBAQEBAQEC/QEBAQL+/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBA" ;
-        :length     "576"^^xsd:long .
+bindata:bindata7  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "QEBAQEBAQEBAQEBAQEBAQEBAQL+/QL+/v0BAv7+/v0BAQL+/v0BAQEBAQL9AQEBAv0BAQL+/v0BAQEBAQL9AQEC/QEBAv0C/v0BAQEBAv0BAQEC/QEBAv0C/v0BAQEC/QEBAQL9AQEC/QEC/v0BAQL9AQEBAQL9AQEC/v7+/v0BAQL9AQEBAv0BAQEBAQEC/QL+/QL+/v79Av7+/v0BAQEC/QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQL+/v0BAQEC/QEBAQEBAQEBAQEC/QEBAQL+/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEC/QEBAQEC/QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBA"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-image:image0  a             :Image ;
-        rdfs:label          "18x24y5z1t2c8b-text"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-03-02T15:08:59" ;
-        :pixels             pixels:pixels0 .
+image:image0  a              ome:Image ;
+        rdfs:label           "18x24y5z1t2c8b-text"@en ;
+        dcterms:identifier   "Image:0" ;
+        ome:acquisitionDate  "2010-03-02T15:08:59" ;
+        ome:pixels           pixels:pixels0 .
 
-channel:channel1  a         :Channel ;
+channel:channel1  a         ome:Channel ;
         dcterms:identifier  "Channel:1" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
-bindata:bindata0  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////" ;
-        :length     "576"^^xsd:long .
+bindata:bindata0  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-bindata:bindata6  a  :BinData ;
-        :bigEndian  false ;
-        :data       "AAAAAAAAAAAAAAAAAAAAAAAAAPz8AAAA/AAA/Pz8/AAAAPz8/AAAAAD8/AAAAAAA/AAAAPz8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAPwAAAD8AAD8/AAAAAAA/AAAAPwAAAD8/Pz8/AAAAAAA/AAA/AAAAAAAAAD8APz8AAAA/AAA/Pz8/AAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz8/AAAAAD8AAAAAAAAAAAAAAD8AAAAAPz8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" ;
-        :length     "576"^^xsd:long .
+bindata:bindata6  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "AAAAAAAAAAAAAAAAAAAAAAAAAPz8AAAA/AAA/Pz8/AAAAPz8/AAAAAD8/AAAAAAA/AAAAPz8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAAD8AAAA/AD8/AAAAAAA/AAAAPwAAAD8AAD8/AAAAAAA/AAAAPwAAAD8/Pz8/AAAAAAA/AAA/AAAAAAAAAD8APz8AAAA/AAA/Pz8/AAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz8/AAAAAD8AAAAAAAAAAAAAAD8AAAAAPz8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAD8AAAAAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .
 
-channel:channel0  a         :Channel ;
+channel:channel0  a         ome:Channel ;
         dcterms:identifier  "Channel:0" ;
-        :color              _:b0 .
+        ome:color           _:b0 .
 
 _:b1    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
-bindata:bindata5  a  :BinData ;
-        :bigEndian  false ;
-        :data       "wMDAwMDAwMDAwMDAwMDAwMDAwEBAwEBAQMDAQEBAQMBAQEBAQMDAwMDAwEDAwMDAQMDAwMBAQMDAwMDAwEDAwMBAwMDAwMBAQMDAwMDAQMDAwMBAwMDAQEDAQMDAwMBAwMDAwEDAwMDAwMBAQMDAwEDAwMDAwEDAwMDAwMBAQMDAwEDAwMDAQMDAwMDAwMBAwEBAwEBAQEDAQEBAQMBAQEDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwEBAQMDAwMBAwMDAwMDAwMDAwMBAwMDAwEBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA" ;
-        :length     "576"^^xsd:long .
+bindata:bindata5  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "wMDAwMDAwMDAwMDAwMDAwMDAwEBAwEBAQMDAQEBAQMBAQEBAQMDAwMDAwEDAwMDAQMDAwMBAQMDAwMDAwEDAwMBAwMDAwMBAQMDAwMDAQMDAwMBAwMDAQEDAQMDAwMBAwMDAwEDAwMDAwMBAQMDAwEDAwMDAwEDAwMDAwMBAQMDAwEDAwMDAQMDAwMDAwMBAwEBAwEBAQEDAQEBAQMBAQEDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwEBAQMDAwMBAwMDAwMDAwMDAwMBAwMDAwEBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMBAwMDAwMBAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA"^^xsd:base64Binary ;
+        ome:length     "576"^^xsd:nonNegativeLong .
 
 unitLength:um  a  rdfs:Class .
 
-pixels:pixels0  a           :Pixels ;
+pixels:pixels0  a           ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :binData            bindata:bindata4 , bindata:bindata9 , bindata:bindata0 , bindata:bindata6 , bindata:bindata2 , bindata:bindata5 , bindata:bindata1 , bindata:bindata8 , bindata:bindata7 , bindata:bindata3 ;
-        :channel            channel:channel1 , channel:channel0 ;
-        :dimensionOrder     dimensionOrder:xyctz ;
-        :physicalSizeX      _:b1 ;
-        :physicalSizeY      _:b1 ;
-        :pixelType          pixelType:uint8 ;
-        :sizeC              "2"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "18"^^xsd:int ;
-        :sizeY              "24"^^xsd:int ;
-        :sizeZ              "5"^^xsd:int .
+        ome:binData         bindata:bindata4 , bindata:bindata9 , bindata:bindata0 , bindata:bindata6 , bindata:bindata2 , bindata:bindata5 , bindata:bindata1 , bindata:bindata8 , bindata:bindata7 , bindata:bindata3 ;
+        ome:channel         channel:channel1 , channel:channel0 ;
+        ome:dimensionOrder  dimensionOrder:xyctz ;
+        ome:physicalSizeX   _:b1 ;
+        ome:physicalSizeY   _:b1 ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:sizeC           "2"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "18"^^xsd:positiveInteger ;
+        ome:sizeY           "24"^^xsd:positiveInteger ;
+        ome:sizeZ           "5"^^xsd:positiveInteger .

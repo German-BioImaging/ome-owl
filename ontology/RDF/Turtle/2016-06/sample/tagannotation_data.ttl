@@ -1,7 +1,7 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/tagannotation/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -16,34 +16,34 @@
 @prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/tagannotation/bindata/> .
 @prefix tagAnnotation: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/tagannotation/tagAnnotation/> .
 
-bindata:bindata1  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata1  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 tagAnnotation:tagAnnotation1
-        a                   :TagAnnotation , :Annotation ;
+        a                   ome:TagAnnotation , ome:Annotation ;
         rdf:value           "SampleTagA" ;
         rdfs:comment        "This is the description of the sample tag A"@en ;
         dcterms:identifier  "Annotation:1" .
 
 unitLength:um  a  rdfs:Class .
 
-pixels:pixels0.0  a         :Pixels ;
+pixels:pixels0.0  a         ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :binData            bindata:bindata1 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b0 ;
-        :physicalSizeY      _:b0 ;
-        :pixelType          pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata1 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b0 ;
+        ome:physicalSizeY   _:b0 ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
 tagAnnotation:tagAnnotation2
-        a                   :TagAnnotation , :Annotation ;
+        a                   ome:TagAnnotation , ome:Annotation ;
         rdf:value           "SampleTagB" ;
         rdfs:comment        "This is the description of the sample tag B"@en ;
         dcterms:identifier  "Annotation:2" .
@@ -52,25 +52,25 @@ _:b0    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
-dimensionOrder:xyczt  a  :DimensionOrder .
+dimensionOrder:xyczt  a  ome:DimensionOrder .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .
 
 tagAnnotation:tagAnnotation3
-        a                   :TagAnnotation , :Annotation ;
+        a                   ome:TagAnnotation , ome:Annotation ;
         rdf:value           "SimpleTagset" ;
         rdfs:comment        "This is the description of the sample tagse"@en ;
         dcterms:identifier  "Annotation:3" ;
-        :annotation         tagAnnotation:tagAnnotation2 , tagAnnotation:tagAnnotation1 ;
-        :namespace          "\"openmicroscopy.org/omero/insight/tagset\"" .
+        ome:annotation      tagAnnotation:tagAnnotation2 , tagAnnotation:tagAnnotation1 ;
+        ome:namespace       "\"openmicroscopy.org/omero/insight/tagset\"" .
 
-[ a            :StructuredAnnotations ;
-  :annotation  tagAnnotation:tagAnnotation3 , tagAnnotation:tagAnnotation2 , tagAnnotation:tagAnnotation1
+[ a               ome:StructuredAnnotations ;
+  ome:annotation  tagAnnotation:tagAnnotation3 , tagAnnotation:tagAnnotation2 , tagAnnotation:tagAnnotation1
 ] .
 
-image:image0  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :annotation         tagAnnotation:tagAnnotation3 ;
-        :pixels             pixels:pixels0.0 .
+image:image0  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif"@en ;
+        dcterms:identifier   "Image:0" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:annotation       tagAnnotation:tagAnnotation3 ;
+        ome:pixels           pixels:pixels0.0 .

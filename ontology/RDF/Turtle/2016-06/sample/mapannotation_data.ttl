@@ -1,8 +1,8 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/mapannotation/image/> .
 @prefix mapAnnotation: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/mapannotation/mapAnnotation/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -20,62 +20,62 @@
 unitLength:nm  a  rdfs:Class .
 
 mapAnnotation:mapAnnotation1
-        a                   :MapAnnotation , :Annotation ;
+        a                   ome:MapAnnotation , ome:Annotation ;
         rdf:value           map:map1 ;
         rdfs:comment        "This is the description of the sample map A"@en ;
         dcterms:identifier  "Annotation:1" .
 
-map:map2.2  a   :Map ;
-        :key    "SampleKeyB-2" ;
-        :value  "SampleValueB-2" .
+map:map2.2  a      ome:Map ;
+        ome:key    "SampleKeyB-2" ;
+        ome:value  "SampleValueB-2" .
 
-image:image0  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :annotation         mapAnnotation:mapAnnotation2 , mapAnnotation:mapAnnotation1 ;
-        :pixels             pixels:pixels0.0 .
+image:image0  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif"@en ;
+        dcterms:identifier   "Image:0" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:annotation       mapAnnotation:mapAnnotation2 , mapAnnotation:mapAnnotation1 ;
+        ome:pixels           pixels:pixels0.0 .
 
-pixels:pixels0.0  a         :Pixels ;
+pixels:pixels0.0  a         ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :binData            bindata:bindata0 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b0 ;
-        :physicalSizeY      _:b0 ;
-        :pixcelType         pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata0 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b0 ;
+        ome:physicalSizeY   _:b0 ;
+        ome:pixcelType      pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
 _:b0    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:nm .
 
-map:map1  a     :Map ;
-        :key    "SampleKeyA" ;
-        :value  "SampleValueA" .
+map:map1  a        ome:Map ;
+        ome:key    "SampleKeyA" ;
+        ome:value  "SampleValueA" .
 
-dimensionOrder:xyczt  a  :DimensionOrder .
+dimensionOrder:xyczt  a  ome:DimensionOrder .
 
 mapAnnotation:mapAnnotation2
-        a                   :MapAnnotation , :Annotation ;
+        a                   ome:MapAnnotation , ome:Annotation ;
         rdf:value           map:map2.2 , map:map2.1 ;
         rdfs:comment        "This is the description of the sample map B"@en ;
         dcterms:identifier  "Annotation:2" .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .
 
-bindata:bindata0  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata0  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-[ a            :StructuredAnnotations ;
-  :annotation  mapAnnotation:mapAnnotation2 , mapAnnotation:mapAnnotation1
+[ a               ome:StructuredAnnotations ;
+  ome:annotation  mapAnnotation:mapAnnotation2 , mapAnnotation:mapAnnotation1
 ] .
 
-map:map2.1  a   :Map ;
-        :key    "SampleKeyB-1" ;
-        :value  "SampleValueB-1" .
+map:map2.1  a      ome:Map ;
+        ome:key    "SampleKeyB-1" ;
+        ome:value  "SampleValueB-1" .

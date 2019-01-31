@@ -1,9 +1,9 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix laserType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/LazerType#> .
 @prefix plane: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/plane/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix detectorType: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/spim/channel/> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
@@ -48,737 +48,737 @@
 
 unitTime:s  a   rdfs:Class .
 
-plane:plane11  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane11  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
 unitLength:nm  a  rdfs:Class .
 
-bindata:bindata24  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata24  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-plane:plane24  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane24  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-[ a            :StructuredAnnotations ;
-  :annotation  xmlAnnotation:SystemSpecific1 , xmlAnnotation:ObjectiveAdditions1 , xmlAnnotation:SpimSet1 , xmlAnnotation:ExtraStageLabel1:3 , xmlAnnotation:ExtraStageLabel1:2 , xmlAnnotation:ExtraStageLabel1:1 , xmlAnnotation:ExtraStageLabel1:0
+[ a               ome:StructuredAnnotations ;
+  ome:annotation  xmlAnnotation:SystemSpecific1 , xmlAnnotation:ObjectiveAdditions1 , xmlAnnotation:SpimSet1 , xmlAnnotation:ExtraStageLabel1:3 , xmlAnnotation:ExtraStageLabel1:2 , xmlAnnotation:ExtraStageLabel1:1 , xmlAnnotation:ExtraStageLabel1:0
 ] .
 
-_:b1    a          :Color ;
+_:b1    a          ome:Color ;
         rdf:value  "16711935" .
 
-_:b2    a          :Color ;
+_:b2    a          ome:Color ;
         rdf:value  "-1" .
 
-image:image1  a             :Image ;
-        rdfs:label          "Spin Sample Tile 2 Angle 1"@en ;
-        dcterms:identifier  "Image:1" ;
-        :acquisitionDate    "2010-11-10T14:42:38" ;
-        :annotation         xmlAnnotation:SpimSet1 , xmlAnnotation:SystemSpecific1 , xmlAnnotation:ExtraStageLabel1.1 , xmlAnnotation:ObjectiveAdditions1 ;
-        :imagingCondition   imagingCondition:image1 ;
-        :instrument         instrument:instrument0 ;
-        :pixels             pixels:image1 .
+image:image1  a               ome:Image ;
+        rdfs:label            "Spin Sample Tile 2 Angle 1"@en ;
+        dcterms:identifier    "Image:1" ;
+        ome:acquisitionDate   "2010-11-10T14:42:38" ;
+        ome:annotation        xmlAnnotation:SpimSet1 , xmlAnnotation:SystemSpecific1 , xmlAnnotation:ExtraStageLabel1.1 , xmlAnnotation:ObjectiveAdditions1 ;
+        ome:imagingCondition  imagingCondition:image1 ;
+        ome:instrument        instrument:instrument0 ;
+        ome:pixels            pixels:image1 .
 
-laser:laser0  a             :Laser , :ManufacturerSpec ;
+laser:laser0  a             ome:Laser , ome:ManufacturerSpec ;
         dcterms:identifier  "LightSource:1" ;
-        :laserMedium        laserMedium:GaAs ;
-        :laserType          laserType:semiconductor ;
-        :manufacturer       _:b3 ;
-        :model              "Laser Mk1" ;
-        :serialNumber       "LASER-1" ;
-        :waveLength         [ a          PATO:0001242 ;
+        ome:laserMedium     laserMedium:GaAs ;
+        ome:laserType       laserType:semiconductor ;
+        ome:manufacturer    _:b3 ;
+        ome:model           "Laser Mk1" ;
+        ome:serialNumber    "LASER-1" ;
+        ome:wavelength      [ a          PATO:0001242 ;
                               rdf:value  "448.0"^^xsd:float ;
                               qudt:unit  unitLength:nm
                             ] .
 
-stageLabel:image1  a  :StageLabel ;
-        rdfs:label  "(1,2) of 1x2"@en ;
-        :positionX  _:b4 ;
-        :positionY  _:b5 .
+stageLabel:image1  a   ome:StageLabel ;
+        rdfs:label     "(1,2) of 1x2"@en ;
+        ome:positionX  _:b4 ;
+        ome:positionY  _:b5 .
 
-bindata:bindata31  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata31  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 _:b0    a          PATO:0000165 ;
         rdf:value  "500.0"^^xsd:float ;
         qudt:unit  unitTime:s .
 
-plane:plane31  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane31  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-plane:plane9  a        :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane9  a           ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-bindata:bindata16  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata16  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 _:b5    a          PATO:0000140 ;
         rdf:value  "2.0"^^xsd:float ;
         qudt:unit  unitLength:referenceFrame .
 
 xmlAnnotation:ExtraStageLabel1:1
-        a                   :XMLAnnotation , :Annotation ;
+        a                   ome:XMLAnnotation , ome:annotation ;
         rdf:value           "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"^^rdf:XMLLiteral ;
         dcterms:identifier  "Annotation:ExtraStageLabel:1:1" ;
-        :namespace          "ome-xml.org:additions:post2010-06:spim:positions" .
+        ome:namespace       "ome-xml.org:additions:post2010-06:spim:positions" .
 
-pixels:image0  a            :Pixels ;
+pixels:image0  a            ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :binData            bindata:bindata7 , bindata:bindata4 , bindata:bindata1 , bindata:bindata8 , bindata:bindata6 , bindata:bindata3 , bindata:bindata5 , bindata:bindata2 ;
-        :channel            channel:channel0.0 , channel:channel0.1 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b6 ;
-        :physicalSizeY      _:b6 ;
-        :pixelType          pixelType:uint8 ;
-        :plane              plane:plane4 , plane:plane5 , plane:plane2 , plane:plane3 , plane:plane8 , plane:plane6 , plane:plane7 , plane:plane1 ;
-        :sizeC              "2"^^xsd:int ;
-        :sizeT              "2"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "2"^^xsd:int .
+        ome:binData         bindata:bindata7 , bindata:bindata4 , bindata:bindata1 , bindata:bindata8 , bindata:bindata6 , bindata:bindata3 , bindata:bindata5 , bindata:bindata2 ;
+        ome:channel         channel:channel0.0 , channel:channel0.1 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b6 ;
+        ome:physicalSizeY   _:b6 ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:plane           plane:plane4 , plane:plane5 , plane:plane2 , plane:plane3 , plane:plane8 , plane:plane6 , plane:plane7 , plane:plane1 ;
+        ome:sizeC           "2"^^xsd:positiveInteger ;
+        ome:sizeT           "2"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "2"^^xsd:positiveInteger .
 
-plane:plane16  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane16  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-bindata:bindata29  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata29  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 objectiveSettings:image1
-        a                   :ObjectiveSettings ;
-        dcterms:identifier  "Objective:1" ;
-        :correctionCollar   "6.0"^^xsd:float ;
-        :medium             medium:oil .
+        a                     ome:ObjectiveSettings ;
+        dcterms:identifier    "Objective:1" ;
+        ome:correctionCollar  "6.0"^^xsd:float ;
+        ome:medium            medium:oil .
 
-objective:objective1  a     :Objective , :ManufacturerSpec ;
+objective:objective1  a     ome:Objective , ome:ManufacturerSpec ;
         dcterms:identifier  "Objective:TubeLens:1" ;
-        :manufacturer       _:b3 ;
-        :model              "OME - Tube lens 120 mm Mk1" .
+        ome:manufacturer    _:b3 ;
+        ome:model           "OME - Tube lens 120 mm Mk1" .
 
-plane:plane29  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane29  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
 _:b6    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
-plane:plane3  a        :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane3  a           ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-bindata:bindata4  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata4  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 _:b4    a          PATO:0000140 ;
         rdf:value  "1.0"^^xsd:float ;
         qudt:unit  unitLength:referenceFrame .
 
-bindata:bindata10  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata10  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-immersion:air  a  :Immersion .
+immersion:air  a  ome:Immersion .
 
-plane:plane10  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane10  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-channel:channel3.1  a       :Channel ;
+channel:channel3.1  a       ome:Channel ;
         dcterms:identifier  "Channel:3.1" ;
-        :color              _:b1 ;
-        :flour              "Green-OME" .
+        ome:color           _:b1 ;
+        ome:flour           "Green-OME" .
 
-bindata:bindata23  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata23  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 xmlAnnotation:ObjectiveAdditions1
-        a                   :XMLAnnotation , :Annotation ;
+        a                   ome:XMLAnnotation , ome:annotation , ome:Annotation ;
         rdf:value           "<OME-Extra:ObjectiveAttributes\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <ObjectiveAdditions ID=\"Objective:TubeLens:1\" FocalLength=\"120\" SlitAperture=\"6\"\n                              LightSheetWidth=\"0.8\"/>\n          <ObjectiveAdditions ID=\"Objective:Illumation:1\" FocalLength=\"25\"/>\n        </OME-Extra:ObjectiveAttributes>"^^rdf:XMLLiteral ;
         rdfs:comment        "Extra attribute values for the objective objects."@en ;
         dcterms:identifier  "Annotation:ObjectiveAdditions:1" ;
-        :namespace          "ome-xml.org:additions:post2010-06:objective" .
+        ome:namespace       "ome-xml.org:additions:post2010-06:objective" .
 
-plane:plane23  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane23  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-channel:channel2.1  a       :Channel ;
+channel:channel2.1  a       ome:Channel ;
         dcterms:identifier  "Channel:2.1" ;
-        :color              _:b1 ;
-        :flour              "Green-OME" .
+        ome:color           _:b1 ;
+        ome:flour           "Green-OME" .
 
-image:image0  a             :Image ;
-        rdfs:label          "Spim Sample Tile 1 Angle 1"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-11-10T14:42:38" ;
-        :annotation         xmlAnnotation:SystemSpecific1 , xmlAnnotation:SpimSet1 , xmlAnnotation:ExtraStageLabel1.0 , xmlAnnotation:ObjectiveAdditions1 ;
-        :imagingCondition   imagingCondition:image0 ;
-        :instrument         instrument:instrument0 ;
-        :pixels             pixels:image0 .
+image:image0  a               ome:Image ;
+        rdfs:label            "Spim Sample Tile 1 Angle 1"@en ;
+        dcterms:identifier    "Image:0" ;
+        ome:acquisitionDate   "2010-11-10T14:42:38" ;
+        ome:annotation        xmlAnnotation:SystemSpecific1 , xmlAnnotation:SpimSet1 , xmlAnnotation:ExtraStageLabel1.0 , xmlAnnotation:ObjectiveAdditions1 ;
+        ome:imagingCondition  imagingCondition:image0 ;
+        ome:instrument        instrument:instrument0 ;
+        ome:pixels            pixels:image0 .
 
-stageLabel:image0  a  :StageLabel ;
-        rdfs:label  "(1,1) of 1x2"@en ;
-        :positionX  _:b4 ;
-        :positionY  _:b4 .
+stageLabel:image0  a   ome:StageLabel ;
+        rdfs:label     "(1,1) of 1x2"@en ;
+        ome:positionX  _:b4 ;
+        ome:positionY  _:b4 .
 
-bindata:bindata30  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata30  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-channel:channel1.1  a       :Channel ;
+channel:channel1.1  a       ome:Channel ;
         dcterms:identifier  "Channel:1.1" ;
-        :color              _:b1 ;
-        :flour              "Green-OME" .
+        ome:color           _:b1 ;
+        ome:flour           "Green-OME" .
 
-laserMedium:GaAs  a  :LaserMedium .
+laserMedium:GaAs  a  ome:LaserMedium .
 
-plane:plane30  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane30  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-plane:plane8  a        :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane8  a           ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-bindata:bindata9  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata9  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-bindata:bindata15  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata15  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 xmlAnnotation:ExtraStageLabel1:0
-        a                   :XMLAnnotation , :Annotation ;
+        a                   ome:XMLAnnotation , ome:annotation ;
         rdf:value           "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"^^rdf:XMLLiteral ;
         dcterms:identifier  "Annotation:ExtraStageLabel:1:0" ;
-        :namespace          "ome-xml.org:additions:post2010-06:spim:positions" .
+        ome:namespace       "ome-xml.org:additions:post2010-06:spim:positions" .
 
-plane:plane15  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane15  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-channel:channel0.1  a       :Channel ;
+channel:channel0.1  a       ome:Channel ;
         dcterms:identifier  "Channel:0.1" ;
-        :color              _:b1 ;
-        :flour              "Green-OME" .
+        ome:color           _:b1 ;
+        ome:flour           "Green-OME" .
 
-bindata:bindata28  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata28  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-medium:oil  a   :Medium .
+medium:oil  a   ome:Medium .
 
 objectiveSettings:image0
-        a                   :ObjectiveSettings ;
-        dcterms:identifier  "Objective:1" ;
-        :correctionCollar   "6.0"^^xsd:float ;
-        :medium             medium:oil .
+        a                     ome:ObjectiveSettings ;
+        dcterms:identifier    "Objective:1" ;
+        ome:correctionCollar  "6.0"^^xsd:float ;
+        ome:medium            medium:oil .
 
-objective:objective0  a           :Objective , :ManufacturerSpec ;
-        dcterms:identifier        "Objective:1" ;
-        :calibratedMagnification  "20.0"^^xsd:float ;
-        :correction               correction:other ;
-        :immersion                immersion:oil ;
-        :lensNA                   "0.95"^^xsd:float ;
-        :manufacturer             _:b3 ;
-        :model                    "Objective Mk1" ;
-        :nominalMagnification     "20.0"^^xsd:float ;
-        :serialNumber             "OBJ1" ;
-        :workingDistance          [ a          PATO:0000040 ;
-                                    rdf:value  "0.0"^^xsd:float ;
-                                    qudt:unit  unitLength:um
-                                  ] .
+objective:objective0  a              ome:Objective , ome:ManufacturerSpec ;
+        dcterms:identifier           "Objective:1" ;
+        ome:calibratedMagnification  "20.0"^^xsd:float ;
+        ome:correction               correction:other ;
+        ome:immersion                immersion:oil ;
+        ome:lensNA                   "0.95"^^xsd:float ;
+        ome:manufacturer             _:b3 ;
+        ome:model                    "Objective Mk1" ;
+        ome:nominalMagnification     "20.0"^^xsd:float ;
+        ome:serialNumber             "OBJ1" ;
+        ome:workingDistance          [ a          PATO:0000040 ;
+                                       rdf:value  "0.0"^^xsd:float ;
+                                       qudt:unit  unitLength:um
+                                     ] .
 
-plane:plane28  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane28  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-correction:other  a  :Correction .
+correction:other  a  ome:Correction .
 
-plane:plane2  a        :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane2  a           ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-bindata:bindata3  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata3  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-bindata:bindata22  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata22  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-channel:channel3.0  a       :Channel ;
+channel:channel3.0  a       ome:Channel ;
         dcterms:identifier  "Channel:3.0" ;
-        :color              _:b2 ;
-        :flour              "Autofluorescence" .
+        ome:color           _:b2 ;
+        ome:flour           "Autofluorescence" .
 
-plane:plane22  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane22  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-microscopeType:other  a  :MicroscopeType .
+microscopeType:other  a  ome:MicroscopeType .
 
-channel:channel2.0  a       :Channel ;
+channel:channel2.0  a       ome:Channel ;
         dcterms:identifier  "Channel:2.0" ;
-        :color              _:b2 ;
-        :flour              "Autofluorescence" .
+        ome:color           _:b2 ;
+        ome:flour           "Autofluorescence" .
 
-channel:channel1.0  a       :Channel ;
+channel:channel1.0  a       ome:Channel ;
         dcterms:identifier  "Channel:1.0" ;
-        :color              _:b2 ;
-        :flour              "Autofluorescence" .
+        ome:color           _:b2 ;
+        ome:flour           "Autofluorescence" .
 
 imagingCondition:image3
-        a                   :ImagingCondition ;
-        :instrument         instrument:instrument0 ;
-        :objectiveSettings  objectiveSettings:image3 ;
-        :stageLabel         stageLabel:image3 .
+        a                      ome:ImagingCondition ;
+        ome:instrument         instrument:instrument0 ;
+        ome:objectiveSettings  objectiveSettings:image3 ;
+        ome:stageLabel         stageLabel:image3 .
 
-plane:plane7  a        :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane7  a           ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-bindata:bindata8  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata8  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-bindata:bindata14  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata14  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-plane:plane14  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane14  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-channel:channel0.0  a       :Channel ;
+channel:channel0.0  a       ome:Channel ;
         dcterms:identifier  "Channel:0.0" ;
-        :color              _:b2 ;
-        :flour              "Autofluorescence" .
+        ome:color           _:b2 ;
+        ome:flour           "Autofluorescence" .
 
-bindata:bindata27  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata27  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 laserType:semiconductor
-        a       :LaserType .
+        a       ome:LaserType .
 
-plane:plane27  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane27  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-plane:plane1  a        :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane1  a           ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-bindata:bindata2  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata2  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-bindata:bindata21  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata21  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-plane:plane21  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane21  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
 xmlAnnotation:ExtraStageLabel1.1
-        a       :Annotation .
+        a       ome:Annotation .
 
 xmlAnnotation:SpimSet1
-        a                   :XMLAnnotation , :Annotation ;
+        a                   ome:XMLAnnotation , ome:annotation , ome:Annotation ;
         rdf:value           "        <OME-Extra:SpimSet\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <SpimImage ID=\"Image:0\" Angle=\"0\"/>\n          <SpimImage ID=\"Image:1\" Angle=\"0\"/>\n          <SpimImage ID=\"Image:2\" Angle=\"45\"/>\n          <SpimImage ID=\"Image:3\" Angle=\"45\"/>\n        </OME-Extra:SpimSet>"^^rdf:XMLLiteral ;
         rdfs:comment        "This structure combines the images into a SPIM set and defines the angles the images were taken from."@en ;
         dcterms:identifier  "Annotation:SpimSet:1" ;
-        :namespace          "ome-xml.org:additions:post2010-06:spim:set" .
+        ome:namespace       "ome-xml.org:additions:post2010-06:spim:set" .
 
-bindata:bindata19  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata19  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image3  a            :Pixels ;
+pixels:image3  a            ome:Pixels ;
         dcterms:identifier  "Pixels:3.0" ;
-        :binData            bindata:bindata27 , bindata:bindata30 , bindata:bindata26 , bindata:bindata28 , bindata:bindata31 , bindata:bindata29 , bindata:bindata32 , bindata:bindata25 ;
-        :channel            channel:channel3.0 , channel:channel3.1 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b6 ;
-        :physicalSizeY      _:b6 ;
-        :pixelType          pixelType:uint8 ;
-        :plane              plane:plane30 , plane:plane32 , plane:plane31 , plane:plane27 , plane:plane25 , plane:plane26 , plane:plane29 , plane:plane28 ;
-        :sizeC              "2"^^xsd:int ;
-        :sizeT              "2"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "2"^^xsd:int .
+        ome:binData         bindata:bindata27 , bindata:bindata30 , bindata:bindata26 , bindata:bindata28 , bindata:bindata31 , bindata:bindata29 , bindata:bindata32 , bindata:bindata25 ;
+        ome:channel         channel:channel3.0 , channel:channel3.1 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b6 ;
+        ome:physicalSizeY   _:b6 ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:plane           plane:plane30 , plane:plane32 , plane:plane31 , plane:plane27 , plane:plane25 , plane:plane26 , plane:plane29 , plane:plane28 ;
+        ome:sizeC           "2"^^xsd:positiveInteger ;
+        ome:sizeT           "2"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "2"^^xsd:positiveInteger .
 
-plane:plane19  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane19  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-detector:detector0  a       :Detector , :ManufacturerSpec ;
+detector:detector0  a       ome:Detector , ome:ManufacturerSpec ;
         dcterms:identifier  "Detector:1" ;
-        :detectorType       detectorType:CCD ;
-        :manufacturer       _:b3 ;
-        :model              "OME-CCD Mk1" ;
-        :serialNumber       "CCD1" .
+        ome:detectorType    detectorType:CCD ;
+        ome:manufacturer    _:b3 ;
+        ome:model           "OME-CCD Mk1" ;
+        ome:serialNumber    "CCD1" .
 
 microscope:microscope0
-        a                :Microscope , :ManufacturerSpec ;
-        :manufacturer    _:b3 ;
-        :microscopeType  microscopeType:other ;
-        :model           "Spim-Sample" ;
-        :serialNumber    "SPIM-1" .
+        a                   ome:Microscope , ome:ManufacturerSpec ;
+        ome:manufacturer    _:b3 ;
+        ome:microscopeType  microscopeType:other ;
+        ome:model           "Spim-Sample" ;
+        ome:serialNumber    "SPIM-1" .
 
 imagingCondition:image2
-        a                   :ImagingCondition ;
-        :instrument         instrument:instrument0 ;
-        :objectiveSettings  objectiveSettings:image2 ;
-        :stageLabel         stageLabel:image2 .
+        a                      ome:ImagingCondition ;
+        ome:instrument         instrument:instrument0 ;
+        ome:objectiveSettings  objectiveSettings:image2 ;
+        ome:stageLabel         stageLabel:image2 .
 
-plane:plane6  a        :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane6  a           ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-bindata:bindata7  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata7  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-bindata:bindata13  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata13  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-plane:plane13  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane13  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-bindata:bindata26  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata26  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 instrument:instrument0
-        a                   :Instrument ;
-        dcterms:identifier  "Instrument:SpimSampleMicroscope1" ;
-        :manufacturerSpec   objective:objective2 , objective:objective1 , objective:objective0 , led:led0 , detector:detector0 , laser:laser0 , microscope:microscope0 .
+        a                     ome:Instrument ;
+        dcterms:identifier    "Instrument:SpimSampleMicroscope1" ;
+        ome:manufacturerSpec  objective:objective2 , objective:objective1 , objective:objective0 , led:led0 , detector:detector0 , laser:laser0 , microscope:microscope0 .
 
-plane:plane26  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane26  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-bindata:bindata1  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata1  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 unitLength:referenceFrame
         a       rdfs:Class .
 
-bindata:bindata20  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata20  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-_:b3    a           :Manufacturer ;
+_:b3    a           ome:Manufacturer ;
         rdfs:label  "OME-Sample"@en .
 
-image:image3  a             :Image ;
-        rdfs:label          "Spim Sample Tile 2 Angle 2"@en ;
-        dcterms:identifier  "Image:3" ;
-        :acquisitionDate    "2010-11-10T14:42:38" ;
-        :annotation         xmlAnnotation:SystemSpecific1 , xmlAnnotation:ExtraStageLabel1:3 , xmlAnnotation:ObjectiveAdditions1 , xmlAnnotation:SpimSet1 ;
-        :imagingCondition   imagingCondition:image3 ;
-        :instrument         instrument:instrument0 ;
-        :pixels             pixels:image3 .
+image:image3  a               ome:Image ;
+        rdfs:label            "Spim Sample Tile 2 Angle 2"@en ;
+        dcterms:identifier    "Image:3" ;
+        ome:acquisitionDate   "2010-11-10T14:42:38" ;
+        ome:annotation        xmlAnnotation:SystemSpecific1 , xmlAnnotation:ExtraStageLabel1:3 , xmlAnnotation:ObjectiveAdditions1 , xmlAnnotation:SpimSet1 ;
+        ome:imagingCondition  imagingCondition:image3 ;
+        ome:instrument        instrument:instrument0 ;
+        ome:pixels            pixels:image3 .
 
-stageLabel:image3  a  :StageLabel ;
-        rdfs:label  "(1,2) of 1x2"@en ;
-        :positionX  _:b4 ;
-        :positionY  _:b5 .
+stageLabel:image3  a   ome:StageLabel ;
+        rdfs:label     "(1,2) of 1x2"@en ;
+        ome:positionX  _:b4 ;
+        ome:positionY  _:b5 .
 
-plane:plane20  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane20  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
 xmlAnnotation:ExtraStageLabel1.0
-        a       :Annotation .
+        a       ome:Annotation .
 
-immersion:oil  a  :Immersion .
+immersion:oil  a  ome:Immersion .
 
-bindata:bindata18  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata18  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-led:led0  a                 :LightEmittingDiode , :ManufacturerSpec ;
+led:led0  a                 ome:LightEmittingDiode , ome:ManufacturerSpec ;
         dcterms:identifier  "LightSource:2" ;
-        :manufacturer       _:b3 ;
-        :model              "Green LED Mk1" ;
-        :serialNumber       "LED-1" .
+        ome:manufacturer    _:b3 ;
+        ome:model           "Green LED Mk1" ;
+        ome:serialNumber    "LED-1" .
 
-plane:plane18  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane18  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-pixels:image2  a            :Pixels ;
+pixels:image2  a            ome:Pixels ;
         dcterms:identifier  "Pixels:2.0" ;
-        :binData            bindata:bindata21 , bindata:bindata19 , bindata:bindata17 , bindata:bindata22 , bindata:bindata20 , bindata:bindata18 , bindata:bindata24 , bindata:bindata23 ;
-        :channel            channel:channel2.1 , channel:channel2.0 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b6 ;
-        :physicalSizeY      _:b6 ;
-        :pixelType          pixelType:uint8 ;
-        :plane              plane:plane19 , plane:plane22 , plane:plane17 , plane:plane20 , plane:plane24 , plane:plane18 , plane:plane21 , plane:plane23 ;
-        :sizeC              "2"^^xsd:int ;
-        :sizeT              "2"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "2"^^xsd:int .
+        ome:binData         bindata:bindata21 , bindata:bindata19 , bindata:bindata17 , bindata:bindata22 , bindata:bindata20 , bindata:bindata18 , bindata:bindata24 , bindata:bindata23 ;
+        ome:channel         channel:channel2.1 , channel:channel2.0 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b6 ;
+        ome:physicalSizeY   _:b6 ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:plane           plane:plane19 , plane:plane22 , plane:plane17 , plane:plane20 , plane:plane24 , plane:plane18 , plane:plane21 , plane:plane23 ;
+        ome:sizeC           "2"^^xsd:positiveInteger ;
+        ome:sizeT           "2"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "2"^^xsd:positiveInteger .
 
 xmlAnnotation:ExtraStageLabel1:3
-        a                   :XMLAnnotation , :Annotation ;
+        a                   ome:XMLAnnotation , ome:annotation , ome:Annotation ;
         rdf:value           "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"^^rdf:XMLLiteral ;
         rdfs:comment        "Extra position of "@en ;
         dcterms:identifier  "Annotation:ExtraStageLabel:1:3" ;
-        :namespace          "ome-xml.org:additions:post2010-06:spim:positions" .
+        ome:namespace       "ome-xml.org:additions:post2010-06:spim:positions" .
 
 xmlAnnotation:SystemSpecific1
-        a                   :XMLAnnotation , :Annotation ;
+        a                   ome:XMLAnnotation , ome:annotation , ome:Annotation ;
         rdf:value           "<YourCustomXmlData>Any well formed XML allowed.</YourCustomXmlData>"^^rdf:XMLLiteral ;
         rdfs:comment        "These are the values you want attached to the SPIM images specific to your system that are not covered in our general SPIM additions."@en ;
         dcterms:identifier  "Annotation:SystemSpecific:1" .
 
 objectiveSettings:image3
-        a                   :ObjectiveSettings ;
-        dcterms:identifier  "Objective:1" ;
-        :correctionCollar   "6.0"^^xsd:float ;
-        :medium             medium:oil .
+        a                     ome:ObjectiveSettings ;
+        dcterms:identifier    "Objective:1" ;
+        ome:correctionCollar  "6.0"^^xsd:float ;
+        ome:medium            medium:oil .
 
 imagingCondition:image1
-        a                   :ImagingCondition ;
-        :instrument         instrument:instrument0 ;
-        :objectiveSettings  objectiveSettings:image1 ;
-        :stageLabel         stageLabel:image1 .
+        a                      ome:ImagingCondition ;
+        ome:instrument         instrument:instrument0 ;
+        ome:objectiveSettings  objectiveSettings:image1 ;
+        ome:stageLabel         stageLabel:image1 .
 
-plane:plane5  a        :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane5  a           ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-bindata:bindata6  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata6  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-bindata:bindata12  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata12  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-plane:plane12  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane12  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-bindata:bindata25  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata25  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 unitLength:um  a  rdfs:Class .
 
-plane:plane25  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane25  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-image:image2  a             :Image ;
-        rdfs:label          "Spim Sample Tile 1 Angle 2"@en ;
-        dcterms:identifier  "Image:2" ;
-        :acquisitionDate    "2010-11-10T14:42:38" ;
-        :annotation         xmlAnnotation:SystemSpecific1 , xmlAnnotation:ExtraStageLabel1:2 , xmlAnnotation:SpimSet1 , xmlAnnotation:ObjectiveAdditions1 ;
-        :imagingCondition   imagingCondition:image2 ;
-        :instrument         instrument:instrument0 ;
-        :pixels             pixels:image2 .
+image:image2  a               ome:Image ;
+        rdfs:label            "Spim Sample Tile 1 Angle 2"@en ;
+        dcterms:identifier    "Image:2" ;
+        ome:acquisitionDate   "2010-11-10T14:42:38" ;
+        ome:annotation        xmlAnnotation:SystemSpecific1 , xmlAnnotation:ExtraStageLabel1:2 , xmlAnnotation:SpimSet1 , xmlAnnotation:ObjectiveAdditions1 ;
+        ome:imagingCondition  imagingCondition:image2 ;
+        ome:instrument        instrument:instrument0 ;
+        ome:pixels            pixels:image2 .
 
-stageLabel:image2  a  :StageLabel ;
-        rdfs:label  "(1,1) of 1x2"@en ;
-        :positionX  _:b4 ;
-        :positionY  _:b4 .
+stageLabel:image2  a   ome:StageLabel ;
+        rdfs:label     "(1,1) of 1x2"@en ;
+        ome:positionX  _:b4 ;
+        ome:positionY  _:b4 .
 
-bindata:bindata32  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata32  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-plane:plane32  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "1"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane32  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "1"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .
 
-bindata:bindata17  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata17  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-pixels:image1  a            :Pixels ;
+pixels:image1  a            ome:Pixels ;
         dcterms:identifier  "Pixels:1.0" ;
-        :binData            bindata:bindata9 , bindata:bindata14 , bindata:bindata16 , bindata:bindata13 , bindata:bindata15 , bindata:bindata12 , bindata:bindata11 , bindata:bindata10 ;
-        :channel            channel:channel1.0 , channel:channel1.1 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b6 ;
-        :physicalSizeY      _:b6 ;
-        :pixelType          pixelType:uint8 ;
-        :plane              plane:plane9 , plane:plane14 , plane:plane11 , plane:plane16 , plane:plane15 , plane:plane10 , plane:plane12 , plane:plane13 ;
-        :sizeC              "2"^^xsd:int ;
-        :sizeT              "2"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "2"^^xsd:int .
+        ome:binData         bindata:bindata9 , bindata:bindata14 , bindata:bindata16 , bindata:bindata13 , bindata:bindata15 , bindata:bindata12 , bindata:bindata11 , bindata:bindata10 ;
+        ome:channel         channel:channel1.0 , channel:channel1.1 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b6 ;
+        ome:physicalSizeY   _:b6 ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:plane           plane:plane9 , plane:plane14 , plane:plane11 , plane:plane16 , plane:plane15 , plane:plane10 , plane:plane12 , plane:plane13 ;
+        ome:sizeC           "2"^^xsd:positiveInteger ;
+        ome:sizeT           "2"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "2"^^xsd:positiveInteger .
 
 xmlAnnotation:ExtraStageLabel1:2
-        a                   :XMLAnnotation , :Annotation ;
+        a                   ome:XMLAnnotation , ome:annotation , ome:Annotation ;
         rdf:value           "<OME-Extra:SpimPositions\n           xmlns:OME-Extra=\"http://www.openmicroscopy.org/Schemas/Additions/2010-10\">\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"objective_stage\"\n                         PositionX=\"-4.345366\" PositionY=\"11.947302\" PositionZ=\"11.94645\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"0\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"0\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"0\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n          <StagePosition TheZ=\"1\" TheT=\"1\" TheC=\"1\" Name=\"cylinder_stage\"\n                         PositionX=\"23.745692\"/>\n        </OME-Extra:SpimPositions>"^^rdf:XMLLiteral ;
         dcterms:identifier  "Annotation:ExtraStageLabel:1:2" ;
-        :namespace          "ome-xml.org:additions:post2010-06:spim:positions" .
+        ome:namespace       "ome-xml.org:additions:post2010-06:spim:positions" .
 
-plane:plane17  a       :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "0"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "0"^^xsd:int .
+plane:plane17  a          ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "0"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "0"^^xsd:nonNegativeInteger .
 
-dimensionOrder:xyczt  a  :DimensionOrder .
+dimensionOrder:xyczt  a  ome:DimensionOrder .
 
 objectiveSettings:image2
-        a                   :ObjectiveSettings ;
-        dcterms:identifier  "Objective:1" ;
-        :correctionCollar   "6.0"^^xsd:float ;
-        :medium             medium:oil .
+        a                     ome:ObjectiveSettings ;
+        dcterms:identifier    "Objective:1" ;
+        ome:correctionCollar  "6.0"^^xsd:float ;
+        ome:medium            medium:oil .
 
-objective:objective2  a           :Objective , :ManufacturerSpec ;
-        dcterms:identifier        "Objective:Illumation:1" ;
-        :calibratedMagnification  "5.12"^^xsd:float ;
-        :immersion                immersion:air ;
-        :lensNA                   "0.5"^^xsd:float ;
-        :manufacturer             _:b3 ;
-        :model                    "Objective Mk2" ;
-        :nominalMagnification     "5.0"^^xsd:float ;
-        :serialNumber             "OBJ2" ;
-        :workingDistance          [ a          PATO:0000040 ;
-                                    rdf:value  "19800.0"^^xsd:float ;
-                                    qudt:unit  unitLength:um
-                                  ] .
+objective:objective2  a              ome:Objective , ome:ManufacturerSpec ;
+        dcterms:identifier           "Objective:Illumation:1" ;
+        ome:calibratedMagnification  "5.12"^^xsd:float ;
+        ome:immersion                immersion:air ;
+        ome:lensNA                   "0.5"^^xsd:float ;
+        ome:manufacturer             _:b3 ;
+        ome:model                    "Objective Mk2" ;
+        ome:nominalMagnification     "5.0"^^xsd:float ;
+        ome:serialNumber             "OBJ2" ;
+        ome:workingDistance          [ a          PATO:0000040 ;
+                                       rdf:value  "19800.0"^^xsd:float ;
+                                       qudt:unit  unitLength:um
+                                     ] .
 
-detectorType:CCD  a  :DetectorType .
+detectorType:CCD  a  ome:DetectorType .
 
 imagingCondition:image0
-        a                   :ImagingCondition ;
-        :instrument         instrument:instrument0 ;
-        :objectiveSettings  objectiveSettings:image0 ;
-        :stageLabel         stageLabel:image0 .
+        a                      ome:ImagingCondition ;
+        ome:instrument         instrument:instrument0 ;
+        ome:objectiveSettings  objectiveSettings:image0 ;
+        ome:stageLabel         stageLabel:image0 .
 
-plane:plane4  a        :Plane ;
-        :exposureTime  _:b0 ;
-        :theC          "1"^^xsd:int ;
-        :theT          "0"^^xsd:int ;
-        :theZ          "1"^^xsd:int .
+plane:plane4  a           ome:Plane ;
+        ome:exposureTime  _:b0 ;
+        ome:theC          "1"^^xsd:nonNegativeInteger ;
+        ome:theT          "0"^^xsd:nonNegativeInteger ;
+        ome:theZ          "1"^^xsd:nonNegativeInteger .
 
-bindata:bindata5  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata5  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-bindata:bindata11  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata11  a   ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .

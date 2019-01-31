@@ -1,27 +1,27 @@
 {
   "@graph" : [ {
     "@id" : "compression:none",
-    "@type" : "Compression"
+    "@type" : "ome:Compression"
   }, {
     "@id" : "dimensionOrder:xyzct",
-    "@type" : "DimensionOrder"
+    "@type" : "ome:DimensionOrder"
   }, {
     "@id" : "pixelType:int8",
-    "@type" : "PixelType"
+    "@type" : "ome:PixelType"
   }, {
     "@id" : "bindata:bindata0",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/compression" : {
+    "@type" : "ome:BinData",
+    "ome:bigEndian" : false,
+    "ome:compression" : {
       "@id" : "compression:none"
     },
     "data" : "ZGVmYXVsdA==",
     "length" : "12"
   }, {
     "@id" : "image:image1",
-    "@type" : "Image",
+    "@type" : "ome:Image",
     "identifier" : "Image:1",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels" : {
+    "ome:pixels" : {
       "@id" : "pixels:pixels1"
     },
     "label" : {
@@ -30,13 +30,13 @@
     }
   }, {
     "@id" : "pixels:pixels1",
-    "@type" : "Pixels",
+    "@type" : "ome:Pixels",
     "identifier" : "Pixels:1",
     "binData" : "bindata:bindata0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
+    "ome:dimensionOrder" : {
       "@id" : "dimensionOrder:xyzct"
     },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
+    "ome:pixelType" : {
       "@id" : "pixelType:int8"
     },
     "sizeC" : "2",
@@ -48,10 +48,11 @@
   "@context" : {
     "length" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/length",
-      "@type" : "http://www.w3.org/2001/XMLSchema#long"
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeLong"
     },
     "data" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data"
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data",
+      "@type" : "http://www.w3.org/2001/XMLSchema#base64Binary"
     },
     "compression" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Compression#",
     "bigEndian" : {
@@ -65,7 +66,7 @@
     "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
     "sizeZ" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeZ",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
     "identifier" : {
@@ -73,27 +74,27 @@
     },
     "sizeY" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeY",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "sizeC" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeC",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "sizeX" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeX",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "sizeT" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeT",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "pixels" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/minimum-specification/pixels/",
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
-    "@vocab" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "image" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/minimum-specification/image/",
     "owl" : "http://www.w3.org/2002/07/owl#",
+    "ome" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",

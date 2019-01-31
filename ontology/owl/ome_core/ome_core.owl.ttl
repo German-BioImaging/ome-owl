@@ -961,13 +961,13 @@ ome:voltage rdf:type owl:ObjectProperty ;
     rdfs:comment "Property \"voltage\" specifies the voltage of the detector."@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/waveLength
-ome:waveLength rdf:type owl:ObjectProperty ;
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/wavelength
+ome:wavelength rdf:type owl:ObjectProperty ;
     rdfs:domain ome:Laser ,
                 ome:LightSourceSettings ;
     rdfs:range  PATO:0001242 ;
-    rdfs:label "wave length"@en ;
-    rdfs:comment "Property \"waveLength\" specifies the wave length of the laser."@en .
+    rdfs:label "wavelength"@en ;
+    rdfs:comment "Property \"wavelength\" specifies the wave length of the laser."@en .
 
 
 ###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/well

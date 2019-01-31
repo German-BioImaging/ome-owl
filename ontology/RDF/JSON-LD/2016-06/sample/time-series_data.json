@@ -1,55 +1,55 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "@type" : "Color",
+    "@type" : "ome:Color",
     "value" : "-2147483648"
   }, {
     "@id" : "dimensionOrder:xyzct",
-    "@type" : "DimensionOrder"
+    "@type" : "ome:DimensionOrder"
   }, {
     "@id" : "pixelType:uint8",
-    "@type" : "PixelType"
+    "@type" : "ome:PixelType"
   }, {
     "@id" : "bindata:bindata1",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "@type" : "ome:BinData",
+    "ome:bigEndian" : false,
     "data" : "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////8A//////////////8A/////wAA//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A//////////////8A//////8A////////////////////////////////",
     "length" : "576"
   }, {
     "@id" : "bindata:bindata2",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "@type" : "ome:BinData",
+    "ome:bigEndian" : false,
     "data" : "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wAAAP8A/wAAAAD//wAAAAAA/wAA//8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAA/wAAAAAAAP8AAP//AAAA/wAA/////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAA////AAAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAD/AAAAAAAAAAAAAAD/AAAAAP8AAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/wAAAAAAAAAAAAAAAAD/AAAA/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "length" : "576"
   }, {
     "@id" : "bindata:bindata3",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "@type" : "ome:BinData",
+    "ome:bigEndian" : false,
     "data" : "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////////AP////////////8A////////AP////////////8A/////wAA//////////////8A////////AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////",
     "length" : "576"
   }, {
     "@id" : "bindata:bindata4",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "@type" : "ome:BinData",
+    "ome:bigEndian" : false,
     "data" : "AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA/wAA/////wAAAP8A/wAAAAD//wAAAAAA/wAA//8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAAD/AAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAAAP8AAAAAAP8A/wAAAAAA/wAA/wAAAAAAAP8AAP//AAAA/wAA/////wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAD//wAAAAAAAAAAAAD/AAAAAAD//wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAAAP8A/wAAAAAAAAAAAAD/AAAA/wAA/wAAAAAAAAAAAAD/AAAA//////8AAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAD/AAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
     "length" : "576"
   }, {
     "@id" : "bindata:bindata5",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "@type" : "ome:BinData",
+    "ome:bigEndian" : false,
     "data" : "/////////////////////////wAA////AP//AAAAAP///wD/AP////8AAP//////AP//AAD/AP//////AP////8A/////wD/AP//////AP////8A/////wD/AP//////AP///wD//////wD/AP//////AP///wD//////wD/AP//////AP//AP///////wD//wAA////AP//AAAAAP///wD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//AAAAAP////////////8A////AP////////////////8A////AP////////////////8A////AAAA//////////////8A////AP//AP////////////8A////////AP////////////8A////////AP////////////8A////AAAA////////////////////////////////",
     "length" : "576"
   }, {
     "@id" : "channel:channel1",
-    "@type" : "Channel",
+    "@type" : "ome:Channel",
     "identifier" : "Channel:0",
     "color" : "_:b0"
   }, {
     "@id" : "image:image0",
-    "@type" : "Image",
+    "@type" : "ome:Image",
     "identifier" : "Image:0",
     "acquisitionDate" : "2010-03-02T10:01:15",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels" : {
+    "ome:pixels" : {
       "@id" : "pixels:pixels0.0"
     },
     "label" : {
@@ -58,16 +58,16 @@
     }
   }, {
     "@id" : "pixels:pixels0.0",
-    "@type" : "Pixels",
+    "@type" : "ome:Pixels",
     "identifier" : "Pixels:0.0",
     "binData" : [ "bindata:bindata3", "bindata:bindata4", "bindata:bindata1", "bindata:bindata2", "bindata:bindata5" ],
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/channel" : {
+    "ome:channel" : {
       "@id" : "channel:channel1"
     },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
+    "ome:dimensionOrder" : {
       "@id" : "dimensionOrder:xyzct"
     },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
+    "ome:pixelType" : {
       "@id" : "pixelType:uint8"
     },
     "sizeC" : "1",
@@ -79,10 +79,11 @@
   "@context" : {
     "length" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/length",
-      "@type" : "http://www.w3.org/2001/XMLSchema#long"
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeLong"
     },
     "data" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data"
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data",
+      "@type" : "http://www.w3.org/2001/XMLSchema#base64Binary"
     },
     "bigEndian" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian",
@@ -98,28 +99,28 @@
     "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
     "sizeZ" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeZ",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "sizeT" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeT",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "identifier" : {
       "@id" : "http://purl.org/dc/terms/identifier"
     },
     "sizeX" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeX",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
     "sizeC" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeC",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "channel" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/time-series/channel/",
     "sizeY" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeY",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "acquisitionDate" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/acquisitionDate"
@@ -132,9 +133,9 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/color",
       "@type" : "@id"
     },
-    "@vocab" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "image" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/time-series/image/",
     "owl" : "http://www.w3.org/2002/07/owl#",
+    "ome" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",

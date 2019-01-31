@@ -1,6 +1,6 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix line:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/line/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/channel/> .
@@ -30,59 +30,59 @@
 @prefix font:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/roi/font/> .
 
 transform:rectangle_shape6
-        a       :AffineTransform , :Transform ;
-        :a00    "1.0"^^xsd:float ;
-        :a01    "0.0"^^xsd:float ;
-        :a02    "3.82"^^xsd:float ;
-        :a10    "0.0"^^xsd:float ;
-        :a11    "1.0"^^xsd:float ;
-        :a12    "2.21"^^xsd:float .
+        a        ome:AffineTransform ;
+        ome:a00  "1.0"^^xsd:float ;
+        ome:a01  "0.0"^^xsd:float ;
+        ome:a02  "3.82"^^xsd:float ;
+        ome:a10  "0.0"^^xsd:float ;
+        ome:a11  "1.0"^^xsd:float ;
+        ome:a12  "2.21"^^xsd:float .
 
-font:shape4  a       :Font ;
-        :fontFamily  fontFamily:serif ;
-        :fontStyle   fontStyle:normal .
+font:shape4  a          ome:Font ;
+        ome:fontFamily  fontFamily:serif ;
+        ome:fontStyle   fontStyle:normal .
 
-_:b0    a          :Color ;
+_:b0    a          ome:Color ;
         rdf:value  "-2147483648" .
 
-point:shape2  a             :Point , :Shape ;
-        dcterms:identifier  "Shape:2" ;
-        :fillColor          _:b1 ;
-        :fillRule           fillRule:nonZero ;
-        :font               font:shape1 ;
-        :strokeColor        _:b1 ;
-        :strokeDashArray    "1" ;
-        :strokeWidth        [ a          PATO:0000921 ;
-                              rdf:value  "1.0"^^xsd:float ;
-                              qudt:unit  unitLength:pt
-                            ] ;
-        :text               "Hello" ;
-        :theC               "2"^^xsd:int ;
-        :x                  "1.0"^^xsd:float ;
-        :y                  "1.0"^^xsd:float .
+point:shape2  a              ome:Point , ome:Shape ;
+        dcterms:identifier   "Shape:2" ;
+        ome:fillColor        _:b1 ;
+        ome:fillRule         fillRule:nonZero ;
+        ome:font             font:shape1 ;
+        ome:strokeColor      _:b1 ;
+        ome:strokeDashArray  "1" ;
+        ome:strokeWidth      [ a          PATO:0000921 ;
+                               rdf:value  "1.0"^^xsd:float ;
+                               qudt:unit  unitLength:pt
+                             ] ;
+        ome:text             "Hello" ;
+        ome:theC             "2"^^xsd:nonNegativeInteger ;
+        ome:x                "1.0"^^xsd:float ;
+        ome:y                "1.0"^^xsd:float .
 
-pixels:pixels0  a           :Pixels ;
+pixels:pixels0  a           ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :binData            bindata:bindata3 , bindata:bindata1 , bindata:bindata2 ;
-        :channel            channel:channel2 , channel:channel1 , channel:channel3 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b2 ;
-        :physicalSizeY      _:b2 ;
-        :pixelType          pixelType:uint8 ;
-        :sizeC              "3"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata3 , bindata:bindata1 , bindata:bindata2 ;
+        ome:channel         channel:channel2 , channel:channel1 , channel:channel3 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b2 ;
+        ome:physicalSizeY   _:b2 ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:sizeC           "3"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-channel:channel3  a         :Channel ;
-        dcterms:identifier  "Channel:2" ;
-        :acquisitionMode    acquisitionMode:multiPhotonMicroscopy ;
-        :color              _:b0 .
+channel:channel3  a          ome:Channel ;
+        dcterms:identifier   "Channel:2" ;
+        ome:acquisitionMode  acquisitionMode:multiPhotonMicroscopy ;
+        ome:color            _:b0 .
 
-roi:roi5  a                 :RegionOfInterest ;
+roi:roi5  a                 ome:RegionOfInterest ;
         dcterms:identifier  "ROI:5" ;
-        :union              [ a       rdf:Bag ;
+        ome:union           [ a       rdf:Bag ;
                               rdf:li  mask:shape7
                             ] .
 
@@ -90,168 +90,168 @@ _:b2    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
-marker:arrow  a  :Marker .
+marker:arrow  a  ome:Marker .
 
-rectangle:shape3  a         :Rectangle , :Shape ;
+rectangle:shape3  a         ome:Rectangle , ome:Shape ;
         dcterms:identifier  "Shape:3" ;
-        :fillRule           fillRule:evenOdd ;
-        :height             "4.0"^^xsd:float ;
-        :text               "Hi There!" ;
-        :width              "3.0"^^xsd:float ;
-        :x                  "1.0"^^xsd:float ;
-        :y                  "2.0"^^xsd:float .
+        ome:fillRule        fillRule:evenOdd ;
+        ome:height          "4.0"^^xsd:float ;
+        ome:text            "Hi There!" ;
+        ome:width           "3.0"^^xsd:float ;
+        ome:x               "1.0"^^xsd:float ;
+        ome:y               "2.0"^^xsd:float .
 
 bindata:bindata_mask_shape7
-        a           :BinData ;
-        :bigEndian  true ;
-        :data       "AOnpAA==" ;
-        :length     "4"^^xsd:long .
+        a              ome:BinData ;
+        ome:bigEndian  true ;
+        ome:data       "AOnpAA=="^^xsd:base64Binary ;
+        ome:length     "4"^^xsd:nonNegativeLong .
 
-point:shape1  a             :Point , :Shape ;
+point:shape1  a             ome:Point , ome:Shape ;
         dcterms:identifier  "Shape:1" ;
-        :theC               "0"^^xsd:int ;
-        :x                  "1.0"^^xsd:float ;
-        :y                  "1.0"^^xsd:float .
+        ome:theC            "0"^^xsd:nonNegativeInteger ;
+        ome:x               "1.0"^^xsd:float ;
+        ome:y               "1.0"^^xsd:float .
 
-fontStyle:bold  a  :FontStyle .
+fontStyle:bold  a  ome:FontStyle .
 
-channel:channel2  a         :Channel ;
-        dcterms:identifier  "Channel:1" ;
-        :acquisitionMode    acquisitionMode:laserScanningConfocalMicroscopy ;
-        :color              _:b0 .
+channel:channel2  a          ome:Channel ;
+        dcterms:identifier   "Channel:1" ;
+        ome:acquisitionMode  acquisitionMode:laserScanningConfocalMicroscopy ;
+        ome:color            _:b0 .
 
-roi:roi4  a                 :RegionOfInterest ;
+roi:roi4  a                 ome:RegionOfInterest ;
         dcterms:identifier  "ROI:4" ;
-        :union              [ a       rdf:Bag ;
+        ome:union           [ a       rdf:Bag ;
                               rdf:li  rectangle:shape6
                             ] .
 
-bindata:bindata3  a  :BinData ;
-        :bigEndian  false ;
-        :data       "//+szuv/AP95n8PiAABHbZO3AP8dPF+G" ;
-        :length     "32"^^xsd:long .
+bindata:bindata3  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "//+szuv/AP95n8PiAABHbZO3AP8dPF+G"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-label:shape4  a             :Label , :Shape ;
+label:shape4  a             ome:Label , ome:Shape ;
         dcterms:identifier  "Shape:4" ;
-        :fillRule           fillRule:evenOdd ;
-        :font               font:shape4 ;
-        :x                  "1.0"^^xsd:float ;
-        :y                  "1.0"^^xsd:float .
+        ome:fillRule        fillRule:evenOdd ;
+        ome:font            font:shape4 ;
+        ome:x               "1.0"^^xsd:float ;
+        ome:y               "1.0"^^xsd:float .
 
 [ a          PATO:0000117 ;
   rdf:value  "2.0"^^xsd:float ;
   qudt:unit  unitLength:pt
 ] .
 
-mask:shape7  a              :Mask , :Shape ;
+mask:shape7  a              ome:Mask , ome:Shape ;
         dcterms:identifier  "Shape:7" ;
-        :binData            bindata:mask_shape7 ;
-        :height             "2.0"^^xsd:float ;
-        :transform          transform:mask_shape7 ;
-        :width              "2.0"^^xsd:float ;
-        :x                  "1.0"^^xsd:float ;
-        :y                  "1.0"^^xsd:float .
+        ome:binData         bindata:mask_shape7 ;
+        ome:height          "2.0"^^xsd:float ;
+        ome:transform       transform:mask_shape7 ;
+        ome:width           "2.0"^^xsd:float ;
+        ome:x               "1.0"^^xsd:float ;
+        ome:y               "1.0"^^xsd:float .
 
-channel:channel1  a         :Channel ;
-        dcterms:identifier  "Channel:0" ;
-        :acquisitionMode    acquisitionMode:laserScanningConfocalMicroscopy ;
-        :color              _:b0 .
+channel:channel1  a          ome:Channel ;
+        dcterms:identifier   "Channel:0" ;
+        ome:acquisitionMode  acquisitionMode:laserScanningConfocalMicroscopy ;
+        ome:color            _:b0 .
 
-roi:roi3  a                 :RegionOfInterest ;
+roi:roi3  a                 ome:RegionOfInterest ;
         dcterms:identifier  "ROI:3" ;
-        :union              [ a       rdf:Bag ;
+        ome:union           [ a       rdf:Bag ;
                               rdf:li  label:shape4 , rectangle:shape3
                             ] .
 
-fillRule:nonZero  a  :FillRule .
+fillRule:nonZero  a  ome:FillRule .
 
-bindata:bindata2  a  :BinData ;
-        :bigEndian  false ;
-        :data       "AP+rzuv/AAB5n8Pi/wBHbJO3//8dPGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata2  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "AP+rzuv/AAB5n8Pi/wBHbJO3//8dPGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-image:image0  a             :Image ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:pixels0 ;
-        :regionOfInterest   roi:roi5 , roi:roi4 , roi:roi3 , roi:roi2 , roi:roi1 .
+image:image0  a               ome:Image ;
+        dcterms:identifier    "Image:0" ;
+        ome:acquisitionDate   "2010-02-23T12:51:30" ;
+        ome:pixels            pixels:pixels0 ;
+        ome:regionOfInterest  roi:roi5 , roi:roi4 , roi:roi3 , roi:roi2 , roi:roi1 .
 
-font:shape1  a       :Font ;
-        :fontFamily  fontFamily:sansSerif ;
-        :fontSize    [ a          PATO:0000117 ;
-                       rdf:value  "1.0"^^xsd:float ;
-                       qudt:unit  unitLength:pt
-                     ] ;
-        :fontStyle   fontStyle:bold .
+font:shape1  a          ome:Font ;
+        ome:fontFamily  fontFamily:sansSerif ;
+        ome:fontSize    [ a          PATO:0000117 ;
+                          rdf:value  "1.0"^^xsd:float ;
+                          qudt:unit  unitLength:pt
+                        ] ;
+        ome:fontStyle   fontStyle:bold .
 
 acquisitionMode:laserScanningConfocalMicroscopy
-        a       :AcquisionMode .
+        a       ome:AcquisionMode .
 
 transform:mask_shape7
-        a       :AffineTransform , :Transform ;
-        :a00    "1.0"^^xsd:float ;
-        :a01    "0.0"^^xsd:float ;
-        :a02    "2.0"^^xsd:float ;
-        :a10    "0.0"^^xsd:float ;
-        :a11    "1.0"^^xsd:float ;
-        :a12    "2.0"^^xsd:float .
+        a        ome:AffineTransform , ome:Transform ;
+        ome:a00  "1.0"^^xsd:float ;
+        ome:a01  "0.0"^^xsd:float ;
+        ome:a02  "2.0"^^xsd:float ;
+        ome:a10  "0.0"^^xsd:float ;
+        ome:a11  "1.0"^^xsd:float ;
+        ome:a12  "2.0"^^xsd:float .
 
-line:shape5  a              :Line , :Shape ;
+line:shape5  a              ome:Line , ome:Shape ;
         dcterms:identifier  "Shape:5" ;
-        :markerEnd          marker:arrow ;
-        :markerStart        marker:arrow ;
-        :x1                 "1.0"^^xsd:float ;
-        :x2                 "2.0"^^xsd:float ;
-        :y1                 "1.0"^^xsd:float ;
-        :y2                 "2.0"^^xsd:float .
+        ome:markerEnd       marker:arrow ;
+        ome:markerStart     marker:arrow ;
+        ome:x1              "1.0"^^xsd:float ;
+        ome:x2              "2.0"^^xsd:float ;
+        ome:y1              "1.0"^^xsd:float ;
+        ome:y2              "2.0"^^xsd:float .
 
-fontStyle:normal  a  :FontStyle .
+fontStyle:normal  a  ome:FontStyle .
 
-roi:roi2  a                 :RegionOfInterest ;
+roi:roi2  a                 ome:RegionOfInterest ;
         dcterms:identifier  "ROI:2" ;
-        :union              [ a       rdf:Bag ;
+        ome:union           [ a       rdf:Bag ;
                               rdf:li  line:shape5 , point:shape2
                             ] .
 
-bindata:bindata1  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata1  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-rectangle:shape6  a         :Shape , :Rectangle ;
+rectangle:shape6  a         ome:Shape , ome:Rectangle ;
         dcterms:identifier  "Shape:6" ;
-        :fillRule           fillRule:evenOdd ;
-        :height             "1.5"^^xsd:float ;
-        :text               "Transformed" ;
-        :tramsform          transform:rectangle_shape6 ;
-        :width              "1.5"^^xsd:float ;
-        :x                  "0.0"^^xsd:float ;
-        :y                  "0.0"^^xsd:float .
+        ome:fillRule        fillRule:evenOdd ;
+        ome:height          "1.5"^^xsd:float ;
+        ome:text            "Transformed" ;
+        ome:tramsform       transform:rectangle_shape6 ;
+        ome:width           "1.5"^^xsd:float ;
+        ome:x               "0.0"^^xsd:float ;
+        ome:y               "0.0"^^xsd:float .
 
 acquisitionMode:multiPhotonMicroscopy
-        a       :AcquisionMode .
+        a       ome:AcquisionMode .
 
-_:b1    a          :Color ;
+_:b1    a          ome:Color ;
         rdf:value  "1" .
 
-fontFamily:sansSerif  a  :FontFamily .
+fontFamily:sansSerif  a  ome:FontFamily .
 
-roi:roi1  a                 :RegionOfInterest ;
+roi:roi1  a                 ome:RegionOfInterest ;
         dcterms:identifier  "ROI:1" ;
-        :union              [ a       rdf:Bag ;
+        ome:union           [ a       rdf:Bag ;
                               rdf:li  point:shape1
                             ] .
 
-bindata:mask_shape7  a  :BinData .
+bindata:mask_shape7  a  ome:BinData .
 
 unitLength:um  a  rdfs:Class .
 
 unitLength:pt  a  rdfs:Class .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .
 
-fillRule:evenOdd  a  :FillRule .
+fillRule:evenOdd  a  ome:FillRule .
 
-dimensionOrder:xyczt  a  :DimensionOrder .
+dimensionOrder:xyczt  a  ome:DimensionOrder .
 
-fontFamily:serif  a  :FontFamily .
+fontFamily:serif  a  ome:FontFamily .

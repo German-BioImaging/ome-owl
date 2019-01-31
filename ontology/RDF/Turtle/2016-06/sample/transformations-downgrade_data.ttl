@@ -1,4 +1,3 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/channel/> .
@@ -31,6 +30,7 @@
 @prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/bindata/> .
 @prefix tagAnnotation: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/tagAnnotation/> .
 @prefix polyline: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/polyline/> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix line:  <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/transformations-downgrade/line/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -57,71 +57,71 @@ person:experimenter16
         dcterms:identifier  "Experimenter:16" .
 
 commentAnnotation:commentAnnotation4
-        a                   :CommentAnnotation , :Annotation ;
+        a                   ome:CommentAnnotation , ome:Annotation ;
         rdf:value           "Abc123"@en ;
         dcterms:identifier  "Annotation:4" ;
-        :annotator          person:experimenter2 .
+        ome:annotator       person:experimenter2 .
 
-point:shape6.3  a  :Point ;
-        :x      "25.0"^^xsd:float ;
-        :y      "15.0"^^xsd:float .
+point:shape6.3  a  ome:Point ;
+        ome:x   "25.0"^^xsd:float ;
+        ome:y   "15.0"^^xsd:float .
 
-pixels:image0  a            :Pixels ;
-        dcterms:identifier  "Pixels:0.0" ;
-        :bigEndian          false ;
-        :binData            bindata:bindata1 , bindata:bindata3 , bindata:bindata2 ;
-        :channel            channel:channel3 , channel:channel2 , channel:channel1 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :interleaved        false ;
-        :physicalSizeY      [ a          PATO:0000117 ;
-                              rdf:value  "100000.0"^^xsd:float ;
-                              qudt:unit  unitLength:um
-                            ] ;
-        :pixelType          pixelType:uint8 ;
-        :significantBits    "7"^^xsd:int ;
-        :sizeC              "3"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+pixels:image0  a             ome:Pixels ;
+        dcterms:identifier   "Pixels:0.0" ;
+        ome:bigEndian        false ;
+        ome:binData          bindata:bindata1 , bindata:bindata3 , bindata:bindata2 ;
+        ome:channel          channel:channel3 , channel:channel2 , channel:channel1 ;
+        ome:dimensionOrder   dimensionOrder:xyczt ;
+        ome:interleaved      false ;
+        ome:physicalSizeY    [ a          PATO:0000117 ;
+                               rdf:value  "100000.0"^^xsd:float ;
+                               qudt:unit  unitLength:um
+                             ] ;
+        ome:pixelType        pixelType:uint8 ;
+        ome:significantBits  "7"^^xsd:positiveInteger ;
+        ome:sizeC            "3"^^xsd:positiveInteger ;
+        ome:sizeT            "1"^^xsd:positiveInteger ;
+        ome:sizeX            "6"^^xsd:positiveInteger ;
+        ome:sizeY            "4"^^xsd:positiveInteger ;
+        ome:sizeZ            "1"^^xsd:positiveInteger .
 
-point:shape6a.3  a  :Point ;
-        :x      "20.0"^^xsd:float ;
-        :y      "10.0"^^xsd:float .
+point:shape6a.3  a  ome:Point ;
+        ome:x   "20.0"^^xsd:float ;
+        ome:y   "10.0"^^xsd:float .
 
-label:shape10  a            :Label , :Shape ;
+label:shape10  a            ome:Label , ome:Shape ;
         dcterms:identifier  "Shape:10" ;
-        :text               "Removed Path" ;
-        :x                  "0.0"^^xsd:float ;
-        :y                  "0.0"^^xsd:float .
+        ome:text            "Removed Path" ;
+        ome:x               "0.0"^^xsd:float ;
+        ome:y               "0.0"^^xsd:float .
 
 binaryFile:binaryFile6
-        a           :BinaryFile ;
-        rdfs:label  "dummy.txt"@en ;
-        :binData    bindata:binfile6 ;
-        :size       "8"^^xsd:long .
+        a            ome:BinaryFile ;
+        rdfs:label   "dummy.txt"@en ;
+        ome:binData  bindata:binfile6 ;
+        ome:size     "8"^^xsd:nonNegativeLong .
 
-point:shape5.3  a  :Point ;
-        :x      "20.0"^^xsd:float ;
-        :y      "10.0"^^xsd:float .
+point:shape5.3  a  ome:Point ;
+        ome:x   "20.0"^^xsd:float ;
+        ome:y   "10.0"^^xsd:float .
 
-_:b0    a          :Color ;
+_:b0    a          ome:Color ;
         rdf:value  "-2147483648" .
 
-[ a            :StructuredAnnotations ;
-  :annotation  tagAnnotation:tagAnnotation9 , xmlAnnotation:xmlAnnotation2 , booleanAnnotation:booleanAnnotation3 , listAnnotation:listAnnotation7 , longAnnotation:longAnnotation8 , xmlAnnotation:xmlAnnotation1 , fileAnnotation:fileAnnotation6 , doubleAnnotation:doubleAnnotation5 , termAnnotation:termAnnotation10 , commentAnnotation:commentAnnotation4 , timestampAnnotation:timestampAnnotation:11
+[ a               ome:StructuredAnnotations ;
+  ome:annotation  tagAnnotation:tagAnnotation9 , xmlAnnotation:xmlAnnotation2 , booleanAnnotation:booleanAnnotation3 , listAnnotation:listAnnotation7 , longAnnotation:longAnnotation8 , xmlAnnotation:xmlAnnotation1 , fileAnnotation:fileAnnotation6 , doubleAnnotation:doubleAnnotation5 , termAnnotation:termAnnotation10 , commentAnnotation:commentAnnotation4 , timestampAnnotation:timestampAnnotation:11
 ] .
 
 experimenterGroup:experimenterGroup12
-        a                   :ExperimenterGroup ;
+        a                   ome:ExperimenterGroup ;
         rdfs:label          "MyOtherGroup"@en ;
         dcterms:identifier  "ExperimenterGroup:12" ;
-        :experimenter       person:experimenter14 , person:experimenter13 ;
-        :leader             person:experimenter17 , person:experimenter12 , person:experimenter11 .
+        ome:experimenter    person:experimenter14 , person:experimenter13 ;
+        ome:leader          person:experimenter17 , person:experimenter12 , person:experimenter11 .
 
-roi:roi2  a                 :RegionOfInterest ;
+roi:roi2  a                 ome:RegionOfInterest ;
         dcterms:identifier  "ROI:2" ;
-        :union              [ a       rdf:Bag ;
+        ome:union           [ a       rdf:Bag ;
                               rdf:li  point:shape2
                             ] .
 
@@ -129,36 +129,36 @@ person:experimenter15
         a                   foaf:Person ;
         dcterms:identifier  "Experimenter:15" .
 
-line:shape7b  a             :Shape , :Line ;
+line:shape7b  a             ome:Shape , ome:Line ;
         dcterms:identifier  "Shape:7b" ;
-        :markerEnd          marker:arrow ;
-        :strokeColor        _:b1 ;
-        :strokeWidth        _:b2 ;
-        :x1                 "1.0"^^xsd:float ;
-        :x2                 "3.0"^^xsd:float ;
-        :y1                 "2.0"^^xsd:float ;
-        :y2                 "4.0"^^xsd:float .
+        ome:markerEnd       marker:arrow ;
+        ome:strokeColor     _:b1 ;
+        ome:strokeWidth     _:b2 ;
+        ome:x1              "1.0"^^xsd:float ;
+        ome:x2              "3.0"^^xsd:float ;
+        ome:y1              "2.0"^^xsd:float ;
+        ome:y2              "4.0"^^xsd:float .
 
-marker:arrow  a  :Marker .
+marker:arrow  a  ome:Marker .
 
-point:shape6.2  a  :Point ;
-        :x      "25.0"^^xsd:float ;
-        :y      "25.0"^^xsd:float .
+point:shape6.2  a  ome:Point ;
+        ome:x   "25.0"^^xsd:float ;
+        ome:y   "25.0"^^xsd:float .
 
-point:shape6a.2  a  :Point ;
-        :x      "20.0"^^xsd:float ;
-        :y      "20.0"^^xsd:float .
+point:shape6a.2  a  ome:Point ;
+        ome:x   "20.0"^^xsd:float ;
+        ome:y   "20.0"^^xsd:float .
 
 doubleAnnotation:doubleAnnotation5
-        a                   :DoubleAnnotation , :Annotation ;
+        a                   ome:DoubleAnnotation , ome:Annotation ;
         rdf:value           "3.14"^^xsd:double ;
         rdfs:comment        "Abc123"@en ;
         dcterms:identifier  "Annotation:5" ;
-        :annotator          person:experimenter2 .
+        ome:annotator       person:experimenter2 .
 
-point:shape5.2  a  :Point ;
-        :x      "20.0"^^xsd:float ;
-        :y      "20.0"^^xsd:float .
+point:shape5.2  a  ome:Point ;
+        ome:x   "20.0"^^xsd:float ;
+        ome:y   "20.0"^^xsd:float .
 
 person:experimenter3  a     foaf:Person ;
         dcterms:identifier  "Experimenter:3" ;
@@ -167,190 +167,190 @@ person:experimenter3  a     foaf:Person ;
         foaf:middleName     "Group"@en .
 
 experimenterGroup:experimenterGroup11
-        a                   :ExperimenterGroup ;
+        a                   ome:ExperimenterGroup ;
         rdfs:label          "MyGroup - Leader+Contact match"@en ;
         dcterms:identifier  "ExperimenterGroup:11" ;
-        :experimenter       person:experimenter16 ;
-        :leader             person:experimenter11 .
+        ome:experimenter    person:experimenter16 ;
+        ome:leader          person:experimenter11 .
 
-roi:roi1  a                 :RegionOfInterest ;
+roi:roi1  a                 ome:RegionOfInterest ;
         dcterms:identifier  "ROI:1" ;
-        :union              [ a       rdf:Bag ;
+        ome:union           [ a       rdf:Bag ;
                               rdf:li  point:shape1
                             ] .
 
-fontStyle:bold  a  :FontStyle .
+fontStyle:bold  a  ome:FontStyle .
 
-image:image0  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :annotation         longAnnotation:longAnnotation8 , booleanAnnotation:booleanAnnotation3 , timestampAnnotation:timestampAnnotation:11 , commentAnnotation:commentAnnotation4 , listAnnotation:listAnnotation7 , termAnnotation:termAnnotation10 , doubleAnnotation:doubleAnnotation5 , tagAnnotation:tagAnnotation9 , fileAnnotation:fileAnnotation6 ;
-        :experimenter       person:experimenter2 ;
-        :experimenterGroup  experimenterGroup:experimenterGroup1 ;
-        :pixels             pixels:image0 ;
-        :regionOfInterest   roi:roi2 , roi:roi3 , roi:roi1 .
+image:image0  a                ome:Image ;
+        rdfs:label             "6x6x1x8-swatch.tif"@en ;
+        dcterms:identifier     "Image:0" ;
+        ome:acquisitionDate    "2010-02-23T12:51:30" ;
+        ome:annotation         longAnnotation:longAnnotation8 , booleanAnnotation:booleanAnnotation3 , timestampAnnotation:timestampAnnotation:11 , commentAnnotation:commentAnnotation4 , listAnnotation:listAnnotation7 , termAnnotation:termAnnotation10 , doubleAnnotation:doubleAnnotation5 , tagAnnotation:tagAnnotation9 , fileAnnotation:fileAnnotation6 ;
+        ome:experimenter       person:experimenter2 ;
+        ome:experimenterGroup  experimenterGroup:experimenterGroup1 ;
+        ome:pixels             pixels:image0 ;
+        ome:regionOfInterest   roi:roi2 , roi:roi3 , roi:roi1 .
 
 _:b2    a          PATO:0000921 ;
         rdf:value  "2.0"^^xsd:float ;
         qudt:unit  unitLength:pt .
 
-bindata:bindata3  a  :BinData ;
-        :bigEndian  false ;
-        :data       "//+szuv/AP95n8PiAABHbZO3AP8dPF+G" ;
-        :length     "32"^^xsd:long .
+bindata:bindata3  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "//+szuv/AP95n8PiAABHbZO3AP8dPF+G"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-font:shape4  a       :Font ;
-        :fontFamily  fontFamily:serif ;
-        :fontStyle   fontStyle:normal .
+font:shape4  a          ome:Font ;
+        ome:fontFamily  fontFamily:serif ;
+        ome:fontStyle   fontStyle:normal .
 
 _:b3    a          PATO:0000921 ;
         rdf:value  "1.0"^^xsd:float ;
         qudt:unit  unitLength:pt .
 
-channel:channel3  a         :Channel ;
-        dcterms:identifier  "Channel:2" ;
-        :acquisitionMode    acquisitionMode:multiPhotonMicroscopy ;
-        :color              _:b0 .
+channel:channel3  a          ome:Channel ;
+        dcterms:identifier   "Channel:2" ;
+        ome:acquisitionMode  acquisitionMode:multiPhotonMicroscopy ;
+        ome:color            _:b0 .
 
 person:experimenter14
         a                   foaf:Person ;
         dcterms:identifier  "Experimenter:14" .
 
-line:shape7a  a             :Line , :Shape ;
+line:shape7a  a             ome:Line , ome:Shape ;
         dcterms:identifier  "Shape:7a" ;
-        :markerEnd          marker:arrow ;
-        :strokeColor        _:b1 ;
-        :strokeWidth        _:b2 ;
-        :x1                 "1.0"^^xsd:float ;
-        :x2                 "3.0"^^xsd:float ;
-        :y1                 "2.0"^^xsd:float ;
-        :y2                 "4.0"^^xsd:float .
+        ome:markerEnd       marker:arrow ;
+        ome:strokeColor     _:b1 ;
+        ome:strokeWidth     _:b2 ;
+        ome:x1              "1.0"^^xsd:float ;
+        ome:x2              "3.0"^^xsd:float ;
+        ome:y1              "2.0"^^xsd:float ;
+        ome:y2              "4.0"^^xsd:float .
 
-point:shape6.1  a  :Point ;
-        :x      "15.0"^^xsd:float ;
-        :y      "25.0"^^xsd:float .
+point:shape6.1  a  ome:Point ;
+        ome:x   "15.0"^^xsd:float ;
+        ome:y   "25.0"^^xsd:float .
 
-point:shape6a.1  a  :Point ;
-        :x      "10.0"^^xsd:float ;
-        :y      "20.0"^^xsd:float .
+point:shape6a.1  a  ome:Point ;
+        ome:x   "10.0"^^xsd:float ;
+        ome:y   "20.0"^^xsd:float .
 
 listAnnotation:listAnnotation7
-        a                   :ListAnnotation , :Annotation ;
+        a                   ome:ListAnnotation , ome:Annotation ;
         rdfs:comment        "Abc123"@en ;
         dcterms:identifier  "Annotation:7" ;
-        :annotation         xmlAnnotation:xmlAnnotation2 , xmlAnnotation:xmlAnnotation1 ;
-        :annotator          person:experimenter2 .
+        ome:annotation      xmlAnnotation:xmlAnnotation2 , xmlAnnotation:xmlAnnotation1 ;
+        ome:annotator       person:experimenter2 .
 
-point:shape5.1  a  :Point ;
-        :x      "10.0"^^xsd:float ;
-        :y      "20.0"^^xsd:float .
+point:shape5.1  a  ome:Point ;
+        ome:x   "10.0"^^xsd:float ;
+        ome:y   "20.0"^^xsd:float .
 
 person:experimenter2  a     foaf:Person ;
         dcterms:identifier  "Experimenter:2" .
 
 fileAnnotation:fileAnnotation6
-        a                   :FileAnnotation , :Annotation ;
+        a                   ome:FileAnnotation , ome:Annotation ;
         rdfs:comment        "Abc123"@en ;
         dcterms:identifier  "Annotation:6" ;
-        :annotator          person:experimenter2 ;
-        :binaryFile         binaryFile:binaryFile6 .
+        ome:annotator       person:experimenter2 ;
+        ome:binaryFile      binaryFile:binaryFile6 .
 
-bindata:bindata2  a  :BinData ;
-        :bigEndian  false ;
-        :data       "AP+rzuv/AAB5n8Pi/wBHbJO3//8dPGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata2  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "AP+rzuv/AAB5n8Pi/wBHbJO3//8dPGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-fillRule:nonZero  a  :FillRule .
+fillRule:nonZero  a  ome:FillRule .
 
-polyline:shape6a  a         :Polyline , :Shape ;
+polyline:shape6a  a         ome:Polyline , ome:Shape ;
         dcterms:identifier  "Shape:6a" ;
-        :markerStart        marker:arrow ;
-        :point              point:shape6a.0 , point:shape6a.3 , point:shape6a.1 , point:shape6a.2 ;
-        :strokeColor        _:b1 ;
-        :strokeWidth        _:b2 .
+        ome:markerStart     marker:arrow ;
+        ome:point           point:shape6a.0 , point:shape6a.3 , point:shape6a.1 , point:shape6a.2 ;
+        ome:strokeColor     _:b1 ;
+        ome:strokeWidth     _:b2 .
 
-line:shape7  a              :Shape , :Line ;
+line:shape7  a              ome:Shape , ome:Line ;
         dcterms:identifier  "Shape:7" ;
-        :markerEnd          marker:arrow ;
-        :markerStart        marker:arrow ;
-        :strokeColor        _:b1 ;
-        :strokeWidth        _:b2 ;
-        :x1                 "1.0"^^xsd:float ;
-        :x2                 "3.0"^^xsd:float ;
-        :y1                 "2.0"^^xsd:float ;
-        :y2                 "4.0"^^xsd:float .
+        ome:markerEnd       marker:arrow ;
+        ome:markerStart     marker:arrow ;
+        ome:strokeColor     _:b1 ;
+        ome:strokeWidth     _:b2 ;
+        ome:x1              "1.0"^^xsd:float ;
+        ome:x2              "3.0"^^xsd:float ;
+        ome:y1              "2.0"^^xsd:float ;
+        ome:y2              "4.0"^^xsd:float .
 
 instrument:instrument1
-        a                   :Instrument ;
-        dcterms:identifier  "Instrument:1" ;
-        :manufacturerSpec   detector:detector1 , objective:objective1 .
+        a                     ome:Instrument ;
+        dcterms:identifier    "Instrument:1" ;
+        ome:manufacturerSpec  detector:detector1 , objective:objective1 .
 
-bindata:binfile6  a  :BinData ;
-        :bigEndian  false ;
-        :data       "12345678" ;
-        :length     "8"^^xsd:long .
+bindata:binfile6  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "12345678"^^xsd:base64Binary ;
+        ome:length     "8"^^xsd:nonNegativeLong .
 
-channel:channel2  a         :Channel ;
-        dcterms:identifier  "Channel:1" ;
-        :acquisitionMode    acquisitionMode:laserScanningConfocalMicroscopy ;
-        :color              _:b0 .
+channel:channel2  a          ome:Channel ;
+        dcterms:identifier   "Channel:1" ;
+        ome:acquisitionMode  acquisitionMode:laserScanningConfocalMicroscopy ;
+        ome:color            _:b0 .
 
 person:experimenter13
         a                   foaf:Person ;
         dcterms:identifier  "Experimenter:13" .
 
-point:shape6.0  a  :Point ;
-        :x      "15.0"^^xsd:float ;
-        :y      "15.0"^^xsd:float .
+point:shape6.0  a  ome:Point ;
+        ome:x   "15.0"^^xsd:float ;
+        ome:y   "15.0"^^xsd:float .
 
-rights:rights0  a      :Rights ;
-        :rightsHeld    "Held" ;
-        :rightsHolder  "Holder" .
+rights:rights0  a         ome:Rights ;
+        ome:rightsHeld    "Held" ;
+        ome:rightsHolder  "Holder" .
 
 experimenterGroup:experimenterGroup15
-        a                   :ExperimenterGroup ;
+        a                   ome:ExperimenterGroup ;
         rdfs:label          "ContactMatch"@en ;
         dcterms:identifier  "ExperimenterGroup:15" ;
-        :leader             person:experimenter11 .
+        ome:leader          person:experimenter11 .
 
-point:shape6a.0  a  :Point ;
-        :x      "1.0"^^xsd:float ;
-        :y      "1.0"^^xsd:float .
+point:shape6a.0  a  ome:Point ;
+        ome:x   "1.0"^^xsd:float ;
+        ome:y   "1.0"^^xsd:float .
 
-roi:roi5  a                 :RegionOfInterest ;
+roi:roi5  a                 ome:RegionOfInterest ;
         dcterms:identifier  "ROI:5" ;
-        :union              [ a       rdf:Bag ;
+        ome:union           [ a       rdf:Bag ;
                               rdf:li  label:shape11 , label:shape10
                             ] .
 
 acquisitionMode:laserScanningConfocalMicroscopy
-        a       :AcquisitionMode .
+        a       ome:AcquisitionMode .
 
-point:shape5.0  a  :Point ;
-        :x      "1.0"^^xsd:float ;
-        :y      "1.0"^^xsd:float .
+point:shape5.0  a  ome:Point ;
+        ome:x   "1.0"^^xsd:float ;
+        ome:y   "1.0"^^xsd:float .
 
-point:shape2  a             :Shape , :Point ;
-        dcterms:identifier  "Shape:2" ;
-        :fillColor          _:b1 ;
-        :fillRule           fillRule:nonZero ;
-        :font               [ a  :Font ] ;
-        :locked             true ;
-        :strokeColor        _:b1 ;
-        :strokeDashArray    "1" ;
-        :strokeWidth        _:b3 ;
-        :text               "Hello" ;
-        :theC               "2"^^xsd:int ;
-        :x                  "1.0"^^xsd:float ;
-        :y                  "1.0"^^xsd:float .
+point:shape2  a              ome:Shape , ome:Point ;
+        dcterms:identifier   "Shape:2" ;
+        ome:fillColor        _:b1 ;
+        ome:fillRule         fillRule:nonZero ;
+        ome:font             [ a  ome:Font ] ;
+        ome:locked           true ;
+        ome:strokeColor      _:b1 ;
+        ome:strokeDashArray  "1" ;
+        ome:strokeWidth      _:b3 ;
+        ome:text             "Hello" ;
+        ome:theC             "2"^^xsd:nonNegativeInteger ;
+        ome:x                "1.0"^^xsd:float ;
+        ome:y                "1.0"^^xsd:float .
 
 xmlAnnotation:xmlAnnotation2
-        a                   :XMLAnnotation , :Annotation ;
+        a                   ome:XMLAnnotation , ome:Annotation ;
         rdf:value           "<test2 xmlns=\"\"/>"^^rdf:XMLLiteral ;
         rdfs:comment        "Abc123"@en ;
         dcterms:identifier  "Annotation:2" ;
-        :annotator          person:experimenter2 .
+        ome:annotator       person:experimenter2 .
 
 person:experimenter1  a     foaf:Person ;
         dcterms:identifier  "Experimenter:1" ;
@@ -359,54 +359,54 @@ person:experimenter1  a     foaf:Person ;
         foaf:mbox           "john@example.org" ;
         foaf:middleName     "Andrew"@en .
 
-fontStyle:normal  a  :FontStyle .
+fontStyle:normal  a  ome:FontStyle .
 
-rectangle:shape3  a         :Rectangle , :Shape ;
+rectangle:shape3  a         ome:Rectangle , ome:Shape ;
         dcterms:identifier  "Shape:3" ;
-        :fillRule           fillRule:evenOdd ;
-        :height             "4.0"^^xsd:float ;
-        :text               "Hi There!" ;
-        :tramsform          transform:rectangle_shape3 ;
-        :width              "3.0"^^xsd:float ;
-        :x                  "1.0"^^xsd:float ;
-        :y                  "2.0"^^xsd:float .
+        ome:fillRule        fillRule:evenOdd ;
+        ome:height          "4.0"^^xsd:float ;
+        ome:text            "Hi There!" ;
+        ome:tramsform       transform:rectangle_shape3 ;
+        ome:width           "3.0"^^xsd:float ;
+        ome:x               "1.0"^^xsd:float ;
+        ome:y               "2.0"^^xsd:float .
 
-objective:objective1  a           :Objective , :ManufacturerSpec ;
-        dcterms:identifier        "Objective:1" ;
-        :calibratedMagnification  "20.34"^^xsd:float ;
-        :lotNumber                "123" ;
-        :manufacturer             [ a           :Manufacturer ;
-                                    rdfs:label  "OME-Labs"@en
-                                  ] ;
-        :nominalMagnification     "20.0"^^xsd:float .
+objective:objective1  a              ome:Objective , ome:ManufacturerSpec ;
+        dcterms:identifier           "Objective:1" ;
+        ome:calibratedMagnification  "20.34"^^xsd:float ;
+        ome:lotNumber                "123" ;
+        ome:manufacturer             [ a           ome:Manufacturer ;
+                                       rdfs:label  "OME-Labs"@en
+                                     ] ;
+        ome:nominalMagnification     "20.0"^^xsd:float .
 
-bindata:bindata1  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata1  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-font:shape2  a       :Font ;
-        :fontFamily  fontFamily:sansSerif ;
-        :fontSize    [ a          PATO:0000117 ;
-                       rdf:value  "1.0"^^xsd:float ;
-                       qudt:unit  unitLength:pt
-                     ] ;
-        :fontStyle   fontStyle:bold .
+font:shape2  a          ome:Font ;
+        ome:fontFamily  fontFamily:sansSerif ;
+        ome:fontSize    [ a          PATO:0000117 ;
+                          rdf:value  "1.0"^^xsd:float ;
+                          qudt:unit  unitLength:pt
+                        ] ;
+        ome:fontStyle   fontStyle:bold .
 
 detectorSettings:detectorSettings1
-        a                   :DetectorSettings ;
+        a                   ome:DetectorSettings ;
         dcterms:identifier  "Detector:1" ;
-        :integration        "3"^^xsd:int ;
-        :zoom               "2.0"^^xsd:float .
+        ome:integration     "3"^^xsd:positiveInteger ;
+        ome:zoom            "2.0"^^xsd:float .
 
-detector:detector1  a       :Detector , :ManufacturerSpec ;
+detector:detector1  a       ome:Detector , ome:ManufacturerSpec ;
         dcterms:identifier  "Detector:1" .
 
-channel:channel1  a         :Channel ;
-        dcterms:identifier  "Channel:0" ;
-        :acquisitionMode    acquisitionMode:laserScanningConfocalMicroscopy ;
-        :color              _:b0 ;
-        :detectorSettings   detectorSettings:detectorSettings1 .
+channel:channel1  a           ome:Channel ;
+        dcterms:identifier    "Channel:0" ;
+        ome:acquisitionMode   acquisitionMode:laserScanningConfocalMicroscopy ;
+        ome:color             _:b0 ;
+        ome:detectorSettings  detectorSettings:detectorSettings1 .
 
 person:experimenter12
         a                   foaf:Person ;
@@ -416,161 +416,161 @@ person:experimenter12
         foaf:mbox           "john@example.org" ;
         foaf:middleName     "Andrew"@en .
 
-polygon:shape5  a           :Polygon , :Shape ;
+polygon:shape5  a           ome:Polygon , ome:Shape ;
         dcterms:identifier  "Shape:5" ;
-        :point              point:shape5.3 , point:shape5.2 , point:shape5.1 , point:shape5.0 ;
-        :strokeColor        _:b1 ;
-        :strokeWidth        _:b2 .
+        ome:point           point:shape5.3 , point:shape5.2 , point:shape5.1 , point:shape5.0 ;
+        ome:strokeColor     _:b1 ;
+        ome:strokeWidth     _:b2 .
 
 experimenterGroup:experimenterGroup14
-        a                   :ExperimenterGroup ;
+        a                   ome:ExperimenterGroup ;
         rdfs:label          "LeaderMatch"@en ;
         dcterms:identifier  "ExperimenterGroup:14" ;
-        :leader             person:experimenter11 .
+        ome:leader          person:experimenter11 .
 
 experimenterGroup:experimenterGroup1
-        a                   foaf:Person , :ExperimenterGroup ;
+        a                   foaf:Person , ome:ExperimenterGroup ;
         rdfs:comment        "A description for my group 1. Complate with basic formatting, like new lines."@en ;
         rdfs:label          "MyGroup"@en ;
         dcterms:identifier  "ExperimenterGroup:1" ;
-        :experimenter       person:experimenter3 ;
-        :leader             person:experimenter1 .
+        ome:experimenter    person:experimenter3 ;
+        ome:leader          person:experimenter1 .
 
-polyline:shape6  a          :Shape , :Polyline ;
+polyline:shape6  a          ome:Shape , ome:Polyline ;
         dcterms:identifier  "Shape:6" ;
-        :markerEnd          marker:arrow ;
-        :markerStart        marker:arrow ;
-        :point              point:shape6.2 , point:shape6.3 , point:shape6.1 , point:shape6.0 ;
-        :strokeColor        _:b1 ;
-        :strokeWidth        _:b2 .
+        ome:markerEnd       marker:arrow ;
+        ome:markerStart     marker:arrow ;
+        ome:point           point:shape6.2 , point:shape6.3 , point:shape6.1 , point:shape6.0 ;
+        ome:strokeColor     _:b1 ;
+        ome:strokeWidth     _:b2 .
 
-roi:roi4  a                 :RegionOfInterest ;
+roi:roi4  a                 ome:RegionOfInterest ;
         dcterms:identifier  "ROI:4" ;
-        :union              [ a       rdf:Bag ;
+        ome:union           [ a       rdf:Bag ;
                               rdf:li  label:shape9
                             ] .
 
 acquisitionMode:multiPhotonMicroscopy
-        a       :AcquisitionMode .
+        a       ome:AcquisitionMode .
 
-point:shape1  a             :Point , :Shape ;
+point:shape1  a             ome:Point , ome:Shape ;
         dcterms:identifier  "Shape:1" ;
-        :theC               "0"^^xsd:int ;
-        :x                  "1.0"^^xsd:float ;
-        :y                  "1.0"^^xsd:float .
+        ome:theC            "0"^^xsd:nonNegativeInteger ;
+        ome:x               "1.0"^^xsd:float ;
+        ome:y               "1.0"^^xsd:float .
 
 xmlAnnotation:xmlAnnotation1
-        a                   :XMLAnnotation , :Annotation ;
+        a                   ome:XMLAnnotation , ome:Annotation ;
         rdf:value           "<test1 xmlns=\"\"/>"^^rdf:XMLLiteral ;
         rdfs:comment        "Abc123"@en ;
         dcterms:identifier  "Annotation:1" ;
-        :annotator          person:experimenter2 .
+        ome:annotator       person:experimenter2 .
 
-_:b1    a          :Color ;
+_:b1    a          ome:Color ;
         rdf:value  "1" .
 
-fontFamily:sansSerif  a  :FontFamily .
+fontFamily:sansSerif  a  ome:FontFamily .
 
 timestampAnnotation:timestampAnnotation:11
-        a                   :TimestampAnnotation , :Annotation ;
+        a                   ome:TimestampAnnotation , ome:Annotation ;
         rdf:value           "2010-02-23T12:51:30" ;
         rdfs:comment        "Abc123"@en ;
         dcterms:identifier  "Annotation:11" ;
-        :annotator          person:experimenter2 .
+        ome:annotator       person:experimenter2 .
 
 booleanAnnotation:booleanAnnotation3
-        a                   :BooleanAnnotation , :Annotation ;
+        a                   ome:BooleanAnnotation , ome:Annotation ;
         rdf:value           true ;
         rdfs:comment        "Abc123"@en ;
         dcterms:identifier  "Annotation:3" ;
-        :annotator          person:experimenter2 .
+        ome:annotator       person:experimenter2 .
 
 longAnnotation:longAnnotation8
-        a                   :LongAnnotation , :Annotation ;
+        a                   ome:LongAnnotation , ome:Annotation ;
         rdf:value           "8"^^xsd:long ;
         rdfs:comment        "Abc123"@en ;
         dcterms:identifier  "Annotation:8" ;
-        :annotator          person:experimenter2 .
+        ome:annotator       person:experimenter2 .
 
 person:experimenter17
         a                   foaf:Person ;
         dcterms:identifier  "Experimenter:17" .
 
-label:shape4  a             :Shape , :Label ;
-        dcterms:identifier  "Shape:4" ;
-        :fillColor          _:b1 ;
-        :fillRule           fillRule:evenOdd ;
-        :font               font:shape4 ;
-        :strokeColor        _:b1 ;
-        :strokeDashArray    "10 10" ;
-        :strokeWidth        _:b3 ;
-        :text               "Hello" ;
-        :theC               "1"^^xsd:int ;
-        :theT               "0"^^xsd:int ;
-        :theZ               "0"^^xsd:int ;
-        :x                  "1.0"^^xsd:float ;
-        :y                  "1.0"^^xsd:float .
+label:shape4  a              ome:Shape , ome:Label ;
+        dcterms:identifier   "Shape:4" ;
+        ome:fillColor        _:b1 ;
+        ome:fillRule         fillRule:evenOdd ;
+        ome:font             font:shape4 ;
+        ome:strokeColor      _:b1 ;
+        ome:strokeDashArray  "10 10" ;
+        ome:strokeWidth      _:b3 ;
+        ome:text             "Hello" ;
+        ome:theC             "1"^^xsd:nonNegativeInteger ;
+        ome:theT             "0"^^xsd:nonNegativeInteger ;
+        ome:theZ             "0"^^xsd:nonNegativeInteger ;
+        ome:x                "1.0"^^xsd:float ;
+        ome:y                "1.0"^^xsd:float .
 
 unitLength:um  a  rdfs:Class .
 
-label:shape11  a            :Label , :Shape ;
+label:shape11  a            ome:Label , ome:Shape ;
         dcterms:identifier  "Shape:11" ;
-        :text               "Removed Path" ;
-        :x                  "0.0"^^xsd:float ;
-        :y                  "0.0"^^xsd:float .
+        ome:text            "Removed Path" ;
+        ome:x               "0.0"^^xsd:float ;
+        ome:y               "0.0"^^xsd:float .
 
 unitLength:pt  a  rdfs:Class .
 
 tagAnnotation:tagAnnotation9
-        a                   :TagAnnotation , :Annotation ;
+        a                   ome:TagAnnotation , ome:Annotation ;
         rdf:value           "Pink" ;
         rdfs:comment        "Abc123"@en ;
         dcterms:identifier  "Annotation:9" ;
-        :annotator          person:experimenter2 .
+        ome:annotator       person:experimenter2 .
 
 person:experimenter11
         a                   foaf:Person ;
         dcterms:identifier  "Experimenter:11" .
 
 experimenterGroup:experimenterGroup13
-        a                   :ExperimenterGroup ;
+        a                   ome:ExperimenterGroup ;
         rdfs:label          "NoMatch"@en ;
         dcterms:identifier  "ExperimenterGroup:13" ;
-        :experimenter       person:experimenter15 ;
-        :leader             person:experimenter17 .
+        ome:experimenter    person:experimenter15 ;
+        ome:leader          person:experimenter17 .
 
-roi:roi3  a                 :RegionOfInterest ;
+roi:roi3  a                 ome:RegionOfInterest ;
         dcterms:identifier  "ROI:3" ;
-        :union              [ a       rdf:Bag ;
+        ome:union           [ a       rdf:Bag ;
                               rdf:li  line:shape7b , line:shape7a , line:shape7 , polyline:shape6a , polyline:shape6 , polygon:shape5 , label:shape4 , rectangle:shape3
                             ] .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .
 
-fillRule:evenOdd  a  :FillRule .
+fillRule:evenOdd  a  ome:FillRule .
 
-label:shape9  a             :Label , :Shape ;
+label:shape9  a             ome:Label , ome:Shape ;
         dcterms:identifier  "Shape:9" ;
-        :text               "Removed Path" ;
-        :x                  "0.0"^^xsd:float ;
-        :y                  "0.0"^^xsd:float .
+        ome:text            "Removed Path" ;
+        ome:x               "0.0"^^xsd:float ;
+        ome:y               "0.0"^^xsd:float .
 
-dimensionOrder:xyczt  a  :DimensionOrder .
+dimensionOrder:xyczt  a  ome:DimensionOrder .
 
 transform:rectangle_shape3
-        a       :AffineTransform , :Transform ;
-        :a00    "10.0"^^xsd:float ;
-        :a01    "30.0"^^xsd:float ;
-        :a02    "50.0"^^xsd:float ;
-        :a10    "20.0"^^xsd:float ;
-        :a11    "40.0"^^xsd:float ;
-        :a12    "60.0"^^xsd:float .
+        a        ome:AffineTransform , ome:AffineTramsform ;
+        ome:a00  "10.0"^^xsd:float ;
+        ome:a01  "30.0"^^xsd:float ;
+        ome:a02  "50.0"^^xsd:float ;
+        ome:a10  "20.0"^^xsd:float ;
+        ome:a11  "40.0"^^xsd:float ;
+        ome:a12  "60.0"^^xsd:float .
 
 termAnnotation:termAnnotation10
-        a                   :TermAnnotation , :Annotation ;
+        a                   ome:TermAnnotation , ome:Annotation ;
         rdf:value           "Blue" ;
         rdfs:comment        "Abc123"@en ;
         dcterms:identifier  "Annotation:10" ;
-        :annotator          person:experimenter2 .
+        ome:annotator       person:experimenter2 .
 
-fontFamily:serif  a  :FontFamily .
+fontFamily:serif  a  ome:FontFamily .

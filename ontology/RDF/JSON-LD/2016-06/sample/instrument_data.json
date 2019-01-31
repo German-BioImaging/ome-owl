@@ -1,14 +1,14 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "@type" : "Manufacturer",
+    "@type" : "ome:Manufacturer",
     "label" : {
       "@language" : "en",
       "@value" : "OME Detectors"
     }
   }, {
     "@id" : "_:b1",
-    "@type" : "Manufacturer",
+    "@type" : "ome:Manufacturer",
     "label" : {
       "@language" : "en",
       "@value" : "OME Lights"
@@ -23,7 +23,7 @@
     }
   }, {
     "@id" : "_:b11",
-    "@type" : "Manufacturer",
+    "@type" : "ome:Manufacturer",
     "label" : {
       "@language" : "en",
       "@value" : "OME Instruments"
@@ -46,7 +46,7 @@
     }
   }, {
     "@id" : "_:b14",
-    "@type" : "Manufacturer",
+    "@type" : "ome:Manufacturer",
     "label" : {
       "@language" : "en",
       "@value" : "OME Filters"
@@ -93,7 +93,7 @@
     }
   }, {
     "@id" : "_:b2",
-    "@type" : "Manufacturer",
+    "@type" : "ome:Manufacturer",
     "label" : {
       "@language" : "en",
       "@value" : "OME Objectives"
@@ -180,7 +180,7 @@
     }
   }, {
     "@id" : "_:b4",
-    "@type" : "Color",
+    "@type" : "ome:Color",
     "value" : "-2147483648"
   }, {
     "@id" : "_:b5",
@@ -224,37 +224,37 @@
     }
   }, {
     "@id" : "arcType:Xe",
-    "@type" : "ArcType"
+    "@type" : "ome:ArcType"
   }, {
     "@id" : "binning:twoXTwo",
-    "@type" : "Binning"
+    "@type" : "ome:Binning"
   }, {
     "@id" : "correction:UV",
-    "@type" : "Correction"
+    "@type" : "ome:Correction"
   }, {
     "@id" : "detectorType:CCD",
-    "@type" : "DetectorType"
+    "@type" : "ome:DetectorType"
   }, {
     "@id" : "dimensionOrder:xyczt",
-    "@type" : "DimensionOrder"
+    "@type" : "ome:DimensionOrder"
   }, {
     "@id" : "filterType:bandPass",
-    "@type" : "FilterType"
+    "@type" : "ome:FilterType"
   }, {
     "@id" : "immersion:air",
-    "@type" : "Immersion"
+    "@type" : "ome:Immersion"
   }, {
     "@id" : "laserMedium:Ruby",
-    "@type" : "LaserMedium"
+    "@type" : "ome:LaserMedium"
   }, {
     "@id" : "laserType:solidState",
-    "@type" : "LaserType"
+    "@type" : "ome:LaserType"
   }, {
     "@id" : "microscopeType:inverted",
-    "@type" : "MicroscopeType"
+    "@type" : "ome:MicroscopeType"
   }, {
     "@id" : "pixelType:uint8",
-    "@type" : "PixelType"
+    "@type" : "ome:PixelType"
   }, {
     "@id" : "unitElectricPotential:V",
     "@type" : "rdfs:Class"
@@ -272,9 +272,9 @@
     "@type" : "rdfs:Class"
   }, {
     "@id" : "arc:arc0",
-    "@type" : [ "Arc", "ManufacturerSpec" ],
+    "@type" : [ "ome:Arc", "ome:ManufacturerSpec" ],
     "identifier" : "LightSource:1",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/arcType" : {
+    "ome:arcType" : {
       "@id" : "arcType:Xe"
     },
     "manufacturer" : "_:b1",
@@ -283,38 +283,38 @@
     "serialNumber" : "A123456"
   }, {
     "@id" : "bindata:bindata0",
-    "@type" : "BinData",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian" : false,
+    "@type" : "ome:BinData",
+    "ome:bigEndian" : false,
     "data" : "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF",
     "length" : "32"
   }, {
     "@id" : "channel:channel0.1",
-    "@type" : "Channel",
+    "@type" : "ome:Channel",
     "identifier" : "Channel:0.1",
     "color" : "_:b4",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/detectorSettings" : {
+    "ome:detectorSettings" : {
       "@id" : "detectorSettings:detectorSettings0"
     },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/lightPath" : {
+    "ome:lightPath" : {
       "@id" : "lightPath:lightPath0"
     },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/lightSourceSettings" : {
+    "ome:lightSourceSettings" : {
       "@id" : "lightSourceSettings:lightSourceSettings0"
     }
   }, {
     "@id" : "detector:detector0",
-    "@type" : [ "Detector", "ManufacturerSpec" ],
+    "@type" : [ "ome:Detector", "ome:ManufacturerSpec" ],
     "identifier" : "Detector:0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/detectorType" : {
+    "ome:detectorType" : {
       "@id" : "detectorType:CCD"
     },
     "manufacturer" : "_:b0",
     "model" : "OME-CCD Mk2"
   }, {
     "@id" : "detectorSettings:detectorSettings0",
-    "@type" : "DetectorSettings",
+    "@type" : "ome:DetectorSettings",
     "identifier" : "Detector:0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/binning" : {
+    "ome:binning" : {
       "@id" : "binning:twoXTwo"
     },
     "gain" : "1.2",
@@ -323,13 +323,13 @@
     "voltage" : "_:b7"
   }, {
     "@id" : "dichroic:dichroic0",
-    "@type" : [ "Dichroic", "ManufacturerSpec" ],
+    "@type" : [ "ome:Dichroic", "ome:ManufacturerSpec" ],
     "identifier" : "Dichroic:0",
     "manufacturer" : "_:b11",
     "model" : "Standard Mk3"
   }, {
     "@id" : "filter:filter0",
-    "@type" : [ "Filter", "ExcitationFilter", "ManufacturerSpec" ],
+    "@type" : [ "ome:Filter", "ome:ExcitationFilter", "ome:ManufacturerSpec" ],
     "identifier" : "Filter:0",
     "filterWheel" : "Disc A",
     "manufacturer" : "_:b14",
@@ -339,9 +339,9 @@
     }
   }, {
     "@id" : "filter:filter1",
-    "@type" : [ "Filter", "EmissionFilter", "ManufacturerSpec" ],
+    "@type" : [ "ome:Filter", "ome:EmissionFilter", "ome:ManufacturerSpec" ],
     "identifier" : "Filter:1",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/filterType" : {
+    "ome:filterType" : {
       "@id" : "filterType:bandPass"
     },
     "manufacturer" : "_:b14",
@@ -351,9 +351,9 @@
     }
   }, {
     "@id" : "filter:filter2",
-    "@type" : [ "EmissionFilter", "Filter", "ManufacturerSpec" ],
+    "@type" : [ "ome:EmissionFilter", "ome:Filter", "ome:ManufacturerSpec" ],
     "identifier" : "Filter:2",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/filterType" : {
+    "ome:filterType" : {
       "@id" : "filterType:bandPass"
     },
     "manufacturer" : "_:b14",
@@ -363,9 +363,9 @@
     }
   }, {
     "@id" : "filter:filter3",
-    "@type" : [ "ExcitationFilter", "Filter", "ManufacturerSpec" ],
+    "@type" : [ "ome:ExcitationFilter", "ome:Filter", "ome:ManufacturerSpec" ],
     "identifier" : "Filter:3",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/filterType" : {
+    "ome:filterType" : {
       "@id" : "filterType:bandPass"
     },
     "manufacturer" : "_:b14",
@@ -375,9 +375,9 @@
     }
   }, {
     "@id" : "filterSet:filterSet0",
-    "@type" : [ "FilterSet", "ManufacturerSpec" ],
+    "@type" : [ "ome:FilterSet", "ome:ManufacturerSpec" ],
     "identifier" : "FilterSet:0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dichroic" : {
+    "ome:dichroic" : {
       "@id" : "dichroic:dichroic0"
     },
     "emissionFilter" : "filter:filter1",
@@ -387,13 +387,13 @@
     "model" : "Standard Mk3"
   }, {
     "@id" : "image:image0",
-    "@type" : "Image",
+    "@type" : "ome:Image",
     "identifier" : "Image:0",
     "acquisitionDate" : "2010-02-23T12:51:30",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument" : {
+    "ome:instrument" : {
       "@id" : "instrument:instrument0"
     },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixels" : {
+    "ome:pixels" : {
       "@id" : "pixels:pixels0"
     },
     "comment" : {
@@ -406,55 +406,55 @@
     }
   }, {
     "@id" : "instrument:instrument0",
-    "@type" : "Instrument",
+    "@type" : "ome:Instrument",
     "identifier" : "Instrument:0",
     "manufacturerSpec" : [ "filter:filter2", "filter:filter0", "laser:laser0", "filterSet:filterSet0", "detector:detector0", "arc:arc0", "filter:filter1", "filter:filter3", "objective:objective0", "microscope:microscope0", "dichroic:dichroic0" ]
   }, {
     "@id" : "laser:laser0",
-    "@type" : [ "ManufacturerSpec", "Laser" ],
+    "@type" : [ "ome:ManufacturerSpec", "ome:Laser" ],
     "identifier" : "LightSource:0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/laserMedium" : {
+    "ome:laserMedium" : {
       "@id" : "laserMedium:Ruby"
     },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/laserType" : {
+    "ome:laserType" : {
       "@id" : "laserType:solidState"
     },
     "manufacturer" : "_:b1",
     "model" : "Ruby60",
     "power" : "_:b10",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pump" : {
+    "ome:pump" : {
       "@id" : "pump:pump0"
     },
     "serialNumber" : "A654321"
   }, {
     "@id" : "lightPath:lightPath0",
-    "@type" : "LightPath",
+    "@type" : "ome:LightPath",
     "emissionFilter" : "filter:filter2",
     "excitationFilter" : "filter:filter3"
   }, {
     "@id" : "lightSourceSettings:lightSourceSettings0",
-    "@type" : "LightSourceSettings",
+    "@type" : "ome:LightSourceSettings",
     "identifier" : "LightSource:0",
     "attenuation" : "0.8",
     "waveLength" : "_:b18"
   }, {
     "@id" : "microscope:microscope0",
-    "@type" : [ "Microscope", "ManufacturerSpec" ],
+    "@type" : [ "ome:Microscope", "ome:ManufacturerSpec" ],
     "manufacturer" : "_:b11",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/microscopeType" : {
+    "ome:microscopeType" : {
       "@id" : "microscopeType:inverted"
     },
     "model" : "Lab Mk3",
     "serialNumber" : "L3-1234"
   }, {
     "@id" : "objective:objective0",
-    "@type" : [ "ManufacturerSpec", "Objective" ],
+    "@type" : [ "ome:ManufacturerSpec", "ome:Objective" ],
     "identifier" : "Objective:0",
     "calibratedMagnification" : "60.12",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/correction" : {
+    "ome:correction" : {
       "@id" : "correction:UV"
     },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/immersion" : {
+    "ome:immersion" : {
       "@id" : "immersion:air"
     },
     "lensNA" : "1.2",
@@ -464,18 +464,18 @@
     "workingDistance" : "_:b3"
   }, {
     "@id" : "pixels:pixels0",
-    "@type" : "Pixels",
+    "@type" : "ome:Pixels",
     "identifier" : "Pixels:0.0",
     "binData" : "bindata:bindata0",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/channel" : {
+    "ome:channel" : {
       "@id" : "channel:channel0.1"
     },
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dimensionOrder" : {
+    "ome:dimensionOrder" : {
       "@id" : "dimensionOrder:xyczt"
     },
     "physicalSizeX" : "_:b5",
     "physicalSizeY" : "_:b5",
-    "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixelType" : {
+    "ome:pixelType" : {
       "@id" : "pixelType:uint8"
     },
     "sizeC" : "1",
@@ -485,11 +485,11 @@
     "sizeZ" : "1"
   }, {
     "@id" : "pump:pump0",
-    "@type" : "Pump",
+    "@type" : "ome:Pump",
     "identifier" : "LightSource:1"
   }, {
     "@id" : "transmittanceRange:transmittanceRange0",
-    "@type" : "TransmittanceRange",
+    "@type" : "ome:TransmittanceRange",
     "cutIn" : "_:b23",
     "cutInTolerance" : "_:b24",
     "cutOut" : "_:b27",
@@ -497,7 +497,7 @@
     "transmittance" : "0.3"
   }, {
     "@id" : "transmittanceRange:transmittanceRange1",
-    "@type" : "TransmittanceRange",
+    "@type" : "ome:TransmittanceRange",
     "cutIn" : "_:b25",
     "cutInTolerance" : "_:b9",
     "cutOut" : "_:b28",
@@ -505,7 +505,7 @@
     "transmittance" : "0.8"
   }, {
     "@id" : "transmittanceRange:transmittanceRange2",
-    "@type" : "TransmittanceRange",
+    "@type" : "ome:TransmittanceRange",
     "cutIn" : "_:b21",
     "cutInTolerance" : "_:b20",
     "cutOut" : "_:b22",
@@ -513,7 +513,7 @@
     "transmittance" : "0.5"
   }, {
     "@id" : "transmittanceRange:transmittanceRange3",
-    "@type" : "TransmittanceRange",
+    "@type" : "ome:TransmittanceRange",
     "cutIn" : "_:b17",
     "cutInTolerance" : "_:b15",
     "cutOut" : "_:b16",
@@ -630,11 +630,11 @@
     },
     "sizeY" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeY",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "sizeX" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeX",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "physicalSizeY" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeY",
@@ -647,17 +647,17 @@
     "pixelType" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PixelType#",
     "sizeT" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeT",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "sizeZ" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeZ",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "dimensionOrder" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder#",
     "channel" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/channel/",
     "sizeC" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeC",
-      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+      "@type" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
     },
     "manufacturerSpec" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/manufacturerSpec",
@@ -689,7 +689,8 @@
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/filterWheel"
     },
     "data" : {
-      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data"
+      "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data",
+      "@type" : "http://www.w3.org/2001/XMLSchema#base64Binary"
     },
     "bigEndian" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/bigEndian",
@@ -697,9 +698,8 @@
     },
     "length" : {
       "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/length",
-      "@type" : "http://www.w3.org/2001/XMLSchema#long"
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeLong"
     },
-    "@vocab" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "qudt" : "http://qudt.org/schema/qudt/",
     "owl" : "http://www.w3.org/2002/07/owl#",
     "screen" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/screen/",
@@ -720,6 +720,7 @@
     "detector" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/detector/",
     "filterSet" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/filterSet/",
     "bindata" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/bindata/",
+    "ome" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "plate" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/instrument/plate/",

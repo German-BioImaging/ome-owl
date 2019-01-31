@@ -1,7 +1,7 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/commentannotation/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/commentannotation/channel/> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
@@ -17,53 +17,53 @@
 @prefix commentAnnotation: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/commentannotation/commentAnnoation/> .
 @prefix bindata: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/commentannotation/bindata/> .
 
-bindata:bindata0  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata0  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 unitLength:um  a  rdfs:Class .
 
-image:image0  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :annotation         commentAnnotation:commentAnnotation1 ;
-        :pixels             pixels:pixels0.0 .
+image:image0  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif"@en ;
+        dcterms:identifier   "Image:0" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:annotation       commentAnnotation:commentAnnotation1 ;
+        ome:pixels           pixels:pixels0.0 .
 
 _:b0    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
 commentAnnotation:commentAnnotation1
-        a                   :CommentAnnotation , :Annotation ;
+        a                   ome:CommentAnnotation , ome:Annotation ;
         rdf:value           "Fred"@en ;
         dcterms:identifier  "Annotation:1" .
 
-dimensionOrder:xyczt  a  :DimensionOrder .
+dimensionOrder:xyczt  a  ome:DimensionOrder .
 
-pixels:pixels0.0  a         :Pixels ;
+pixels:pixels0.0  a         ome:pixels , ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :binData            bindata:bindata0 ;
-        :channel            channel:channel0 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b0 ;
-        :physicalSizeY      _:b0 ;
-        :pixelType          pixelType:uint8 ;
-        :sizeC              "1"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata0 ;
+        ome:channel         channel:channel0 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b0 ;
+        ome:physicalSizeY   _:b0 ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:sizeC           "1"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:pixelType .
 
-channel:channel0  a         :Channel ;
+channel:channel0  a         ome:Channel ;
         dcterms:identifier  "Channel:0" ;
-        :color              [ a          :Color ;
+        ome:color           [ a          ome:Color ;
                               rdf:value  "-2147483648"
                             ] .
 
-[ a            :StructuredAnnotations ;
-  :annotation  commentAnnotation:commentAnnotation1
+[ a               ome:StructuredAnnotations ;
+  ome:annotation  commentAnnotation:commentAnnotation1
 ] .

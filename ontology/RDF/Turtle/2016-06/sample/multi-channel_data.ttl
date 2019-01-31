@@ -1,7 +1,7 @@
-@prefix :      <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix image: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/multi-channel/image/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ome:   <http://www.openmicroscopy.org/rdf/2016-06/ome_core/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix channel: <http://www.openmicroscopy.org/rdf/2016-06/ome_core/samples/multi-channel/channel/> .
 @prefix PATO:  <http://purl.obolibrary.org/obo/PATO_> .
@@ -20,72 +20,72 @@
 
 unitLength:um  a  rdfs:Class .
 
-bindata:bindata2  a  :BinData ;
-        :bigEndian  false ;
-        :data       "//+szuv/AP95n8PiAABHbZO3AP8dPF+G" ;
-        :length     "32"^^xsd:long .
+bindata:bindata2  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "//+szuv/AP95n8PiAABHbZO3AP8dPF+G"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-bindata:bindata0  a  :BinData ;
-        :bigEndian  false ;
-        :data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata0  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "/wCrzur//wB5oMPi/wBIbJO3AP8ePGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
-channel:channel2  a         :Channel ;
-        dcterms:identifier  "Channel:2" ;
-        :acquisitionMode    acquisitionMode:multiPhotonMicroscopy ;
-        :color              [ a          :Color ;
-                              rdf:value  "65535"
-                            ] .
+channel:channel2  a          ome:Channel ;
+        dcterms:identifier   "Channel:2" ;
+        ome:acquisitionMode  acquisitionMode:multiPhotonMicroscopy ;
+        ome:color            [ a          ome:Color ;
+                               rdf:value  "65535"
+                             ] .
 
-pixels:pixels0  a           :Pixels ;
+pixels:pixels0  a           ome:Pixels ;
         dcterms:identifier  "Pixels:0.0" ;
-        :binData            bindata:bindata0 , bindata:bindata2 , bindata:bindata1 ;
-        :channel            channel:channel0 , channel:channel1 , channel:channel2 ;
-        :dimensionOrder     dimensionOrder:xyczt ;
-        :physicalSizeX      _:b0 ;
-        :physicalSizeY      _:b0 ;
-        :pixelType          pixelType:uint8 ;
-        :sizeC              "3"^^xsd:int ;
-        :sizeT              "1"^^xsd:int ;
-        :sizeX              "6"^^xsd:int ;
-        :sizeY              "4"^^xsd:int ;
-        :sizeZ              "1"^^xsd:int .
+        ome:binData         bindata:bindata0 , bindata:bindata2 , bindata:bindata1 ;
+        ome:channel         channel:channel0 , channel:channel1 , channel:channel2 ;
+        ome:dimensionOrder  dimensionOrder:xyczt ;
+        ome:physicalSizeX   _:b0 ;
+        ome:physicalSizeY   _:b0 ;
+        ome:pixelType       pixelType:uint8 ;
+        ome:sizeC           "3"^^xsd:positiveInteger ;
+        ome:sizeT           "1"^^xsd:positiveInteger ;
+        ome:sizeX           "6"^^xsd:positiveInteger ;
+        ome:sizeY           "4"^^xsd:positiveInteger ;
+        ome:sizeZ           "1"^^xsd:positiveInteger .
 
-channel:channel0  a         :Channel ;
-        dcterms:identifier  "Channel:0" ;
-        :acquisitionMode    acquisitionMode:laserScanningConfocalMicroscopy ;
-        :color              [ a          :Color ;
-                              rdf:value  "-16776961"
-                            ] .
+channel:channel0  a          ome:Channel ;
+        dcterms:identifier   "Channel:0" ;
+        ome:acquisitionMode  acquisitionMode:laserScanningConfocalMicroscopy ;
+        ome:color            [ a          ome:Color ;
+                               rdf:value  "-16776961"
+                             ] .
 
-image:image0  a             :Image ;
-        rdfs:label          "6x6x1x8-swatch.tif"@en ;
-        dcterms:identifier  "Image:0" ;
-        :acquisitionDate    "2010-02-23T12:51:30" ;
-        :pixels             pixels:pixels0 .
+image:image0  a              ome:Image ;
+        rdfs:label           "6x6x1x8-swatch.tif"@en ;
+        dcterms:identifier   "Image:0" ;
+        ome:acquisitionDate  "2010-02-23T12:51:30" ;
+        ome:pixels           pixels:pixels0 .
 
 _:b0    a          PATO:0000117 ;
         rdf:value  "100000.0"^^xsd:float ;
         qudt:unit  unitLength:um .
 
 acquisitionMode:multiPhotonMicroscopy
-        a       :AcquisitionMode .
+        a       ome:AcquisitionMode .
 
-dimensionOrder:xyczt  a  :DimensionOrder .
+dimensionOrder:xyczt  a  ome:DimensionOrder .
 
-bindata:bindata1  a  :BinData ;
-        :bigEndian  false ;
-        :data       "AP+rzuv/AAB5n8Pi/wBHbJO3//8dPGCF" ;
-        :length     "32"^^xsd:long .
+bindata:bindata1  a    ome:BinData ;
+        ome:bigEndian  false ;
+        ome:data       "AP+rzuv/AAB5n8Pi/wBHbJO3//8dPGCF"^^xsd:base64Binary ;
+        ome:length     "32"^^xsd:nonNegativeLong .
 
 acquisitionMode:laserScanningConfocalMicroscopy
-        a       :AcquisitionMode .
+        a       ome:AcquisitionMode .
 
-pixelType:uint8  a  :PixelType .
+pixelType:uint8  a  ome:PixelType .
 
-channel:channel1  a         :Channel ;
-        dcterms:identifier  "Channel:1" ;
-        :acquisitionMode    acquisitionMode:laserScanningConfocalMicroscopy ;
-        :color              [ a          :Color ;
-                              rdf:value  "16711935"
-                            ] .
+channel:channel1  a          ome:Channel ;
+        dcterms:identifier   "Channel:1" ;
+        ome:acquisitionMode  acquisitionMode:laserScanningConfocalMicroscopy ;
+        ome:color            [ a          ome:Color ;
+                               rdf:value  "16711935"
+                             ] .
