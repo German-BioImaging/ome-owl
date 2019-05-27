@@ -1537,7 +1537,7 @@ ome:row rdf:type owl:DatatypeProperty ;
 ###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/rowNamingConvention
 ome:rowNamingConvention rdf:type owl:DatatyeProperty ;
     rdfs:domain ome:Plate ;
-    rdfs:range NamingConvention ;
+    rdfs:range ome:NamingConvention ;
     rdfs:label "row naming conversion"@en ;
     rdfs:comment "Property \"rowNamingConvention\" specifies the naming convention for rows that is a predefined list of values for the well labels."@en .
 
