@@ -94,7 +94,7 @@ xsd:string rdf:type rdfs:Datatype ;
 ###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/specificationFile
 OME4DN:specificationFile rdf:type owl:ObjectProperty ;
     rdfs:domain  ome:ManufacturerSpec ;
-    rdfs:range OME4DN:SpecificaionFile ;
+    rdfs:range OME4DN:SpecificationFile ;
     rdfs:label  "specification file"@en ;
     rdfs:comment "Property \"specificationFile\" specifies a file describing specification.  The default file type is PDF."@en .
 
@@ -109,7 +109,7 @@ OME4DN:microscopyBody rdf:type owl:ObjectProperty ;
 
 ###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/microscopyBodyType
 OME4DN:microscopyBodyType rdf:type owl:ObjectProperty ;
-    rdfs:domain  ome:MicroscopeBody ;
+    rdfs:domain  OME4DN:MicroscopeBody ;
     rdfs:range OME4DN:MicroscopeBodyType ;
     rdfs:label  "microscope body type"@en ;
     rdfs:comment "Property \"microscopeBodyType\" specifies the type of microscopy body."@en .
@@ -479,15 +479,15 @@ OME4DN:optovarLensType rdf:type owl:ObjectProperty ;
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/correction
 OME4DN:correction rdf:type owl:ObjectProperty ;
-    rdfs:domain OME4DN:Objective ;
-    rdfs:range  OME4DN:Correction ;
+    rdfs:domain ome:Objective ;
+    rdfs:range  OME4DN:ObjectiveCorrection ;
     rdfs:label "correction"@en ;
     rdfs:comment "Property \"correction\" specifies the correction applied to the lens."@en .
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/nominalImmersionMedium
 OME4DN:nominalImmersionMedium rdf:type owl:ObjectProperty ;
-    rdfs:domain OME4DN:Objective ;
+    rdfs:domain ome:Objective ;
     rdfs:range  OME4DN:NominalImmersionMedium ;
     rdfs:label "nominalImmersionMedium"@en ;
     rdfs:comment "Property \"nominalImmersionMedium\" specifies the immersion medium the lens is designed for."@en .
@@ -495,7 +495,7 @@ OME4DN:nominalImmersionMedium rdf:type owl:ObjectProperty ;
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/parfocalizingDistance
 OME4DN:parfocalizingDistance rdf:type owl:ObjectProperty ;
-    rdfs:domain OME4DN:Objective ;
+    rdfs:domain ome:Objective ;
     rdfs:range  PATO:0000040 ;
     rdfs:label "parfocalizing distance"@en ;
     rdfs:comment "Property \"parfocalizingDistance\" specifies the distance between the objective lens mounting plane and the specimen."@en .
@@ -503,7 +503,7 @@ OME4DN:parfocalizingDistance rdf:type owl:ObjectProperty ;
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/backFocalPlanePosition
 OME4DN:backFocalPlanePosition rdf:type owl:ObjectProperty ;
-    rdfs:domain OME4DN:Objective ;
+    rdfs:domain ome:Objective ;
     rdfs:range  PATO:0000140 ;
     rdfs:label "back focal plane position"@en ;
     rdfs:comment "Property \"backFocalPlanePosition\" specifies the position of the back focal plane with respect to the specimen position."@en .
@@ -531,6 +531,14 @@ OME4DN:lensGeometry rdf:type owl:ObjectProperty ;
     rdfs:range  OME4DN:LensGeometry ;
     rdfs:label "lens geometry"@en ;
     rdfs:comment "Property \"lensGeometry\" specifies the geometrical shape of the lens surfaces."@en .
+
+
+###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/lensConstruction
+OME4DN:lensConstruction rdf:type owl:ObjectProperty ;
+    rdfs:domain OME4DN:Lens ;
+    rdfs:range  OME4DN:LensConstruction ;
+    rdfs:label "lens construction"@en ;
+    rdfs:comment "Property \"lensConstruction\" specifies whether or not the lens is simple or composite."@en .
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/radiusOfCurvature
@@ -772,7 +780,7 @@ OME4DN:substrateType rdf:type owl:ObjectProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/substrateMaterial
-OME4DN:substrateMaterial rdf:Material owl:ObjectProperty ;
+OME4DN:substrateMaterial rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:Mirror, OME4DN:Dichroic, OME4DN:Beamsplitter, OME4DN:Reflector ;
     rdfs:range  OME4DN:SubstrateMaterial ;
     rdfs:label "substrate material"@en ;
@@ -1097,6 +1105,14 @@ OME4DN:intensityCalibrationToolType rdf:type owl:ObjectProperty ;
     rdfs:comment "Property \"intensityCalibrationToolType\" specifies the type of intensity Calibration Tool."@en .
 
 
+###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/experimentType
+OME4DN:experimentType rdf:type owl:ObjectProperty ;
+    rdfs:domain ome:Experiment ;
+    rdfs:range  OME4DN:ExperimentType ;
+    rdfs:label "experiment type"@en ;
+    rdfs:comment "Property \"experimentType\" specifies a term to describe the type of experiment."@en .
+
+
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/labellingMethod
 OME4DN:labellingMethod rdf:type owl:ObjectProperty ;
     rdfs:domain ome:Experiment ;
@@ -1292,7 +1308,7 @@ OME4DN:fieldOfView rdf:type owl:ObjectProperty ;
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/objective
 OME4DN:objective rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:MicroscopeSettings, ome:ObjectiveSettings ;
-    rdfs:range  OME4DN:Objective ;
+    rdfs:range  ome:Objective ;
     rdfs:label "objective"@en ;
     rdfs:comment "Property \"objective\" specifies the objective."@en .
 
@@ -1300,7 +1316,7 @@ OME4DN:objective rdf:type owl:ObjectProperty ;
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/immersiumMedium
 OME4DN:immersiumMedium rdf:type owl:ObjectProperty ;
     rdfs:domain ome:ObjectiveSettings ;
-    rdfs:range  OME4DN:Objective ;
+    rdfs:range  ome:Objective ;
     rdfs:label "immersium medium"@en ;
     rdfs:comment "Property \"immersiumMedium\" specifies the actual immersion medium that was used in this case."@en .
 
@@ -1374,6 +1390,14 @@ OME4DN:samplePositionZ rdf:type owl:ObjectProperty ;
     rdfs:comment "Property \"samplePositionZ\" specifies the z position of the sampleHolder within the microscope's reference frame."@en .
 
 
+###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/illuminationType
+OME4DN:illuminationType rdf:type owl:ObjectProperty ;
+    rdfs:domain ome:Channel ;
+    rdfs:range  OME4DN:ChannelIlluminationType ;
+    rdfs:label "illumination type"@en ;
+    rdfs:comment "Property \"illuminationType\" specifies the method of illumination used to capture the channel."@en .
+
+
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/detectorSettings
 OME4DN:detectorSettings rdf:type owl:ObjectProperty ;
     rdfs:domain ome:Channel ;
@@ -1400,7 +1424,7 @@ OME4DN:fieldCalibration rdf:type owl:ObjectProperty ;
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/flatFieldImage
 OME4DN:flatFieldImage rdf:type owl:ObjectProperty ;
-    rdfs:domain ome:FieldCalibration ;
+    rdfs:domain OME4DN:FieldCalibration ;
     rdfs:range  OME4DN:FlatFieldImage ;
     rdfs:label "flat field image"@en ;
     rdfs:comment "Property \"flatFieldImage\" specifies an image describing field dependent variations in the pixel-to-pixel sensitivity of the detector and/or by distortions in the optical path."@en .
@@ -1653,7 +1677,7 @@ OME4DN:beadVolume rdf:type owl:ObjectProperty ;
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/beadType
 OME4DN:beadType rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:ColoredBeadsSlide ;
-    rdfs:range  OME4DN:BeatType ;
+    rdfs:range  OME4DN:BeadType ;
     rdfs:label "bead type"@en ;
     rdfs:comment "Property \"beadType\" specifies the type of colred beads used in this case."@en .
 
@@ -1666,16 +1690,16 @@ OME4DN:calibrationSlideType rdf:type owl:ObjectProperty ;
     rdfs:comment "Property \"calibrationSlideType\" specifies the type of calibration slide used in this case."@en .
 
 
-###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/calibrationSlideMeasure
-OME4DN:calibrationSlideMeasure rdf:Measure owl:ObjectProperty ;
+###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/calibratedMeasure
+OME4DN:calibratedMeasure rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:CalibrationSlide ;
-    rdfs:range  OME4DN:CalibrationSlideMeasure ;
-    rdfs:label "calibration slide measure"@en ;
-    rdfs:comment "Property \"calibrationSlideMeasure\" specifies the optical characteristic this slide is used to calibrate, examples include magnification, distance, optical distorsions and others."@en .
+    rdfs:range  OME4DN:CalibratedMeasure ;
+    rdfs:label "calibrated measure"@en ;
+    rdfs:comment "Property \"calibratedMeasure\" specifies the optical characteristic this slide is used to calibrate, examples include magnification, distance, optical distorsions and others."@en .
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/intensityCalibrationTool
-OME4DN:intensityCalibrationTool rdf:Measure owl:ObjectProperty ;
+OME4DN:intensityCalibrationTool rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:IntenstiyCalibration, OME4DN:ExcitationCalibration, OME4DN:DetectorCalibration ;
     rdfs:range  OME4DN:IntensityCalibrationTool ;
     rdfs:label "intensity calibration tool"@en ;
@@ -1683,7 +1707,7 @@ OME4DN:intensityCalibrationTool rdf:Measure owl:ObjectProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/observedExcitationWavelength
-OME4DN:observedExcitationWavelength rdf:Measure owl:ObjectProperty ;
+OME4DN:observedExcitationWavelength rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:ExcitationCalibration ;
     rdfs:range  PATO:0001242 ;
     rdfs:label "observed excitation wavelength"@en ;
@@ -1691,7 +1715,7 @@ OME4DN:observedExcitationWavelength rdf:Measure owl:ObjectProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/observedExcitationPower
-OME4DN:observedExcitationPower rdf:Measure owl:ObjectProperty ;
+OME4DN:observedExcitationPower rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:ExcitationCalibration ;
     rdfs:range  PATO:0001024 ;
     rdfs:label "observed excitation power"@en ;
@@ -1699,7 +1723,7 @@ OME4DN:observedExcitationPower rdf:Measure owl:ObjectProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/calibrationMap
-OME4DN:calibrationMap rdf:Measure owl:ObjectProperty ;
+OME4DN:calibrationMap rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:DetectorCalibration ;
     rdfs:range  OME4DN:CalibrationMap ;
     rdfs:label "calibration map"@en ;
@@ -1707,7 +1731,7 @@ OME4DN:calibrationMap rdf:Measure owl:ObjectProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/metricType
-OME4DN:metricType rdf:Measure owl:ObjectProperty ;
+OME4DN:metricType rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:CalibrationMap ;
     rdfs:range  OME4DN:MetricType ;
     rdfs:label "metric type"@en ;
@@ -1715,7 +1739,7 @@ OME4DN:metricType rdf:Measure owl:ObjectProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/row
-OME4DN:row rdf:Measure owl:ObjectProperty ;
+OME4DN:row rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:CalibrationMap ;
     rdfs:range  OME4DN:Row ;
     rdfs:label "row"@en ;
@@ -1723,7 +1747,7 @@ OME4DN:row rdf:Measure owl:ObjectProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/cell
-OME4DN:cell rdf:Measure owl:ObjectProperty ;
+OME4DN:cell rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:Row ;
     rdfs:range  OME4DN:Cell ;
     rdfs:label "cell"@en ;
@@ -1731,7 +1755,7 @@ OME4DN:cell rdf:Measure owl:ObjectProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/measuredLateralDrift
-OME4DN:measuredLateralDrift rdf:Measure owl:ObjectProperty ;
+OME4DN:measuredLateralDrift rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:MechanicalCalibration ;
     rdfs:range   PATO:0000140;
     rdfs:label "measured lateral drift"@en ;
@@ -1739,7 +1763,7 @@ OME4DN:measuredLateralDrift rdf:Measure owl:ObjectProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/measuredFocalDrift
-OME4DN:measuredFocalDrift rdf:Measure owl:ObjectProperty ;
+OME4DN:measuredFocalDrift rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:MechanicalCalibration ;
     rdfs:range   PATO:0000140;
     rdfs:label "measured focal drift"@en ;
@@ -1747,7 +1771,7 @@ OME4DN:measuredFocalDrift rdf:Measure owl:ObjectProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/measuredSettlingTime
-OME4DN:measuredSettlingTime rdf:Measure owl:ObjectProperty ;
+OME4DN:measuredSettlingTime rdf:type owl:ObjectProperty ;
     rdfs:domain OME4DN:MechanicalCalibration ;
     rdfs:range   PATO:0000165 ;
     rdfs:label "measured settling time"@en ;
@@ -2230,7 +2254,7 @@ OME4DN:cellValue rdf:type owl:DataProperty ;
 
 
 ###   http://www.4ducleome.org/rdf/2019-05/4D_NMM/measuredRepeatability
-OME4DN:measuredRepeatability rdf:Measure owl:DataProperty ;
+OME4DN:measuredRepeatability rdf:type owl:DataProperty ;
     rdfs:domain OME4DN:MechanicalCalibration ;
     rdfs:range  xsd:float ;
     rdfs:label "measured repeatability"@en ;
@@ -2436,7 +2460,8 @@ OME4DN:Mirror rdf:type owl:Class ;
 
 
 ###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/Dichroic
-OME4DN:Dichroic rdfs:subClassOf ome:ManufacturerSpec, ome:Dichroic ;
+OME4DN:Dichroic rdf:type owl:Class ;
+    rdfs:subClassOf ome:ManufacturerSpec, ome:Dichroic ;
     rdfs:label "Dichroic"@en ;
     rdfs:comment "Class \"Dichroic\" is a  dichroic component(s) available in this microscope.  A dichroic beamsplitter or dichroic mirror is a mirror that spectrally separate light by transmitting and reflecting light as a function of wavelength. In the context of fluorescence microscopy, they are typically used to reflect the excitation light, but transmit the emitted fluorescence. Dichroic mirrors can be categorized in different manners. However, the most important criteria for choosing a dichoric mirror are the transmittance and the reflectance wavelenght ranges."@en .
 
@@ -2514,7 +2539,7 @@ OME4DN:IntensityCalibrationTool rdf:type owl:Class ;
 ###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/Sample
 OME4DN:Sample rdf:type owl:Class ;
     rdfs:label "Sample"@en ;
-    rdfs:comment "Class \"Sample\" is the sample that was imaged in this experiment.a tool, such as the Meta-Max calibration toold developed by the 4D Nucleome Imaging Standards Working Group, used to perform an intensity calibration procedure."@en .
+    rdfs:comment "Class \"Sample\" is the sample that was imaged in this experiment."@en .
 
 
 ###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/Image
@@ -2534,12 +2559,6 @@ OME4DN:TIRFSettings rdf:type owl:Class ;
 OME4DN:MicroscopeSettings rdf:type owl:Class ;
     rdfs:label "Microscope Settings"@en ;
     rdfs:comment "Class \"MicroscopeSettings\" referes to the Microscope used to acquire this image and holds the setting that were applied to the microscope in this case."@en .
-
-
-###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/ObjectiveSettings
-OME4DN:ObjectiveSettings rdf:type owl:Class ;
-    rdfs:label "Objective Settings"@en ;
-    rdfs:comment "Class \"Objectiveettings\" is the setting applied to an Objective e as well as a reference to the Objective (the ID attribute) in question. The ID referes to the Objective used in this case."@en .
 
 
 ###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/FocalPosition
@@ -2741,10 +2760,10 @@ OME4DN:LensType rdf:type owl:Class ;
     rdfs:comment "Class \"LensType\" is the general category this lens belongs to."@en .
 
 
-###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/Correction
-OME4DN:Correction rdf:type owl:Class ;
-    rdfs:label "Correction"@en ;
-    rdfs:comment "Class \"Correction\" is the correction applied to the lens."@en .
+###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/ObjectiveCorrection
+OME4DN:ObjectiveCorrection rdf:type owl:Class ;
+    rdfs:label "Objective Correction"@en ;
+    rdfs:comment "Class \"ObjectiveCorrection\" is the correction applied to the lens."@en .
 
 
 ###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/NominalImmersionMedium
@@ -2935,6 +2954,7 @@ OME4DN:LabellingMethod rdf:type owl:Class ;
 
 ###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/MicrobeamManipulationType
 OME4DN:MicrobeamManipulationType rdf:type owl:Class ;
+    rdfs:subClassOf ome:MicrobeamManipulationType; 
     rdfs:label "Microbeam Manipulation Type"@en ;
     rdfs:comment "Class \"MicrobeamManipulationType\" is the type of micromanipulation performed."@en .
 
@@ -2945,16 +2965,16 @@ OME4DN:TIRFSettingsGeometry rdf:type owl:Class ;
     rdfs:comment "Class \"TIRFSettingsGeometry\" is the TIRF geometry used in this case."@en .
 
 
-###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/IlluminationType
-OME4DN:IlluminationType rdf:type owl:Class ;
+###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/ChannelIlluminationType
+OME4DN:ChannelIlluminationType rdf:type owl:Class ;
     rdfs:label "Illumination Type"@en ;
-    rdfs:comment "Class \"IlluminationType\" is the method of illumination used to capture the channel."@en .
+    rdfs:comment "Class \"ChannelIlluminationType\" is the method of illumination used to capture the channel."@en .
 
 
-###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/ColoredBeadsSlideType
-OME4DN:ColoredBeadsSlideType rdf:type owl:Class ;
-    rdfs:label "Colored Beads Slide Type"@en ;
-    rdfs:comment "Class \"ColoredBeadsSlideType\" is the type of colred beads used in this case."@en .
+###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/BeadType
+OME4DN:BeadType rdf:type owl:Class ;
+    rdfs:label "Bead Type"@en ;
+    rdfs:comment "Class \"BeadType\" is the type of colred beads used in this case."@en .
 
 
 ###  http://www.4ducleome.org/rdf/2019-05/4D_NMM/CalibrationSlideType
@@ -2973,26 +2993,6 @@ OME4DN:CalibratedMeasure rdf:type owl:Class ;
 OME4DN:MetricType rdf:type owl:Class ;
     rdfs:label "Metric Type"@en ;
     rdfs:comment "Class \"MetricType\" is the type of metric that was computed as part of the calibratin procedure in this instance."@en .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag
-rdf:Bag rdf:type owl:Class ;
-    rdfs:label "Bag"@en .
-
-
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq
-rdf:Seq rdf:type owl:Class ;
-    rdfs:label "Seq"@en .
-
-
-###  http://xmlns.com/foaf/0.1/Person
-foaf:Person rdf:type owl:Class ;
-    rdfs:label "Person"@en .
-
-
-### http://purl.org/dc/terms/FileFormat
-dcterms:FileFormat rdf:type owl:Class ;
-    rdfs:label "File Format"@en .
 
 
 #################################################################

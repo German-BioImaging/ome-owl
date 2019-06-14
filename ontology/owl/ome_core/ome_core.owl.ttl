@@ -647,6 +647,14 @@ ome:microbeamManipulation rdf:type owl:ObjectProperty ;
     rdfs:comment "Property \"microbeamManipuration\" specifies the microbeam operation that describes a microbeam operation type and the region of the image it was applied to."@en .
 
 
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/microbeamManipulationType
+ome:microbeamManipulationType rdf:type owl:ObjectProperty ;
+    rdfs:domain ome:MicrobeamMinipulation ;
+    rdfs:range ome:MicrobeamManipurationType ;
+    rdfs:label "microbeam manipuration type"@en ;
+    rdfs:comment "Property \"microbeamManipuration type\" specifies the type of manipulation performed."@en .
+
+
 ###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/microscope
 ome:microscope rdf:type owl:ObjectProperty ;
     rdfs:domain ome:Instrument ;
@@ -2263,6 +2271,12 @@ ome:MicrobeamManipulation rdf:type owl:Class ;
     rdfs:comment "Class \"MicrobeamManipulation\" is microbeam operation types and the regions of the images."@en .
 
 
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipulationType
+ome:MicrobeamManipulationType rdf:type owl:Class ;
+    rdfs:label "Microbeam Manipulation Type"@en ;
+    rdfs:comment "Class \"MicrobeamManipulationType\" is the type of manipulation performed."@en .
+
+
 ###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope
 ome:Microscope rdf:type owl:Class ;
     rdfs:subClassOf ome:ManufacturerSpec ;
@@ -3574,51 +3588,51 @@ expType:timeLapse rdf:type owl:NamedIndividual ,
     rdfs:label "solid state"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#FLIP
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType#FLIP
 mbmp:FLIP rdf:type owl:NamedIndividual ,
-    ome:MicrobeamManipuration ;
+    ome:MicrobeamManipurationType ;
     rdfs:label "FLIP"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#FRAP
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType#FRAP
 mbmp:FRAP rdf:type owl:NamedIndividual ,
-    ome:MicrobeamManipuration ;
+    ome:MicrobeamManipurationType ;
     rdfs:label "FRAP"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#inverseFRAP
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType#inverseFRAP
 mbmp:inverseFRAP rdf:type owl:NamedIndividual ,
-    ome:MicrobeamManipuration ;
+    ome:MicrobeamManipurationType ;
     rdfs:label "inverse FRAP"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#opticalTrapping
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType#opticalTrapping
 mbmp:opticalTrapping rdf:type owl:NamedIndividual ,
-    ome:MicrobeamManipuration ;
+    ome:MicrobeamManipurationType ;
     rdfs:label "optical trapping"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#other
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType#other
 mbmp:other rdf:type owl:NamedIndividual ,
-    ome:MicrobeamManipuration ;
+    ome:MicrobeamManipurationType ;
     rdfs:label "other"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#photoablation
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType#photoablation
 mbmp:photoablation rdf:type owl:NamedIndividual ,
-    ome:MicrobeamManipuration ;
+    ome:MicrobeamManipurationType ;
     rdfs:label "photoablation"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#photoactivation
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType#photoactivation
 mbmp:photoactivation rdf:type owl:NamedIndividual ,
-    ome:MicrobeamManipuration ;
+    ome:MicrobeamManipurationType ;
     rdfs:label "photoactivation"@en .
 
 
-###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#uncaging
+###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType#uncaging
 mbmp:uncaging rdf:type owl:NamedIndividual ,
-    ome:MicrobeamManipuration ;
+    ome:MicrobeamManipurationType ;
     rdfs:label "uncaging"@en .
 
 
