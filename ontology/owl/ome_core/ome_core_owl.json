@@ -1,75 +1,67 @@
 [ {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0000040",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0000044",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0000117",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_00001242",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0000140",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0000146",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0000165",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0000921",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0001024",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0001025",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0001242",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/PATO_0015009",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/SBO_0000259",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/FileFormat",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "File Format"
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dataset"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Dataset"
   } ]
 }, {
-  "@id" : "http://purl.org/dc/terms/description",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimenterGroup"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/experimenterGroup"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/fillRule"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/experiment"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Experiment"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "description"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://purl.org/dc/terms/identifier",
+  "@id" : "http://purl.org/dc/elements/1.1/identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "An unambiguous reference to the resource within a given context."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -79,21 +71,124 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/FileFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "File Format"
+  } ]
+}, {
   "@id" : "http://qudt.org/schema/qudt#unit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"http://qudt.org/schema/qudt#unit\" specifies the appropriate unit of measure."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "unit"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/A00",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"A00\" specifies the element (0,0) of matrix used to transform the shape."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Transform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/A01",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"A01\" specifies the element (0,1) of matrix used to transform the shape."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Transform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A01"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/A02",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"A02\" specifies the element (0,2) of matrix used to transform the shape."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Transform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/A10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"A10\" specifies the element (1,0) of matrix used to transform the shape."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Transform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A10"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/A11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"A11\" specifies the element (1,1) of matrix used to transform the shape."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Transform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A11"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/A12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"A12\" specifies the element (1,2) of matrix used to transform the shape."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Transform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A12"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode",
@@ -198,13 +293,6 @@
     "@value" : "near field scanning optical microscopy"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode#secondHarmonicGenerationImaging",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -277,6 +365,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "AffineTransform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Transform"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Annotation",
@@ -294,7 +385,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"Arc\" is various kinds of Arc lamps."
+    "@value" : "Class \"Arc\" is various kinds of Arc lamps - Hg, Xe, HgXe."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -308,11 +399,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"ArcType\" is the type of Arc lamps - Hg, Xe, HgXe."
+    "@value" : "Class \"ArcType\" is types of Arc lamp."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Arc Type"
+    "@value" : "ArcType"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ArcType#Hg",
@@ -336,43 +427,22 @@
     "@value" : "Xe"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ArcType#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ArcType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BasicAnnotation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"BasicAnnotation\" is an abstract Basic Annotation from which some others are derived."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Basic Annotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Annotation"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"BinData\" is contents of this element are base64-encoded."
+    "@value" : "Class \"ArcType\" is contents of this element are base64-encoded."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Binary Data"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinaryFile",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinFile",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"BinaryFile\" is binary files."
+    "@value" : "Class \"BinFile\" is binary files."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -411,13 +481,6 @@
     "@value" : "1x1"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Binning#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Binning" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Binning#twoXTwo",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Binning" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -436,7 +499,7 @@
     "@value" : "Boolean Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BasicAnnotation"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/CO2Percent",
@@ -451,9 +514,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "CO2 percent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Channel",
@@ -489,7 +549,7 @@
     "@value" : "Comment Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TextAnnotation"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Compression",
@@ -515,13 +575,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "none"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Compression#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Compression" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Compression#zlib",
@@ -582,13 +635,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "oblique illumination"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ContrastMethod#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ContrastMethod" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ContrastMethod#phase",
@@ -676,14 +722,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Correction" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "neo fluar"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Correction#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Correction" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
+    "@value" : "neofluar"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Correction#planApo",
@@ -704,7 +743,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Correction" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "plan neofluar"
+    "@value" : "planNeofluar"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Correction#superFluor",
@@ -744,9 +783,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Detector"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ManufacturerSpec"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorSettings",
@@ -851,13 +887,6 @@
     "@value" : "lifetime imaging"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType#photodiode",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -881,6 +910,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Dichroic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ManufacturerSpec"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder",
@@ -947,7 +979,7 @@
     "@value" : "Double Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/NumericAnnotation"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Ellipse",
@@ -978,20 +1010,6 @@
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Filter"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExcitationFilter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"ExcitationFilter\" is a filter placed in the Excitation light path."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "ExcitationFilter"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Filter"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Experiment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1001,6 +1019,11 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Experiment"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimentType",
@@ -1098,11 +1121,18 @@
     "@value" : "ion imaging"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimentType#other",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimentType#photoablation",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimentType" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "other"
+    "@value" : "photoablation"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimentType#photoactivation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimentType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "photoactivation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimentType#photobleaching",
@@ -1144,15 +1174,18 @@
     "@value" : "Experimenter Group"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/External",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExtractionFilter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"External\" is a file location. Can optionally specify a portion of a file using Offset and a ReadLength. If Offset and ReadLength are specified in conjuction with Compression, then they point into the uncompressed file."
+    "@value" : "Class \"ExtractionFilter\" is a filter placed in the Extraction light path."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "External"
+    "@value" : "ExtractionFilter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Filter"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Filament",
@@ -1180,39 +1213,32 @@
     "@value" : "FilamentType"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilamentType#halogen",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilamentType#Halogen",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilamentType" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "halogen"
+    "@value" : "Halogen"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilamentType#incandescent",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilamentType#Incandescent",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilamentType" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "incandescent"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilamentType#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilamentType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
+    "@value" : "Incandescent"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FileAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"FileAnnotation\" is file object annotations."
+    "@value" : "Class \"FilamentType\" is file object annotations."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "File Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TypeAnnotation"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule",
@@ -1224,6 +1250,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Fill Rule"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid3"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule#evenOdd",
@@ -1312,13 +1341,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "neutral density"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilterType#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilterType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilterType#shortPass",
@@ -1446,21 +1468,18 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"GenericExcitationSource\" is sources as collections of key/value pairs, stored in Maps. The other lightsource objects should always be used in preference to this if possible.."
+    "@value" : "Class \"Font\" is sources as collections of key/value pairs, stored in Maps. The other lightsource objects should always be used in preference to this if possible.."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "General Excitation Source"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightSource"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/IlluminationType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"IlluminationType\" is methods of illumination used to capture the channel."
+    "@value" : "Class \"Illumination\" is methods of illumination used to capture the channel."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1486,13 +1505,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "oblique"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/IlluminationType#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/IlluminationType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/IlluminationType#transmitted",
@@ -1522,16 +1534,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Image File"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinaryFile"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ImagingCondition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"ImagingCondition\" is image conditions introduced in the OWL ontology."
+    "@value" : "Class \"ImageCondition\" is image conditions introsuced in the OWL ontology."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1542,7 +1551,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"ImagingEnvironment\" is environments that the biological samples were in during the experiments."
+    "@value" : "Class \"ImageEnvironment\" is environments that the biological samples were in during the experiments."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1588,13 +1597,6 @@
     "@value" : "oil"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion#water",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Immersion" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1638,7 +1640,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"Laser\" is laser."
+    "@value" : "Class \"Laser\" is laser types."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1646,6 +1648,55 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightSource"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser/dye",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "dye"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser/excimer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "excimer"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser/freeElectron",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "free electron"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser/gas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gas"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser/metalVapor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "metal vapor"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser/semiconductor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "semiconductor"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser/solidState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "solid state"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserMedium",
@@ -1893,80 +1944,6 @@
     "@value" : "XeFl"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserMedium#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserMedium" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"LaserType\" is a laser type."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Laser Type"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#dye",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "dye"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#excimer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "excimer"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#freeElectron",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "free electron"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#gas",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "gas"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#metalVapor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "metal vapor"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#semiconductor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "semiconductor"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType#solidState",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "solid state"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightEmittingDiode",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1979,9 +1956,6 @@
   }, {
     "@language" : "en",
     "@value" : "Light Emitting Diode"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightSource"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightPath",
@@ -2048,7 +2022,7 @@
     "@value" : "List Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Annotation"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LongAnnotation",
@@ -2062,7 +2036,7 @@
     "@value" : "Long Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/NumericAnnotation"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Manufacturer",
@@ -2109,7 +2083,7 @@
     "@value" : "Map Annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Annotation"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Marker",
@@ -2155,127 +2129,65 @@
     "@value" : "Medium"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#air",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "air"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#glycerol",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "glycerol"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#oil",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "oil"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium#water",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "water"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipulation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"MicrobeamManipulation\" is microbeam operation types and the regions of the images."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Microbeam Manipulation"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipulationType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"MicrobeamManipulationType\" is the type of manipulation performed."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Microbeam Manipulation Type"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class \"MicrobeamManipuration\" is microbeam operation types and the regions of the images."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Microbeam Manipuration"
+  } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#FLIP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "FLIP"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#FRAP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "FRAP"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#inverseFRAP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "inverse FRAP"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#opticalTrapping",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "optical trapping"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#photoablation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "photoablation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#photoactivation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "photoactivation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration#uncaging",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "uncaging"
   } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamMinipulation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -2286,55 +2198,45 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Microscope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ManufacturerSpec"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"MicroscopeType\" is a type of microscope."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "MicroscopeType"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#dissection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType" ],
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope#dissection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "dissection"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#electrophysiology",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType" ],
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope#electrophysiology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "electrophysiology"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#inverted",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType" ],
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope#inverted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "inverted"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType#upright",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType" ],
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope#upright",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "upright"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Model",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class \"Model\" is models of the components."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Model"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/NDFilter",
@@ -2365,34 +2267,6 @@
     "@value" : "Naming Convention"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/NamingConvention#letter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/NamingConvention" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "letter"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/NamingConvention#number",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/NamingConvention" ],
-  "http://www.w3.org/2000/01/rdf-schema#number" : [ {
-    "@language" : "en",
-    "@value" : "letter"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/NumericAnnotation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"NumericAnnotation\" is an abstract Numeric Annotation from which some others are derived."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Numeric Annotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BasicAnnotation"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Objective",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2405,6 +2279,48 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ManufacturerSpec"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class \"ObjectiveMedium\" is a description of a Medium used for the lens. The Medium is the actual immersion medium used in this case."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Objective Medium"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#air",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "air"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#glycerol",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "glycerol"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#oil",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "oil"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium#water",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "water"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveSettings",
@@ -2550,7 +2466,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Plate Acquisition"
+    "@value" : "Plate Acquision"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Point",
@@ -2604,6 +2520,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Project"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid4"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Protocol",
@@ -2640,13 +2559,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "modeLocked"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pulse#other",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pulse" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "other"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pulse#qSwitched",
@@ -2729,36 +2641,17 @@
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Rights",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"Rights\" is the rights holder of the data and the rights held."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Rights"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Screen",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"Screen\" is groupings for Plates."
+    "@value" : "Class \"Screen\" is groupings for Plates.."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Screen"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ScreenType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"ScreenType\" is the type of the Screen."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Screen Type"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Settings",
@@ -2794,29 +2687,26 @@
     "@value" : "StageLabel"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotations",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"StructuredAnnotations\" is unordered collections of annotations attached to objects in the OME data model."
+    "@value" : "Class \"StructuredAnnotation\" is unordered collections of annotations attached to objects in the OME data model."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Structured Annotations"
+    "@value" : "Structured Annimation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TagAnnotation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Class \"TagAnnotation\" is a tag annotation (represents a tag or a tagset)."
+    "@value" : "Class \"TagAnnotation\" is ."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Tag Annotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TextAnnotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TermAnnotation",
@@ -2828,23 +2718,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Term Annotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BasicAnnotation"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TextAnnotation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"TextAnnotation\" is an abstract Text Annotation from which some others are derived."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Text Annotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Annotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TiffData",
@@ -2856,6 +2729,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Tiff Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinData"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TimestampAnnotation",
@@ -2867,9 +2743,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Timestamp Annotation"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Transform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class \"Transform\" is matrixes used to transform the shapes."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BasicAnnotation"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transform"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TransmittanceRange",
@@ -2881,20 +2765,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Transmittance Range"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TypeAnnotation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class \"TypeAnnotation\" is an abstract Type Annotation from which some others are derived."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Type Annotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Annotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Well",
@@ -2928,111 +2798,23 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "XML Annotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TextAnnotation"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/a00",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/XMLAnnotationValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"a00\" specifies the element (0,0) of matrix used to transform the shape."
+    "@value" : "Property \"XMLAnnotationValue\" specifies a general XML annotation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AffineTransform"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/XMLAnnotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "a00"
+    "@value" : "XML annotation value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/a01",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"a01\" specifies the element (0,1) of matrix used to transform the shape."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AffineTransform"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "a01"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/a02",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"a02\" specifies the element (0,2) of matrix used to transform the shape."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AffineTransform"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "a02"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/a10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"a10\" specifies the element (1,0) of matrix used to transform the shape."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AffineTransform"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "a10"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/a11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"a11\" specifies the element (1,1) of matrix used to transform the shape."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AffineTransform"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "a11"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/a12",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"a12\" specifies the element (1,2) of matrix used to transform the shape."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AffineTransform"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "a12"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/acquisitionDate",
@@ -3064,9 +2846,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "acquisition mode"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AcquisitionMode"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/airPressure",
@@ -3081,9 +2860,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "air pressure"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0001025"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/amplificationGain",
@@ -3107,7 +2883,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"annotation\" specifies an annotation from which all others are ultimately derived."
+    "@value" : "Property \"annotation\" specifies the annotation from which all others are ultimately derived."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Dataset"
@@ -3118,19 +2894,11 @@
   }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Image"
   }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ListAnnotation"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Plate"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/PlateAcquisition"
-  }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Project"
   }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Reagent"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ReagentSet"
   }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Screen"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotations"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Well"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3144,7 +2912,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"annotator\" specifies the person who attached this annotation.  e.g. If UserA annotates something with TagB, owned by UserB, UserA is still the Annotator."
+    "@value" : "Property \"annotator\" specifies  the person who attached this annotation.  e.g. If UserA annotates something with TagB, owned by UserB, UserA is still the Annotator."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Annotation"
@@ -3155,23 +2923,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/arcType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"arcType\" specifies the type of the arc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Arc"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "arcType"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ArcType"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/attenuation",
@@ -3214,13 +2965,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#common" : [ {
     "@language" : "en",
-    "@value" : "Property \"binData\" specifies the binary data which are base64-encoded."
+    "@value" : "Property \"bindata\" specifies the binary data which are base64-encoded."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinaryFile"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Mask"
-  }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pixels"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -3231,11 +2978,11 @@
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinData"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/binaryFile",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/binFile",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"binaryFile\" specifies the binary file. "
+    "@value" : "Property \"binFile\" specifies the binary file. "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FileAnnotation"
@@ -3245,7 +2992,7 @@
     "@value" : "binary file"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinaryFile"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinFile"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/binning",
@@ -3263,6 +3010,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Binning"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/booleanAnnotationValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"booleanAnnotationValue\" specifies the boolean value of the BooleanAnnotation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BooleanAnnotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "boolean annotation value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/calibratedMagnification",
@@ -3338,7 +3102,7 @@
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/columnNamingConvention",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"columnNamingConvention\" specifies the naming convention for columns that is a predefined list of values for the well labels."
@@ -3371,6 +3135,23 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
   } ]
 }, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/commentAnnotationValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"commentAnnotationValue\" specifies a simple comment annotation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/CommentAnnotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comment annotation value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/compression",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3379,8 +3160,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinData"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/External"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3453,9 +3232,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "cut in"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0001242"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/cutInTolerance",
@@ -3470,9 +3246,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "cut in tolerance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0001242"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/cutOut",
@@ -3487,9 +3260,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "cut out"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0001242"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/cutOutTolerance",
@@ -3504,9 +3274,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "cut out tolerance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0001242"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/data",
@@ -3555,43 +3322,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "delta t"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000165"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/detectorSettings",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"detectorSettings\" specifies the detector settings."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Channel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "detector settings"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorSettings"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/detectorType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"detectorType\" specifies the type of the detector."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Detector"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "detector type"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorType"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/dichroic",
@@ -3602,8 +3332,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilterSet"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Instrument"
   }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightPath"
   } ],
@@ -3630,6 +3358,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DimensionOrder"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/doubleAnnotationValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"doubleAnnotationValue\" specifies a simple numerical annotation of type xsd:double."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DoubleAnnotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "double annotation value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/emissionFilter",
@@ -3663,9 +3408,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "emission wavelength"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_00001242"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/endTime",
@@ -3685,40 +3427,15 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/excitationFilter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"excitationFilter\" specifies the filters placed in the excitation light path."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilterSet"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightPath"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "excitation filter"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExcitationFilter"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/excitationWavelength",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"excitationWavelength\" spefifies the wavelength of excitation for a particular channel."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Channel"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "excitation wavelength"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0001242"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/experiment",
@@ -3761,34 +3478,12 @@
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimentType"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/experimenter",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/experimenterGroup",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"experimenter\" specifies the person performed an imaging experiment."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Dataset"
   }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimenterGroup"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Image"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipulation"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Project"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "experimenter"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/experimenterGroup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"experimenterGroup\" specifies the group of experimenters who performed an imaging experiment."
   } ],
@@ -3801,10 +3496,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
+    "@value" : "experimenter"
+  }, {
+    "@language" : "en",
     "@value" : "experimenter group"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExperimenterGroup"
+  }, {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/exposureTime",
@@ -3819,30 +3519,10 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "exposure time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000165"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/external",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"external\" specifies the file location."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinaryFile"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "external"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/External"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/externalDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"externalDescription\" specifies a description of the externally defined identifier for the object."
@@ -3853,9 +3533,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "external description"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/externalIdentifier",
@@ -3872,9 +3549,25 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "external identifier"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/extractionFilter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"extractionFilter\" specifies the filters placed in the extraction light path."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilterSet"
+  }, {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightPath"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "extraction filter"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ExtractionFilter"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/fieldIndex",
@@ -3926,23 +3619,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FillRule"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/filterSet",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"filterSet\" specifies the filter set."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Channel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "filer set"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilterSet"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/filterType",
@@ -4055,6 +3731,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Folder"
+  }, {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4064,37 +3742,30 @@
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Folder"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/font",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"font\" specifies the font used to draw the text."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Shape"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "font"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Font"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/fontFamily",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"fonf\" specifies the font used to draw the text."
+  }, {
     "@language" : "en",
     "@value" : "Property \"fonfFamily\" specifies the font family used to draw the text."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Font"
+  }, {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Shape"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "font"
+  }, {
     "@language" : "en",
     "@value" : "font family"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Font"
+  }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FontFamily"
   } ]
 }, {
@@ -4110,9 +3781,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "font size"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000117"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/fontStyle",
@@ -4204,25 +3872,8 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/href",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"href\" specifies the file location."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/External"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "href"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/humidity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"humidity\" specifies the humidity around the sample."
@@ -4233,9 +3884,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "humidity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0015009"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ifd",
@@ -4283,6 +3931,8 @@
   }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Folder"
   }, {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Screen"
+  }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/WellSample"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4291,40 +3941,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Image"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/imageFile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"imageFile\" specifies the actual image file."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pixels"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "imageFile"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ImageFile"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/imagingCondition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"imagingCondition\" specifies the imaging condition."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Image"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "imaging condition"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ImagingCondition"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/imagingEnvironment",
@@ -4338,7 +3954,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "imaging environment"
+    "@value" : "Imaging Environment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ImagingEnvironment"
@@ -4376,23 +3992,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/instrument",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"instrument\" specifies the instrument used to capture the Image."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ImagingCondition"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "instrument"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Instrument"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/integration",
@@ -4480,23 +4079,6 @@
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserMedium"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/laserType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"laserType\" specifies the type of laser."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "laser type"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LaserType"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/leader",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4528,7 +4110,7 @@
     "@value" : "length"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeLong"
+    "@id" : "http://www.w3.org/2001/XMLSchema#long"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/lensNA",
@@ -4548,40 +4130,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/lightPath",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"lightPath\" specifies the light path."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Channel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "light path"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightPath"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/lightSourceSettings",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"lightSourceSettings\" specifies the light source settings."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Channel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "light source settings"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightSourceSettings"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/locked",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4597,6 +4145,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/longAnnotationValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"longAnnotationValue\" specifies a simple numerical annotation of type xsd:long."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LongAnnotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "long annotation value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#long"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/lotNumber",
@@ -4639,23 +4204,6 @@
     "@language" : "en",
     "@value" : "Property \"manufacturerSpec\" specifies the base from which many microscope components are extended."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Detector"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Dichroic"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Filter"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/FilterSet"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Instrument"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/LightSource"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Objective"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "manufacturer spec"
@@ -4664,20 +4212,18 @@
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ManufacturerSpec"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/map",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/mapAnnotationValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"map\" specifies the value of the map that contains of a list of key/value pairs."
+    "@value" : "Property \"mapAnnotationValue\" specifies the value of the map annotation that contains of a list of key/value pairs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/GenericExcitationSource"
-  }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ImagingEnvironment"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MapAnnotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "map"
+    "@value" : "map annotation value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Map"
@@ -4693,6 +4239,8 @@
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Line"
   }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Polyline"
+  }, {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Shape"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4712,6 +4260,8 @@
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Line"
   }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Polyline"
+  }, {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Shape"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4733,43 +4283,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "maximum field count"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/medium",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"medium\" specifies a medium used for the lens."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveSettings"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "medium"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Medium"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/metadataOnly",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"metadataOnly\" specifies if there is on pixel data in this file."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pixels"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "metadata only"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/microbeamManipulation",
@@ -4781,6 +4294,8 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Experiment"
   }, {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Image"
+  }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ImagingCondition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4791,23 +4306,6 @@
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipuration"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/microbeamManipulationType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"microbeamManipuration type\" specifies the type of manipulation performed."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamMinipulation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "microbeam manipuration type"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipurationType"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/microscope",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4815,7 +4313,9 @@
     "@value" : "Property \"microscope\" specifies the microscope."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Instrument"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Image"
+  }, {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ImagingCondition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4825,23 +4325,6 @@
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/microscopeType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"microscopeType\" specifies the type of the microscope."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Microscope"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "microscopeType"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicroscopeType"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/mimeType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4849,7 +4332,7 @@
     "@value" : "Property \"mimeType\" specifies the MIME type of the binary file."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinaryFile"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinFile"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4860,7 +4343,7 @@
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/model",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"model\" specifies the model of the component."
@@ -4873,7 +4356,7 @@
     "@value" : "model"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Model"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/nameSpace",
@@ -4883,14 +4366,14 @@
     "@value" : "Property \"nameSpace\" specifies the namespace for annotation you define. If it is absent then we assume the annotation is to use our (OME's) default interpretation for this type."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Annotation"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "name space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/nominalMagnification",
@@ -4908,6 +4391,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/objectiveMedium",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"objectvieMedium\" specifies a medium used for the lens."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveSettings"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "objective medium"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ObjectiveMedium"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/objectiveSettings",
@@ -4958,9 +4458,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "physical size x"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000117"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeY",
@@ -4975,9 +4472,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "physical size y"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000117"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/physicalSizeZ",
@@ -4992,9 +4486,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "physical size z"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000117"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pinholeSize",
@@ -5009,9 +4500,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "pinhole size"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000117"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pixcelType",
@@ -5055,7 +4543,7 @@
     "@value" : "Property \"plane\" specifies the microscope stage and image timing data for a given channel/z-section/timepoint."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pixels"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Channel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -5185,9 +4673,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "position x"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000140"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/positionY",
@@ -5206,16 +4691,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "position y"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000140"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/positionZ",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"positionZ\" specifies the z position of the stage."
+    "@value" : "Property \"positionX\" specifies the z position of the stage."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Plane"
@@ -5225,9 +4707,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "position z"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000140"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/power",
@@ -5242,9 +4721,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "power"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0001024"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/protocol",
@@ -5259,43 +4735,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "protocol"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Protocol"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/protocolDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"protocolDescription\" specifies a description of the screen protocol; may contain very detailed information to reproduce some of that found in a screening database."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Protocol"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "protocol description"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/protocolIdentifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"protocolIdentifier\" specifies a pointer to an externally defined protocol, usually in a screening database."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Protocol"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "protocol identifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pulse",
@@ -5310,33 +4749,16 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "pulse"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pulse"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/pump",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"pump\" specifies the pump of the laser."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "pump"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pump"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/readOutRate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"readOutRate\" specifies the speed at which the detector can count pixels. {used:CCD,EMCCD}  This is the bytes per second that can be read from the detector (like a baud rate)."
+  }, {
+    "@language" : "en",
+    "@value" : "Property \"readOutRate\" specifies the speed at which the detector can count pixels."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/DetectorSettings"
@@ -5344,9 +4766,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "read out rate"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000044"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/reagent",
@@ -5389,14 +4808,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"radiusX\" specifies the horizontal radius of the ellipse."
+    "@value" : "Property \"rediusX\" specifies the horizontal radius of the ellipse."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Ellipse"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "radius x"
+    "@value" : "redius x"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -5406,14 +4825,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"radiusY\" specifies the vertical radius of the ellipse."
+    "@value" : "Property \"rediusY\" specifies the vertical radius of the ellipse."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Ellipse"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "radius y"
+    "@value" : "redius y"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -5447,7 +4866,7 @@
   }, {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Image"
   }, {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/MicrobeamManipulation"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -5463,49 +4882,26 @@
     "@language" : "en",
     "@value" : "Property \"repetitionRate\" specifies the rate in Hz at which the laser pulses if the Pulse type is 'Repetitive'."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "repeteion rate"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000044"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/rightsHeld",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"rightsHeld\" specifies the rights held by the rights holder.  e.g. \"All rights reserved\" or \"Creative Commons Attribution 3.0 Unported License\""
+    "@value" : "Property \"rights\" specifies the lights holder and lights held."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Rights"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "rightsHeld"
+    "@value" : "rights"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/rightsHolder",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"rightsHolder\" specifies the rights holder for this data. e.g. \"Copyright (C) 2002 - 2016 Open Microscopy Environment\""
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Rights"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "rightsHolder"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/row",
@@ -5526,10 +4922,10 @@
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/rowNamingConvention",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2002/07/owl#DatatyeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"rowNamingConvention\" specifies the naming convention for rows that is a predefined list of values for the well labels."
+    "@value" : "Property \"columnNamingConvention\" specifies the naming convention for rows that is a predefined list of values for the well labels."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Plate"
@@ -5577,7 +4973,7 @@
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/screenType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"screenType\" specifies the screen type."
@@ -5588,9 +4984,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "screen type"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/ScreenType"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/serialNumber",
@@ -5610,38 +5003,15 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sha1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Property \"sha1\" specifies the SHA1 hash value."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/External"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "SHA1"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#hexBinary"
-  } ]
-}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/shape",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"shape\" specifies the shape that contains a single specific ROI shape and links that to any channels, and a timepoint and a z-section."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Shape"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "shape"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Shape"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/significantBits",
@@ -5662,20 +5032,17 @@
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/size",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"size\" specifies the size of the uncompressed file."
+    "@value" : "Property \"shape\" specifies the size of the uncompressed file."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinaryFile"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/BinFile"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "size"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeLong"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/sizeC",
@@ -5832,7 +5199,7 @@
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/strokeDashArray",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"strokeDashArray\" specifies the array of stroke dash."
@@ -5845,7 +5212,7 @@
     "@value" : "stroke dash array"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/strokeWidth",
@@ -5860,9 +5227,20 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "stroke width"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/tagAnnotation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"tagAnnotation\" specifies the annotation that represents as a tag."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "tag annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000921"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TagAnnotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/temperature",
@@ -5877,9 +5255,20 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "temperature"
+  } ]
+}, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/termAnnotationValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"termAnnotation\" specifies the ontology term annotation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "term annotation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000146"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TermAnnotation"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/text",
@@ -5960,7 +5349,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"tiffData\" specifies the location of the pixel data in a tiff file."
+    "@value" : "Property \"tiffData\" specifies the pixel data in a tiff file."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Pixels"
@@ -5985,9 +5374,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "time increment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000165"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/timePoint",
@@ -6007,6 +5393,23 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/timestampAnnotationValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property \"timestampAnnotationValue\" specifies the date/time annotation of type xsd:dateTime."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/TimestampAnnotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "timestamp annotation value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/transform",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6021,7 +5424,7 @@
     "@value" : "transform"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/AffineTransform"
+    "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Transform"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/transmittance",
@@ -6140,16 +5543,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "voltage"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/SBO_0000259"
   } ]
 }, {
-  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/wavelength",
+  "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/waveLength",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property \"wavelength\" specifies the wave length of the laser."
+    "@value" : "Property \"waveLength\" specifies the wave length of the laser."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Laser"
@@ -6158,10 +5558,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "wavelength"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0001242"
+    "@value" : "wave length"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/well",
@@ -6193,16 +5590,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "well origin x"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000140"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/wellOriginY",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#common" : [ {
     "@language" : "en",
-    "@value" : "Property \"wellOriginY\" specifies the y position to use for the origin of the fields (individual images) taken in a well."
+    "@value" : "Property \"wellOriginX\" specifies the y position to use for the origin of the fields (individual images) taken in a well."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Plate"
@@ -6210,9 +5604,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "well origin y"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000140"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/wellSample",
@@ -6282,9 +5673,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "working distance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/PATO_0000040"
   } ]
 }, {
   "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/x",
@@ -6351,6 +5739,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"y\" specifies the y value of the object."
+  }, {
+    "@language" : "en",
+    "@value" : "Property \"z\" specifies the z value of the object."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.openmicroscopy.org/rdf/2016-06/ome_core/Ellipse"
@@ -6366,6 +5757,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "y"
+  }, {
+    "@language" : "en",
+    "@value" : "z"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -6428,7 +5822,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The OME ontology provides a set of concepts for all information objects described as metadata accessible by OME. These information objects are parts of metadata include descriptions of the imaging experiments and the people who perform them, descriptions of the microscope, the resulting images and how they were acquired, the analyses performed on those images, and the analysis results themselves. An OME metadata may contain any or all of this information. This is the initial version of OWL-based OME data model ontology generated by Norio Kobayashi at RIKEN."
+    "@value" : "The OME ontology provides a set of concepts for all information objects described as metadata accessible by OME.  These information objects are parts of metadata include descriptions of the imaging experiments and the people who perform them, descriptions of the microscope, the resulting images and how they were acquired, the analyses performed on those images, and the analysis results themselves. An OME metadata may contain any or all of this information. This is the initial version of OWL-based OME data model ontology generated by Norio Kobayashi at RIKEN."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -6456,9 +5850,6 @@
     "@value" : "Seq"
   } ]
 }, {
-  "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#li",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6482,22 +5873,10 @@
     "@language" : "en",
     "@value" : "Property \"value\" specifies the value of the entity."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "value"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ]
-}, {
-  "@id" : "http://www.w3.org/2000/01/rdf-schema#Class",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#common",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -6512,9 +5891,6 @@
   } ]
 }, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#lael",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.w3.org/2000/01/rdf-schema#number",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -6552,13 +5928,6 @@
     "@value" : "An integer containing only non-negative values."
   } ]
 }, {
-  "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeLong",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A long integer containing only non-negative values."
-  } ]
-}, {
   "@id" : "http://www.w3.org/2001/XMLSchema#positiveInteger",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6573,9 +5942,6 @@
     "@value" : "The string data type can contain characters, line feeds, carriage returns, and tab characters."
   } ]
 }, {
-  "@id" : "http://www.w3.org/2002/07/owl#DatatyeProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://xmlns.com/foaf/0.1/Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -6584,7 +5950,7 @@
   } ]
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/depicts",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Property \"http://xmlns.com/foaf/0.1/depicts\" specifies a relationship between the image and something that the image depicts."
@@ -6595,9 +5961,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "depicts"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ]
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/thumbnail",
