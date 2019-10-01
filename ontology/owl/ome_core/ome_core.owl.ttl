@@ -277,8 +277,7 @@ xsd:string rdf:type rdfs:Datatype ;
 :experiment rdf:type owl:ObjectProperty ;
             rdfs:domain :Dataset ,
                         :ExperimenterGroup ,
-                        :Image ,
-                        :Project ;
+                        :Image ;
             rdfs:range :Experiment ;
             rdfs:label "experiment"@en ;
             rdfs:comment "Property \"experiment\" specifies the experiment."@en .
@@ -396,7 +395,6 @@ xsd:string rdf:type rdfs:Datatype ;
 :image rdf:type owl:ObjectProperty ;
        rdfs:domain :Dataset ,
                    :Folder ,
-                   :Screen ,
                    :WellSample ;
        rdfs:range :Image ;
        rdfs:label "image"@en ;
