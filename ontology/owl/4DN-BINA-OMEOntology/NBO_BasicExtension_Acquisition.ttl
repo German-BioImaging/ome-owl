@@ -705,7 +705,7 @@ NBOBA:opticaAssembly rdf:type owl:ObjectProperty ;
     rdfs:comment "Property \"opticaAssembly\" refers to an Optical Assembly component placed in this Ligth Path."@en .
 
 
-F
+
 ###   http://www.quarep.org/rdf/model/v02-00/basicExtension/Acquisition/polarizationOptics
 NBOBA:polarizationOptics rdf:type owl:ObjectProperty ;
     rdfs:domain NBOBA:LightPath   ;
@@ -1191,7 +1191,7 @@ NBOBA:isInterleaved rdf:type owl:DataProperty ;
     rdfs:domain NBOBA:Pixels ;
     rdfs:range  xsd:boolean ;
     rdfs:label "is interleaved"@en ;
-    rdfs:comment "Property \"isInterleaved\" records the order in which the channels are arranged within the data block: True if channels are stored RGBRGBRGB...; False if channels are stored RRR...GGG...BBBÅc"@en .
+    rdfs:comment "Property \"isInterleaved\" records the order in which the channels are arranged within the data block: True if channels are stored RGBRGBRGB...; False if channels are stored RRR...GGG...BBBc"@en .
 
 
 ###   http://www.quarep.org/rdf/model/v02-00/basicExtension/Acquisition/significantBits
