@@ -231,8 +231,7 @@ NBOAA:acousticFrequency rdf:type owl:ObjectProperty ;
     rdfs:domain  NBOAA:AcoustoOpticalDeviceSettings ;
     rdfs:range   PATO:0000044 ;
     rdfs:label   "acoustic frequency"@en ;
-    rdfs:comment "Property \"acousticFrequency\" records the frequency of the acoustic wave used to alter the diffraction properties of the crystal during this Acquisition. Wavelength tuning is very rapid and limited only by the acoustic transit time across the crystal.
-."@en .
+    rdfs:comment "Property \"acousticFrequency\" records the frequency of the acoustic wave used to alter the diffraction properties of the crystal during this Acquisition. Wavelength tuning is very rapid and limited only by the acoustic transit time across the crystal."@en .
 
 
 ###  http://www.quarep.org/rdf/model/v02-00/advancedAndConfocalExtension/Acquisition/acoustoOpticalTuneableFilterSettings
