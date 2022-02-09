@@ -10,7 +10,7 @@
 @prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
 @prefix SBO: <http://purl.obolibrary.org/obo/SBO_> .
 
-@base <http://www.quarep.org/rdf/model/v02-00/> .
+@prefix : <http://www.quarep.org/rdf/model/v02-00/> .
 @prefix NBOCA: <http://www.quarep.org/rdf/model/v02-00/calibrationPerformanceExtension/Acquisition/> .
 @prefix NBOBH: <http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/> .
 @prefix NBOBA: <http://www.quarep.org/rdf/model/v02-00/basicExtension/Acquisition/> .

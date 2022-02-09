@@ -10,7 +10,7 @@
 @prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
 @prefix SBO: <http://purl.obolibrary.org/obo/SBO_> .
 
-@base <http://www.quarep.org/rdf/model/v02-00/basicExtension/> .
+@prefix : <http://www.quarep.org/rdf/model/v02-00/basicExtension/> .
 @prefix NBOBH: <http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/> .
 @prefix NBOBA: <http://www.quarep.org/rdf/model/v02-00/basicExtension/Acquisition/> .
 
@@ -1488,7 +1488,7 @@ NBOBA:Image rdf:type owl:Class ;
 NBOBA:ImagingEnvironment rdf:type owl:Class ;
     rdfs:subClassOf ome:ImagingEnvironment ;
     rdfs:label "Imaging Environment"@en ;
-    rdfs:comment "Class \ImagingEnvironment\" describes the environmental conditions in which the biological sample was kept during the Acquisition of this Image."@en .
+    rdfs:comment "Class \"ImagingEnvironment\" describes the environmental conditions in which the biological sample was kept during the Acquisition of this Image."@en .
 
 
 ###  http://www.quarep.org/rdf/model/v02-00/basicExtension/Acquisition/ObjectiveSettings

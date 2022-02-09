@@ -10,7 +10,7 @@
 @prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
 @prefix SBO: <http://purl.obolibrary.org/obo/SBO_> .
 
-@base <http://www.quarep.org/rdf/model/v02-00/> .
+@prefix : <http://www.quarep.org/rdf/model/v02-00/> .
 @prefix NBOBH: <http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/> .
 
 
@@ -891,7 +891,7 @@ NBOBH:laserClass rdf:type owl:ObjectProperty ;
     rdfs:domain NBOBH:Laser ;
     rdfs:range  NBOBH:LaserClass ;
     rdfs:label  "laser class"@en ;
-    rdfs:comment "Property \"laserClass\" describes the safety Class this Laser belongs to. Laser Classes are defined based on their potential for causing injury to humans\Åf eyes and skin."@en .
+    rdfs:comment "Property \"laserClass\" describes the safety Class this Laser belongs to. Laser Classes are defined based on their potential for causing injury to humans eyes and skin."@en .
 
 
 ###   http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/pulseDuration
@@ -1453,7 +1453,7 @@ NBOBH:condenserType rdf:type owl:ObjectProperty ;
     rdfs:domain NBOBH:Condenser ;
     rdfs:range  NBOBH:CondenserType ;
     rdfs:label "condenser type"@en ;
-    rdfs:comment "Property \"condenserType\" captures the general category this Condenser belongs to according to ISO 10934-1:2002. Specifically, this category refers to the type of Correction or Contrast Enhancement Method this Condenser is designed to achieve. According to ISO 10934-1:2002, options include: 1) Abbe, this is a condenser of simple design introduced by Abbe, in which there is only limited correction for spherical aberration and none for chromatic aberration. 2) Achromatic-aplanatic, this is a in which chromatic aberrations and spherical aberrations have been reduced. 3) Cardioid, this is a dark field condenser for transmitted light illumination that has spherical aberration and coma (i.e., aberration in which the image of an off-axis point object is deformed so that the image is shaped like a comet) correction. 4) Dark-field, this is a dark-ground condenser designed for dark-field microscopy, which for reflected-light microscopy might be located within the mount of the objective. 5) Pancratic, this is a condenser containing a variable \"zoom\Åh (pancratic) lens which allows the size of the illuminated field at the object to be varied while the illuminated field diaphragm remains of constant size. 6) Phase-contrast, this is condenser designed for phasecontrast microscopy. 6) Universal, this is a condenser designed for multiple contrast methods such as bright field, dark field, phase contrast, differential interference contrast, polarized light and modulation contrast."@en .
+    rdfs:comment "Property \"condenserType\" captures the general category this Condenser belongs to according to ISO 10934-1:2002. Specifically, this category refers to the type of Correction or Contrast Enhancement Method this Condenser is designed to achieve. According to ISO 10934-1:2002, options include: 1) Abbe, this is a condenser of simple design introduced by Abbe, in which there is only limited correction for spherical aberration and none for chromatic aberration. 2) Achromatic-aplanatic, this is a in which chromatic aberrations and spherical aberrations have been reduced. 3) Cardioid, this is a dark field condenser for transmitted light illumination that has spherical aberration and coma (i.e., aberration in which the image of an off-axis point object is deformed so that the image is shaped like a comet) correction. 4) Dark-field, this is a dark-ground condenser designed for dark-field microscopy, which for reflected-light microscopy might be located within the mount of the objective. 5) Pancratic, this is a condenser containing a variable \"zoom\" (pancratic) lens which allows the size of the illuminated field at the object to be varied while the illuminated field diaphragm remains of constant size. 6) Phase-contrast, this is condenser designed for phasecontrast microscopy. 6) Universal, this is a condenser designed for multiple contrast methods such as bright field, dark field, phase contrast, differential interference contrast, polarized light and modulation contrast."@en .
 
 
 ###   http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/microscopeTubeType
@@ -3605,13 +3605,13 @@ NBOBH:AttenuationMethod rdf:type owl:Class ;
 ###  http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/Polarization
 NBOBH:Polarization rdf:type owl:Class ;
     rdfs:label "Polarization"@en ;
-    rdfs:comment "Class \Polarization\" records the polarization effect of this optical element. Any thin-film interference Coating that is used at non-normal angles-of-incidence will cause some amount of polarization, the precise effect varying greatly with wavelength and with the particular Coating design."@en .
+    rdfs:comment "Class \"Polarization\" records the polarization effect of this optical element. Any thin-film interference Coating that is used at non-normal angles-of-incidence will cause some amount of polarization, the precise effect varying greatly with wavelength and with the particular Coating design."@en .
 
 
 ###  http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/NDType
 NBOBH:NDType rdf:type owl:Class ;
     rdfs:label "ND Type"@en ;
-    rdfs:comment "Class \NDType\" refers to the general category of this Neutral Density Filter. Neutral Density Filters come in two general types. Those made of darkened glass that absorb light and those coated with a metal film that reflect light."@en .
+    rdfs:comment "Class \"NDType\" refers to the general category of this Neutral Density Filter. Neutral Density Filters come in two general types. Those made of darkened glass that absorb light and those coated with a metal film that reflect light."@en .
 
 
 ###  http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/MirrorType
@@ -3682,7 +3682,7 @@ NBOBH:CondenserCorrection rdf:type owl:Class ;
 
 ###   http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/CondenserType
 NBOBH:CondenserType rdf:type owl:Class ;
-    rdfs:comment "Class \"condenserType\" captures the general category this Condenser belongs to according to ISO 10934-1:2002. Specifically, this category refers to the type of Correction or Contrast Enhancement Method this Condenser is designed to achieve. According to ISO 10934-1:2002, options include: 1) Abbe, this is a condenser of simple design introduced by Abbe, in which there is only limited correction for spherical aberration and none for chromatic aberration. 2) Achromatic-aplanatic, this is a in which chromatic aberrations and spherical aberrations have been reduced. 3) Cardioid, this is a dark field condenser for transmitted light illumination that has spherical aberration and coma (i.e., aberration in which the image of an off-axis point object is deformed so that the image is shaped like a comet) correction. 4) Dark-field, this is a dark-ground condenser designed for dark-field microscopy, which for reflected-light microscopy might be located within the mount of the objective. 5) Pancratic, this is a condenser containing a variable \"zoom\Åh (pancratic) lens which allows the size of the illuminated field at the object to be varied while the illuminated field diaphragm remains of constant size. 6) Phase-contrast, this is condenser designed for phasecontrast microscopy. 6) Universal, this is a condenser designed for multiple contrast methods such as bright field, dark field, phase contrast, differential interference contrast, polarized light and modulation contrast."@en .
+    rdfs:comment "Class \"condenserType\" captures the general category this Condenser belongs to according to ISO 10934-1:2002. Specifically, this category refers to the type of Correction or Contrast Enhancement Method this Condenser is designed to achieve. According to ISO 10934-1:2002, options include: 1) Abbe, this is a condenser of simple design introduced by Abbe, in which there is only limited correction for spherical aberration and none for chromatic aberration. 2) Achromatic-aplanatic, this is a in which chromatic aberrations and spherical aberrations have been reduced. 3) Cardioid, this is a dark field condenser for transmitted light illumination that has spherical aberration and coma (i.e., aberration in which the image of an off-axis point object is deformed so that the image is shaped like a comet) correction. 4) Dark-field, this is a dark-ground condenser designed for dark-field microscopy, which for reflected-light microscopy might be located within the mount of the objective. 5) Pancratic, this is a condenser containing a variable \"zoom\" (pancratic) lens which allows the size of the illuminated field at the object to be varied while the illuminated field diaphragm remains of constant size. 6) Phase-contrast, this is condenser designed for phasecontrast microscopy. 6) Universal, this is a condenser designed for multiple contrast methods such as bright field, dark field, phase contrast, differential interference contrast, polarized light and modulation contrast."@en .
 
 
 ###   http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/MicroscopeTubeType
@@ -5540,8 +5540,7 @@ NBOBH:MultianodeArrangement rdf:type owl:Class ;
 
 
 ###  http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/Mechanism#softwareBased
-<http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/Mechanism#softwareBased
-> rdf:type owl:NamedIndividual ,
+<http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/Mechanism#softwareBased> rdf:type owl:NamedIndividual ,
    NBOBH:Mechanism ;
     rdfs:label "software based"@en ;
     rdfs:label "image based"@en .
@@ -6576,7 +6575,7 @@ NBOBH:MultianodeArrangement rdf:type owl:Class ;
 ###  http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/CCDType#emccd
 <http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/CCDType#emccd> rdf:type owl:NamedIndividual ,
    NBOBH:CCDType ;
-    rdfs:label "E\MCCD"@en .
+    rdfs:label "EMCCD"@en .
 
 
 ###  http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/CCDType#other
@@ -6586,8 +6585,7 @@ NBOBH:MultianodeArrangement rdf:type owl:Class ;
 
 
 ###  http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/CCDArchitecture#frameTransfer
-<http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/CCDArchitecture#frameTransfer
-> rdf:type owl:NamedIndividual ,
+<http://www.quarep.org/rdf/model/v02-00/basicExtension/Hardware/CCDArchitecture#frameTransfer> rdf:type owl:NamedIndividual ,
    NBOBH:CCDArchitecture ;
     rdfs:label "frame transfer"@en .
 
