@@ -2254,7 +2254,7 @@ rdf:value rdf:type owl:DatatypeProperty ;
 
 ###  http://www.openmicroscopy.org/rdf/2016-06/ome_core/StructuredAnnotation
 :StructuredAnnotation rdf:type owl:Class ;
-                      rdfs:label "Structured Annimation"@en ;
+                      rdfs:label "Structured Annotation"@en ;
                       rdfs:subclassOf :Annotation ;
        rdfs:comment "Class \"StructuredAnnotation\" is unordered collections of annotations attached to objects in the OME data model."@en .
 
